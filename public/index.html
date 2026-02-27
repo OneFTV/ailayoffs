@@ -439,40 +439,54 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 </footer>
 
 <script>
-// === ANIMATED COUNTERS ===
-const counters=[
-  {el:'c-jobs',target:487300,rate:142,rateEl:'rate-jobs'},
-  {el:'c-companies',target:342,rateEl:'rate-co',rateVal:'12'},
-  {el:'c-reskill',target:1200000000},
-  {el:'c-new',target:284500,rate:98,rateEl:'rate-new'},
-];
+// === DATA-DRIVEN FROM API ===
 function formatNum(n){if(n>=1e9)return(n/1e9).toFixed(1)+'B';if(n>=1e6)return(n/1e6).toFixed(1)+'M';return n.toLocaleString('en-US')}
-function animateCounter(cfg,dur=2200){
-  const el=document.getElementById(cfg.el);const start=performance.now();const t=cfg.target;
-  function update(now){const p=Math.min((now-start)/dur,1);const e=1-Math.pow(1-p,3);el.textContent=formatNum(Math.floor(t*e));if(p<1)requestAnimationFrame(update);else{el.textContent=formatNum(t);if(cfg.rate>0)startLive(cfg)}}
-  if(cfg.rateEl){document.getElementById(cfg.rateEl).textContent=cfg.rateVal||cfg.rate}
+function animateCounter(el,target,dur=2200){
+  const start=performance.now();
+  function update(now){const p=Math.min((now-start)/dur,1);const e=1-Math.pow(1-p,3);el.textContent=formatNum(Math.floor(target*e));if(p<1)requestAnimationFrame(update);else el.textContent=formatNum(target)}
   requestAnimationFrame(update);
 }
-function startLive(cfg){const el=document.getElementById(cfg.el);let v=cfg.target;setInterval(()=>{v+=Math.random()<.3?1:0;el.textContent=formatNum(v)},1000/(cfg.rate/3600))}
-counters.forEach(c=>animateCounter(c));
 
-// === TICKER ===
-const companies=[
-  {name:'BT Group',jobs:'55,000',type:'Operations (by 2030)'},
-  {name:'Amazon',jobs:'27,000',type:'Various'},
-  {name:'Meta',jobs:'21,000',type:'Multiple Teams'},
-  {name:'UPS',jobs:'12,000',type:'Management & Ops'},
-  {name:'Google',jobs:'12,000',type:'Various Divisions'},
-  {name:'Microsoft',jobs:'10,000',type:'Various'},
-  {name:'SAP',jobs:'8,000',type:'Restructuring'},
-  {name:'IBM',jobs:'7,800',type:'Back Office'},
-  {name:'Klarna',jobs:'700',type:'Customer Service'},
-  {name:'Dropbox',jobs:'500',type:'AI Integration'},
-  {name:'Chegg',jobs:'400',type:'Content & Tutoring'},
-  {name:'Duolingo',jobs:'~100',type:'Translation'},
-];
-const ticker=document.getElementById('ticker');
-ticker.innerHTML=[...companies,...companies].map(c=>`<div class="ticker-item"><strong>${c.name}</strong><span class="num">-${c.jobs}</span>${c.type}</div>`).join('');
+// Fetch stats and layoffs from API
+Promise.all([
+  fetch('/api/stats').then(r=>r.json()),
+  fetch('/api/layoffs').then(r=>r.json())
+]).then(([stats, layoffs]) => {
+  // Counters
+  animateCounter(document.getElementById('c-jobs'), stats.totalJobsCut);
+  animateCounter(document.getElementById('c-companies'), stats.totalCompanies);
+  animateCounter(document.getElementById('c-reskill'), 1200000000);
+  animateCounter(document.getElementById('c-new'), 284500);
+  document.getElementById('rate-jobs').textContent = '142';
+  document.getElementById('rate-new').textContent = '98';
+
+  // Ticker
+  const ticker=document.getElementById('ticker');
+  const items=layoffs.map(c=>({name:c.company,jobs:c.jobsCut.toLocaleString(),type:c.reason.split(',')[0]}));
+  ticker.innerHTML=[...items,...items].map(c=>`<div class="ticker-item"><strong>${c.name}</strong><span class="num">-${c.jobs}</span>${c.type}</div>`).join('');
+
+  // Companies table
+  const tbody=document.querySelector('table tbody');
+  if(tbody){
+    const tagClass={Tech:'tag-tech',Fintech:'tag-finance',Logistics:'tag-retail',Telecom:'tag-telecom',Education:'tag-education',Media:'tag-media'};
+    tbody.innerHTML=layoffs.map(l=>`<tr><td><strong>${l.company}</strong></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td>${l.reason}</td><td>${l.date}</td><td><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`).join('');
+  }
+
+  // Update company count badge
+  const badges=document.querySelectorAll('.badge');
+  badges.forEach(b=>{if(b.textContent.includes('Companies'))b.textContent=stats.totalCompanies+' Companies'});
+
+  // Charts - by sector
+  const sectorLabels=Object.keys(stats.bySector);
+  const sectorData=Object.values(stats.bySector);
+  if(window.sectorChart)window.sectorChart.destroy();
+  window.sectorChart=new Chart(document.getElementById('chartSectors'),{type:'doughnut',data:{labels:sectorLabels,datasets:[{data:sectorData,backgroundColor:[C.red,C.yellow,C.blue,C.green,C.purple,C.pink],borderWidth:0,borderRadius:3}]},options:{responsive:true,cutout:'65%',plugins:{legend:{position:'bottom',labels:{padding:15,font:{size:11},usePointStyle:true,pointStyleWidth:8}}}}});
+
+  // Charts - by company (horizontal bar)
+  const top10=layoffs.slice(0,10);
+  if(window.compChart)window.compChart.destroy();
+  window.compChart=new Chart(document.getElementById('chartCompanies'),{type:'bar',data:{labels:top10.map(l=>l.company),datasets:[{label:'Jobs Cut',data:top10.map(l=>l.jobsCut),backgroundColor:C.yellow+'aa',borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1a1a2e44'}},y:{grid:{display:false}}}}});
+}).catch(err=>console.error('API error:',err));
 
 // === CHARTS ===
 const C={red:'#ef4444',yellow:'#f59e0b',blue:'#3b82f6',green:'#10b981',purple:'#8b5cf6',pink:'#ec4899'};
