@@ -1,14 +1,2262 @@
 [
-  {"company":"BT Group","sector":"Telecom","jobsCut":55000,"reason":"Operations automation, AI assistants","date":"2023-05-18","source":"https://www.bbc.com/news/business-65631168","sourceName":"BBC News","aiRelated":true},
-  {"company":"Amazon","sector":"Tech","jobsCut":27000,"reason":"Warehouse automation, Alexa AI","date":"2023-01-18","source":"https://www.reuters.com/technology/amazon-lay-off-over-17000-workers-2023-01-18/","sourceName":"Reuters","aiRelated":true},
-  {"company":"Meta","sector":"Tech","jobsCut":21000,"reason":"AI-driven efficiency restructuring","date":"2022-11-09","source":"https://www.wsj.com/articles/meta-is-preparing-to-notify-employees-of-large-scale-layoffs-this-week-11667767794","sourceName":"WSJ","aiRelated":true},
-  {"company":"UPS","sector":"Logistics","jobsCut":12000,"reason":"Route optimization, automated sorting","date":"2024-01-30","source":"https://www.cnbc.com/2024/01/30/ups-to-cut-12000-jobs.html","sourceName":"CNBC","aiRelated":true},
-  {"company":"Google","sector":"Tech","jobsCut":12000,"reason":"AI consolidation, Bard/Gemini pivot","date":"2023-01-20","source":"https://www.theverge.com/2023/1/20/23563706/google-lay-off-12000-workers","sourceName":"The Verge","aiRelated":true},
-  {"company":"Microsoft","sector":"Tech","jobsCut":10000,"reason":"Copilot integration, team restructuring","date":"2023-01-18","source":"https://www.bloomberg.com/news/articles/2023-01-18/microsoft-to-cut-10-000-jobs","sourceName":"Bloomberg","aiRelated":true},
-  {"company":"SAP","sector":"Tech","jobsCut":8000,"reason":"AI-focused restructuring","date":"2024-01-23","source":"https://www.reuters.com/technology/sap-restructure-8000-roles-ai-push-2024-01-23/","sourceName":"Reuters","aiRelated":true},
-  {"company":"IBM","sector":"Tech","jobsCut":7800,"reason":"Hiring freeze, AI replacing back office","date":"2023-05-01","source":"https://www.bloomberg.com/news/articles/2023-05-01/ibm-to-pause-hiring-for-roles-that-ai-could-do","sourceName":"Bloomberg","aiRelated":true},
-  {"company":"Klarna","sector":"Fintech","jobsCut":700,"reason":"AI chatbot replaced customer service","date":"2024-02-01","source":"https://www.ft.com/content/6a0e0787-4232-4cb5-bb39-4c5ec5bfa034","sourceName":"Financial Times","aiRelated":true},
-  {"company":"Dropbox","sector":"Tech","jobsCut":500,"reason":"AI features replacing manual work","date":"2023-04-27","source":"https://techcrunch.com/2023/04/27/dropbox-lays-off-500-employees/","sourceName":"TechCrunch","aiRelated":true},
-  {"company":"Chegg","sector":"Education","jobsCut":400,"reason":"ChatGPT competition, content AI","date":"2023-06-12","source":"https://techcrunch.com/2023/06/12/chegg-lays-off-4-of-workforce/","sourceName":"TechCrunch","aiRelated":true},
-  {"company":"Duolingo","sector":"Education","jobsCut":100,"reason":"AI replacing translators","date":"2024-01-08","source":"https://www.theverge.com/2024/1/8/24030568/duolingo-laid-off-contract-workers-ai","sourceName":"The Verge","aiRelated":true}
+  {
+    "company": "Jack Dorsey",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Jack Dorsey's Block cuts thousands of jobs as it embraces AI - BBC",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05U0d1UVZzMXpjUzNwamNJelcxcGtqSUR3dEswUnJwVnpHc3lFa0lNS1JEUjhvaVl6QXFCUWJHemFPRzY5MDlndHRfYnY5ZDZjN3I2WW91MFk3dw?oc=5",
+    "sourceName": "BBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Doomsday",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Doomsday scenario or reality? Mass layoffs fuel fear of AI Armageddon - USA Today",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSDg4ZTh1YjkxellyLU5tQ29HaEY4NGFtYmtvdXlUOXJSc01pTmtYVmVjUEVpQ0IybDZsWjIzYXNicFVvR1pnbEFGNnRWdTk0VEtqMDdlSi1UYTU3UEJuNGxyWV9zeTVjVTUzOEdJVGpMZzJtRlNBaUFZMnR6U09HeUx3?oc=5",
+    "sourceName": "USA Today",
+    "aiRelated": true
+  },
+  {
+    "company": "Viral Layoff",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Viral Layoff List Links AI To Mass US Job Cuts After Jack Dorsey Post - NDTV",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUWRxczIyR1E5NExSanpDdE5XZGstVzB5Y1h4bXFhUFczY2F6VlYyQThVbEtQdVR0VXdYX0hxTEVFUE9OQmROWVB6eWRxMjY3VlRZUU1DMWJZMGtUZnZlU1RPZDY4NGpORUFKcDFwZ1VVRXVmRVYyTE5yTVIydkxpYXNyTFJ3dlROdXBoenJHX1luZWdEcFZuS9IBoAFBVV95cUxQSS1yVE9fcVNvUHktRTJiMmlmenVXY2EzTDBxNUVoeFJFQ3JWRWw0cXBPUDBjbmhSRm94WFNKTzVQQ1M3aGNhcnpCN3lmcTdDNGRjWk1CWmlqcVA2T0pxa29MYTdOMlhtNzBZb1FIdTZuQjhmRWd4ZGZvMjN3SVRPNFhBZlZfcVhubGtWMTdqcDgyblQwX2dtS1MwRy1jenFJ?oc=5",
+    "sourceName": "NDTV",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "I'm a data analyst who survived 3 rounds of layoffs at Block. I saw how AI was automating my work — it cost me my job. - Business Insider",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMnJpQW9sVTh0aDNST3VnQzZzTnJSWU8wQXhNVEtJQWgyclJyMmJWSnJ4bG00aGdPUUp1X0tQZ1NyOFY2STRTUzAwR1d1TE5oTFFOOTNvdTJDMmNPcXlvZXhjTGVNdjFCVmllV0wxQXV6bkd4aUNIVVVuVXplMk5PSWdLVE9KTzJp?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Is AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is AI Going to Replace Your Job in 2026? Morningstar Report Reveals - Jagran Josh",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQT0t6akVvX3lUQzlzS09VOVV3dVZZM2RSWVQ5YUtPUzJMNEhJM0V0Zk4zOVd2cGRJM3MzVVJmQk5LMUpUckxVYURHTXd3UEZMdFdXMDREc3MwWmFKalNRUnZWak1KSkZscTd1bG1YcHFJUjhINGNsNUxjSVZGYzYzZmgyQmpYV1dmQUMxUndCUDlyNl9ka09EYzY4WVhoVEhuMGs3bGV4LXhjNjA?oc=5",
+    "sourceName": "Jagran Josh",
+    "aiRelated": true
+  },
+  {
+    "company": "Are Jack",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Are Jack Dorsey's aggressive job cuts the start of an AI jobs apocalypse? Economists weigh in - CNBC",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVlZRSE5kbUI0MldEV2NFUExSN2U1RzJRVFNyTzlkNVJDOE5FLVBnd3B4N0IxTHBDNndteUIwUGRjcTNDUWN3eWQyQXBhVUVWRFVHSENkQjg5ZzYtSjhsU1pOOWwxUGR2M3FXV3IyN2g0TnFyejc2M3RiOXpLaWwyTXd0bFBoaHhjQ1RtQnVJRE9QV2EzWjN3S2cxNnNnNnRXcHZBWTRhMzlrWXp5ejcxZFRqaGs5b1p2V3fSAb8BQVVfeXFMT0lMaGxTT0dWN3VwZkJNdGRaN1JOeXJHUFNHWFlYNkk4bVBGQ2pPYkh6RjNKc1Vtcmo4ZGlLZkUtc3BwMW1SLXZQT0oya2pmZXE3dlNNSWNRLWU1aWEzMmkzOG5qb2JUY1UtMmxydWhQSUJrQmNlOVRUVXVYclJib1pwMVp4Z2VBTzVENmJhdDdfQnoyS0NEZXpsWUZCNEN6WlRpc2U4ajJvU1hJQ0dRTm5wTnFDMFhleFpoUTM1WG8?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Software",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Software stocks fall as Block’s big job cuts stoke further AI fears - MarketWatch",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiswNBVV95cUxNUlVLZUJoSEVMZXNsdzJsTldhYU5iUHVRT2swZVM3Q3hvOFlzSDJfNDdnRmNYYVZwUm4xUVpHdkdtZW44MDRJRUdmbkVkTXRDREd1MUttSVBIb25DOHpMcG11eE05YkxRNlF6dnY1bEZJdUh1eGdubldSUW1wVkhVTFV1Y0NtOHhjOEhqOXRSVWRWcThFeHR4eVhXOV9nQnZSOFBsajREd1MteE0zUWV0endlbW9TMWx2U3gycUMxRUJic05VVkFtRFJSbFJXR0w1b1h5NXRVRUhZOHpiQ3N0VXFBaGhFYnhiYlNwZWxHTUVnd2JxR0s3UC1MeTlWd0dZa2U5ejMycGU1VDZWMzE2Q2RvYnlwT19tY0YzLWJKYTlMMUROVjVyY3MwOHNWWVFvbDFpakZkb1RpTWpwdFhOQnNJSm5GSXh0d0lZRlcxMHQzcHFLSlluVXg2TmJQTHc4dXNGWk9tdGpqTkN0QlVRTFBkaWNKSDdSTkRUUHliV2ZmRGFacXVXdlZDakRfcUhNcF9HNWVuR1ltZHE3VUx6Y3o3d1hJMkFGWXJfb0FTRkxUYW8?oc=5",
+    "sourceName": "MarketWatch",
+    "aiRelated": true
+  },
+  {
+    "company": "Block",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Block shares surge as Jack Dorsey announces AI-driven layoffs of 4,000 workers - Scripps News",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRGlOckdGLVd4MTlJbTY2eDJoLUpRNUo5X3A1d3lfb0NKQ3BudUM5MFN4cktCN0FNX1NBN09xY21UeThxT3hkWWFsSHhhY1dZMmdHaTdPRTctaWR5NGkzX05vMmZtUUxiQmYwbFlZMmhuV1dZbWhfSUg1LUV3X0ZCXzkwdU5xZzJiRzZZMzh3bnU0dFVsbHRsamwxbllMOFZuWmJoWEI5dmRHdzNhWElMRExwZFRSc3NPS2wtWXRTcFo?oc=5",
+    "sourceName": "Scripps News",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Job",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Job Cuts Drive 11% WiseTech, 23% Block Share Surge - GuruFocus",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZlJ5ZFJkWU9sZjhkSkVmNnhvS2F5c3hRMHlsZEwwRFA2MDQ4bXQwZm9fRVFOblI2b2FSYmpMWXZGUmhmaThXejdLWVpkajJnUHhNUVJXQmltYWRoU1FwYUdERzVWNUJEMkxZTE56RUlPMDFQTXd1bVNiazM3MjhqZTk0M3JzS1JYc18yblJPUWZobnM?oc=5",
+    "sourceName": "GuruFocus",
+    "aiRelated": true
+  },
+  {
+    "company": "Dorsey",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Dorsey's blunt AI warning sharpens debate over jobs and profits - Reuters",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNQnZmeDZtODJja2l4Qkp4X01CQ0ZEOHFhX2J3S2pscHNlTDl2bWphUUdlSl94dEhyZzZMbmF5U2VRTmdqNWJqUmY0Z2JsMW9Tc1k5b1VDNVRFV2d4TjNfU254RF9sNFdZQzZnOVJKUGU2cjgwYTFGUWFySVFJYVRWSHc5YVZidzh3ZVpRYXJoRWVXY3lUTGdQUzZNZjE2V001c2F2RGF3?oc=5",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Jobs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Jobs Apocalypse? Jack Dorsey’s Block Layoffs Spark Debate Over Artificial Intelligence Impact - techi.com",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMk9nZGJZY2J5Ynk3dzJ1U1VMdmpZX0JiTi15SnRtdHJFX2dpaXB5a2l3VFJGR3J5TmFmSzJoajhSeWVNMmxPQzJlYUJFVF96bUlPeGxaVUc2Tmc5ZnptcHJoeXEyS0plNjFCaG4xdXhHbHdTd3I0TzVoNHBNV0kzdXZjMl9PQQ?oc=5",
+    "sourceName": "techi.com",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Restructuring",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Restructuring Is Showing Up In Layoff Plans - Finimize",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQaDRHQkhWTVBqLUJkbTBUNFh1QUdtbGhWQ1A0SW5NTl9Jb2VuQVpVdVBISmI0djJyS3gzeHA1MW9KR2VTZXFzaXB6c1N0WEdUTlZlZ1dXTnVpV1dQTHhkUGJjczRsZi1DSjJrTXZreUJWSUZNUmJQRXNFRHJQcVV5QQ?oc=5",
+    "sourceName": "Finimize",
+    "aiRelated": true
+  },
+  {
+    "company": "After Slashing",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "After Slashing 4,000 Jobs at Block, Jack Dorsey Blames AI. Critics Are Lighting Him Up - inc.com",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVzF6NE1qbE54YzJpMGFBakZ4NDhKRm9GLUY5am00MWxpRHJxWnFWZDVCWklBVU1UdDZfc1BmTzF0cmNtUktRSFBkMHRObVQ0Z24yQkhkYjdCVmg1eVh3bDBic3lnY3drR04wbE5SVFpWV3lMckVMRGZPcktjb3ktcWJ6dVcyVFVOZjFvc291eXZKNlMtQWdBUWVSMnVWaUhETGYzc1JGTlFpdHUtTkphS2s4OS12c2VXZkdSaW9JQTNHT1JlcWc?oc=5",
+    "sourceName": "inc.com",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Gains",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Gains Can Be Unlocked Without Cutting Jobs, Morningstar Says - Bloomberg.com",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOTWNRcU9raC1XOEgzMkN6S2xaUkY5ZGpkLVhuZmhCc3RQd2x5RG43Uks3MURQQnBXUHpRb1A3WHJSenVDbEZYVjdlZVJsRHhIQm5ISGFXSXpqckF1Y3VIRjN0anMxRlc0YTQ3WU9sLXhiS1FpeTJBNGxfWExnNTR1Q1dPbGREV01qWjF1aFVtOEJid3ctY2tEMURMRzNoU1Y0dERBbFluNEpTZjJTeUV2eDU4RQ?oc=5",
+    "sourceName": "Bloomberg.com",
+    "aiRelated": true
+  },
+  {
+    "company": "Is",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is the AI job apocalypse here? Block’s workforce cut validates dystopian report - Investing.com",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObkxRYjlIN19iSVozZnU1VFlLU3FBZmYzcEd0VmVlcmlhcnAyUkwzbTE5RDlBMEwtREZnaEh6ZUl1VnZlbVRCV1BLWGhGNHF4QS1zV3E4TnVOdDJidVNXbHpfQ0M3RlhOcUR4amU1TmxfYll0RjRRazQtNEtxQkM2TmNOWldvblp1b1ZrWGY3N1dVbVdUU1ZLUXlMX1JuNkE3LUUtaXF1d2h2emk1S1g0VnI5SzlQVU9SRWVoQk1EVTVrX3V5WllpcA?oc=5",
+    "sourceName": "Investing.com",
+    "aiRelated": true
+  },
+  {
+    "company": "WiseTech",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "WiseTech called on to consult union on AI job cuts - AFR",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMDdMaWVvcTRtR3V2TFE5RV9QZUcwX0JqcjRrVWJ2bzVJVzUzT05jUXJ2TzBxUGhuYzZhWHZ6TWVBcy00Qmt3YWN6ejVMVnNUVDlodXZHVnRneUNSVkp5V1Zycmw4cDltR3pScnhwc2FKSTY3V29QN2dZaVlaQUhHR01PWDhSS2xMV0VOZHhaSkttUmMzVEo1WWdRNUxOWHhDck9rR3ZXeklOekg4djd3SjR3VQ?oc=5",
+    "sourceName": "AFR",
+    "aiRelated": true
+  },
+  {
+    "company": "Block CEO",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Block CEO Cuts 4,000 Jobs, Says AI Makes Smaller Teams More Effective - Fine Day 102.3",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOeVJ3VWlGdWpJNkNrTmNZS3ltOS1GOUVOSzY3RFByLVdyR2V4OHVuMDBuQnMwaXY1WHIwN3oyQW9qV3FLUmVyb3g2dGpfdWx4SE9US1hMejUwLXpzS25vc0JyYThPQzF4MXFLQVRqd0dpclFOZGE1UkhPcUp6Z1gzMHN2LWpxUWpjZ1J6Q055cllfMjhIMkI2Y1lJTDZLMEx1M1MwZVVLR1N5T3FJeGE3S3ZrSzVaTk1pV0VyN0tIblduc00?oc=5",
+    "sourceName": "Fine Day 102.3",
+    "aiRelated": true
+  },
+  {
+    "company": "Block Stock",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Block Stock Jumps After Plan to Cut 40% of Staff Amid AI Warning - Barron's",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMigANBVV95cUxQeXRMTUZjN193alZjTEEwMzJnV1pWdllJQkJGdmMyemIyRGd4Y0JvV195Z1l0b3JVWlB6Y0VMdnEteEdKRm9RZjNrV3QxYUZ5V2NPbVNla2xpVENDYXlGNG1kODU2dFZhamRscV9fNUdNSU9FRVlaMm90OVhtQmdDOFBMT0VFc3hMXzRjYjY5aWVtQWlyTU5vcW03Nk0zaENnbjBqM0Jkb2hMa0wyUTN2ODdCX3A5ZTRCZ29PVzEwWHBLSnp1UjdsTDJiQXZDZkEyM1MwNDd6RG5KRzBXUDBOcjhIYUNaaVdZazFIdmlhNkhESjVEc0lGUFZBajMwOHZyNUhXekR6eTVpVUxoWFAxM0ppanNqYnBzQmJwdUpsbjJvODR1V1ZlZ0o2aU1uWHZRMUstLUdsRVhEWm1NcHZsYXAwSzlhbHFNZmhsZTZFTl9hM3Mydm9sdEFjN3hfV1dkaGxsY2xTNGNrdFpycjNITjlxSUVXTVF5dnNkS2VpUWo?oc=5",
+    "sourceName": "Barron's",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI drives massive layoffs at Jack Dorseys Block; 4,000 jobs cut - Tribune India",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOM0x4YWNKUEFEbUpqMjlmSVl6NFZqblJHdVdqb2dvOC1GLUZpaDFHNEY2Ynp6LXhQeTM4NWwxYkE5QXFvdE51YVBrUkdxdUdQVE16dHh5QU9kU3F4aFMyLWU1REdYb3ZfamJhZ2ZnR3J4TGdPeDJrb0o1MzlHMGp2ZXlCUW9PNU5LNEppdkYyd1ZPeUhuYkpmNTcycUxwZFdjdE5TcdIBqAFBVV95cUxQcFFJMk5EZEJ6UTI2cGF3RmdtWXpiYTY3MEo0Tk13ZkQ2X1d5WlJVX1dCdmFSVllqZlpsQ2E0MUU3Y3FhX2NPMDFUZmlYcklPekpFQU1vSF9ESkkyYmNRZ3NUOHNOZkJQeEJkeERKc2J2TnluRjRoOV9POE1PRjNFVHVxVFFOalZ0MEI0UEExZ0NfV1djS21sbHczSndpdU1wMmxGZXN3MEI?oc=5",
+    "sourceName": "Tribune India",
+    "aiRelated": true
+  },
+  {
+    "company": "Credit",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Credit card stocks tumble as Block’s AI-driven job cuts rattle investors By Investing.com - Investing.com Nigeria",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPU2JjNDcxUW9CR1NLcjVpR2gxcUhycVN3R3VUbUVtOHJGS3o5YmJDb3pTOFpzTXFTc2tyTGxUNFMzejU2MTk1V25tUEZkMUpEcVJLMzBjRkhzX1NUbkxKeGZuNEpLMlJZSGhZSGFINkFYYXNrMmZYTUNaV1NhcHVzMTBKYWc0VUdvenYwY1ZVdWhFNHNjaVZBLTlLZjhqSmpnbDBYM240ZXJkQmdRdUtVMy0tQkxTbFVqZFgtZWtRVU5kMHg3dDg3dmZOZw?oc=5",
+    "sourceName": "Investing.com Nigeria",
+    "aiRelated": true
+  },
+  {
+    "company": "WPP",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "WPP flags job cuts amid AI shift | Vaishnaw calls for AI-ready curriculum overhaul - Storyboard18",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQd0xmUkhOWXJDRlJUWWhDTmN3QlFtdXJTWXl1WWpUdkdPSnMzTWo1MWhVWVlOY09HeDV1VWp1N2QyWFdsMENWb0Z1azR3V3A3SXQxeUVNSEo2RWlTV3ExZm5MVS1lcVJhaUFIVlUzUWpNb1hJOUR1M182Rkh1SFBjQ18xQzJTcU1rUWNibkxZXzlXTzJkQ0RDSV84am5faE0yeFA5cjdhWVM4QlBLODZVS0dQeHVYcUV4X2wwY1RfMldOY21LZzV1RWdtTWEzWXhMWnfSAdcBQVVfeXFMT0N2MFRGbzRxX2t0VjZWU0p3ajNadXlRLVNhUDJ2eDBfMkdrbWJ2b21uRGFDc3V1NWxUNFBlQU0yMEE1Ml8wMXlPXzM2YnNPU3pYNDJaNWU0Nks4dVlzenpUWkxYUG8tX0t0SFduWVNSbXdUZHVHZ0owZjktQjlUT1hrRnBqczE0WjZVM3gtM2t1WDNVV0ZWRHRHRlR5SEswOGo2ZktpRUJhb2NOTDBpTDR2Z2U5NnFQNlEycF9iQlFVR2Z5ejZiTTV1bVpjcGU2X3NqV292Y28?oc=5",
+    "sourceName": "Storyboard18",
+    "aiRelated": true
+  },
+  {
+    "company": "Block Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Block Layoffs 2026: Block to Cut 4,000+ Jobs as AI Reshapes Workforce, Jack Dorsey Says - Storyboard18",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQalExcEY2SUlqWkQtN0tJOTJRaTd5WGllV2RCeEUxUnFSc3l5WGtQYnBrdHFlaFhuNm1VX242MW5zRV9RS0tsZFBwWWZlY01KcUZiejVwaWV4NFd2OVBnQVl5RVlMNzZKbkd2SFRlV2JmeVZweTVXdGdlWk1PcVZQVi1jZFJ0dUpyc0thdjlFOHFMQ1NDTFZQTXpxcTNGU19YWjdhZ0ZvZlVMOXd1MUw0TUFYNV9Sd9IBuwFBVV95cUxNU3JTaGI2bVJ5TFZnWmNhM2ZzaTRlYmFfcTdZcWZHSGxzY2RlTVU0S0RlUi1mSjlUeFRwaWZXMWxmOG4zdy1IeV91QUZvdEE3Mk04TmtyTERsa0p6clM1c0dnam1Ud3NNS0EyV0lUS0VPbXBYOU50a0R2MFdvQnk1US0xMlo4NXB5a1huczZlNVp5dlVqZ0JueWg2Mnp2TTlTM2t1alZqUWFZWVloZ3VGenNpTmtuamhxdjJn?oc=5",
+    "sourceName": "Storyboard18",
+    "aiRelated": true
+  },
+  {
+    "company": "Twitter",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Twitter founder cuts 4,000 jobs at tech firm in AI overhaul - GB News",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9leEN0LS01cG5ncDlFR0pzUjZINC03VTNxNDNSbjRhenpHNlRMYlVsa2lpY0ZVTC1qQVVEeVJ4eTh2TVdJNkZtQmpxMDhhN3d2T2hWZXVmLXFkMTRiSEtrT0dVVU1vY1o4Q29NS0E0TzJHLXdX?oc=5",
+    "sourceName": "GB News",
+    "aiRelated": true
+  },
+  {
+    "company": "Companies",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Companies cutting jobs as investments shift toward AI - CNA",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPR2lqclY5VXhIVXAtOTZibHNmeU5CZGd1S3NReTNORk5VWmNSOW8ySmZZVVNkSXRUZ1dLcjY4bUwxbnBVTXhUd19TWmk2bHdWZVZIeGh6TWQxRW9HU0tianJEd05yUU01WjVwRWdrSG56Yk4zY20tVkVDMkZPVzRQTEFNRkdUeElpTmlYLW81ZU1FQU9XN1RNanBuT0R1d0Z6?oc=5",
+    "sourceName": "CNA",
+    "aiRelated": true
+  },
+  {
+    "company": "Rising Impact",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Rising Impact Of AI: Block’s Major Layoff, 4,000 Jobs Cut Amid Structural Shift - The420.in",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1uRC1MaDFaUmUzbTFEdll5NF9CVnJSME4wU2FsMEV5cFcwaTZzREZZWEo4RjVfOXFlRVBKTW9rM1liczFva01TUEdNU2hobE5McUlFTDFTSV9VNVNJNjZzNjAxSW5lMDlDQVdRT2pTbUZTcWs?oc=5",
+    "sourceName": "The420.in",
+    "aiRelated": true
+  },
+  {
+    "company": "The",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The new corporate magic trick: sacking staff for AI - The Australian",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNNUtTUDBGVzBlM3lTMnRJMlhHUWcxTmlCZF9XdVVONl9nRktQNU5UQ3hxS3lxbWMzZTlvc1ZMeWZQYkt0Q0dnMmtSYVVKcHFTOVRtcVN6MkUxRkEtX2czOFp4RExnNWJpcnF4cHVwODJZLWtHYTlPT0RoUUtmTTczUG9jblVfTmlncFMwbWM1djI4RGlrdHg2enZFRlhqX0FvVS01S3I2NC1BY0kyWFhtQXJhRXNndkNUY0Y5R2ZpaEhIUDFQUmFyZW9EanM0OU1Ub3pMYUtZaWVZMlUtSE5uQ0lya1lrZ2NxOTI3MHNiTlNNVHhndmEzLWlpMFYxMEHSAYQCQVVfeXFMTUl3WHRfOWwxdUFEdlk2eUhRZTdpaVVDTF9UZUREZWZCN0UwakFKanVUUFFHR0llNFR2dmhzWGpZWW5RZzZqek1YN09hakE1ZE1EaU4tVF8yQmFLbTVJN0JjVnRuTU51OXVFaXNTN0NnVUY2U0w0Ti1FbVI5eVotVWthU2tkSmpYdE9kb2loS1ZCMDNvNU4tRmlQbmhLYW1Yb0tTSEl0VXp0cUtIX2JfT05oNjBPZVJzUlhSR0xKVF9DNTRUbFI2VzB3WFJzUmhWVmVwNFhfLU1oUWg0MUZDTGo0NGhkQmZkd0VYWW1RVU5XZEIyblUzMDlJZ2c4eFUyODR1Z1M?oc=5",
+    "sourceName": "The Australian",
+    "aiRelated": true
+  },
+  {
+    "company": "US Job",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "US Job Cuts Surge to Highest Level Since Pandemic as AI Reshapes the Workforce - Blockonomi",
+    "date": "2026-02-27",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxORURNMF80eFJsamgwbEtDYWtxRGkzc0lLamUyMU5GbllWMXNDVlhTSTNHNDBHbWp3aU5EeFRfOHpXSEVmWjhlSmdNX1BJLWo5TnZyRkk3eUlXOWxwYnktN0dUX20xVlBTdWRWSlNjQThuVEc4WVJYUWpzODVtb0h0X21TXy1kS3dGVnRzYzBWMWliNTBVb0lsM3dNVzVLbFh6RDNpcQ?oc=5",
+    "sourceName": "Blockonomi",
+    "aiRelated": true
+  },
+  {
+    "company": "Meta",
+    "sector": "Tech",
+    "jobsCut": 0,
+    "reason": "Landed Meta and Coinbase offers after spending nearly a year getting rejected",
+    "date": "2026-02-27",
+    "source": "https://reddit.com/r/cscareerquestions/comments/1rg03si/landed_meta_and_coinbase_offers_after_spending/",
+    "sourceName": "Reddit r/cscareerquestions",
+    "aiRelated": true
+  },
+  {
+    "company": "Jack Dorsey",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Jack Dorsey’s Block to cut nearly half its workforce in AI overhaul, shares surge - Reuters",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZ0FPMTl2MF9iVnFXcWgwNkQ5eTVmcnl0TG1KMFJLcDJnTFlNd0s3SHJUOGJHMksydTNjbDM4VEpuelA0VU1fN0J4dDI2SHR3UXpMNG1fT1Z4SDNxYy1XdGNzTklWeDkzYTBSd2ZyMlUxWUZZa2dzQldNN3g2WHhMOW91b0RnZDlRV3YyQXdHSVdFLXAxUkxtNThDam42cEJfbW1yM1gyV0hGblRZ?oc=5",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "Block",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Block to cut more than 4,000 jobs amid AI disruption of the workplace - Los Angeles Times - Los Angeles Times",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZ2RtNFJYV182SEFyZlYwc3lGejdLVGVjWHRpR05uWkh3RWI2TVFNRlpZRF95a19SS3VERVpvSl9GSWVEQktEWkdIa3MxSWV2N0t6X2tpV2s4aVpidFBUVnlFSTBzX2MzOUdsb1gxSF83Zzl4TmhCbzFSMXYwN3ByTm9Wb3lBY0RnekxVQUV5TmR6S1p0aEZfOHhpbThXQ3dKUVV3ajVKLXVfZDRBcHFSTHM0QVY2VGpvS2lobUE2VWNRbWhiTTFPU0dlUTY?oc=5",
+    "sourceName": "Los Angeles Times",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI job cuts raise unemployment alarms - MSN",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdThfTjFGLWZoWlhxT2NHYkIwbVFiNFY3YlNzaUtHSFJxYWg3Q2c5dEFVd0F5MS1BeVkzNUpkd04wY1ZSTjlEMDQ1N3pSd1NPZy1hZTJNaUVRYVVidms5a053ZFR5ZlRDc1puQnZBX3RHUFc2WXRVUk1zZlJTYkUwTnY2Y3RGUVhCeFpJLXVnT1YzeXRzTzR1RU9aRkhWY2oyOUNFamYxZG1RV1VJb0NLN1BRSDBoNTZ3ME9yMER0ci1KbG9Lck51QlNic0VGU0FiUHQ5Yjdn?oc=5",
+    "sourceName": "MSN",
+    "aiRelated": true
+  },
+  {
+    "company": "Lagarde Vows",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Lagarde Vows ‘Extremely Attentive’ ECB on AI-Driven Job Cuts - Bloomberg.com",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNExOSDhUVUN2TnFzZFNzYnluTkRzRE5wU0FJUnB4VkNWWW1reGR1bDhEZUdBUnQ0RnR4M1NkcGM2cDY5WHFtWnM0LXMxYTdsVHYzZ3hFOExFQWNZeUZqNDY2WFhXLVh1LTZBT2t6WXZ0UjI3bTVkVjExX2luM2Y0dU9zZFFlbE12R3pPZ1YxRHBmeFk5RkRYdFZtMUxxVGNySTFiN3hac3JybW9uMEE?oc=5",
+    "sourceName": "Bloomberg.com",
+    "aiRelated": true
+  },
+  {
+    "company": "EBay",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "EBay to cut 800 jobs, joining other tech names in announcing layoffs as AI reshapes workforces - MarketWatch",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxPamNMX2h6QXBzdFJwSklUUWotWEx6am1DNEt4ZmVsejJCRFFEdW42eVNWdzFxQ2Qxa0VoMHpLcHlNdWJTOVJBN3kyaEFFVkwtZUlwSllzZzBSY0Z5QWpBV2Y3ZC1Xenc3NERKYUFSeEt6VEF2WU5IVDRXc1MzRmNXSl9WT2JNdTVUZEZTTGZScnRQajVRT3RoNWRaeVR2S2NMVGR3UDZ3cm1vVWExeW5RQ0tpZlBXWU5JQ1dVd0l6X09kRVB3amt4YlhWRDEwcGpvRFJWUG4zR2NmYlZxeHZGeFh4UmxhdEdZU3Y5cXZUa0xrNDdNaUcxcTVNcW50Z1JUaVNiUnltdEd5MGFmYzg1NFJJX3dtdHZFYTRRR0tsWVd0a3BFT1N2MXVfOHQwa2stazg1QkdIeF9rOV9xS254WnI5V2VQbjQtYWxFRWRXT3ZwRURFZ0xrSjAzMU0xdU1NS2UzaXQ5eEFldWhfTmM5YWt4SjBVbHI4UFJvdk9WcjYwaDF3R3FESFpERGpwY0gxYlBWNzN2ZTJRbTVPeGV6X2dHMVVSSlVZNC0wNGw2UHFlUWJHN3JsbmZiYUJBUnhwa0dLdnZOOWxkbk95YjJyRDNXZi1fM2M?oc=5",
+    "sourceName": "MarketWatch",
+    "aiRelated": true
+  },
+  {
+    "company": "WPP",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "WPP to sell assets and cut jobs in radical shake-up to counter AI threat - The Guardian",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFExckxqNzBrektCRUlHMVRQQUJKekxzUXNLWHNTX29odHRvVE1rWnFJSkNJQUpNX1JSMjBSYU1HZHdTclZpZHV5Q1VHQWxtbnIzZm9ZdjNtSmlvS3cwQ3ExZGxMUUM3Yi01ZHlwdUtUV3lsV3ZKU1VpTk85cmZHeUFpcFctTnJCN3k5M1RlalRTZVNOVGlIbEFKVGRLRzNMRWQw?oc=5",
+    "sourceName": "The Guardian",
+    "aiRelated": true
+  },
+  {
+    "company": "CEO Jack",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "CEO Jack Dorsey issues a dire warning about AI's impact as he cuts Block by almost half - Business Insider",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOakR6NUxFN1lOOUM5eVVCc2tHWm4tY2hPMmZGUmtQcGNmMjhkRlFvem5kMXJUc283dHh1M3lxZ2w0bVFFNWQyMXgzM1NuSDB5b2ZJT0xQUUlER08wWmpHNUpndzBxb1U1SmVHY29tYVhmaHFHMW1qR1NqaVJJTjJsZ2N4akRKaXc1SEE3cVktdTRUbnZYRDFHNkVXOEE?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Nvidia Fails",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Nvidia Fails to Impress Investors Amidst Ocado's Drastic AI Job Cuts - streamlinefeed.co.ke",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMjFxenYtRXJldUxmYjlWZU40Y3R2WEZaVHFNUUJhTjlHbDhUM0tPNjQyRU5oelNTSmZJb1BSOXlMak5FSmY0TGJCUTBZSUdhTXl0OGJjMVFfMW1aS3luM0hvOFBMcTVrQnFWZTZoTFFTN1JrWjRLeFE2OElmZkNYWGItVmNzaE9fUTZQQVJyOTlNNzFEWng3OVpsaGJDYzhZQmc3Vw?oc=5",
+    "sourceName": "streamlinefeed.co.ke",
+    "aiRelated": true
+  },
+  {
+    "company": "Australia",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Australia union seeks urgent talks with WiseTech over AI‑driven job cuts - MSN",
+    "date": "2026-02-26",
+    "source": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOeWkwNkwwSDQ5T1k2T2RQQnZLRzJkdVh5RndlSEFURDdwaVJHM1Z3TksyQkh1M3EySGY4Z0dxcENiV280OEVzYzRBMVdyTzhyTDRvZ2w3bGVvdTRuY2JCcEd2aU42SFl6Z2pBbXF6ZUVnQ0tSS0tUNlItQmhSZU5WcDE2T3NTS3JNZ0RMUG1HMXlHV1N1TkF5RWpNZUxfZnE2eW85NmgxLWlHT2JPd1JIWE1vZHpqVDBUQVE4NFVodlo4TlcwVFlPWGwxbEdqN2lWb0FaLUFsS2RTOVRyeVE5NEhUdGZQSXM?oc=5",
+    "sourceName": "MSN",
+    "aiRelated": true
+  },
+  {
+    "company": "Meta",
+    "sector": "Tech",
+    "jobsCut": 0,
+    "reason": "Manager generated and gave AI Performance Feedback, and fired me!",
+    "date": "2026-02-26",
+    "source": "https://reddit.com/r/Layoffs/comments/1rezyap/manager_generated_and_gave_ai_performance/",
+    "sourceName": "Reddit r/layoffs",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Tech",
+    "jobsCut": 0,
+    "reason": "For people already employed, has the threat of AI change your future financial outlook?",
+    "date": "2026-02-26",
+    "source": "https://reddit.com/r/cscareerquestions/comments/1rfp7o3/for_people_already_employed_has_the_threat_of_ai/",
+    "sourceName": "Reddit r/cscareerquestions",
+    "aiRelated": true
+  },
+  {
+    "company": "google",
+    "sector": "Tech",
+    "jobsCut": 0,
+    "reason": "Need Advice - Struggling after mass layoff and feeling lost in my career",
+    "date": "2026-02-26",
+    "source": "https://reddit.com/r/cscareerquestions/comments/1rfph6p/need_advice_struggling_after_mass_layoff_and/",
+    "sourceName": "Reddit r/cscareerquestions",
+    "aiRelated": true
+  },
+  {
+    "company": "Oracle",
+    "sector": "Tech",
+    "jobsCut": 0,
+    "reason": "Industry veterans does the current AI hype resemble dot cum bubble and 2008 great recession (causes by real estate bubble )?",
+    "date": "2026-02-26",
+    "source": "https://reddit.com/r/cscareerquestions/comments/1rfcj38/industry_veterans_does_the_current_ai_hype/",
+    "sourceName": "Reddit r/cscareerquestions",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "7 companies that have signaled they are replacing human employees with AI - Business Insider",
+    "date": "2026-02-25",
+    "source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOc2ROSlNIeUl1cFRzVTJGUzk3TjFkU2RDQktwdXQxemhxNDFPRVcxd1Z1S21uY00wN1RvSWdSOFYxZHhSX3FObU13bFMwSXZEWnVMTHFMUzNObnlRNTF5WWRDcWFUOG9XSjNiQjUzMkxDc2R0ZDJNQUI0dzZTcDRvSlY2TnljdE5rTU45LWRkaEwyU1VDbzFaWk42N093Ri1MMl9CRG5feVBRcDBhbHc?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Half",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Half of firms that cut customer service staff due to AI will rehire by 2027 - iTnews Asia",
+    "date": "2026-02-25",
+    "source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQVotQjZPZ2w1aUxaVEsyb0hVQ0xWalhPVWwtMDJmN0N4M2xraDduWGQ2TnFpa1ZxdUhNTUREQVJleEJVbzdSTjFXanFuWXpmNkFxWFozTUtpZ1ZGVHRUaDB5VlpwdC1ROUE1SmpRM1IybjVMOWNCRWlFa0s4SERld0d1Tkt0cWszdzJsWG02d0RUMnNCVHBKUm1Pc1pBRjl1X29tWlFaU1RKRThJUHhQQw?oc=5",
+    "sourceName": "iTnews Asia",
+    "aiRelated": true
+  },
+  {
+    "company": "Companies",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Companies cutting jobs as investments shift toward AI - Reuters",
+    "date": "2026-02-25",
+    "source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUWdfaHBhbE4tUnNaZHEzMjRSN0xtRzhVSU16b1NZY0FTMlF3YnNiNk82MjNfYVdfQ2tjZHotWmMyMXgtV2hIMFdSdktyZy14UExzaWY2bUhYR0ExUmZ4NzhCU2NNTjBVZi1XdHJmN0I5cnNjdWJLZFk0ZmlxY2Q3bGhIYWsyY3RHRDVyMng0ZjJIcWFBc25aVGdKaG90bzNCTXhkYTBzbW83c0lvS0E?oc=5",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "WiseTech",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "WiseTech to axe a third of global workforce in two‑year AI pivot - Reuters",
+    "date": "2026-02-25",
+    "source": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSnRYcEh6Sklmcnl1YW5IdGxINmc0UTZhTXNyNFZZaXVqRGVmVjduN2ZQZUpQcDdrcXhnNDZpNG1QaFl6MnNna0RkMUhTajRscXRxTTBDa3RSOG9DLThqVk4yd2MxaU9CVjQ2bXl1TjBoOGIyaFdodWVCSGtQY21RdzNueWhtQWFQUTU5TEM5YVEyV2NZZUJkZVVXTjlYUlJyamZpa2wwQlZsam1FV3RubWpKdEMtdkFTYjJsTkFkcw?oc=5",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "Australia",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Australia’s WiseTech to cut 2,000 jobs as AI renders manual coding obsolete - Computerworld",
+    "date": "2026-02-25",
+    "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTWZ2ejdjd3F1enpqYUo4REFXWW1NZDRCNW5MRFdiOEF0Yk5XX0I3eFJTWTRjR1ozakVJbWZvQXItaEdETFBJZWZqYkF3YUpMbEJNS1NpU0YtLVFWYkpwbXA0OVQ3RUdYQ2JEUXVMUDNZU3JQT2VEOGdwZGZHTUNPaDI0MnNXSDdkYzE2czhYRGRoaGl4eTBqQllzdHFZclU2SmY5MTZnOE9XZDNjZ2RpVFU0ZmViSWhIUTJPSTFpbGkzZw?oc=5",
+    "sourceName": "Computerworld",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI job losses hit Australia hard as software giant WiseTech axes 2000 jobs - The Age",
+    "date": "2026-02-25",
+    "source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMXpnX095N21BenJtX2FrUU81cG9iY3NxNEZES0wydVlBRHhydXc2SVM0ek01NW05QzZxSF8wNlZQc3JkRTZnSFpXdVloX1pJb0lQSENVYnVZb21ibWh3T1JKb0FDLUwyMTQ5OUlOV05xVW9qTklBZTR5MFVYdmJPWDFvSWxMSEFyN0JzbFZGUFUwZTFOZXRyVVpsVW4?oc=5",
+    "sourceName": "The Age",
+    "aiRelated": true
+  },
+  {
+    "company": "Inflation",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Inflation above forecasts; WiseTech announces massive job cuts; AI threatens office property - AFR",
+    "date": "2026-02-25",
+    "source": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRTNiOC1nRXJJenZMVWpYVW1wLWpaTkozbUo1ZkYwanVYR0x0OVFSMGRiMEhrMFY4VnA2Y2piMkxRTEpWQVBWUE1hQVdZS0owUmQ0em85T3FESV92dFlCdWxqTXZFRjU1SC1vTEo4ZkZzNGxZRTdOTUFIMHBSOFo2cWszNVZoWlhJc1NpN2dDNVc4Z0JtUGFQVDBHSHlWcmpMYXg1Ukxxb1JOT0N3am1iZlVmSHpSLVpCUzc2dllBN29WMkUxREhvX3ljajdsNTByXzlydU9iMl9XUERKZE5GY3B0bw?oc=5",
+    "sourceName": "AFR",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI isn’t replacing that many jobs — yet - Customer Experience Dive",
+    "date": "2026-02-24",
+    "source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNOElZRXp6REhZcWgtX0IyLU1ZMDZtU3BScFdQb253WURZc2RXc2gzWUdsT05zelZkS21zdzM5a00tcHFpdHlMU0hJLWNQTjJZcXR1Y25GZnZ0cjFKUENiODNfVkpVRjNUSDF3MTM2Q2JDQjZYYnB4NnJuSjlzWlhqRGRLQ19sOGtQbkI4amNoeWVjUQ?oc=5",
+    "sourceName": "Customer Experience Dive",
+    "aiRelated": true
+  },
+  {
+    "company": "Top",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Top 20 Predictions from Experts on AI Job Loss - AIMultiple",
+    "date": "2026-02-24",
+    "source": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE42RGJRLUcxSmdSXzFWVGV3RjhMLWdKblpXUk9KbmtiS2NTRHRCb09OU1lQVGxNZ3pzU1ZSaVBKVUE4V0JLbGRoeUN2a2p5R25RNldVNHFKdw?oc=5",
+    "sourceName": "AIMultiple",
+    "aiRelated": true
+  },
+  {
+    "company": "OpenAI CEO",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "OpenAI CEO: AI not to blame for layoffs, blasts ‘insane’ data centre water concerns - capacityglobal.com",
+    "date": "2026-02-23",
+    "source": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1xV0Q3TDFJQll1SEdvRUktVEhuX3UwM25pWGNPX3Q0RjVaM1VFOHpHOUhVT3BRZjA1SHNaY1ZXXzFJUk9SVDQ0UmdUSjh3VE93enNuc2tpdVUwMmdWa3BSZXlGZVh4VlhVYUtrdWIzX3FPTG5xd01N?oc=5",
+    "sourceName": "capacityglobal.com",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Job",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Job Loss Statistics 2026: Who's Losing, Who’s Hiring, etc. - SQ Magazine",
+    "date": "2026-02-23",
+    "source": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBVZGtlaml6c2JCWldzYlJWcnZTY1hQMVI4eXZ6SnQ5Z3lLaU5QUDE2VkU0ZEdRWElzX0MzX1g3T21NTFBTMHZvcXBPNjRVeTlpOXQ4ZnMzVzFnNUhu?oc=5",
+    "sourceName": "SQ Magazine",
+    "aiRelated": true
+  },
+  {
+    "company": "Will",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Will artificial intelligence make human workers obsolete? - Johns Hopkins University",
+    "date": "2026-02-23",
+    "source": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1lQ2NGa241b05xeWRhTTR5VEI4M1VxX0hTRy1KUTVLMmZwTVpHcWdIVTdBTHkwMU1YYld6anV4LURCcWN4Wmw0LW9KUnYtUW84ejdWd2UwY1JiN054bzNaVERuU3N5a2pQbldkbE1nWUw1czc0SVE?oc=5",
+    "sourceName": "Johns Hopkins University",
+    "aiRelated": true
+  },
+  {
+    "company": "Sam Altman",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Sam Altman just said what everyone is thinking about AI layoffs - ITPro",
+    "date": "2026-02-20",
+    "source": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMVhaNFU3M1ZtRFFGa2RUVkdQTXVWTF9QU3VDcU9FeU16c21KYjFVZ3lBX1h1S29CY29UbXNRQXQtVm8waEtsSE54WWlBMm5RMl9tQU5xanJIRHJXTDFlcjlqcjBMcm1vUExUV0R6ZWEwTVRBLS11eW5tdkZsWEw3NnNaN0RTN3J5QmdSTWJna3RtTHc?oc=5",
+    "sourceName": "ITPro",
+    "aiRelated": true
+  },
+  {
+    "company": "Brian Moynihan",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Brian Moynihan on AI job cuts: Look at impact of computers in the 1960s - Fortune",
+    "date": "2026-02-16",
+    "source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQS1hqTm42eEpVSTVPT01DMFl6QnppQm8tQjlzU2w4ckVKQUFib21falBOZzdIQUc1STVnckJnNF9ZZ0FGZ0MtZXNCb09qZHlmcHprMV9ucENERjdWd2JwVEU4c0tENUR3ZnF6MWM2M0kwOEFPRzBLT2Vkd3N2dkQ2MkJXZw?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "Fear Grows",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Fear Grows That AI Is Permanently Eliminating Jobs - Futurism",
+    "date": "2026-02-11",
+    "source": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1BLWJsM1dWSjg1MHR1cUpzekFCOExpeHNBWWdKSHBkN0FZRDVpODg0T3RMWWkta3FKbi1JYnF0dmJGelViSkk2QTk4UklDMG5pdnBramZVSENYV2VEeWpmX1BsV2hxRFdKdURld0EyeXluMHJBdWNrXzB3?oc=5",
+    "sourceName": "Futurism",
+    "aiRelated": true
+  },
+  {
+    "company": "US",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "US companies accused of ‘AI washing’ in citing artificial intelligence for job losses - The Guardian",
+    "date": "2026-02-09",
+    "source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMV9UVnJkZS02RW0zOFBsTnBsRDBqWGN1ZmstTF9qSFhiZTRCVFJHQnE4ejZoa0xtSXhfc0JmczdBNnZuY0k4TFhMLWsxQ0lCTV9OaHNiNnExVUQ5YlFJYm1JaFlhSWRGSjc0Q29TdGdGdDJFb1FNYTVhaEhiY2hCdTA4T3lGOTNvVWU0QVg0R1pMd1lYSW1Dag?oc=5",
+    "sourceName": "The Guardian",
+    "aiRelated": true
+  },
+  {
+    "company": "One",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "One question is haunting laid-off Big Tech workers: Did AI just cost me my job? - Business Insider",
+    "date": "2026-02-07",
+    "source": "https://news.google.com/rss/articles/CBMiugFBVV95cUxORy1yOGtOQmU1MllMOGNJcVR0dnBaWVZ4QWNqVHc1ZTlrUXA4Ni1UVzdraVJ3OUhJMXo4NzhMMXBrc25BZEJCSXAtMVcxU0d0R3pUR3dhU3VWWVdCS2xYSzcwNmVTTVgwcVZuUmZscnlUVGRfSE9iXzUwOVFJaGNMNGNiblJZNlN0MWdySmNDaVZZTXQ0Z0lhSWpMTTVqenRhZ3hXT0RCWGZZYU1zT1JxX0RpbVY2bkNBN2c?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Artificial Intelligence",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Artificial Intelligence, Job Loss, and the Psychiatric Significance of Work - Psychiatric Times",
+    "date": "2026-02-06",
+    "source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQ1g1VUoyZEdibF9vQVo0dUQyVktvX2swT0pXOVJpcGdPeG1QSjR6ejc4VVlEOFE5WXloeXF1WUhWMUpIN1lQQnladnpobExNR2hLY2N1TVpLd2ZFU25IRDhRSmhCWVpnWW94c2Z3LWlsT0lBc3VxU1RHNnBqbmtzazJsYlJjSWlINVp0QkVoY0g0eV9IazBnRTQzcElyMFhjRnNEbUZibVRKdnQ2b1NaXw?oc=5",
+    "sourceName": "Psychiatric Times",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon, UPS and Other Major Companies Are Making Big Job Cuts. Is AI To Blame? - Investopedia",
+    "date": "2026-02-04",
+    "source": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMzV1MHRXOGc5MWlfbHRLb1FaM2dYV25GZnlQQXo0TFkzYTdUdGhjUU1abGFIS0c1OFRIOXAzVkx5R3ZKcnVtNUdValpfekowVVczRGV1OHZ1S3hqdUNtM3l1Qkd1MExTMnNIN2pueFZTbnNrVHFNMkpjbkNsTUlra01xTVBrQzZVS3pWVm4xUVY2T2taMHhBVExVMThHSXdjVkYyNTdDUDR5cUJNNUtGeXFRY19Ea2sx?oc=5",
+    "sourceName": "Investopedia",
+    "aiRelated": true
+  },
+  {
+    "company": "More",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "More companies are pointing to AI as they lay off employees - CBS News",
+    "date": "2026-02-03",
+    "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZzhqZXd1Nlc3WE9IUFUwQTd4cUtKcU5FVlJJTmV5ajdTYjBGaTJpcTdHMU1NaW5qN1p5VFVqSTB4Q2hsWWN0UnN5LXk5WnFoOGdscC1GTDhVRlF0Mm5raVN3M3BuaHB1QTNhbV9GUFU3VzdHM3RrUkRfUHBEZDZ2V3pmMFZ1REpfa3EzY1NNWdIBlAFBVV95cUxNLWlZdGdrbDBSU0RlN0Z6Q2ExSjVqZjdXckl4bExpc1Jfd1RaQnFwVkxGU0Y5dDhfQ3d0dEd2TG9fbUdsVUpEM2h5aV9hYVBud25DSHlIbWMxVVlCLU9wQ3BTMUV2R3FzWHQ4N2o0XzNVRXhyQzdmQUNGb1MxQ1FObTFqOFFuOFBXTjNnODJOV1FCNmVQ?oc=5",
+    "sourceName": "CBS News",
+    "aiRelated": true
+  },
+  {
+    "company": "Recent",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Recent layoffs have been attributed to AI. Is that reality? - marketplace.org",
+    "date": "2026-02-03",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRmpVRFpYYUttR1BncExWVFRyX21ISDVkNmxkTXBwZVlTWUhhLXZvV04tcFFqRElYVVlzeEpHaW9QaVdweVlkTHFfd0ZYTDZ6TGUta1E1bVBtQ1I4QkR3RWR1NmdGU0lJcTRuYXdCNlktRUtMOHVUZ1UzcjRmMUVldXUxbDctVU9CN0lXX2JDOVBxUUxROXJwbjhSR0luNlF3T0g3bA?oc=5",
+    "sourceName": "marketplace.org",
+    "aiRelated": true
+  },
+  {
+    "company": "The",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The “AI Layoff” Myth - Medium",
+    "date": "2026-02-01",
+    "source": "https://news.google.com/rss/articles/CBMia0FVX3lxTE00bnV2aTZScFluN2kyQjFZVmtmSzRWOXlncGJsMnJNVDJWYVM5c1lzTV95YnltM1I0UUZ6YkxFanpoMVBmSldRb1BXSkhOaVZZenBpZUlhZjE0ekx3SFNZOWk4Q2ZFNVB3M0JZ?oc=5",
+    "sourceName": "Medium",
+    "aiRelated": true
+  },
+  {
+    "company": "Companies Are",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Companies Are Laying Off Workers Because of AI’s Potential—Not Its Performance - Harvard Business Review",
+    "date": "2026-01-29",
+    "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZk83TWNoZnJEeWF4M0pseHZlSmxTbC1JWjlPSTFHU3RobDJuZWZveWNXWUVQcUp3dzlSRzAzQnd2N19WR3N0ejV5cVUtbExPdktHVkdtNWtUVktER05EaUVadHJ1TU5ITTgyaThFLUlSLWhnbUk5QS1JQ1Y3NmdaalE3NUpseVdiVUYtbTFHZjNkX1l4WWZ3dFhYWU1LLWNEVmdZ?oc=5",
+    "sourceName": "Harvard Business Review",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon slashes 16k jobs hoping for efficiency gains from AI - Spiceworks",
+    "date": "2026-01-29",
+    "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaFpTOVRNem8xc2lrckZNSGkxYzZqNTNDTzZvMm42X0NPY2k0cm9Ic3RYUTRJVGJ5NklKSGxOV1pwYi15d1Jrbkh1LVdJOHFrRktjT3Q3YXRQUTl2S1JDbDA5bGF6MjdjR3F3aVdjcVFYa2NoZjlTTHhRTU51Tk5LTmVjQlNWNXVndEt1TlB6c0NlX0gxcHZfbXFjbjQtT1k?oc=5",
+    "sourceName": "Spiceworks",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Job",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Job Impact in the US: the Apocalypse Can Wait - Visionary Marketing",
+    "date": "2026-01-28",
+    "source": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1aOEpfLUZMY21kY3YxWWw0czhsaTcwQ1A3eWJ3YmhyVmVaa19FLWs4TkxpOWdiNFhlSUpSZjNXRS1oQUZtZDlUNzJpNjlQMi01d1cxNGlVa3BreDg4allCV2xZRWNtTDBCMFR3?oc=5",
+    "sourceName": "Visionary Marketing",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon axes 16,000 more jobs as companies keep replacing workers with AI - New York Post",
+    "date": "2026-01-28",
+    "source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWDNsZmNpYUxiamhUcUZPVURCTTVfYzVPTUhfdGpMNzBheWY5Qm9IVGhtVFRhdHQtNzYxSGxuWlNrTW5DbDE3ejFUdm9QLVg5V2dqb2kzdG4tYlRTY0RMZnhyWkJLN0VCQUhDUTV5U1JwbW5GVHlpQUVEZTQ2WW5nRktILXFjYTZEdEFreVhhQWhwVjYyS2VNRE0xY2Nyc05aZmdJN2Y5czhodkhleUpKYQ?oc=5",
+    "sourceName": "New York Post",
+    "aiRelated": true
+  },
+  {
+    "company": "New Research",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "New Research Reveals 276,000+ Tech Workers Lost Jobs to AI-Driven Layoffs in 2024-2025 - Sarasota Herald-Tribune",
+    "date": "2026-01-27",
+    "source": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQcm9yUUxWT19WelBkM0lhdzBxaDl5S0hfSklHLVpxbktkU2N0VUNhamMzUnF0Y3NCZmNjN0VUNEJQOGI5Q09UbzdDSFpRRDZsNHRHUDFFRnlESS0wN3k4NWlfeEcyMzlsRDBYUUZRdHhXZkVXTk1xeXE2VHhTZTZnX1d3UFFGcWh4ZzNST0J2YTJ1bzBTazZlMnJrVkFGRG9FemZkRmJtdGZORldtbzlialF4T0JBTDNieWlMWnE1STQwQ0hPcVIxbnk4MEZYTFNVb0h4Y2xTLXZsdw?oc=5",
+    "sourceName": "Sarasota Herald-Tribune",
+    "aiRelated": true
+  },
+  {
+    "company": "Pinterest",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Pinterest will lay off 15% of its workforce as the platform pivots resources to AI - KRON4",
+    "date": "2026-01-27",
+    "source": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdHR4U3pUaXdNSGxPWDZtUkt5SUFmNHlKYnd0SUt5Um1jU1drWUFpM0xxZ2hySEtvZnZqSDlBMDh2NF9iU09UMklabjNpcDZSS2hhaWVhT09CMVpZcDVHV1dLWkxvdk1KVEF1eTJzLTNDUUxNN3JhRXlnT09Md3VDTnBqa3pXTVpEOFhZV3FMN0twNFJXTVZLQUlkUW1tNTRhdVVkd3Z4MlRCdzFOMFNJZUF6V3M5ZVNDTUR1N2pXVkJtQUlnZlZZTWY1aEHSAdIBQVVfeXFMTVNwUTlaeTV0aXowVXpQb3pfcG5QZ3ZIZURiTm9Ccjc3Vl9CczhSWlJseVEtZzhjRkNxUkhISS1QNmhzWVFyRGRZZWthbzJWaGE4X1dUcTZzN2hRMnlBVFBpTnJSaTVVbVUtV2FKZk9lUjVfSTB5bVRzU01lejNmMWVuWmtRT0NiLXlYUXdTR3p3dzRLTGFFVXpicWRxLUNFbTJhZTg4ZlVhVTNGeHlnUGVyaThBTE9DbXZvT2JQRUJjTHoyV2tKN2RVcDJGWl9HaWZ3?oc=5",
+    "sourceName": "KRON4",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Job",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Job Cuts Are Landing Hardest in Britain, Morgan Stanley Says - Bloomberg.com",
+    "date": "2026-01-25",
+    "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxON0xDeVFCS0szN3RIdkFVRWhXeG1tWmVvZlFkVkdLRDVSODRLbjhtd2dpUWRiWmd4dzhTRmsyZFIzZTBmcXJyT1lZYWYybjdFM2RfUGxKSVVjS19BY2REbFhmOVY1TUJlVVlpVWlhQnlRd2JKY2RnMzFoal9aWmpCbXgyMlowZmRCZUZSb3ljZWVGOElxLVdMeUphNld6ZWhhTEVzdmtZUk13TWk3LVdzV05iTQ?oc=5",
+    "sourceName": "Bloomberg.com",
+    "aiRelated": true
+  },
+  {
+    "company": "Will TCS",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Will TCS Layoffs Impact AI Roles in 2024? - Analytics India Magazine",
+    "date": "2026-01-24",
+    "source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRDkwbVh0RWF5YzVyVU1ON29ZZGQ1dm5IdXBPMlFmTmlPZmhJZzhwZnFzc1JzbmxkNjItR3VCVVNpeEl3RVREb1RUMDh2ci0xa2M4YUF3emxCVlRJNDllVkoxcHBVTE5VbEVzMTdHcFlWM3paREVDT1dXTWNpWDR4ZVVLSktRZXdySkZDSTZHa2VVdw?oc=5",
+    "sourceName": "Analytics India Magazine",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI impacting labor market ‘like a tsunami’ as layoff fears mount - CNBC",
+    "date": "2026-01-20",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVFJWbThHejRHS1dnWFNBN2dCRlJmVzd3dXoxSzVMa3V4RkVsZ241eTZMOHJ1VzlKRnpwZVZxQVpvQ1dvSlZqOWVFX3BUS3Z2Yml2ZnplWnRXblU5U0JnMzNsVVZ6NzB1SlBUbFFGeDBGaTlyU2lyaGF3SG14TXdWVnRmUUpLMkRyVjlKNkgtYkR3dGk3dGlFbTZTamk2N2V40gGmAUFVX3lxTFBiSFRocVRpeVRPa2JtcEF6SFM0OUNJU2dFd1BJTXc4dkR3YjFKR00zMjJCRlJISm9CUVh0dE5wMzhDUHJzeG1EZDZ2S2d0RnFzTERFTnc1QXh1bFU3a1dLc1BxWUNUM0VpdDJNQ1E5cmlFTUVTTUlXdUZaZUt5UWxTaHMxV0VFTTZmbjc4ZzFiX2thXzhzUl9CTXpFTFo5SXRqRHZCelE?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "70+ Stats On AI Replacing Jobs (2026) - Exploding Topics",
+    "date": "2026-01-20",
+    "source": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5sNDZqVW12YUhRelFDWVNvOEdKNVc3RHVwcFp3UWpzSGhSVWNzTm9XZzI4UUh6S3FuSTFLbEFvSXpBcFoxUlBBb3R1ZU02dXNWcUVTLXhnaHlHdzZucVhz?oc=5",
+    "sourceName": "Exploding Topics",
+    "aiRelated": true
+  },
+  {
+    "company": "The",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The other way AI is affecting layoffs? The blame game. - The Business Journals",
+    "date": "2026-01-20",
+    "source": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRURhUUVKYnpvOWJTSnc4Ym1udy05d0JTQ3JWSk42azZHYm5pMV9SQnFCbDdjVWhwOGVCdnRoa19GVG1BMWpQT3BvZlU1UWFfb0lHbnpRdEdZY1BpeTdYc3l3RzNYQ0JhbGJGYy05c21hVlp4QzlheV9xWXpnOEp3WmNkOXB1bVNnSXB4QVlNMHNwWTczUnNfejNTTE5Ta0xtbjJxZWpB?oc=5",
+    "sourceName": "The Business Journals",
+    "aiRelated": true
+  },
+  {
+    "company": "Companies That",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Companies That Have Replaced Workers with AI in 2025 and 2026 - tech.co",
+    "date": "2026-01-19",
+    "source": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16Z2F6UTBYdkJVakc5M3dYemU5cDlUdi1TTllYUVItM1FJMXRnWFZtczRNRnBCWE1wVVVZTHUzLUxNNlFieWFxOUV6WElYYUhud3ptMm9VN09UaWtMNFh1SU1kOFk?oc=5",
+    "sourceName": "tech.co",
+    "aiRelated": true
+  },
+  {
+    "company": "It",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "It's happening. Charlotte's biggest banks are replacing some workers with AI - Axios",
+    "date": "2026-01-16",
+    "source": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOV004VHVETTlMNDdDQzhwaENkVDVacjlraVdzMVRBbGQ1U2gtemlpRWhHSEZmazdnazU0SWV1OHBJbDFoVjBkRGdiMVUxNTlFQmVJdTI1Q1FXaWM4RlJFZ1RYYk91RFJOakhZUnRxQmNDYmVjUEtka1pEY2FZVWpBM1VnZWJTVXpzTDAxQUtB?oc=5",
+    "sourceName": "Axios",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "A new study claims AI will destroy 10.4 million roles in the US by 2030, more than the number of jobs lost in the Great Recession – but analysts still insist there won’t be a ‘jobs apocalypse’ - ITPro",
+    "date": "2026-01-13",
+    "source": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQY3dfZjJHdmdCWExnMFdzX2p5RUppOVl1MHFLM2xfNnJCOGtUelNVeVNUNjFxTmQ4YWMwNjBqS3pCVnEwQ0Mzc01nUDFfYzI4enoyTHBVMk55ZGhINEh4bTllZUdQRS15dnB4WFRDN3kxbXZlODRkQjQtWDZiTXR4cWliTTVZZG9MbTY1WnlSY1EyUEd5aEE?oc=5",
+    "sourceName": "ITPro",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI layoffs are looking more and more like corporate fiction that's masking a darker reality, Oxford Economics suggests - Fortune",
+    "date": "2026-01-07",
+    "source": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdTQ4aGdMVXd2V1VMN0o2TXpKRVdjaTJHUVNhdTdFa0VNa0NqaGJYRVh1Z2xoNGdmTWhzcnBNb1JRTUtBRUJFekZhNG5JX2lXVWQxNUdJdHJiYi1ndDVfZXV0RXVGcUpEZlpRSjlNaFk0a1h6amt0MWRPczlOcEZONDdRZTJYU204QkhWX1c1N0NHdEJMMzROam1wRktsTXNJZEFhRnRoemI2ZE9VN0MwOGpB?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Will",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Will Demolish 200,000 Jobs According to Expert - Yahoo Finance",
+    "date": "2025-12-31",
+    "source": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5WRDBiaWNpdi1CLWswS2ZKazJVX2JxYWJCTkI3aE1XQ3J2V214YjNqOW9RNHdXdk8zbTFRNkM3V1kyaGxERzFYX0ZKa1p2bkMtOUZwY2c5T184cnJXTDV2YlF2TjNSRkdqUWY1eGV6TzdtMFVhZ3E3a2dB?oc=5",
+    "sourceName": "Yahoo Finance",
+    "aiRelated": true
+  },
+  {
+    "company": "The",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The 'Godfather of AI' warns 2026 will bring a new wave of AI job losses - Business Insider",
+    "date": "2025-12-28",
+    "source": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNWxPUlBTZnEyaEZFQzhRS2JjMzBlRlh6QUpLMGpZR2tsSDZKRE5MNUpHVmN0T0ZpYTMydnpTcHc0OEoyZDI1MWw0d1FXY09ldTNYeFJsTUVOSU1qMU9vZ2xXSmhQVUlrWi1WQjBkek1PeVZBbUtNRFdxY0ZwU3ZOb2VRTWZmaW1MNnRJWkc5dkw?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "'Godfather of AI' Geoffrey Hinton predicts 2026 will see the technology get even better and gain the ability to 'replace many other jobs' - Fortune",
+    "date": "2025-12-28",
+    "source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcDYwU2l6cFgxS1JjYUhNM1l0X0ttOFRhUFh1XzBPdlp4dzQ5OVd0c0NFbHptVnRrVDUzMDE5ejJBaHgzMmZrUGxTY1VGWV9aM09KdF9na01jdk1MV3oyR3VBMENOUzFaZHhDaVY3Yk9jb2F1bjFKS0IwbzdxaTkyM3pWVHgtM1NfblFiUXp3d2RLcFVLV2ZFN3FwQUVLN3Z6UmtqUlFJVQ?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI was behind over 50,000 layoffs in 2025 — here are the top firms to cite it for job cuts - CNBC",
+    "date": "2025-12-21",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUjZpVUFOVmJ4UllaQ2h6YXlHRzVzdlRGd0paUXFrWms4alBmTlpuN3BfbmduUUphSC1SMjR1aVB3T0FaWE9yZGN6WjRVZFBRdWZPZUVvVnJwYURpMk12Z1lVeDViWkZGWWU1UjhjdldISFNSSEVJWk45VTBQVXdmTE5zaDhwc2g3YkZiU0pVTF94MEpmT2N1ZlhRUktjaWpw0gGmAUFVX3lxTE5vNjZwczBfbi1scnNRb2VVODlTOHRWUV9rSHlRSGpnLWlIUVdzODVva0dOSW5HbzhuZHBhRWhYVHVCck1VUXNYODZYQ1pxSkJyaEJOQjIybmZONHIwXzJYMGFocWcwWlB1Z2l6aTYyZHBJWlpFUWxlWGh5UTlDcDRhYVpsVTVxRnBZNHZuYmF5V2EwOWJ0TVlIcEFjV29yaU1ZRVBtV0E?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI’s Job Impact: Gains Outpace Losses - Information Technology and Innovation Foundation",
+    "date": "2025-12-18",
+    "source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUjdVUWhPalpVQXRBeGttTTBsWi1wQ24xVVZ4UWpTWm9kX0JWR1RLdnJyUEtERXBncEI3TElFOWdNS0pVOFpxRHVueW1qTjZuN0NISWsyTTM0QjhBeTE3ckZldEhaeFgwZTBNZ0lONmpQQUQxSU43M0dfWmMzTlk3NUl2UQ?oc=5",
+    "sourceName": "Information Technology and Innovation Foundation",
+    "aiRelated": true
+  },
+  {
+    "company": "The AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The AI efficiency illusion: why cutting 1.1 million jobs will stifle, not scale, your strategy - Fortune",
+    "date": "2025-12-18",
+    "source": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdmhkZ25fYlBQZnJMM09qQkI4eXFENi01VE91emVwc3MzOWJMSmRIZ1lGeVI4MlVfWUNPakdCdWZQeWVpbndabHVqNlphMm9MQ3BuQUpUZ2JEM0xBMEhCVFJlQ0xwMFJ0bEFMVXNqMW4zM0RDM243T25QbTVpTlZ3V3dNU0dORVRyV2dabEx3T1VnMGhzNUZhV0V6TkplWl8zYmsxbzlkQWlGVFJJTkpzTG10Z2xTYlFUZnRMMUs5Z04?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AWS CEO",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AWS CEO Matt Garman says AI displacing junior employees is bad for business - Fortune",
+    "date": "2025-12-16",
+    "source": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVXlWY0szMnduRDF3c0V1MHJFeHR5bHRDSElzNk1SOTNvV1hNX3BVT0RCRTZZOVdyd3BxVU45VnBzMWZwbDdIajZpaDVSZFl6aDJSV3UxTFR1OHlXdHBiTW5nVXZlMFFqQXlXQXpQNlowOHBVNVRneWNuNXExRzZnTFR0RWlTaVJBMElCcDJvaUJvV1dLZWR4cjlINlkzbjlCR3RKbS1NOTFzZUdKV280?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "New",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "New survey reveals this surprising fact about companies that successfully use AI - Fast Company",
+    "date": "2025-12-15",
+    "source": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNYVpqLWsyRXVKeUJKT1NJMEZUS25YQU8yOXdTdjBNbXBicmx4TUY2djVrUWY0RUhBd1R3cG5ZUGgzajV3dlRDV2JmeUlYc3V1eURreG4xel9ndkJWVFltbGZXUlRqTnhrQThoamozYVFOV3kyYmV0aUFkdlpFVXl6WjRBV25YVFI3ZnJORHVjbU1fU0FLVFJUWVItOG5uOTExYXc1VzFfNDFmbWxvVkJxaWZ0TzB1RTZJV3dSeXVQbUNhX2otNU92M2YtbU03eHYwdVlXWkhlbTF4R1J6Z0xpSTFDNmRUdHZjTHpzX3hSc01RS1I5THdHQ0w1bw?oc=5",
+    "sourceName": "Fast Company",
+    "aiRelated": true
+  },
+  {
+    "company": "Hawley",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Hawley sponsors bill to track AI layoffs as WashU expert warns of ‘great AI replacement’ - STLPR",
+    "date": "2025-12-08",
+    "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUnJtU2Y5ZmhscmI5eEJ3ZEc3SHk4VG1kd1JRRWRJUlRja192bnA2UGZtZkRIc2pqMS0wOVJTMU5sMkswZzZiak80S19hNlBHdWxFOXBBUnhxSE1oSW93ZlhaZW9kdkNpNFAzREhUZHVLYk9XNlNZczlEVzNEbFA1dGViaG9VeGRBLXZqR1FOSzJWVlF1cHRvN29YN2loWmNhREgwTWpZOTRfZ0VlY2xFbnQ3M1FyQi1EdnRzZzAyLWY2Zw?oc=5",
+    "sourceName": "STLPR",
+    "aiRelated": true
+  },
+  {
+    "company": "Is SLO",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is SLO County ready for catastrophic, AI-driven job losses? | Opinion - San Luis Obispo Tribune",
+    "date": "2025-12-07",
+    "source": "https://news.google.com/rss/articles/CBMigAFBVV95cUxORUxRam1oTUU5LVVkRWF1UjBEMVZuc2lZRnNkWjYzS2hNdXRzZ2JFZUUwdEZSOGMtT05adEcyNExlMUJzZ2hiTk5ucXVUSlcxeElDR1Fic1Q2dzgxR1dTTlhvSzZiQmxPVXZxdEFRQk1VNzZHa29vVk5fbkIxUEdvWtIBgAFBVV95cUxNMDlCOHdFSDljaXhYQ2poZ2U0Ty1MM2FPMi1HUWo0VUFweXBQZEE4VV9Xc2FVd0RFM2FteGtyRUJzRWdaMzlBRkdNbHZTQkRDdXp4SmpZXzE0SGpKUldOOUk0TS1qOW4zVTB4TkRvcDRvQko1QmVRdjR0ZXY3dVFfaA?oc=5",
+    "sourceName": "San Luis Obispo Tribune",
+    "aiRelated": true
+  },
+  {
+    "company": "More",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "More job cuts on the way? MIT study claims AI could currently replace 12% of total US jobs market - TechRadar",
+    "date": "2025-11-27",
+    "source": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ1NDM3RUSjlEcTRwZ0t4MzVjeHVQWG9UOUNKMEVsTTFWN2V3U0puT1VaMG9xRTlsWTdsc0xoMWwzYUlrU2ZiVlpXUjQxdXlLa1dJOHRzMk9BY2I4UzN1b0dlV1VEVXllSEs4aTN1QXpGSXZITERTUHNaM1lNYTBaOFcxVkROM0xTMXlsSExNUE9YODRrcC0tQmZaN3JoVjlvMnFsdWRZZkVlcUxL?oc=5",
+    "sourceName": "TechRadar",
+    "aiRelated": true
+  },
+  {
+    "company": "MIT",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "MIT study finds AI can already replace 11.7% of U.S. workforce - CNBC",
+    "date": "2025-11-26",
+    "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNUVibzRUdk5hYUE4WVk0eThiRWt3S2MzVGRCc0lfWkRsMU85bTBsYWJxX3RlYVc5ekhqcGJobDYtbEpJSmpvTERJU3k5VzhJSExIS3dmZ0w4dWpiRlpjZzk1RFBYR3JnNUFXZHpvYjZHYVRYM3pTaHZoNDU4TlpDbWRCMTE1ZGNPSHB5Qzh1a3NRNWw5Qkg1SEZ3WjJ4dDVIcC1ZeWNEQXZza1nSAbABQVVfeXFMUENGUGUxOV9sUEdJSWpyN2JmNU9DWk8wZEY2cFJ0N2RuRmxGVVVEcy12VlNjNGRQb1Jqa3dGNFZobV9CNmtIRF9KcHBzeFk4S1JmYUI4dFB2RFJhN0pJc0hKT2UzckJQZFlJamhoZnloczJyTnp0RkVKNmdVTzBzenFLUGtmQ2YyRmFwUHF1OE8tZUFCQTB5aWdQeVVpVWE2SjB6Z3dDaml0clJ3Rk1KeDk?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon's layoffs and leaked AI plans beg the question: Is the era of robot-driven unemployment upon us? - Fortune",
+    "date": "2025-11-25",
+    "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPclVCYzdNNnhVd0U1WmZLVEFSak02UEV6Q0Izczg4S2Vjd2tTMXo1S3FlamlHNzloX18tUUEzQmFpMlY3TjZTVjNRVWVVWXlCaVlqOTRJOVhoZVlWTUtrRFB5YVpEbUZvN1pZaW91YUFRdmRjX1FkQ2JWTDZqZ1Q0cmpsRnVEWkgxbXh1SlYwQ1I2bTg3YjFURmtjR3ZTVnpnSTBV?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI cited in nearly 50,000 job cuts this year as tech giants accelerate automation - Los Angeles Times",
+    "date": "2025-11-20",
+    "source": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUE5veV9RQmJiZnNjOXd2M0VBd1BQVFB2MjRxWWZRNEx3S2k1X3Z3eTl1eUxzMWoxZlp4Q0pHZkFNRVBfcTcydmdyLVpXWHdKUzZuY29KS2FMZEs3d1gySGRsWVpMZXZSUS1PeEVEc3ZsZU1wMHpYQ2l3cEdfY1BsR2VvRVFueTlIbjBGbDQyR0d2OUdQcVdqczNFakQyWHFudXIwNlhyUk42Q3RfcUhsVGw1dDgzNjZZYjM4OFoxdS0?oc=5",
+    "sourceName": "Los Angeles Times",
+    "aiRelated": true
+  },
+  {
+    "company": "CAPITAL IDEAS",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "CAPITAL IDEAS: Is artificial intelligence taking your grandkids’ jobs? - The Berkshire Edge",
+    "date": "2025-11-17",
+    "source": "https://news.google.com/rss/articles/CBMingFBVV95cUxOTV9sMG9UTWNQNER4dU9ueWtXZDExaTNrZU5jdDJGaVp0dXhqQnNFZU5qQ3JocVpqNmRpd1lLTmJiVWEyaHZ2M0hfZmhja2FiSmN0aDk5TXl4NFJUTTdQVWQzT0VTNXlmTHZzRVFQRWRzOWoxSWVwTlJwSllHTnV2ZVNGRUFXWE5aNkNtMUtFWTZMOVJjaDVvWUEycHRiZw?oc=5",
+    "sourceName": "The Berkshire Edge",
+    "aiRelated": true
+  },
+  {
+    "company": "In",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "In defense of junior staff: Why replacing young people with AI could spark a 'talent doom cycle' - CNBC",
+    "date": "2025-11-16",
+    "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNUS1qZzR1ODF6QVF0R1pUdmZkQ08zakdNdG56UGNobF94MVRKY2c4c0dMSGNicE9HeThwMjM3eTdoZWRxZ2FweEpqVXpTNGRFcUxtcEkycXlJbHVndEJVbGFXRy1WbmtoTmVjXzVJeVM1YzFjRDJQYkdUSXJsMXdvNW1xSFJSNTlwajg0YjhORdIBlAFBVV95cUxOLVlIVFRZM1dyMjcwRS1IUWljLUhhcGsxdWdTcWkyYngxMUQ0SGJjaEZjZHhlOW1RTTMzamVsRVdzeVFsVU0zTzBBczBBUFZkMk92UXlmYjZzaUU1bFVXUlpsZEpscTNRRVhkSEhLMFRldS1SZEd4RlIwWjN5QmJoTk9uUkJ5d2dnNlYzaFpPTXNPUlBJ?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI-related layoffs often hit entry-level roles, young workers - Computerworld",
+    "date": "2025-11-14",
+    "source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYUtmbEVNVmxGYVhQX2pscUQ1dDBZYlM3dGFIdzc5UE9FZG9xZ1kxejFLLTdwNVhYZE13aTRKOGd0OFNGREtLQlZ0X1pFalZWNUNXQzU2Z3RkVVZEZnVFM1hMWkdzNEl3SjlTUVJmZkNxSjhWZkdtY2hWV1ZjX0o2WERYNW5tMjBEdU43cS0ydFE3bU1SNDdObHVGUVNwOGc0TllLNlAtY0NBUGs4VlhWVg?oc=5",
+    "sourceName": "Computerworld",
+    "aiRelated": true
+  },
+  {
+    "company": "Cost Cutting",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Cost Cutting, AI Lead to Surge in U.S. Planned Layoffs in October - Carrier Management",
+    "date": "2025-11-07",
+    "source": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QTXFLVFJ6NmhmV0xOOVlSUXFwYm9aQ0pqMWZSU2stbjlMdVUxMzZ5UjdSN0UwZ2kxVDRrRHpQNkdsdm5qM2pkV0JHc3pENXFZMHlkT1pZaE5qYnVfekwzMDVzakFsUTd5ME9VNQ?oc=5",
+    "sourceName": "Carrier Management",
+    "aiRelated": true
+  },
+  {
+    "company": "You",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "You’ve just been laid off because of AI — here’s what to do next - CNBC",
+    "date": "2025-11-07",
+    "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbXMyaHFFcFJMeWNQT2xjemRDaHhJTmdHTHVtZU8wRjRDOEtYZUFCZ0VtQjh5MGJHbFp4TG56clptMGJxQ3ZXRjhXODZLS3BBNkVGcUt3YlIyTlU5aG9ERXJwUVA0QzFPV0FELUVtNEJPeTJjM0ltRHI1ZFh2VUxHdnFDYU84VVF0SE5Wc1pWWmM0Z3JUbXhEZXN5amlpSTTSAaQBQVVfeXFMUFZRaEdyUnFTTm41YW1EbFk4ajNfWTc3YmhyX2pBQ3AtQ2tpSk4yazBUcVdiNTFRVDdRVWstVVV2Tm1wSmp3VDVwdFJpTGszMURmd1ZvN3BBeEFEeUhtQWFGa2dWU1hsc3hLN29WODdLYTlxT3ltb3hEYVZwN25ObU5jdUo2TTRNa0JlV1cwLW96cjgtUkdZdFJMeGcydTJBWFVsMm0?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI isn’t replacing jobs. AI spending is - Fast Company",
+    "date": "2025-11-07",
+    "source": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ScTJWMUVNMkNEa2R0bU5hUTJ4MXJBM0RhLWZlaGdxbEJ4ZlExeUNod250TTctOG9nbVBKRl84YUpiNDY4R1RwWnpNUUFoWFBwNkhGcDhNVjUtV0l3QWR5NEFqY3U1YzhPVFdadE5VQVliSUlzYVE?oc=5",
+    "sourceName": "Fast Company",
+    "aiRelated": true
+  },
+  {
+    "company": "All",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "All those corporate layoffs? Don’t blame AI. - The Hill",
+    "date": "2025-11-07",
+    "source": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQXzFDWklPcElCYTBuaTNJOVZjMmFCdF9YS181bEk5alpkbjluMXk4LWhEcHdadm9qbTlYZkhxRmVfdkdXNy16cnlwZF9oWE5Fc1F3eVhGdlFyWVdwMEdEWDd5Tlo3RVRnczR2cGJZLUxfWDE5dXYzNWhuR0tITVB0S9IBhgFBVV95cUxPM2NZNFBlNFhyNlBCOVN1bV9YbWliN2hiM1R5ZkM4cThPS0JUcm8xTHJ5cGl2TFZsNXBDNmNhOGszWnRPVjJXekZ2c25ZU2xFM3M1amFPX2h5VTdlTGZXalNVQmNRUHF0QkROMkVyUy1DS2YzY3paWmRka01QOUFuNENvUC1CUQ?oc=5",
+    "sourceName": "The Hill",
+    "aiRelated": true
+  },
+  {
+    "company": "October Challenger",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "October Challenger Report: 153,074 Job Cuts on Cost-Cutting & AI - Challenger, Gray & Christmas, Inc.",
+    "date": "2025-11-06",
+    "source": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMHNEdWl3dW52TkZqQjFQUnpGb2E1NXRJN2VQb2RJa0hJalMwVWpyeXJsbkxzck45c3ZEYlhRaThTR2J3SVhWckM1ZkNYeTdJTjN1SzFtdXViN3NWeDUxSjIyYnl1WTBpXzFMUnZ3NXNuUmNUanhENXVXQUxtcWN2bVZhdGhsLWFCLWdsZmc4eXRtMjNXSlh5TUtFSUI3dw?oc=5",
+    "sourceName": "Challenger, Gray & Christmas, Inc.",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI wreaks havoc on US jobs with two-decade high 150K cut in October – bringing 2025 total to 1M: report - New York Post",
+    "date": "2025-11-06",
+    "source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeFFiZ0UxT002NXpuSFBsbFE4bUpjZXRaZV8tcjUzUGhpVHNNTE1TanNhMWJKeWEyR19pMXBGZTRnYnIxU195VjNTSzlZYkE1YkQ2TTNQZlMwSGRtOTNQQWhWSjd0X0s0dDI1Sk50R0xwR0NrSkdoTzU5T0I0cDJIYmQ0eExSM3ZOSkY2OTVrSXdsNkRUZ2JVT2txRWlsWDNyWHZ4VVdIWkJFUm9Wbm9kaDUzVmE?oc=5",
+    "sourceName": "New York Post",
+    "aiRelated": true
+  },
+  {
+    "company": "What",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "What’s really going on with AI and jobs? - bloodinthemachine.com",
+    "date": "2025-11-06",
+    "source": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBVQ1VuWjd5cUw5REk0WWRia2Vpb1lTSUVLb0tFRzA3YjVWWG0xSTBNeGpDaVU5ODFiR00zU19VYm1Ed2p6ZEotYW80Q2kxaDNaNkpkcU9qZGtPWHF1T1BOdUdWcWJpc1h2VnFLb2ltMDA2MlRGMXRTUA?oc=5",
+    "sourceName": "bloodinthemachine.com",
+    "aiRelated": true
+  },
+  {
+    "company": "Warner",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Warner, Hawley to Introduce Bipartisan Legislation to Track Number of Jobs Lost to AI - Warner.senate.gov",
+    "date": "2025-11-05",
+    "source": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQamwycXdIU1E3OE0wMnN1S3IwS21zZnNMYlpDYmxrLTFDc3VrUl9iX2FPaTAzZUpuakRsQzZwbHV6MkM3TGQ2MDdNbmdjb3B0eWdmYWt6UzJvWE5KY3RseF9QbGNnT3o5cmxUWHBvQVV4VGFTdzlpM3k5OWpPdmRESTl1alQyRUpGZU1KdDJmcEVIZVctd05MZExVdGlHZDZrQkJoSHR5UnFQSThNNUwyblJYS2tiX2MxNmRsVWE4SWp0bEFCSTNNWUNZMnYtcmt1UUVSSENR?oc=5",
+    "sourceName": "Warner.senate.gov",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Tech",
+    "jobsCut": 0,
+    "reason": "r/Layoffs Rules",
+    "date": "2025-11-05",
+    "source": "https://reddit.com/r/Layoffs/comments/1op7z6c/rlayoffs_rules/",
+    "sourceName": "Reddit r/layoffs",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI-washing and the massive layoffs hitting the economy - CNBC",
+    "date": "2025-11-04",
+    "source": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOd21mSklJYjUyRV93SVBheW5RUFRJOWNfRWpNMEwtSlNOa0J4dXEtVjRmSjdtYVNtamVrQVFjR2FJNjZoTEM4cHNzbmdrWFpOZ3NVeEx2Y2U5X0dWVHZobUtmdVliNlhkc0VPallmcVVmeHp2MVljY21temxGUXdPWVdyeWFneXBk0gGOAUFVX3lxTE9wZTkyYnoyVTFuMHV0TGF2OU80WGU3cVhOSm5va0gtc2ZuVFlTYUEtYVU5UjBpLThBU3J3YjBBb1JqMS1JcGNYcjhUam5SMkEzSjlrOUVQY1RGSFdlN2k1QVlXLUpFb0ZSQnBOaGVtREpOVjB4Zjg0bWpoOWxkWmpLQ0dFOG4xTkJjV0ZYUkE?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Rise",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Rise of the AI Job-Killing Machines - Variety",
+    "date": "2025-11-04",
+    "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOV1RMeFI4MHlnQ1NuTTZfZWIyWjJJU28xTklHbE9nYVhNOG1OWGs5cnZINmJKMHJkSFkzY0lWeEwxdFRsZ1Z3Y0wxRl9uV3RiWmhCYWZOb1EyNmh2bWh0aExCUlFKZnNNWVNDYjN3Y2EybVZrVFJYWUdrVnlFTkhYS2JVU3pqbHpHamtwTXlNaw?oc=5",
+    "sourceName": "Variety",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "\"Layoff boomerangs\" suggest replacing workers with AI isn't sticking - Axios",
+    "date": "2025-11-04",
+    "source": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9ZZFI0RWEtckFFZi1HWlFkMi0tVVFYNzVEU1JOcElSU0k3Z09pT1VzVjQyS3pVaHNJTkpnbWtvN1pVZElLVTNsODlUTXNrb2Q3dUplRmtJX2V2T0dGY1VJMzNtWElFUQ?oc=5",
+    "sourceName": "Axios",
+    "aiRelated": true
+  },
+  {
+    "company": "Is AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is AI coming for your job? Maybe. See which industries are most, least at risk - USA Today",
+    "date": "2025-11-04",
+    "source": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaFdpaENWeVhQeHZTMF9WUjROazBFYkM3NmRIYjJwcGlEdDZOay1yd0poMC1OUTRkRTNrWEJYTjZnN0dacVRiV0QxTTZnLWF2VFk0NzR6cE5Eb25DSU41S3BwNm9BanRuRHFTZGtxNl9pbTBJMFNUQ1hNX3dKQklvWWhlaDRLVEhNZVoyS2tsa1BVUHRXQmFB?oc=5",
+    "sourceName": "USA Today",
+    "aiRelated": true
+  },
+  {
+    "company": "Tech",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Tech layoffs keep coming, but not because AI is replacing jobs (yet) - Technical.ly",
+    "date": "2025-11-03",
+    "source": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03LXp3VnVLS2lWMmV1U2t3eFdodzVYOHkwV3BGRXBTUG96SkxBQWpPOXd6STBEdnpKMHR6MGR6eElscWNBeEJLanczdUVKNmtaVllHYWVnY3NlZlhqSmR5R3JIWTJuM0JXRk1qQ00teWxDV1lmUmIxQk93?oc=5",
+    "sourceName": "Technical.ly",
+    "aiRelated": true
+  },
+  {
+    "company": "CEO Andy",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "CEO Andy Jassy says Amazon’s 14,000 layoffs weren’t about cutting costs or AI taking jobs: ‘It’s culture’ - Fortune",
+    "date": "2025-11-01",
+    "source": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNa01lZTRvUzEtNjhEWFd6VllJU3FSbU9IVDV4M3ZZT1FzSnFuaGMtYUM1VTE1RVRhM2dBMWJrNzNFTENSM3RYa01xMEROM29xUi1LekVWRHh3ZEkzOFhLR1RRWlZ1LXJhaE9BYTZRcEdvNGRFU28xMFR2MmFnN2lMM0h0RlV2U29HWkE?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI-driven automation triggers major workforce shift across corporate America - Fox Business",
+    "date": "2025-10-31",
+    "source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWFJIMWtCaHJPSDdQRE1kNlBKY2RrWTNLOGxNZjJFck1faGVZMHVfbGRJTFYyRFhZTFZsTld3ZE81YW5WY21SWC15emgzc0JzMnlkdnFlOFpEUWtiS3NpdkcwaXctS0JCRVZZWm9jYXZiODRsOUtGTk1MVmh4NW9rdnhKYUg5V1hwQmFUckVFcXJBOUI3dWpXUzMzM3VKTDZqQzdKUWdSRkZQNHM2bXJWaGM3Y3LSAboBQVVfeXFMUHRVc3FrQ041MTB0Q0tHVlB6a1ZoRDBadjRXYWhVNWZ0RWxXXzhBc1pzTHNqUUprQ3E2WkFEMnkxazdjcHNVVWFWNWZfamk4cXdXdjRYdkw5d3F2MVZrNEJzaC0wSG8ySThuLThDakpIc3I3SE9LUVhEVXRfUnFkMmJmd3g1Q2N3UEhlU1c4NDN2UHJMMnRud056Yy1PMzc1cnVNMEtRUW1LRmQ3WEtlS0JIaHJNVmh5eUlR?oc=5",
+    "sourceName": "Fox Business",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Didn",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Didn’t Layoff 14,000 People. Amazon Did. - Forbes",
+    "date": "2025-10-31",
+    "source": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVnFoWEp2X1NzWDRteEQ3b3QzS0J0NjZDd01lNVpVQnBNOFhFMUtyTTBjQzczd2N2aWkxaVVDaGE5TUlLQV94LTVOTVNlQWZBckNXdmstWTR3WkVXd0lvUkVxb0t0cUdpc29lYXA1MUVCcVBJSy1YZjI3dV9GN0RFeTNJUkx5OG1tamtDNHlDcTJLd3RRRHpmX2Nn?oc=5",
+    "sourceName": "Forbes",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon CEO",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon CEO Now Says AI Is Not Responsible for Recent Layoffs - Gizmodo",
+    "date": "2025-10-30",
+    "source": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOemtFaTJXRUtsMEJfY1I0U2ltUjM0QUJwRm9VclVHLThhUUFoODRjV1RMVlFaZjhyMEx2QnBISUFQcmpfWURtTzdNY3huT0VhNnhiMWtMRHNxU3BfZk1pU0NwRFBHMDlmYzNsTFNCcGNJTTRmZkhaRFF5TXV6LWdDZFp1dC1GbTZfVTFXVERERFJ4V2JPZ0E?oc=5",
+    "sourceName": "Gizmodo",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Layoffs: Why Understanding Intent May Save Your Job - Forbes",
+    "date": "2025-10-30",
+    "source": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNNVg0RGx0WVlVd3lGbjFJR0xYaWFXZ2h5RC1jZTVLYVJKTDNHQW5mSnNPRzYyWTBqd0VTckRqcEEzXzF3bnBfOHRkTUl3Rm5fSUVvWElTT01OWmdYdVpVUkRkZjJfMEJwR2gxT216ZTVORWNRc2dUbHlsX1BoVXVHaG5FS1FVLWxYQkZqZmJuSTA4Y1IyQ0VsZUh3V0xiN0pmaHBCd3J2R1VSZw?oc=5",
+    "sourceName": "Forbes",
+    "aiRelated": true
+  },
+  {
+    "company": "Everyone",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Everyone thinks AI is replacing factory workers, but Amazon’s layoffs show it’s coming for middle management first - Fortune",
+    "date": "2025-10-29",
+    "source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdXBLMUJxNEFSLU0zRGtpdXFqTGZSdUtfeXhCX0V6bUtfeDZ3NVNvTXZYTDdYU2M1bmFFS09MdWdQRkRwZ2lyWExIZnFyM2ZWVGFxWmhsZ2R4b082WEpVRUZKdXNpMUZoSXZsalVHMUdDSl95Q0trMzBSR3NSR0FMc2NXYm54NUIzbWVIN1kxcW8wdw?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon cuts 30,000 corporate jobs as AI replaces workers - Transportation and Logistics International",
+    "date": "2025-10-29",
+    "source": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPN3BWTlBOeURnUEh2Q1FhZ1VPdWxuTV9wblV1SGpOZEpvV2tuUkg2MlZMd19GQVJkTlc2WHdSeGNYdjdoQVI2aWF0YkE4S1owa2R5NUo4T0FfbVBEM3ZTdTV2TEJIMUJiM2hkSDRSdVVpS0UzREt1OWgwaUIyUW5yTVROa1VoNDFmYUpQU1NB?oc=5",
+    "sourceName": "Transportation and Logistics International",
+    "aiRelated": true
+  },
+  {
+    "company": "The",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The era of mega AI layoffs is here - Business Insider",
+    "date": "2025-10-29",
+    "source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNM21SNldqeUhMeUhFV3VRbjhsb0Q4OGpjSTkybEJCNENUaTE5VW40bEVmS1lNOW9IbGxQTUZiTmIxUnZBdWZ5cnZKMG51c3ZMUlZ2WkZmRlZfeFlGWGhvQS1YS1I1YjhaRUk0WjdLS1NHU2xlcE5MYXRRbWdiQnpjQ2lKWmhDdDZNZjRfWlExR3hEQURXTC1BUw?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon cuts 14K jobs in AI-fueled reorganization - CIO Dive",
+    "date": "2025-10-28",
+    "source": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9nQ05LeG42UkJ6aVNaZjNxZXBVVEJsZzAzanJ1QWN0dmdxM05HeHZLU3gzR0gxYWhQMGNnQzZGcGlqazlnRHFZZEJ1QzNLa0JTZl9Jei1mY1VYbGdwdV9WSlQxQ1ZTSmFvNUdRT1ZBLThBWmNJcHJv?oc=5",
+    "sourceName": "CIO Dive",
+    "aiRelated": true
+  },
+  {
+    "company": "The AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The AI job cuts are here - or are they? - BBC",
+    "date": "2025-10-28",
+    "source": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5yMnJ5Vk5OMUFFQ1puMHQ2N01FSUJKZ1Vza1NwZ1pIYVktWFJlSWE1b3RGRUtsaEdDSjFEOHJiUW5ONDRIdkRqU3MzTGtVUHNvZ2NrXzkyaGxMZw?oc=5",
+    "sourceName": "BBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Global",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Global firms slash jobs amid weak sentiment, AI push - Reuters",
+    "date": "2025-10-28",
+    "source": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYkVFcUdXOWFDaWVGbzRXcXc5UGkzRi1MM0pYcHhDV2E2VXFPR21Ma2Y4RlBGbWlRdkxEMTh4T3NVMEs5dUFDM1E5Njd5eGhlaTg1ODkwM3FBU1RuSjEzYjNRNTFiU185M2lucDdfa1JGeU82eTNVMFc2T2o5Y0ltVFZfcEdOR2g3ZGp3ZUdNeGxqbnk5cVAtVzRnWXJCZmNyMVRpSUFkYm0zRnF1Vzhn?oc=5",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "Is",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is artificial intelligence to blame for Amazon job cuts? - Al Jazeera",
+    "date": "2025-10-28",
+    "source": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNXJVazhHaldEWVVFc0JWRGVWa0ZBaFFRck4ta0h3bkZvQVJMNGNnaGVXTFlMRmt5V1ZheVVtZk5UUUF3NkRWWDV6S1NBM2p3T0pLb1NuLXFwQ0w2Ry1NU3dJdW9nSnVaZjhWOUFmd3dTdDI0SVVrZXBIYjNmRU43VlZUc2llNVhEWFBuN0pHVW4xaG5zeUdFZEhyUTQyQdIBowFBVV95cUxNRDB4eHVVWVZvY0dQRkpHWWoxSlc2NkR2eFFib3FJb1Nuc1FqaDh4X1JlVTBpaFdlSDRpeVlEQ3FlOWRybXdvYklUeEJxaktycEtYLXZjc04zNW5sNjA5NUQxNDRwLWdJRHBkVkJwR3FDZXZjTUJObXZtdjZaRWkzMmRLbFVMTFhqQW5HSmRaWjNNUnhVN1FDQ2w4bkJ1T2JnZ0Uw?oc=5",
+    "sourceName": "Al Jazeera",
+    "aiRelated": true
+  },
+  {
+    "company": "Meta",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Meta cuts 600 jobs amid AI expansion push — as automation replaces human staff - Fox Business",
+    "date": "2025-10-23",
+    "source": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObzk5Zm1aV2RBS1drVExORmgzcHdlYjFtTDR3eGR6WEtwelNjQjZqQ200WHZOTnlaYlIzUWEtM1NYMjMxclR2R0s2SzZkcG9ra0g2Q2xMa2VlMjBTVl9ZN3NOSzhLdEUwVzFMX0pWM1RBa1JUUmM4a2JvMFdabDA0XzU1M0YzVS11cElWLVpZUGEzQ2djRklsZW5YRzBJSlZkS2NnM2NYMy1uR3hqQXVKTWpR0gG3AUFVX3lxTE1oT2JVM1kyNEdsWVZxcTM1S25RT0tSM1NiMV83QWcxMDZXSFFoUkNlLTRLS2hwVXZXTUZ6VG9ySFdhZWt2ZS01ZnFYdnd3bTVrNEI5S3kwMUs2NXNYNldzNGtvV0ItTUJFbXg0MVZVR196RWhjVERSb0RZWTRwMDNUa3FTYXRkVl9pbFFVT3RLNVljWDNsMjFnSDNab3dBb1RWaV96RUdiTkN3YXhzV1FkaEI2Y1BFbw?oc=5",
+    "sourceName": "Fox Business",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI is already taking white-collar jobs. Economists warn there's 'much more in the tank' - CNBC",
+    "date": "2025-10-22",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUGgxWXg3UXYtWFpzeUtscUhGRjE4Zm5qTmtfZGxRZWdmTDJ5a2dCdk9OU3l4YlVRbGVSdWtJSTJBNkREaUdLMVB0Tmxla2kyZ2tFOG5iY2twd3c0MmgyVGxuaDdGM0NCUV84YjNYczlBWWNkTnREMzdkLTN3bl9YazRMRTZFZDZvb2V0ejVMTnBrYTktdHFkZTNTWUl1RHc2cmxFa9IBqgFBVV95cUxQSUZDLWpNY1NWMlZ6TG5waldyd1FkWFl5RWMwcVpId3VxNi14aUdISk85VVNIdGFLSG45cW9VUnR3aEc5OE81X3BjOGthRFQwSmlnOWdzdkF5SVlYbGhCMmpEYlFBc085VHZhbXJYVmEzSWtEU2k4bkJzOTR3eGJRSzc0ZEYyZkh4MVdmUGVpcVpCTXNMbTRYQV9QdVRCOHFyaDBpVDVkUVoyUQ?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Using AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Using AI to Replace Jobs? Layoffs Will Cost You. Do This Instead - inc.com",
+    "date": "2025-10-22",
+    "source": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPU0JkOHRlTkM0NDctbjVDTVdlU2tDemFqaS1LRk8zNTdZNmdoVmdqZEY4ZzVVTkVZdTNMV3M1ZUdTeHgzNzRSNnJ2YUNnUElxWXVPR3VlaTEzUFdyX1dWMlF2YzNHY21VUDFYWmZfaXdyaENMTW9hWUdtXzNwVnQxY3RwYW11WmNuY3NBZ2ZpWHNTaThIYm1UV0xlYlV2akpfYmhqVGxzX3c?oc=5",
+    "sourceName": "inc.com",
+    "aiRelated": true
+  },
+  {
+    "company": "Companies",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Companies are blaming AI for job cuts. Critics say it’s a 'good excuse' - CNBC",
+    "date": "2025-10-19",
+    "source": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSE40UHhqVlNhaTNiVVV2N2hpZzgzQTNxQTdHbHRRT3M3NDhrS0E2bnhoV2pZcERxYTRzRkJ4TXpjZkE0U2Y3TWp3UlZ1YjU0dkRxZkZoM2VyRTd2UW9XS3lVQWlLWWZ0NDJhTHdTSllZNDBHWGdfeFhvTGY1VUxHdzVfY3NXRkUyX0t4ZmpvbU9sNmxmQ3hxTUVpNnF3eTRuWnfSAacBQVVfeXFMT0h5UnB1QXF4RjA2QXkxMDExVUtaR2pNYS1pQzcyRHlSX0dEU2NsczFVNFp3THJQV05hZkJPQmlLNWd6OU1FUWZreGlfU2FMa00zY2ZwVmFOOFJBdXpjeVlnR3ZXYXVibHU1bmY3dzZ3cnJVakhlcU9NbFFzU2tqSXJOSU1TdklqbjNhcWVRWnMwaG95SmVFVTRwaGtORGFXd1NhTHNOTTg?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "How AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "How AI job cuts could come back to haunt Trump - Politico",
+    "date": "2025-10-16",
+    "source": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbDA4ZThzZmU5LXJVUldadktmMzhZM0tpa2FCeTVQSkNkcW9kUGl6VjBlSHluWlJOTGRSTElrdGNHY1dfdHRzLVdnaFJISV9yYWFPcUlzaXBVRGN3b3Q5cGJCekhFclZFSVpQX19wNG5Hd0xzZDA3MkVtajRhTG9XRXA2WkdYcVBPVFhUMQ?oc=5",
+    "sourceName": "Politico",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Job",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Job Cuts Reach New Heights In September - Forbes",
+    "date": "2025-10-14",
+    "source": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZV9FdjJkXzhmRzQ3cUR2cHhSRDV2N2gxdXN3aEtNaXJEWmNnRjhnSGlDZEkwdktTNndhSDcwc1ZNWFVvSHpsd2dHQm9pc0JHSFFTbnprbzhCTkdHWi1YVDlGblNRdjg3Vm0tMDRSRDk5WmUzaHU4RVRJX1ZyLUQ2T1lXQjFNLXh6RHg1N19aMVl1UWRZMndGUWNXeFdjdGNSYzdFNHRNNXk2NUFpSzV2a3hR?oc=5",
+    "sourceName": "Forbes",
+    "aiRelated": true
+  },
+  {
+    "company": "Nearly",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Nearly 4 in 10 companies will replace workers with AI by 2026, survey shows - HR Dive",
+    "date": "2025-09-22",
+    "source": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPR2RJZjhmaFFSQ0xaZUZ3RGlFRnhTd1Rnc2hDUzRCS1o1TnlzZnJLRTViRjBQY1kyZ19teE5ZT2wtak4zMmpxYmJoeDJZN21Ca1F2MW5kZlh3aVppNXp1Q3REQXB2R2RpTVB4dlBzQzhMYlg5QVg3UFRPdmF1TWpqZ0hESTdhYTZQRUE?oc=5",
+    "sourceName": "HR Dive",
+    "aiRelated": true
+  },
+  {
+    "company": "Are Businesses",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Are Businesses Scaling Back Hiring Due to AI? - Liberty Street Economics",
+    "date": "2025-09-04",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY3NFZU55ZTNxTjJXOUtVNWZ6a3RzUXc1TE5zR1Mya251ZHVZVmZzanNGVXBGcHNsaFllSXI0LXkzTE01d0JjelB4NnJacy14QjREZmxhcU9sMmNKaWZtTXNWNUlzcXc3NFFLVWhvbnd4U2VpSWxZOXFtZVBmUUo0dXVtN1gwa29qM0N4SFZpUGFscXlvQ3RnMUxKak9ncDRf?oc=5",
+    "sourceName": "Liberty Street Economics",
+    "aiRelated": true
+  },
+  {
+    "company": "NY Fed",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "NY Fed says AI not fully replacing jobs as more firms use it - qz.com",
+    "date": "2025-09-04",
+    "source": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5tOVA1aWg4d1ktbUFiVktBVXZJNDU4aFB0bC1aTjFkS21Yclh2ZXFfSkRxMU5YdjladTY5eUJSdEIwZ29uSFUwaDFacXpuVzI1UVlZLTJkNURCYUFONG50c1Rmbw?oc=5",
+    "sourceName": "qz.com",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI-driven layoffs are on the rise. Could yours be next? Silicon Valley tech expert explains what to know - ABC7 San Francisco",
+    "date": "2025-09-03",
+    "source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQ1dPTzdvRElyZlJuVFBPLUQzVFU1YXhwaTJDOFkwRWFZQjBTZmx6RklfNktTdFJmazhURG1jcVlueS1kaVNyVXB1Y2hFQ2pIV3dVUGNEYzVxdHptMmZ6RzlWT2FoMWVGZFNyQ0J1b01adUpNTjBVZDE5eV9COGFjdW56ZW95c0Z3Qk56QnptaDVQRXI0bDZ1MmtFU0s4WWlkMHh1NWo0R2g4SlhvcVNjN0Y1X0HSAboBQVVfeXFMT1NvRXExRU9IWnVQak9aRnNfTUpHYkZrbWFYWm9oMTJZSmQzYWtia2Z5bzhQRFZVUlBxbkdGZi1DeEVSU0g1SmVidG1abWtBcHd0WHJ3MmFHdWZyTnpOdWh2RzdvZ2hxaGpFOTQyWFVZajJEV0plY3VqdXpJT2UxWGhhc2lOdDEzSU1NOXJ4WXkzXzRYTk1SZ2dlVXFfS1RNeERRVDBBUFlkOUUwSU5MbVMtNmRBbGQ1WHVB?oc=5",
+    "sourceName": "ABC7 San Francisco",
+    "aiRelated": true
+  },
+  {
+    "company": "Salesforce",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Salesforce cuts 4,000 jobs due to AI, CEO says - Fox Business",
+    "date": "2025-09-03",
+    "source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMV8wN3haemVVamVXZTZFUmlXcWEwbVplQTBuSlZXY0VfNnowenptX3VqNTZ2RmlaM1dTdU1CQno5Tkh5NlEteUdZaV9HVk95YUljbmlDOHNYWW9qR082THFtQ3loR0g2dmNCUWwtdXZHel9iUG00N3RRYWhuWEFVTGtEQdIBiAFBVV95cUxPTGRtVmZZSGc1cTNNQnNyVnFSZVdGN0dGN1g0bXd6akJRUzBkWFhvbU83N0hnNjJVTHZyZ295dkV2c2NmY1FQaXVxNFdpLTdoRGZoZnlxX1dnUEVicEZNQXJyQlVXQkIwdFozZUx5UkJRdjVQRkJmWEhDTmRleWlsZWtMbXVZdXJ3?oc=5",
+    "sourceName": "Fox Business",
+    "aiRelated": true
+  },
+  {
+    "company": "Salesforce CEO",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Salesforce CEO Marc Benioff says his company has cut 4,000 customer service jobs as AI steps in: ‘I need less heads’ - Fortune",
+    "date": "2025-09-02",
+    "source": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZ0NzT0hRWm4xa1NoemFCdHZSYnBQSEJyLUQ4Skp3cE1idm93UVBXUUFqTEdZR3RhWXM1X1dCUVdDZEFXYmtPMWc2NGZWTFU4b3lnMmhVRG9Nc0ZJbTlKeFJybU1JQ29DTXVRWUY1cDQ2WE9kRFFQR05GYWNfRU55SHYybGN6QkxobGszMG82Q0ZxVU9pb3dVV3c3elJFMWRjWGFZMGJNZTg4dlp2MWNKZ09FX19lNnRa?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI, layoffs, productivity and The Klarna Effect - Marcus on AI | Substack",
+    "date": "2025-08-23",
+    "source": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1CV2cxVkJ0elJTdnNBNEh1UlYzV2RoLWhvSFVVdnBPQkltVk12WFVJZG5WRWJXaTVudVp5OVRKY3R1UnhNZ2FLNkJiaWNGVGRQX3o5c2k1WmZKNmI5RGtxMnBKaVAxaGNGQ1AwclhsdTh1SzdrdmVVSHE1UXc?oc=5",
+    "sourceName": "Marcus on AI | Substack",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Replacing",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Replacing Jobs? CEOs Sound The Alarm For White-Collar Workers. - Investor's Business Daily",
+    "date": "2025-08-21",
+    "source": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZlFtRjRkRnpVNl84NnVMSm1MTzZ1bUFMZ3NXeTlvMFVGOV9KMUFJZlRZRzB1Szl6ekItSDNuNmhlcDBmaHVxZGlPOFVZYmVrT28yeGNMQjF6Y2hCalFXRWNGWGRjOUhYb1h6NTVvYkp1Mk9ZcTFCa2h0eXZyLUpyZWE4SEUxTS1Ub0owR0JlTFFVdzhYdnF0a0JB?oc=5",
+    "sourceName": "Investor's Business Daily",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI is already displacing these jobs - Axios",
+    "date": "2025-08-18",
+    "source": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE42U3I4cFRQTGtmWjRHLXk3cUhVaE0tVzJBLVRLZm93SENxODlpRVJneXZKa09GTDFNNlhxWVFaaEFmM09ESmFtd044NGMzeHdUa1A3MzZDV0RJZlEy?oc=5",
+    "sourceName": "Axios",
+    "aiRelated": true
+  },
+  {
+    "company": "Is AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is AI The Scapegoat Employers Use To Explain Technology Layoffs? - Forbes",
+    "date": "2025-08-17",
+    "source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQdTZycU42LTlyLUZPWElKa0huYnR2NFdEUzY5TEZOUmhVc01EUjhXUjhOWWJ0WktFUGtFNklSaFo4OUlHR2Q1bVVobU1KN0FxbndCU2tXNDRBMmsyUUR5XzZzYVZldkFnMEhMX1VWbEVpSmN3TEI5TTd4QXRSUElhZElKRlN5WjU0cGxJS1ZnSGRITVluRkdtQ3l2Z1FRd1FwR1dZeU9vWDYtbWduOVZMZnV5R2MxX2RXMTlDcFNR?oc=5",
+    "sourceName": "Forbes",
+    "aiRelated": true
+  },
+  {
+    "company": "Why AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Why AI is replacing some jobs faster than others - The World Economic Forum",
+    "date": "2025-08-12",
+    "source": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBBODVtWnN4U0xiZmZoWUhxZFdrbzZNb0ZDbHNLYTJhLUVPa1B0cUViUUxJSGFKWTVNMGtndmd5TlR5YkFPSFdiQzR6cEFTMmI0M1FLcGs4Z0NpaFQ2enNuUGFaSFZweGsyYUhJUXJ6Ujl5Z254bm96VVNodzlVQQ?oc=5",
+    "sourceName": "The World Economic Forum",
+    "aiRelated": true
+  },
+  {
+    "company": "Stunning",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Stunning new data reveals 140% layoff spike in July, with surge in AI and 'technological updates' increasingly apparent - Fortune",
+    "date": "2025-08-07",
+    "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPLXFtZDcwNVI5OXNjRjVRUGNsSmxCSUNremJnSnZKcHo4Ulo2RUJNOVQ1bVlOaTZuNy1oUDVObmEtOXNVRjBNaGE1RGJqVENiRXBMeTRaeWlpeVFnYmRxektyNlNxdGdyVEc5ZmVjdGxNUUlaRWVDOG5FYzkwUXhKa3FOQy1FUFRWRnhhSUh5S1I0V0F5VUdyeWhOMGM2QUpMendj?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI is leading to thousands of job losses, report finds - CBS News",
+    "date": "2025-08-05",
+    "source": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE10NUhuX0FONlhIdFAwZ3VfMWdyaFAwSGlJYl9nOFlUQ0JRbzFYOXI5bl82RTdSWjFCZy1lUzM0OEtFRTJmMkF4MUM4d1o1TGNMeDFSSmdvUGhveE9LaDNBb0I4a9IBaEFVX3lxTE5KUXJyY3E1MEtvSVBWUmJOSjBEb1pxWEFFQU1MUnl1eFZPdXBuY2ZFenpfMW1vS2U2RjJxUWZ6ZjhVR2kzNXRxbGNNMDVqTFk3QW5sZ3pEaFBCcnctUDdXWkVmLUduR0ZQ?oc=5",
+    "sourceName": "CBS News",
+    "aiRelated": true
+  },
+  {
+    "company": "Big Tech",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Big Tech has cut over 100,000 jobs this year — and the AI revolution is just getting started - New York Post",
+    "date": "2025-08-03",
+    "source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPaDRlbzkxNHhLNi1LQ0syb0o1VWNuQnNOWDZIbE1SNFhYVmloSHlXYjRUcGtuN0NfbFNPcjQ2SXhGTFN2eGpuMWc2d3VvMUxFSmxFSnVrU2xMSHhLTlFhSkhEZnczbHE5YW1aR2M2ajdBOF9BUWJ2RzZmYUJwelJCMEVxTzJXTDFqaEVManRMQWxfNDR5Z0F0XzJjajFUVVlUR2dCQ0ZtWm9femJKakxHb3BVbmdqSFNKN3NzeFBOZldjb3Vnb3dR?oc=5",
+    "sourceName": "New York Post",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "62,000 Jobs Were Lost In July—With DOGE, AI And Tariffs To Blame, Report Says - Forbes",
+    "date": "2025-07-31",
+    "source": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOVzZyeTAteThfeHp3LWZjMGpTSk1ZTk1GZldjVHRGSm5ZM3RYYmNhTkx3RlBsbTdldXRlMTVQZ24wcUNMbTB5emFETUhKeHpRMnF4Q2ZJUDdzcXU0V0QwWXZjTzZOVEVqUmJ3RVFmOHRtcnptVEI0c2lUY1FVNW9lTFByVXFYbTFNVTIzc2VOTHI4dWM3amtoVUV5Rm1INXhNa1ZXSmJEREtwajRCal94Q2RSeTV0M3ZjeFlzdk5kcEhRZnNpcE5rRGdSOXlUeFVEajRDTTUtRzk?oc=5",
+    "sourceName": "Forbes",
+    "aiRelated": true
+  },
+  {
+    "company": "Summer Lull",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Summer Lull Ends: July 2025 Job Cut Announcements Spike to 62,075, Tech, AI & Tariffs Increasingly Blamed - Challenger, Gray & Christmas, Inc.",
+    "date": "2025-07-31",
+    "source": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTWpWRHhnOVpsczBFWkpMNmRZdXFjQ3NacnZBN0dpcjQwaUlhcUx1eU9hVS1OUzE3ZXF2a2NSNHVQQVRnbEtRdVk4Zkh5YVBobEs5R1JlZl9TWEFFUTJFWWN6MVlpN1NpVFo2ODZPSDkySzJndS1nSmlSaWxTVmpqbGpJclNGYm0tY2NoMmNQT0haSlJNRC11eW1XS3g?oc=5",
+    "sourceName": "Challenger, Gray & Christmas, Inc.",
+    "aiRelated": true
+  },
+  {
+    "company": "Opinion",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Opinion | How AI is impacting 700 professions — and might impact yours - The Washington Post",
+    "date": "2025-07-28",
+    "source": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORy1zZkNhWHVxc1BBbmNYd2stNFhtZ0kybXhvbGNYd2VCTkVxTjZtbEY0ODAzOXhKazdKc0htM2lPVWtSaHBGQWtrQzBpOUV6TzIyek54QXZUb1E0WmVub3lNVl8xSnd5VzZoZjRpa2ZySjY1ODBoQy11TWNXcXhFSDEtN1M?oc=5",
+    "sourceName": "The Washington Post",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI is driving mass layoffs in tech, but it's boosting salaries by $18,000 a year everywhere else, study says - Fortune",
+    "date": "2025-07-27",
+    "source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOGk5bjNEVms5amVyVHFrOGpCZ1p2ZkpPZ1ZETlpqRDQ3dFkyckpWMmxsYzNfam5xeFZ6REZlcXFXUUJ3WEU2RlB2NnU0aXlfX2Z3ZFMxUVZud1hVbF9lX0VKTUJjZFA1SFpJUWlhVjYzbnYtMUtCNHlwaGNuU3hveU5hb016TjBONVozb3Jma2lnZw?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI’s Growing Reach Reshaping Jobs—But Mass Layoffs Remain Elusive - The Washington Informer",
+    "date": "2025-07-24",
+    "source": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOC1ZcDZKYjVfYUh4SUNXallTYWNqbW1yVnE5ODdZcms0OGVPVV9lTTZwdWJ4emFVYmxNWm5aMks5bGZ5NW5mSnNGT1Aya2FaYldfSTc2bGJLdXZSdW01em5mMW5wVU5SNUxDTy03SkZvSnF2djdsRWxKQjJVX0p4c0RlaUFfYzVxdHZEakI2RUVUYjdtcmpZMlppOWI1NVJtVnc?oc=5",
+    "sourceName": "The Washington Informer",
+    "aiRelated": true
+  },
+  {
+    "company": "Big Tech",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Big Tech’s new rule: Use AI or be fired - The San Francisco Standard",
+    "date": "2025-07-24",
+    "source": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc21TTDVZYjN0cmZFd0NfTjFrQW1qUEVIQ3c1RXU4cVItb2ZQb0g1SFRrRG5kWm5TV2NGLWk0dllGcmFhSWY1UDl4VkRwMWIyc3ZCSGlMMjA2bHFkRTV3cV9lTHJSd1RHb1pJaFB4UjI1aVdKdVVkZDNsbF9xV3dTakt3UFFWc2YxS09MYXJB?oc=5",
+    "sourceName": "The San Francisco Standard",
+    "aiRelated": true
+  },
+  {
+    "company": "In",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "In recent layoffs, AI's role may be bigger than companies are letting on - CNBC",
+    "date": "2025-07-20",
+    "source": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNY01aNU5MeUNsQXRMbHlzUGh6QkRMV0U0NmE2VVpJbDA3ak9YQ3hncjlUTVdFaE9WRnpIOUdvV3N3SC1EZmJ6eDlBM1cyQWVob1JMeGctQ01WdGQ5LWNRakp3STA2UlhoN3RTUnpwUV9QLWs5b2ViUzVrcWRNVWM3QWcwUFVrS0VuVEhIdFgxWVRSRU9lUVNN0gGcAUFVX3lxTE1tTXRnVUVOeWZ4dUh3aGJveDBsRFpMQTlKdFpLZDdFaEZ0aWxvVmdUdFpzVzB6VlVFbkYybnY0M1NGal9jTnZkS3NfYUVVSV9iTklKb2VyQ2d1RUVwY1BHb255aDhFTkZIaHo2VC1NNGt6RVVwU2lFSzVTYzhxSExkN3FyQ1BPRHBKeTJRSlVkeUNzXzBWTnZ0N0pXcw?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "You",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "You’re Not Imagining It: AI Is Already Taking Tech Jobs - Forbes",
+    "date": "2025-07-17",
+    "source": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBiQU5ENmZGd3ZYOUNhN3FiZnJ2eW9zV3NLUnNTNjJqSXdWajQxNVYxTVVPR21XYkVZUFdzZ1Q3WWhwbW5YV05BZ3dId2JSNnhsRUtNSkJYUUt0ZVFQaWwySVVhNnR0SXdWc25GS0x1NnN4dE9pY2NJdw?oc=5",
+    "sourceName": "Forbes",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI job losses: Nvidia CEO Jensen Huang says artificial intelligence could lead to layoffs 'if the world runs out of ideas' - ABC7 New York",
+    "date": "2025-07-14",
+    "source": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPYmFPbG5Bc3I3ZTJDRWJheDdxZ0puMFZSYjNQZHJOdnNBUVAxci1UVlJPbWpGV0JfOGxKT1VfNHNMY185Qk9MUmJTMU9uRGlxbDY0YXhlbmtDNHNCbWo2TDB0OURPUGYwYTFmcEhBSF81QjdSaERaeXhra3FoV2NZaFh2SHhlYjhDYXkzNkJxSWlqWWt2WTV3NnQzaVJ2MllyX042WTM2UWMxNlRJcTFPSFVhQldhaW16aDIyU29HY0lOd01mRkp6cHZXQ3A5UkNXdWfSAdcBQVVfeXFMTmNnRG42QndWeFBwZ0NDaDNaVUZPQ1EzOWFoVlZrWUJUSldybkJCNnJJaVQwWnVoTXpjWGFQNVk0dXpuVy0xVUVjMmtneFo1RVdIcmQ0bzBKSWVhYlZNdW8tT1gwYkRZNDZILWxlVml4d3JWY2RSMjJyR3hyQ2R1djRyUWR0ajZXVHk1dWhfWFJBUHNGWE5Obm5XekxrMW5jdmFpckI2eXFvSnFGLUpiUVhCZmdCVHhVTmdzekpPbm14T05vLTc3S3djbGJOQXFUZ290WHIyLWM?oc=5",
+    "sourceName": "ABC7 New York",
+    "aiRelated": true
+  },
+  {
+    "company": "Telstra",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Telstra says 550 new job cuts 'not a result' of AI - Information Age | ACS",
+    "date": "2025-07-10",
+    "source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbGtBSXFmX2RjMlp1aVUxNUpXVTZEUGpaalh5cEJyMVl1Qk9OaEFvTDJfX2NWcnBGTVdSTTZFdkNPRlpoWm9DTjl3SDN2Y0JUQi1Db2xPb2ZFSDRUaVFfeGdqb1YwWm1ncjYzeXJQbVlRZXR6Q1BjdnlCdHFGZ2lVRVd6QmRWTWNQUHZZOFBvZE9KdUt0?oc=5",
+    "sourceName": "Information Age | ACS",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI-driven job cuts may be underreported: Challenger - CFO Dive",
+    "date": "2025-07-08",
+    "source": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRklac2VVVnlsSm9JZzdwVUVCVklGYTNkbFFNVVJjM1FRY1NpUmdUUUJWWmlPNkl1UVhVa1RQMjNadTVSdEZJR1RFMzhJMHRvemxqdzVGZDVuVmNHX2NQSG9DTWdCLVNwLW8zcUR3dFNGY05SVWhtd3BUWmUtdVdUVC1SWUlnNlU?oc=5",
+    "sourceName": "CFO Dive",
+    "aiRelated": true
+  },
+  {
+    "company": "Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Layoffs and slow hiring have job seekers worried about AI. Here's what's happening. - NBC News",
+    "date": "2025-07-05",
+    "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcW0wN2FWMTRfVWd2Um9faDF5VXRySFZNVVRzNkVYR3V2VzRTZ1lYZjdRTHR3YkV0TGhsM1NCMXQ4ZURWMTNuSURWOG5NeXlLWGVZSUVTWDV0Q0pjSktGUzZsaERDWmVIVGxUNDZfUkp5MXNjVktzUEhQZU5XV1hpWTJmZUw3N1h5cUFDVm1FRXNhZ2FTT3dkLXdpR0p1Vnp0T3FBQ25oTXNhRzB0Yjk4ZGVkRQ?oc=5",
+    "sourceName": "NBC News",
+    "aiRelated": true
+  },
+  {
+    "company": "Companies",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Companies keep slashing jobs. How worried should workers be about AI replacing them? - Los Angeles Times - Los Angeles Times",
+    "date": "2025-07-05",
+    "source": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZTZ1clM2S3N6N200a1J4eWYzZnZhNFVpWEtfc3N2R1BtMFhMU0UyeTBxZnA5VHpoZkhHNlpoc2RFWFVNMm9ZMWZKNnBuZDZpRDJ3QzZzWTlvZzVvT0RoMjl5ZXphTjZxRGhTcXlvLVlQSFBsSW5wOW9MVFRSLThfZktMdmxQbUFEYVhRYWxJdTlHNEdJV1pZcG5WbG82SEZ0WXlYNEI3bG4xMjkwdzBwQ0VLVjRxcXU0RkNQdWdoLXZhemdhUHQ5M0I1V0Z2LXl6Vy1CTg?oc=5",
+    "sourceName": "Los Angeles Times",
+    "aiRelated": true
+  },
+  {
+    "company": "Ford",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Ford, JPMorgan, Amazon Executives Predict Deep Job Cuts as AI Advances - PYMNTS.com",
+    "date": "2025-07-03",
+    "source": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWS1UM25WNDR4ekNYcE5kS2w5ZHFYT1p3eThVY2hvenl6U3FHUmJVUnJpQkphQVlXeVlaUkI2bWZodXlVMFFoQW9nYkQyOVBlWHZFcGtwZUo0QlJ0d28xQ2lhOXF2QWlIMjJhenFSbGJzNnJ1bkMxQl9KSy12Z0w2Q0RucXhaVldVS3JrWVJqVUhMVFVUOEhqQUdfVEVnN0ZNNGl4ZUVNcWg2WVFPSF9iSUNfRVR0MElFMFVkdi12ZkI?oc=5",
+    "sourceName": "PYMNTS.com",
+    "aiRelated": true
+  },
+  {
+    "company": "Tech Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Tech Layoffs Surge: Intel, Microsoft Cut Jobs as AI Reshapes Workforce - Design News",
+    "date": "2025-06-26",
+    "source": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTkFDR1I0NVIxdjBsckNXZEpRQTVRM2FCNTFZcEVGTVhTUmExMVdJM1ItT19DZEZUYzVOWnpJLXBWcWsyQWJkUHZXMUxyWDNqZktqS1B6OWpvUklnOVFTZGI3T3hYeEcwOTFOY0VVVEZiNHJwY1AyekMtQ2ZmQWtneUREX3lmQ1prSjdXWFE1VElrUDJCLWd1aF85ZExpYTlscWxaZ1BTdkZISV8tcmNLVjRheWoxc2Vy?oc=5",
+    "sourceName": "Design News",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Killed",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Killed My Job: Tech workers - bloodinthemachine.com",
+    "date": "2025-06-25",
+    "source": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ZNTF6enBGaVNPY2M2QU5jQ2dJVS1ETnd0MWFYTXdQWlUzQkMya3UtM0ZkdEpJT3dPbkNpRUx1b2RGM19sTWs2MHBueFdKZ2NDWDA2aWJ4ZWpKcURVZDRrQzllVHFTYktSaWg2dVVWNkZ1eDhlaEVxSUl5cDEwdnM?oc=5",
+    "sourceName": "bloodinthemachine.com",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI begins to reshape the IT job landscape as layoffs rise - cio.com",
+    "date": "2025-06-25",
+    "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOM1piY2lVOGM5S0VBT3BFTTk4dkVpUWxKTVRwVlFfeWppWGNwZW9lSWg2SXNNSE84d0dXc0pVX0RDV2FNenl0ZTJNeFRma3RwLWhpa20yNURxSHJXeHlLd0R5bUYybVZpMDZTMFpkWmV5U21UN2dUSi00bDg2ZWExOURjclAxRFc5WXFXWU91VkRoVDJXdzBJdThUNEswaXc?oc=5",
+    "sourceName": "cio.com",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI's impact on the job market is ‘inevitable,’ says workforce expert: 'It's going to hurt for certain parts of the population' - CNBC",
+    "date": "2025-06-23",
+    "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQS1RX3k4ajhXaHRtcUtFbkVrUUs0VDhpVjR6eGRsNGthdzJiX3V0c29Pb0poMTA1WXF6dGVybmh0clNKX20zZzFTbkpoOUl0ZXVLZW1xNWRJc2ZWVWpqM09pNGF2NzhGREZOcC1FZUdicUl4Um9fRkVtSk90SEhfN1czb01WWVYtVUZ4RTl0TlZPYVdZTlNVUGpSRlZtVUxMSjR30gGoAUFVX3lxTE9iUm0tOXBlYnZaajh5TTZRV2lzWFNwZ3pxSEZRMkRKT3FDQXBJU1ZfaWszbTVsa0puZHdlbXFTRUVlajZVVk1nYl9lcVJfb3VkNUxiRGRPOWs0c3FTMGJSTlRKZzdjcXN1MHJLOENwWE5jWTB1dUZxclFDUlUtWXJLRkFESmo1NEZJMzdILVlmSzA2cmFac1ozZFhCeldRSFJMLXBLc0RfTA?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon Preps",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon Preps Employees for Layoffs by Talking Up the Power of AI Agents - Gizmodo",
+    "date": "2025-06-17",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQXdUYWV4MC1qRGNfUnU3Zm5TSzJ1eEZlN2NRVkJudEY1YVdJdFNybzItMlJuNGo1MWJubmphWW9MaXN5TUFPc0U0OWJ0anFrUVk3VFk2QWlfeElyR25lMnlERHVrUXMwMFIyYmI1RkZfTWdlb0dMTUhWTjd6UldUSDFRY0lUQzZiMEdHeXZneXkzVXBRSFB0cEhWZWdya0FEd1F0Yw?oc=5",
+    "sourceName": "Gizmodo",
+    "aiRelated": true
+  },
+  {
+    "company": "Company",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Company boards push CEOs to replace IT workers with AI - cio.com",
+    "date": "2025-06-05",
+    "source": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSFdyTlQwS0VvQ1JUYXAtdHJBejcwckhWS1ZsbmY1UFZZZkdMM01qSjMwOU10WURReDVNZGM3M2FISmMtV3hJQkNwMmNtalJtRVBMeWRMa2FEOEJYNElWaGFoRHk4YTFCb0dDUno4NnhVR3prYjZfWFliTHZBUHpKOVpIeHB3TlY5MHJEV2FCcmIxaHVXTmpFUjVucw?oc=5",
+    "sourceName": "cio.com",
+    "aiRelated": true
+  },
+  {
+    "company": "IBM Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "IBM Layoffs: IBM to cut 8000 jobs globally amid AI shift - Deccan Herald",
+    "date": "2025-05-29",
+    "source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbGFuQWNUVzFJX0xDbUhUaERlb0VmTkY1cUNWejlaZk82VlZPejZPcF9UQmtCOW9RVldJMlR5N3dOWUtMLUtPTFk4dmJOelpBN3Y3cTZQSHl4YTJVZlJaaW9Gc3dMazdWM19Hb0ZBaDA4cG44TkFFb1l6eGxmUWRMb2NGaVNlM3otT0JCanY5NG1jSG5qWjhoMmRwT3owSmlvb1I5R25NZlpnUkVTUXJJSnJYMnB4eXlQT2lBQXhn?oc=5",
+    "sourceName": "Deccan Herald",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI surge, human cost: Thousands of jobs lost in 2025 as layoffs accelerate - Storyboard18",
+    "date": "2025-05-21",
+    "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPU195X29nOU9OdW9yR2hZX1RudHNtZmpPN0QxX1pCVjRZWWlmRDZTYlhrWHBRY0ppaGI0NmZwMm9IRnhkZVF4NFZBM1RmU3RSS3gxcXltNy1fUmRELXh4c29RRmVhdEhsUlZFZGVmWVBwZTVjOEotX092YXpmTEsxUXNKWFdDSkZoZ1AyZ2w5RWgyY29JU1hyT0o5bF8yQ3VIT3F5SUlpcGZyQ0RSZ19MNGpjNlZmNDFra1otSU1DdE1URlhtd3fSAcsBQVVfeXFMTUJIc0tEYjJiWjZHdE42cjFpMmVpTWN4QmFRQ2w2eFpYQ3NJMnRuSW8tR2E0QmI1VVFiYmNmUDh0QTY1UmpyU2V6UjlhcURDa1ducGFzVEFTQ3F0dm1DWkNBNTdVc1piRHFlRHpnWVh2WFR6Y1d0ZE5OOEZLY1N0V1pFVGdza2N5cE9pXzR4d2dId1ZUS1RpM1U1eWR2RVMxbUR6Q1kyLUx2YUtCMEVnbWRVWVU3SG1xN3NYdkx1U09rQ2pZaGxOdGVUeG8?oc=5",
+    "sourceName": "Storyboard18",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI-driven layoffs surge as companies cut thousands of jobs - Exchange4Media",
+    "date": "2025-05-16",
+    "source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTGVoWm5CNi1nV3dEUndZaGVqYmhfRXhpX0hlb3pSV3pSUjZRRzFoME1NWEpyank3eXFMY1FucE5BYXdNYXpDTzJaVS1KMFFWcWhSbmJ3NjVHY2pmS1dEdkJEYlJiVzVWM3VudGsxNVREMFBvWGh3dUxnZ0ZZVmZ4SEtXeU4wNlhPTWxfVDN4cDVoUWNFb0RoMnQteVhEQXpucUlyOHpjWmdFRzdyQmpaRmh2Y2hsdVFNSjhSZA?oc=5",
+    "sourceName": "Exchange4Media",
+    "aiRelated": true
+  },
+  {
+    "company": "Krakow",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Krakow layoffs reflect broader shift to AI, automation in CEE - Central European Times",
+    "date": "2025-04-08",
+    "source": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPWDl2TzFUaEppUldnSXRPU2tOV1E3ZkNCZWJqQmJGRkRlOG9tQ0ExaUpWMnJsYXYxT2pnUUJBcHFOV2lCTVhhMGxTRkVZRzg3VzNyYzVmUDRrdkN4Q0NRTTF0c3JoOFFMZXZBZ3lNdHRsYXJqeWdqNGNwcmRDT0FnVkJiamdnT1Z5ZC1iRVBXWWNCM0VwZWloNEFR?oc=5",
+    "sourceName": "Central European Times",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "A workforce management giant will lay off 1,750 employees to make way for AI - Fortune",
+    "date": "2025-02-07",
+    "source": "https://news.google.com/rss/articles/CBMickFVX3lxTE1qLVE0VzVydzZnaGQ5cXBZcUxjNkl5RzdwbGZPMmRhZ1QwYVFndl9qcURyX1hIUGF4c2R0WW9fc2V3ZXJDYUpXZGExYjc0dWNBM1AzTVdScllHOUJ6cFpNVE90LWJ5Rk1NWDdURzZHbmhMZw?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "Some",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Some hardware giants cut jobs in 2024 as they doubled down on AI - R&D World",
+    "date": "2024-11-14",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeHpTT0Q1TE5NMGQ2aWk1TTJDYVFwV2I1QXBRUVVoZy0zbUZFR2RaWTVvaTZ6TUFzOU9LUVRudmUxYUhZQThTWWp1ZS11a1BxbXJxeXBfRlBoY2JWbTJydmgwdUtiZ0U4TTdJX09GU3BxVmZVS2ZQZWd1dEhjV1diU1M1LWR6eV9DRXZOQlpUYzQ3aTFiZTVoNEpIdFpOS01V?oc=5",
+    "sourceName": "R&D World",
+    "aiRelated": true
+  },
+  {
+    "company": "AMD Says",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AMD Says It’s Laying Off 4 Percent Of Workforce Amid AI Chip Push - crn.com",
+    "date": "2024-11-13",
+    "source": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQm0xOS1aZ2NtcUZKTkQ5VEIyYU11NVN1TlBQUG01R0lkYmM0dFZLQVpuZktvSHZhZk9mTmZEcFdZOEtMX1BNeTFrTFotTnFHd3MxbzJjNkVoSnZPeWdZcDVrWnBHQ2dEekQxazJkOFlfbG82VWR6QWNUSXZMdlpxX0ZaNHQ?oc=5",
+    "sourceName": "crn.com",
+    "aiRelated": true
+  },
+  {
+    "company": "Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Layoffs surge in US white collar jobs as rates, AI alter office work - S&P Global",
+    "date": "2024-10-31",
+    "source": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNM0VhcjhadmphRHNsb1BocExZcklyVmpaeGZwMjBNUmlDV0VwX2cteHVleEtuUzYyS19wUFQ2UEx1VmpmRUs1VmJHQzZ4dzhUTGhjZ2tiYTlEVlFuZlh1b1ZqWWdTcER3cmFkUE1PUnBMVDlGakltVVVpZ19xSzJ0UVFXX2tLVE5xWHRyZUVMSVFudVBRVFBHSHZVaWZmbFJtTk9wUWdZbWl4STJCNVQ1Q2xNdjZqUjFyYjkzYTNqUExROGJvTFhWOXNxa2dSdDllUjBMZjdmc05IdEh6Z2x4V2NKQWNiVkZ6NmRF?oc=5",
+    "sourceName": "S&P Global",
+    "aiRelated": true
+  },
+  {
+    "company": "Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Layoffs, AI demand create mismatched talent market for IT skills - cio.com",
+    "date": "2024-10-23",
+    "source": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTXc4S1YxdU9CWjFHLUttaUlUYjlTMDJXbGhpeUJCYktYSlBqcjlPVzhkRnB3bmpKY2ZJQ0JlbHRGdGxralkwZjJkeHZZck9aMHBOQmN0TjEwZEwtUW5COVNVak85OURSSGhpTERsd01BcVh1ckh3dEgtQzJzanhNQmp3RHpLQTEwVk5hLXhqbmYtVzZHdEV0WEI1OTJidlo4NDlRbThxcw?oc=5",
+    "sourceName": "cio.com",
+    "aiRelated": true
+  },
+  {
+    "company": "ByteDance",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "ByteDance's TikTok cuts hundreds of jobs in shift towards AI content moderation - Reuters",
+    "date": "2024-10-11",
+    "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQOHFyVmRNamlPYXgwQXZuU0FpX051d1RRMk5MYko3cmZTb29FakxvSGJFNjRWUlJCTTl6bnFuMVg4VUk0Z2RiRm9vcE1HSzNJSV95STBHYUpJNW9EMzFDaTJ2NklmTi1Hdm1QM1hTYXVwZm9melZKak00N3JBenI3V1dXZHFoSVRDRXVOckZlMGpmNUVDRHFKSnVTLXZiUUw0QUh0V0o4dHRGQklNazl3ZExVSWljRlhQQ2dKU0Nva1EzQQ?oc=5",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "The",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The 9 sectors shedding the most jobs — with AI automating over 12,000 in one of them - Business Insider",
+    "date": "2024-10-10",
+    "source": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPU0pDdHJ4MkN5LU9PazNiQ2EtRFJ5TFR6VTM4VnpLN1g0ajgzczNidUxkVzZsdEtSTHM2d3BhdXJhSmlqRUprQ054VjNBb09UdnpjMEx2ZXRsOG9JeHpGR3p6MDNNaktmVHpWMXdfYl9mQ29GSVU2cHBwanFSeUszejN4dnFLcHl1a1B6Tl9OTjA5QlVjOEVwNXZqVHVZRVBRYjJaajA5ZDNyTmJJUVBvUU5TSQ?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Klarna",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Klarna is All in on AI, Plans to Slash Workforce in Half - CX Today",
+    "date": "2024-08-30",
+    "source": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOYUh6SmdiMDhEa3l6SmdCMlVmdjFMcUpyNzBUQlpuVFlfOWxpS3RnQlZRWm92VmxkSXVrazVnSExUT0tCaVFZQmZYcks3MkdHUFpMYTd6TnNBa2NONGJackJUbEQ5eWkwcGJXenpwZTJUX0htWUFSem05U001S0tuMmxVcUFNNFJsQ0JJMA?oc=5",
+    "sourceName": "CX Today",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI troubles, Mastercard layoffs: Top tech news August 2024 - American Banker",
+    "date": "2024-08-30",
+    "source": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOY3M5R2dfR1RDclVZRkF1UVB5Tm16OWJ2VGc0dmI0Rlc4LWVCTTZpSUk4bi05ZEJDaG9xNDd2N2I2M1VkTHg0cUI0bGVQQmprdWlUOGJnMG9fazFsYzI5R1lyLUJnYUxGaHNiUDB2aDMzUmZyRHQwSmNxOGtyNk9rU1ZyTWdpU1B5My1Jd1NvcjRLb1dmTW9Z?oc=5",
+    "sourceName": "American Banker",
+    "aiRelated": true
+  },
+  {
+    "company": "Dell",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Dell staff say they aren't surprised about layoffs following its AI pivot - Business Insider",
+    "date": "2024-08-11",
+    "source": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUVM2WmFvLVR0N0oxQzN2UkNfTEtFWkRPc0JuNGdyS01uQmZTaTJNZDFjUGF3dnpEVXRyRnRlRTN2el9wbHd1Rm5MLUZBQVdxRnUzcUcycDRJVEVUTVF6eEdsRDlraXpZNXI5RGFMU3dQSVE5QTN3SzdyNEx0U2RGdFozYUxLZjhjTGM2UW13c19JMEFNZFE2UHVmNA?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI startup Cohere cuts staff after $500 million funding round - CNBC",
+    "date": "2024-07-23",
+    "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPc1N5U3d3RkNaZDhZbTZDcU9Lc2VNVXBvOWl6VWxDd2NyakZXYWNtamFnd1pkeThES2NyWUtGTWs2c1JwN2JvdkVXTjJlSnlZZkhvSmVfYlgxNkx5TG9IQzg4eERGdW5jek9NbnZXMXExR2ZKbkpEdkFMMmRlb01IOHZjXzJSdkxscUdHcmRldjhKZGxSRC1pYlExeWctVUnSAaQBQVVfeXFMUGdaTDJFckFQcFNrLTBOY2pBbEpqYm1oc3c2UmdaZ283cjhPMldDVm0zYjVmRHh2blpGNkRsWlpweDdVTlNlc0xjSXExX0xhT3JKRndEeGNRYkp6MmxKVjVmbDVCQnBpbjk1Zkh2VG5xLUhhNWtFLXlfRTVWSHJsZXRwZmNVX3FkanJ5cFdDclZLMVRSUnQ4LXdleE5zaG9fR3VCa1o?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Exclusive",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Exclusive: Intuit is laying off 1,800 employees as AI leads to a strategic shift - Fortune",
+    "date": "2024-07-10",
+    "source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSjdzN2VvZkVZZ0hMVTVjTm56NUU2YnJtYTZlNUdDckxfNnh4STd4OXZvbEZwc1ptbnVrTEplT0pPU0NkUXV2R3JuN19rYkZJY3pwd2VjZjk0Sy1CaEktWmxVelZKQTNnWGx4TmZUdmNMVkdlbjV2d0s0TFVGWDM2OGQ0Yw?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI Is",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI Is Coming for Big Tech Jobs—but Not in the Way You Think - WIRED",
+    "date": "2024-06-17",
+    "source": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWm5mLVpVcnRNdDNZRkZjaFpYdHU0aWM4TVhqaUlJSW5rX2JDNFJiT1VUUkswVHVuVHZ2eW5Zejd2NF9ZSF9abndIS3BoTmE5Y2lJM0FzSzZiY1hZMmpXNG1UOE9qMVhUWG1Ma1RZS3RZRk9HWG82LVRSeFdpUkt2S096UU5CdzhDUW00N1g5RDB6dw?oc=5",
+    "sourceName": "WIRED",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "“Necessary” adjustment | Microsoft announces up to 1,500 layoffs, leaked memo blames 'AI wave' - HR Grapevine",
+    "date": "2024-06-04",
+    "source": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUEFtd0tIRjRvRTU1VXl6ZnFMR0N0dmNjR3p4RDg0cEtGanZUSlNGdk83Q2Ewd3laMHdaNm1HR0VQT1NZS0tUZWt3bm9YYVFGZFNNOUd6NTBUdEV0QzN0QWR2SWx3ZEc3YmpoZktiN3NwcmpLVUxOaWNaME5RMzU5UURWMW9qbjd5WWlWZmRuUmUzOHdGT2I1MWQ0VzNqS2g1b0VocGZEbHZoMUxQcmVMVDUwSktqQkprOVBaTEZ3dko?oc=5",
+    "sourceName": "HR Grapevine",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI isn’t coming for your job—at least not yet - Fortune",
+    "date": "2024-05-19",
+    "source": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRHFjbTBiVjRPcFJLZG5yVXgxNmQ1RWR3RzdxaXRpa2c5QkZ1M3hNU1VCTzN0NG5aNU1uMmVaMUZSUzdsUHRuWjBfYlBkNlVraDZIc1ZYdXhRQ3VMc01HT2pvUjhXOXQ3UEVET2xvS0dWYUc2UThqNnF0U2NtNzhZWk1OcUdvM0Nta0hoeUNMbjI5aUIzUS1yMDRTb0dDVlV5X0lFdlo4ZDV5UQ?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "Artificial Intelligence",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Artificial Intelligence Cost Americans 800 Jobs In April - Forbes",
+    "date": "2024-05-02",
+    "source": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQNnozWnhNZW10VzIxS0RSUnhMU2ZJaTNhQmtiRkJCRWJRRWVYLVBYU01uVVZaS3d0a1dCTlQ0bmwzalNxR1lsLXZEdVBrQUFha0dQdWxPd3pxWlFMZ1NfSU84NWVHWFRtTzAtZjJ0XzBjaVd5N09Nb1hiUy1fb0hMcURWUHVTcTVzZ214dVM0Ql9MeERNdXFKb1pVbHZWSGtiYlZsaTVva19ZNWwyYzl6V0R0WVNGTWpkR2x4M1VUTGk4U0plVk9MaTl0RkZBMWpaeUNhNnNDUlpLUQ?oc=5",
+    "sourceName": "Forbes",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI adoption will drive both hiring and layoffs in 2024, half of tech leaders say - HR Dive",
+    "date": "2024-05-01",
+    "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZDhIYTgwUmR5Yk1IQVhNVmd1QmlFWjJES0JUZHNaSjl5UFYwMkZsSlpXT3hWa0pwaFZDc29HdnVrTUEyMk5BVVlwRFVaZWFkLVlNdWFsSWJxaUpmbW45VE1KaVUzYlZvWWJsS1lUY2tDY2JwbElBajdhcG9hbDFNZUU1WUk5OEhMVlI5MHA4SQ?oc=5",
+    "sourceName": "HR Dive",
+    "aiRelated": true
+  },
+  {
+    "company": "Best Buy",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Best Buy cuts workforce, including Geek Squad, looks to AI for customer service - USA Today",
+    "date": "2024-04-17",
+    "source": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdTF6SmFtZWdTUWNyLXBCbjBhZl9VeS1zOHF5Qi1Fai1VcENrYUFFTTRLNzd3dzNNcnNsaWYtOVFEVFpHWnc2VDhnNXhXTVlZWV9CMGctNXBMSzNaZHdEWGdRdkZLMVZoR2NhUUd3ai1wTXJFTWJTUXZLSm94eTVyNHU2c21ETnI2ZElIXzVTUENKb2hFWWx0SUd3d1JnNVlzWXBj?oc=5",
+    "sourceName": "USA Today",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Amazon’s security chief says he would be ‘astonished’ if cybersecurity professionals are laid off due to AI - Fortune",
+    "date": "2024-04-09",
+    "source": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Gdkd4RS1ubzhwXzdIWXVlOVlqUVRHSGJ6V2NWeFNrX3lNMXB0dUZKNTZLRmFXUkU3NHVJRFJhOFNrcDExRkl3LVlwYVg4MFFITFV4eFZzY3BGOEF1b1pCMmtrSUxtdGU3MS1uRG1rU202VDA4NVE?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI will shrink workforces within five years, say company execs - CNN",
+    "date": "2024-04-05",
+    "source": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBtcDM0eElUb0MxQ2laUnJqYWJndF8xUU1IclNqMlNVREdEV1dxSE5ldWFEOHJxbFlvVmxDQ1VORWtGcEtuSEVRV3FTbFdZX0wzRHF2OHY1dlZrSmdWb0o1TDFjRQ?oc=5",
+    "sourceName": "CNN",
+    "aiRelated": true
+  },
+  {
+    "company": "Is AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is AI driving tech layoffs? - Computerworld",
+    "date": "2024-04-04",
+    "source": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaWRYYVN1ODdlT3MzSGh1TjRqNTNqTVJEa245eTFtU2hSbUpQdHk0R3I4RVRqU2E2X0p2bVh4U1lzemk3X2pTVTd2ZlpheUdKREMzcml3dkVLRWtPR1RETW5Nelhsb2t1YV91dnlhanBUem9BODZGa0czZXNMY0s5M1hUMA?oc=5",
+    "sourceName": "Computerworld",
+    "aiRelated": true
+  },
+  {
+    "company": "Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Layoffs and AI sour annual Game Developers Conference: ‘The vibe is rancid’ - The Guardian",
+    "date": "2024-03-23",
+    "source": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbjJPcE9pa09CNy0yVVI5UlVEa3dzX21xWnQ3X1hCNk5tOUw0NERzbWhjYWZ5V3kyUFF6UWR4NHBJd3Zza0pmQWZIZnZRSHpIMFh3QURhNWs5dS0ta2U1ZzMwWE01blFKSm5ZM29BVEY4UVZ3ZnluX1lCbm9jcnh5N3VEUWF3X3c0VTFHRFN1YzBCSVBS?oc=5",
+    "sourceName": "The Guardian",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI a job killer? In California it’s complicated - Los Angeles Times",
+    "date": "2024-03-20",
+    "source": "https://news.google.com/rss/articles/CBMingFBVV95cUxQY3pZbkdyMml2WXBMbnF6Z1J3MHJJUHF2bjhfR0xtcnRocmRWSU5ORUlIRGx5cmlfaWx6bXNqbGVYLWstcHpmN25WaWFJRXViaWFMMVE4akQ1N3oyNkFmQUIzLUhNUnNxcVd5ZXFucU9TOVNQSnFLdmVULTBOclBwQWlVUl9tOFN1VHBuUVRKRWM0MFFHbFZRYmtrN3BOdw?oc=5",
+    "sourceName": "Los Angeles Times",
+    "aiRelated": true
+  },
+  {
+    "company": "IBM Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "IBM Layoffs Hit Marketing, Communications Staff As AI Charge Continues: Report - crn.com",
+    "date": "2024-03-13",
+    "source": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdlFZcUdPNUVRVm5fRW9YSE9nYlJXdnNTbWJwQ2pWblF0aXZFY2djWG01U25pd1V0ZDJpd0ZQVzRvMDdQeHpGTkRzZUI4Szd5M2I1c1Vhakh3WkdrWFBfSC1VZXRYdUxxX254UzJsR3IxcVlBOUR1eHZvUHBPRlRsazBfTDk4RlFrOEsydmxoRGlOTzU1UUNUWVBRSDJXYVdqQTV3aDBYMmZGQTVOUHlQY2J3?oc=5",
+    "sourceName": "crn.com",
+    "aiRelated": true
+  },
+  {
+    "company": "Pecan AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Pecan AI parts ways with a third of its workforce in second round of layoffs - CTech",
+    "date": "2024-03-12",
+    "source": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00YjU1NnRSRUJSQi1MQk1lUkdtYVlWSnU4M04xZmxqOXUzMndqTVBJNTBHVndxeGwzUlZpRnU3Rjc4emdUX2NNenYwb1BOa1lqMDA4clZTVzJmOC1EN0hqM2g3bnk5c0E?oc=5",
+    "sourceName": "CTech",
+    "aiRelated": true
+  },
+  {
+    "company": "We",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "We must start preparing the US workforce for the effects of AI – now | Steven Greenhouse - The Guardian",
+    "date": "2024-02-29",
+    "source": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeGhGT3djMEVGZ2N2bWRYaDlJejNleUFjaUtORzdSVHRWQjVuZldKLU5KLW1qSXJkOHlHcGtqM0IyZ1d6YjhlNnpXS2dkMjR6UXllRVBJdThOZ0M3cEJ2WXJPVWlGVTNoT0JjXzhfa2tKQVo5WU80TzZnY2tKdW1sakoxNWNoTEdISU5CeTRn?oc=5",
+    "sourceName": "The Guardian",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI is ‘corporate Ozempic’ for tech layoffs, says Scott Galloway - Fortune",
+    "date": "2024-02-29",
+    "source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNaDZxOHlVbWpWVXhSaGY3TDh5R2ozWi01VWotMXIwYnhLNXVJRTI1Z3ZIRlhQX0JyQWZHTDRWeGl2YU0zeThFb1kxbWo4ejV6ZFZtOHVRN1ZTSlBOOEN3a25RYW1xTHhhN0pTZDhITWdPM1p6aGtqRWRtNjZ0Y0RwZG50X3lpTVpwMXFuUzRJYkk5cW5tRWQzMjItREFiakJnNW9LWDJfRlQteUNKSWc?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI isn't driving tech layoffs — but it does make a good scapegoat - Business Insider",
+    "date": "2024-02-21",
+    "source": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYjFLVGNhUkRJV0k2akxYUzdKc1Zsamh1VThYdnJ1NHpCLWpXZkJqa1d1VGdIQVViYXA5VlNtUzBZU3VJOEh1VEpaVW1qYTh3TWtIM05qUjZLQWRPLTBZTkdfWWNySUFaTDJFU0xFMU13aVAzSHRvcmZpcFRibkpwTkVxU2NQU2M?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "Computer Science",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Computer Science majors on the rise despite tech layoffs, questions over AI - Yale Daily News",
+    "date": "2024-02-14",
+    "source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPanhKc05PdWlSZm5PRFRFdFVwQkx2NmFPdi1xRGxBaFdXTDdzU2wzdG1TQ29HTDRSOGYtMnJSdktKVkNBMUJUY3ZIMmxWWWNsQzhZRnJHYmhPTHVOSkVlcjhDQU9HclN5VEtzbnBITjRYb3pBNXdSdHU2Q2Ftc0IwdnhMNVZ2T1RhMU5VbHpPUUJLd1dHRFBJcmg4eFo5UG5Vc01tZUhGNW9KTFdmX3c?oc=5",
+    "sourceName": "Yale Daily News",
+    "aiRelated": true
+  },
+  {
+    "company": "Over",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Over 4,000 workers have lost their jobs to AI since May, outplacement firm estimates—and that's 'certainly undercounting' - Fortune",
+    "date": "2024-02-08",
+    "source": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5MUXRzUFJ4RGxwMElSLXA0NUxkZ3hxS3ZHOHd3SDB2ZGZnaFFVM3hmT1E2bHNPcEFrMlNLN2F4WEE1ZTZMVDdaNEhRNGIwV29SVl9kUnNrVVFicXBUUkcwZ1FjOGRUR2d5MGJsdVVGUVBjTWViSG9oQkJpTQ?oc=5",
+    "sourceName": "Fortune",
+    "aiRelated": true
+  },
+  {
+    "company": "Tech Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Tech Layoffs Just Keep Coming as Sector Resets for AI - WSJ",
+    "date": "2024-02-06",
+    "source": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxNQjZGaDdXYzNVUXNDRExtQVE0R2lCcXR2WHFBTm1SZ2taQTJ5cy1yZjQxRXZ1Q3o2amhlcjN3S1N2X1BFQWFmXzJFN0psWmpGMlRiMEdZMHozM2FveC1pZmVueGJSWGlQNU1XLTBDa09IcTloZmk4SU55eFNlZlp1Y05vQUpXbmUweFVHLXFMYkxFYWNDT3JPRnowSXE0Y1lxS1BadkNpX25NdEtHeU96UW1nNVJ3c1I0RktmNldKeGJHZEI1MW54dmNjTU9OR0h3QTNXLTFRanFmelR5eDhoZ2dDblNJSTUwb2hHcTI5c1ZwYjVWbU5sX1lVaF90dGZNbXpwQTVCdnJQeXc3U3F5cUppS3g2TzR5cFVxeWFiek9rS3JKYmFqVEdwZHk1Zm1WZGtDejVfVzRLNHRpMGRBd3Z4YjUtd2pBSkE5c0pSMUJfZVF3bi1WblBmV1N5N2xtbmVUM0xxLWlTUnItRU5paVdRcGZYSFE5?oc=5",
+    "sourceName": "WSJ",
+    "aiRelated": true
+  },
+  {
+    "company": "Surge",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Surge in Tech Layoffs in 2024: Rise in Interest Rates and AI Focus - Industry Leaders Magazine",
+    "date": "2024-02-06",
+    "source": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObzJKN2hhZUFPTGppVHBSME9KdFJHSjBOQS1HanFfTlVSMEY2bF9HWmx2UFdCNVFrZmxBbTlwQ28wbXFrMjFhLWt1WHZEUGhqTklXUVNRV2VFcVJ2eXF2ak5vclhpbHdSY2xSVXpJVFVqVDdTcEUyUWRzRFdDenBQUkZ2NEtrSHhoczg4ZXh3ZHZyd1JQX0lUUWNZTzNCMWFfUDBEcjRjUUdJdw?oc=5",
+    "sourceName": "Industry Leaders Magazine",
+    "aiRelated": true
+  },
+  {
+    "company": "Workers",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Workers are terrified of layoffs, AI and a recession in 2024 - Employee Benefit News",
+    "date": "2024-02-05",
+    "source": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPN2cyaWpsdThXX2MtV2lkY3hmY3BDa0xtcld6OFRyYUNkbXBJLU10M09xZzA4UENkaXlOYTdmU2w4RDhnOHR6QTduaUJwdWtuZmVtS3RtbHBieDY4QzNGMmRFUW1aRWZjaGthUlFiOUJNS2xsRHlfZzZ6WC1YOFZrNWlWOVgyTmMzVlptejVMMnFuVmNWVnBJ?oc=5",
+    "sourceName": "Employee Benefit News",
+    "aiRelated": true
+  },
+  {
+    "company": "Tech Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Tech Layoffs Surge in 2024: Over 32,000 Jobs Cut Amid AI Focus - Quiver Quantitative",
+    "date": "2024-02-05",
+    "source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRVdJZnZfQ19uYjBWZEY4TFMxSzFIdFpnWTJnNVN4UjJEOUJFUWtvc0pKUk42Nl95S19BSDdZVVpFY1VlRmdjWWRwMmxWLUtwR1RhdEhYSmdSNnNMQ3NsOEg1R0JiUUEwcEg4LTIwdDl6TEhaZmpNdFZ2VzROcjFHa2pkQndzeXJPZ0duUVlkRi05UFFnUkFIRUxDcGM3STdJbHNsRUFRcmFvMnMtejU5V1BaWV9VU1pUZERNUUtn?oc=5",
+    "sourceName": "Quiver Quantitative",
+    "aiRelated": true
+  },
+  {
+    "company": "Klarna",
+    "sector": "Fintech",
+    "jobsCut": 700,
+    "reason": "AI chatbot replaced customer service",
+    "date": "2024-02-01",
+    "source": "https://www.ft.com/content/6a0e0787-4232-4cb5-bb39-4c5ec5bfa034",
+    "sourceName": "Financial Times",
+    "aiRelated": true
+  },
+  {
+    "company": "Is New",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Is New AI Driving the Mass Big Tech layoffs? - mindmatters.ai",
+    "date": "2024-02-01",
+    "source": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbmJsLU1GUlRyYlo3VExhLU5kU2ZyYWVHNkxLdUpidkE5OW5USF9vR3Q1dGVfMHpZWlBMcmlQdDl0bXluSzFKU09YMG5KZF9WemFockVvRWwtdWFBR0IzUU9lN2RnTWNPdUJGRXZjLTZka1hicTBNMmdHRjFvZmlTNg?oc=5",
+    "sourceName": "mindmatters.ai",
+    "aiRelated": true
+  },
+  {
+    "company": "Zoom Layoffs",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Zoom Layoffs Total 150 As Video Giant Turns Attention To 'Critical' Areas, Including AI - crn.com",
+    "date": "2024-02-01",
+    "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPLXlTX1FZWk90eHpUNzRzcHBmVHRKNkVpak9XTldKZUd4MHRLdXdOcTN0blJPTkdUU1gzSm42QW90cS1Ja0lJeEtQTGRCMmdUdDZfVWhvc3JlQ2JkaXhZMjd2cmgxZnA1UkdJM04wWXhRX2NMYnJ5ejAwbi1taWFzSFJBM0tSSFNCV0I5TGVQODRJTGtnYlpxSUdsVWJ6LTJpSlVUeTNwdE02STRJdEszcU1WdXJibmFENE1mZFFPNl81RW8?oc=5",
+    "sourceName": "crn.com",
+    "aiRelated": true
+  },
+  {
+    "company": "UPS",
+    "sector": "Logistics",
+    "jobsCut": 12000,
+    "reason": "Route optimization, automated sorting",
+    "date": "2024-01-30",
+    "source": "https://www.cnbc.com/2024/01/30/ups-to-cut-12000-jobs.html",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Tech",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Tech layoffs are expected to continue as companies seek to hire more AI talent, analyst says - Business Insider",
+    "date": "2024-01-26",
+    "source": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWlJxdDk5TDVpWVNYX3ZiMnRlaDV2QjZzZzc4andfZzBXbFQ5Z1c2SUZyR3FxTk1ybzhpMzVockxlVzI5aW9Fd0JPZVc3cVZpZWlSU2lteGRDSmdzWUdFQ29yYllxMlNCUVQ5N1Y2ZUV4RkNLWjhtY3dRalVyakt2R3NIa3VPeUJqeTJrZ290Wm9yeDM5RlYwLQ?oc=5",
+    "sourceName": "Business Insider",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI hiring frenzy to fuel layoffs in other tech segments as firms strive to balance costs - CNBC",
+    "date": "2024-01-25",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbVJrQWdHZlBrRVJBUTlwN2pBZUxjcEpLeXlLV2tOMjNUY2JWUTlBQjdibDk0cEdHbzJkYk5lSm1PUTM4TldlTlBRQWh1U05RN090WTQ3VTgxdUJRb1pzZTVlZGVnOU91U3BMVVF0aWcxSDlKUHVSQ0ZLMlV2dm51cXF3eTNmWWtXVXhUQTJMMGhrVXVBcWpoVkwxNUlaQklybXpWatIBqgFBVV95cUxQYXNNVU1mY1VETnJMVXNYZTR4OExIa2V5Y1pySUIzREZUTGwxdXNWX0VDX2Jmc1BQUDdkd2w4cWJScTRJdk1YQmI1X3d5TFNVU2F5UjdFbGQ5dGpNQVFwT05TSmJiTkVEeGRVbEZzc3lkTWtfS2g2M19GVDMyd2NOY3dRWm5jVDZ0YW0yc25KZ1hyWHpBd0VMV0Qyb3RTbGxnOTJOU3NyNEI1QQ?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "SAP",
+    "sector": "Tech",
+    "jobsCut": 8000,
+    "reason": "AI-focused restructuring",
+    "date": "2024-01-23",
+    "source": "https://www.reuters.com/technology/sap-restructure-8000-roles-ai-push-2024-01-23/",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "\"AI made us do it\" is Big Tech's new layoff rationale - Axios",
+    "date": "2024-01-18",
+    "source": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBjemRWMDRGbFFfTXg4cW4wblBIQUtHeml1alhJQ1lsY3VLNnlaRHR0RXJIem9IY3VHZ1BFYS1yQWJSd3hUVVJCZml2c0E0amk3OUJBTGs4N1hUU0RBVDBncHpSMjBJelRJRjJsU3ZsX3N4ZTZpMWc?oc=5",
+    "sourceName": "Axios",
+    "aiRelated": true
+  },
+  {
+    "company": "Google CEO",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Google CEO warns of more layoffs in 2024 amid artificial intelligence push - CBS News",
+    "date": "2024-01-18",
+    "source": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1GMUZYal9nenRHY2Y2RU4zQmpjaEE0bzctVE5GcFNoT2dBSnd5aUtfczFvV0dvVF9GZEVYdHdhclFfS1BobWNtbkZXd1FBc3RpMlFoaUNUYVhHaEZDNjNkY0s5OXU0bFZfUjA1UFNNRV_SAXZBVV95cUxQVTNPQkZvdkZqZFJkTzVKN25zZkpnM1RLajVqb1J4MFYtdXNLazhJekswUXhBZXVEcUhjdkpkaDF2ZlBIMmpMbjBSMHB3czF3VkpzZHJONEMtQmtzTWk4UHF4amZJY0MzUktGQmRrT0h5UGxZZVd3?oc=5",
+    "sourceName": "CBS News",
+    "aiRelated": true
+  },
+  {
+    "company": "Corporate",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Corporate titans are slashing jobs, but AI will add new wrinkles to the equation in 2024 - The Business Journals",
+    "date": "2024-01-17",
+    "source": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUzB5bUFRME5sUG40SU51d1hITDhmOEhBNUJ5QWU0X25KVWRHU1JKM0JON21FR2c4MnZ0azhtajVnclp2b3dKdzdhb1Y1RXNBcE9nR0lYTkNzd3AxbkFOZXlrVEZKaU1LRzdKenYyRHRLMWZ1MGVmZzlXVWlqU3JpWEtUQVVKM1dhczBaTG1ISllvWms4cXBTZ0JQT2JYVGl1d3c?oc=5",
+    "sourceName": "The Business Journals",
+    "aiRelated": true
+  },
+  {
+    "company": "Various",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "25 Percent of CEOs Plan to Replace Human Workers With AI This Year - Futurism",
+    "date": "2024-01-16",
+    "source": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBzZHdMd2duQmRWRFlveGlWTmtmTkkyU2l5Mjh2dzcxSEI3RGxsazBYYUxxcVZ5Q1NnUENYcXR3cHJwZm5seEFWOXIwekU2TEUzRG56TE9IMjZCUkh1V0Y2NWtNcVFWcHM?oc=5",
+    "sourceName": "Futurism",
+    "aiRelated": true
+  },
+  {
+    "company": "The",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "The tech sector is pouring billions of dollars into AI. But it keeps laying off humans - CNN",
+    "date": "2024-01-15",
+    "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBfa05hSHR5UWZqZXQ1MVVneWF5ZjdWRU1hbkR0eFktNTAtSWpaTW13RmtPWnV4SGY5QjVRT0ZLRVlQaUtkMU5yeDNka1VMSnZfbHdzUS01U2dRX0hyVVVfN1BwZ2Y4VURzOGd4X2I2WQ?oc=5",
+    "sourceName": "CNN",
+    "aiRelated": true
+  },
+  {
+    "company": "Unhappy",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Unhappy new year: 2024 opens with wave of layoffs in tech, and AI could be making it worse - CTech",
+    "date": "2024-01-11",
+    "source": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBMM1R0Qm1EeHN3aFdFTERWcmpzVmhoVWRyM0IxaHlUZGJWU2Q0b0dtb2VQeVk5eFhxeFZzb3FEX2hrNnJ3b1oweWVZLXBKeE12Q0J3OFozOS1URGg3TW5wbXFTeWVpSlk?oc=5",
+    "sourceName": "CTech",
+    "aiRelated": true
+  },
+  {
+    "company": "Duolingo",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Duolingo cuts workers as it relies more on AI - The Washington Post",
+    "date": "2024-01-11",
+    "source": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBUUkNiQWw1N3Atck5IR1llcHBjbklSb1hjaUNwZ2pQMmtYTDM0VDI3dmpvTGNsYjFRaWV2N09lS1VzOTF1bFR4ZjA4LWN4Q0psZE9tanBtUnVnaUR4VUp0QVhST2NCMHpCZU5MWnJWaDlwS0hzTFhBTzYwZlU5QQ?oc=5",
+    "sourceName": "The Washington Post",
+    "aiRelated": true
+  },
+  {
+    "company": "Duolingo",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Duolingo lays off staff as language learning app shifts toward AI - CNN",
+    "date": "2024-01-09",
+    "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE11R09pRkJVZVo3NGp5UXZuRUxUOWc4SHNHZnJJU1FfUU1hZFIxVlZDdkFwaERacTNkUnpFNzdqSzMtX3ZaZWUxeVVRQnVNR1dtRUpLRTlOaFVGNms3c0c3dWxTSkNodTF5cUJtNTVYNA?oc=5",
+    "sourceName": "CNN",
+    "aiRelated": true
+  },
+  {
+    "company": "Duolingo",
+    "sector": "Education",
+    "jobsCut": 100,
+    "reason": "AI replacing translators",
+    "date": "2024-01-08",
+    "source": "https://www.theverge.com/2024/1/8/24030568/duolingo-laid-off-contract-workers-ai",
+    "sourceName": "The Verge",
+    "aiRelated": true
+  },
+  {
+    "company": "AI",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "AI in 2024: Five trends workers need to know - BBC",
+    "date": "2024-01-05",
+    "source": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPV2RBTFU0SmtYd2J1LW1aYzRqT2xCbEo4RHBSVVN3NWZBMEx4Ml85aEhUa0dZY2hMSkw3ZF9STDdwb1Nsa0tLTW5ZTVJBV3NTRUdqdW03Ylp5VUNMcTZzMjY4dnI5ODZLQWxFNXNiLW8tUUR1aXVndmhoeWJEM2V2RHZWLTNnc05PUFZuUVFuM3ctOVk?oc=5",
+    "sourceName": "BBC",
+    "aiRelated": true
+  },
+  {
+    "company": "New",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "New hardware, more layoffs, AI in game dev: Analyst predictions for 2024 - GamesIndustry.biz",
+    "date": "2024-01-03",
+    "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQXlFRHpRTlU1cUpkbmF4SXh2azMwa0liSlExbWdNZThuTnZqeFhra2RCQy1mMVpuaXEtMTBCSnVKc1pzMFJaRVVDVV9ZS1pBMjMyUEN0VElEdi11M3Z1dldRRGlSUUplS3NnWjJuNFNuOFlOZnVnZWE3Y05fSDQwRlhvTnBaZC1rQlN2Nk5KUUdQb3Vyem1SOGsxZS1HTk9H?oc=5",
+    "sourceName": "GamesIndustry.biz",
+    "aiRelated": true
+  },
+  {
+    "company": "Recent",
+    "sector": "Unknown",
+    "jobsCut": 0,
+    "reason": "Recent data shows AI job losses are rising, but the numbers don't tell the full story - CNBC",
+    "date": "2023-12-16",
+    "source": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbkd4MTR3MEpOc0I0T29rc3hYSDFnMDNpRlVSYzFUcDlxMjI4UEE4Y296YkowQnZRdTZfREhEVmJnb1pLc1ZibUxkTkxTVktVLVVnSXhRay1VT1h3U2JlWVRydjI2clVHWTlXY2Y5cTZFb3lPb0xpV185WnRGTDRnRDZjY0EwdVhlazhEbWdFUlF3MnJnbk5qOG56Z29rY2JnVXc2X9IBqgFBVV95cUxNVTRGaUFjSnZCTmpsMGZaZlNUMEtmOE82VWVvX0JuVDBjRktsU0NWYUlXR0kwUFNxVzRxUGtsRktzTk5oeFYxMXJXdUxQR0QzN1ZLanNrTVF0Z2FreFZfWVQteThQb1RJbkVZbm8zUmlfemk3eGFudnNyQ3JtTTg2OTFJdV9GcmY1c0NZUmVPZkFQZmlKVXFoXzJPcnNnclc0U3o0M19IUlhYUQ?oc=5",
+    "sourceName": "CNBC",
+    "aiRelated": true
+  },
+  {
+    "company": "Chegg",
+    "sector": "Education",
+    "jobsCut": 400,
+    "reason": "ChatGPT competition, content AI",
+    "date": "2023-06-12",
+    "source": "https://techcrunch.com/2023/06/12/chegg-lays-off-4-of-workforce/",
+    "sourceName": "TechCrunch",
+    "aiRelated": true
+  },
+  {
+    "company": "BT Group",
+    "sector": "Telecom",
+    "jobsCut": 55000,
+    "reason": "Operations automation, AI assistants",
+    "date": "2023-05-18",
+    "source": "https://www.bbc.com/news/business-65631168",
+    "sourceName": "BBC News",
+    "aiRelated": true
+  },
+  {
+    "company": "IBM",
+    "sector": "Tech",
+    "jobsCut": 7800,
+    "reason": "Hiring freeze, AI replacing back office",
+    "date": "2023-05-01",
+    "source": "https://www.bloomberg.com/news/articles/2023-05-01/ibm-to-pause-hiring-for-roles-that-ai-could-do",
+    "sourceName": "Bloomberg",
+    "aiRelated": true
+  },
+  {
+    "company": "Dropbox",
+    "sector": "Tech",
+    "jobsCut": 500,
+    "reason": "AI features replacing manual work",
+    "date": "2023-04-27",
+    "source": "https://techcrunch.com/2023/04/27/dropbox-lays-off-500-employees/",
+    "sourceName": "TechCrunch",
+    "aiRelated": true
+  },
+  {
+    "company": "Google",
+    "sector": "Tech",
+    "jobsCut": 12000,
+    "reason": "AI consolidation, Bard/Gemini pivot",
+    "date": "2023-01-20",
+    "source": "https://www.theverge.com/2023/1/20/23563706/google-lay-off-12000-workers",
+    "sourceName": "The Verge",
+    "aiRelated": true
+  },
+  {
+    "company": "Amazon",
+    "sector": "Tech",
+    "jobsCut": 27000,
+    "reason": "Warehouse automation, Alexa AI",
+    "date": "2023-01-18",
+    "source": "https://www.reuters.com/technology/amazon-lay-off-over-17000-workers-2023-01-18/",
+    "sourceName": "Reuters",
+    "aiRelated": true
+  },
+  {
+    "company": "Microsoft",
+    "sector": "Tech",
+    "jobsCut": 10000,
+    "reason": "Copilot integration, team restructuring",
+    "date": "2023-01-18",
+    "source": "https://www.bloomberg.com/news/articles/2023-01-18/microsoft-to-cut-10-000-jobs",
+    "sourceName": "Bloomberg",
+    "aiRelated": true
+  },
+  {
+    "company": "Meta",
+    "sector": "Tech",
+    "jobsCut": 21000,
+    "reason": "AI-driven efficiency restructuring",
+    "date": "2022-11-09",
+    "source": "https://www.wsj.com/articles/meta-is-preparing-to-notify-employees-of-large-scale-layoffs-this-week-11667767794",
+    "sourceName": "WSJ",
+    "aiRelated": true
+  }
 ]
