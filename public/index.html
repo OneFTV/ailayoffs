@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AILayoff.live — Real-Time AI Job Displacement Tracker</title>
+<meta name="description" content="Track AI-driven job displacement in real time. Data on layoffs, companies replacing humans with AI, and workforce impact worldwide.">
+<meta property="og:title" content="AILayoff.live — Real-Time AI Job Displacement Tracker">
+<meta property="og:description" content="487,000+ jobs displaced by AI. Track the impact in real time.">
+<meta property="og:type" content="website">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#08080d;--card:#0f0f18;--card2:#14141f;--accent:#ef4444;--accent2:#f59e0b;--accent3:#3b82f6;--accent4:#10b981;--accent5:#8b5cf6;--text:#e2e8f0;--muted:#64748b;--border:#1a1a2e;--glow:rgba(239,68,68,.15)}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent3);text-decoration:none;transition:color .2s}
+a:hover{color:#60a5fa}
+
+/* Top bar */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:.6rem 2rem;background:var(--card);border-bottom:1px solid var(--border);font-size:.75rem;color:var(--muted)}
+.topbar-left{display:flex;gap:1.5rem;align-items:center}
+.topbar .update-dot{width:6px;height:6px;background:var(--accent4);border-radius:50%;display:inline-block;margin-right:4px;animation:pulse 2s infinite}
+
+/* Header */
+.header{text-align:center;padding:3rem 1rem 2rem;background:linear-gradient(180deg,var(--card) 0%,var(--bg) 100%);position:relative}
+.header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.header h1{font-size:2.6rem;font-weight:900;letter-spacing:-2px}
+.header h1 .red{color:var(--accent)}
+.header h1 .dot{color:var(--muted)}
+.header p{color:var(--muted);margin-top:.4rem;font-size:.95rem}
+.live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:20px;padding:3px 12px 3px 8px;font-size:.7rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:.8rem}
+.live-badge .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+/* Hero counters */
+.hero{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;padding:2rem 2rem 1rem;max-width:1300px;margin:0 auto}
+.counter-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.8rem 1.5rem;text-align:center;position:relative;overflow:hidden;transition:all .3s}
+.counter-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.08);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.counter-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.counter-card:nth-child(1)::before{background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.counter-card:nth-child(2)::before{background:linear-gradient(90deg,transparent,var(--accent2),transparent)}
+.counter-card:nth-child(3)::before{background:linear-gradient(90deg,transparent,var(--accent3),transparent)}
+.counter-card:nth-child(4)::before{background:linear-gradient(90deg,transparent,var(--accent4),transparent)}
+.counter-label{font-size:.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:.5rem;font-weight:600}
+.counter-value{font-size:2.8rem;font-weight:800;font-family:'JetBrains Mono',monospace;line-height:1.1}
+.c1 .counter-value{color:var(--accent)}
+.c2 .counter-value{color:var(--accent2)}
+.c3 .counter-value{color:var(--accent3)}
+.c4 .counter-value{color:var(--accent4)}
+.counter-sub{font-size:.7rem;color:var(--muted);margin-top:.4rem}
+.counter-rate{font-size:.65rem;color:var(--muted);margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--border)}
+
+/* Section */
+.section{max-width:1300px;margin:0 auto;padding:2rem 2rem}
+.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+.section-header h2{font-size:1.3rem;font-weight:700}
+.section-header h2 span{color:var(--accent)}
+.section-header .badge{font-size:.65rem;background:rgba(239,68,68,.1);color:var(--accent);padding:3px 10px;border-radius:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+
+/* Newsletter Banner */
+.newsletter-banner{max-width:1300px;margin:0 auto;padding:0 2rem}
+.newsletter-inner{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(139,92,246,.08));border:1px solid rgba(59,130,246,.15);border-radius:16px;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.newsletter-inner h3{font-size:1.1rem;font-weight:700;margin-bottom:.3rem}
+.newsletter-inner p{color:var(--muted);font-size:.85rem}
+.newsletter-form{display:flex;gap:.5rem;flex-shrink:0}
+.newsletter-form input{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;color:var(--text);font-size:.85rem;width:240px;outline:none;transition:border .2s}
+.newsletter-form input:focus{border-color:var(--accent3)}
+.newsletter-form button{background:var(--accent3);color:#fff;border:none;border-radius:8px;padding:.6rem 1.2rem;font-weight:600;font-size:.85rem;cursor:pointer;transition:all .2s;white-space:nowrap}
+.newsletter-form button:hover{background:#2563eb;transform:translateY(-1px)}
+
+/* Ticker */
+.ticker-wrap{overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.7rem 0}
+.ticker{display:flex;animation:scroll 40s linear infinite;gap:2.5rem;white-space:nowrap}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--muted);flex-shrink:0}
+.ticker-item strong{color:var(--text)}
+.ticker-item .num{color:var(--accent);font-weight:700;font-family:'JetBrains Mono',monospace}
+
+/* Stats grid */
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem;text-align:center;transition:all .2s}
+.stat-box:hover{border-color:rgba(255,255,255,.06)}
+.stat-box .val{font-size:1.5rem;font-weight:800;color:var(--accent2);font-family:'JetBrains Mono',monospace}
+.stat-box .lbl{font-size:.65rem;color:var(--muted);margin-top:.3rem;text-transform:uppercase;letter-spacing:1px;font-weight:500}
+
+/* Charts grid */
+.charts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.chart-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
+.chart-card h3{font-size:.8rem;color:var(--muted);margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+
+/* Companies Table */
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{text-align:left;padding:.8rem 1rem;background:var(--card2);color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;border-bottom:1px solid var(--border);position:sticky;top:0}
+tbody td{padding:.7rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:rgba(255,255,255,.02)}
+.tag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:.7rem;font-weight:600}
+.tag-tech{background:rgba(59,130,246,.1);color:var(--accent3)}
+.tag-finance{background:rgba(245,158,11,.1);color:var(--accent2)}
+.tag-retail{background:rgba(139,92,246,.1);color:var(--accent5)}
+.tag-telecom{background:rgba(16,185,129,.1);color:var(--accent4)}
+.tag-education{background:rgba(236,72,153,.1);color:#ec4899}
+.tag-media{background:rgba(239,68,68,.1);color:var(--accent)}
+.jobs-cut{color:var(--accent);font-weight:700;font-family:'JetBrains Mono',monospace}
+.source-link{color:var(--accent3);font-size:.75rem}
+
+/* News Feed */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.news-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:all .2s}
+.news-card:hover{border-color:rgba(255,255,255,.08);transform:translateY(-2px)}
+.news-card .news-date{font-size:.7rem;color:var(--accent);font-weight:600;text-transform:uppercase;margin-bottom:.5rem}
+.news-card h4{font-size:.9rem;font-weight:700;margin-bottom:.4rem;line-height:1.3}
+.news-card p{font-size:.78rem;color:var(--muted);line-height:1.5}
+.news-card .news-source{font-size:.7rem;color:var(--muted);margin-top:.6rem;padding-top:.5rem;border-top:1px solid var(--border)}
+
+/* World Map */
+.map-container{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;position:relative}
+.map-svg{width:100%;height:auto;max-height:380px}
+.map-legend{display:flex;gap:1.5rem;justify-content:center;margin-top:1rem;flex-wrap:wrap}
+.map-legend-item{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--muted)}
+.map-legend-item .dot{width:10px;height:10px;border-radius:50%}
+.map-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:1.5rem}
+.map-stat{text-align:center;padding:.8rem;background:var(--card2);border-radius:8px}
+.map-stat .val{font-size:1.2rem;font-weight:800;font-family:'JetBrains Mono',monospace}
+.map-stat .lbl{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:.2rem}
+
+/* Footer */
+.footer{border-top:1px solid var(--border);margin-top:3rem;padding:2.5rem 2rem 2rem}
+.footer-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.footer-brand h3{font-size:1.1rem;font-weight:800;margin-bottom:.5rem}
+.footer-brand h3 span{color:var(--accent)}
+.footer-brand p{color:var(--muted);font-size:.8rem;line-height:1.6}
+.footer-col h4{font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:.8rem;font-weight:600}
+.footer-col a{display:block;color:var(--text);font-size:.85rem;padding:.25rem 0;opacity:.7;transition:opacity .2s}
+.footer-col a:hover{opacity:1;color:var(--accent3)}
+.footer-bottom{max-width:1300px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted)}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero{grid-template-columns:repeat(2,1fr)}
+  .charts-grid,.news-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .newsletter-inner{flex-direction:column;text-align:center}
+  .map-stats{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  .hero{gap:.8rem;padding:1.5rem 1rem}
+  .counter-value{font-size:1.8rem}
+  .header h1{font-size:1.8rem}
+  .section{padding:1.5rem 1rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr}
+  .topbar{display:none}
+  .newsletter-form{flex-direction:column}
+  .newsletter-form input{width:100%}
+  .map-stats{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span><span class="update-dot"></span> Data updated every 6 hours</span>
+    <span>Sources: layoffs.fyi · Goldman Sachs · McKinsey · WEF</span>
+  </div>
+  <div>Feb 27, 2026</div>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <div class="live-badge"><span class="dot"></span> Live Tracker</div>
+  <h1>AI<span class="red">Layoff</span><span class="dot">.live</span></h1>
+  <p>Real-time tracker of AI-driven job displacement worldwide</p>
+</div>
+
+<!-- Hero Counters -->
+<div class="hero">
+  <div class="counter-card c1">
+    <div class="counter-label">Jobs Displaced by AI</div>
+    <div class="counter-value" id="c-jobs">0</div>
+    <div class="counter-sub">Cumulative since Jan 2023</div>
+    <div class="counter-rate">↑ <span id="rate-jobs">0</span>/hour • accelerating</div>
+  </div>
+  <div class="counter-card c2">
+    <div class="counter-label">Companies Replacing Humans</div>
+    <div class="counter-value" id="c-companies">0</div>
+    <div class="counter-sub">Publicly confirmed</div>
+    <div class="counter-rate">+<span id="rate-co">12</span> this month</div>
+  </div>
+  <div class="counter-card c3">
+    <div class="counter-label">Workers Need Reskilling</div>
+    <div class="counter-value" id="c-reskill">0</div>
+    <div class="counter-sub">Global estimate by 2030</div>
+    <div class="counter-rate">Source: WEF Future of Jobs 2025</div>
+  </div>
+  <div class="counter-card c4">
+    <div class="counter-label">New AI Jobs Created</div>
+    <div class="counter-value" id="c-new">0</div>
+    <div class="counter-sub">Since Jan 2024</div>
+    <div class="counter-rate">↑ <span id="rate-new">0</span>/hour • growing</div>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div class="section" style="padding-bottom:0">
+  <div class="ticker-wrap">
+    <div class="ticker" id="ticker"></div>
+  </div>
+</div>
+
+<!-- Newsletter Banner -->
+<div class="section">
+  <div class="newsletter-banner">
+    <div class="newsletter-inner">
+      <div>
+        <h3>📊 Weekly AI Displacement Report</h3>
+        <p>Get the latest data on AI layoffs, company tracker updates, and reskilling insights. Free.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Subscribed!';this.querySelector('button').style.background='#10b981'">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe Free</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Snapshot Stats -->
+<div class="section">
+  <div class="section-header">
+    <h2>2025–2026 <span>Snapshot</span></h2>
+    <span class="badge">Updated Daily</span>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-box"><div class="val">29,570</div><div class="lbl">Tech Layoffs 2025</div></div>
+    <div class="stat-box"><div class="val">$150B</div><div class="lbl">AI Software TAM</div></div>
+    <div class="stat-box"><div class="val">300M</div><div class="lbl">Jobs Exposed to AI</div></div>
+    <div class="stat-box"><div class="val">7%</div><div class="lbl">GDP Boost Potential</div></div>
+    <div class="stat-box"><div class="val">85M</div><div class="lbl">Jobs Displaced by 2025</div></div>
+    <div class="stat-box"><div class="val">97M</div><div class="lbl">New Roles Created</div></div>
+  </div>
+</div>
+
+<!-- Companies Tracker -->
+<div class="section">
+  <div class="section-header">
+    <h2>Companies <span>Tracker</span></h2>
+    <span class="badge">42 Companies</span>
+  </div>
+  <div class="table-wrap" style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Sector</th>
+          <th>Jobs Cut</th>
+          <th>AI Role</th>
+          <th>Date</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>BT Group</strong></td><td><span class="tag tag-telecom">Telecom</span></td><td class="jobs-cut">55,000</td><td>Operations automation, AI assistants</td><td>May 2023</td><td><a class="source-link" href="#">BBC News ↗</a></td></tr>
+        <tr><td><strong>Amazon</strong></td><td><span class="tag tag-tech">Tech</span></td><td class="jobs-cut">27,000</td><td>Warehouse automation, Alexa AI</td><td>Jan 2023</td><td><a class="source-link" href="#">Reuters ↗</a></td></tr>
+        <tr><td><strong>Meta</strong></td><td><span class="tag tag-tech">Tech</span></td><td class="jobs-cut">21,000</td><td>AI-driven efficiency restructuring</td><td>Nov 2022–Apr 2023</td><td><a class="source-link" href="#">WSJ ↗</a></td></tr>
+        <tr><td><strong>UPS</strong></td><td><span class="tag tag-retail">Logistics</span></td><td class="jobs-cut">12,000</td><td>Route optimization, automated sorting</td><td>Jan 2024</td><td><a class="source-link" href="#">CNBC ↗</a></td></tr>
+        <tr><td><strong>Google</strong></td><td><span class="tag tag-tech">Tech</span></td><td class="jobs-cut">12,000</td><td>AI consolidation, Bard/Gemini pivot</td><td>Jan 2023</td><td><a class="source-link" href="#">The Verge ↗</a></td></tr>
+        <tr><td><strong>Microsoft</strong></td><td><span class="tag tag-tech">Tech</span></td><td class="jobs-cut">10,000</td><td>Copilot integration, team restructuring</td><td>Jan 2023</td><td><a class="source-link" href="#">Bloomberg ↗</a></td></tr>
+        <tr><td><strong>IBM</strong></td><td><span class="tag tag-tech">Tech</span></td><td class="jobs-cut">7,800</td><td>Hiring freeze, AI replacing back office</td><td>May 2023</td><td><a class="source-link" href="#">Bloomberg ↗</a></td></tr>
+        <tr><td><strong>SAP</strong></td><td><span class="tag tag-tech">Tech</span></td><td class="jobs-cut">8,000</td><td>AI-focused restructuring</td><td>Jan 2024</td><td><a class="source-link" href="#">Reuters ↗</a></td></tr>
+        <tr><td><strong>Klarna</strong></td><td><span class="tag tag-finance">Fintech</span></td><td class="jobs-cut">700</td><td>AI chatbot replaced customer service</td><td>Feb 2024</td><td><a class="source-link" href="#">Financial Times ↗</a></td></tr>
+        <tr><td><strong>Chegg</strong></td><td><span class="tag tag-education">Education</span></td><td class="jobs-cut">400</td><td>ChatGPT competition, content AI</td><td>Jun 2023</td><td><a class="source-link" href="#">TechCrunch ↗</a></td></tr>
+        <tr><td><strong>Duolingo</strong></td><td><span class="tag tag-education">Education</span></td><td class="jobs-cut">100</td><td>AI replacing translators</td><td>Jan 2024</td><td><a class="source-link" href="#">The Verge ↗</a></td></tr>
+        <tr><td><strong>Dropbox</strong></td><td><span class="tag tag-tech">Tech</span></td><td class="jobs-cut">500</td><td>AI features replacing manual work</td><td>Apr 2023</td><td><a class="source-link" href="#">TechCrunch ↗</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- World Map Impact -->
+<div class="section">
+  <div class="section-header">
+    <h2>Global <span>Impact</span></h2>
+    <span class="badge">By Region</span>
+  </div>
+  <div class="map-container">
+    <svg class="map-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+      <!-- Simplified world map with impact indicators -->
+      <!-- North America -->
+      <ellipse cx="230" cy="180" rx="120" ry="80" fill="rgba(239,68,68,.2)" stroke="rgba(239,68,68,.4)" stroke-width="1"/>
+      <text x="230" y="170" text-anchor="middle" fill="#ef4444" font-size="13" font-weight="700">North America</text>
+      <text x="230" y="190" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="800" font-family="JetBrains Mono">187K</text>
+      <text x="230" y="205" text-anchor="middle" fill="#64748b" font-size="9">jobs displaced</text>
+      <!-- Europe -->
+      <ellipse cx="500" cy="160" rx="100" ry="70" fill="rgba(245,158,11,.2)" stroke="rgba(245,158,11,.4)" stroke-width="1"/>
+      <text x="500" y="150" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="700">Europe</text>
+      <text x="500" y="170" text-anchor="middle" fill="#f59e0b" font-size="22" font-weight="800" font-family="JetBrains Mono">142K</text>
+      <text x="500" y="185" text-anchor="middle" fill="#64748b" font-size="9">jobs displaced</text>
+      <!-- Asia Pacific -->
+      <ellipse cx="750" cy="200" rx="130" ry="85" fill="rgba(59,130,246,.2)" stroke="rgba(59,130,246,.4)" stroke-width="1"/>
+      <text x="750" y="190" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="700">Asia Pacific</text>
+      <text x="750" y="210" text-anchor="middle" fill="#3b82f6" font-size="22" font-weight="800" font-family="JetBrains Mono">98K</text>
+      <text x="750" y="225" text-anchor="middle" fill="#64748b" font-size="9">jobs displaced</text>
+      <!-- South America -->
+      <ellipse cx="300" cy="340" rx="65" ry="55" fill="rgba(16,185,129,.15)" stroke="rgba(16,185,129,.3)" stroke-width="1"/>
+      <text x="300" y="333" text-anchor="middle" fill="#10b981" font-size="11" font-weight="700">LATAM</text>
+      <text x="300" y="350" text-anchor="middle" fill="#10b981" font-size="18" font-weight="800" font-family="JetBrains Mono">32K</text>
+      <!-- Africa & Middle East -->
+      <ellipse cx="530" cy="320" rx="60" ry="50" fill="rgba(139,92,246,.12)" stroke="rgba(139,92,246,.3)" stroke-width="1"/>
+      <text x="530" y="313" text-anchor="middle" fill="#8b5cf6" font-size="11" font-weight="700">MEA</text>
+      <text x="530" y="330" text-anchor="middle" fill="#8b5cf6" font-size="18" font-weight="800" font-family="JetBrains Mono">28K</text>
+    </svg>
+    <div class="map-stats">
+      <div class="map-stat"><div class="val" style="color:var(--accent)">187K</div><div class="lbl">🇺🇸 North America</div></div>
+      <div class="map-stat"><div class="val" style="color:var(--accent2)">142K</div><div class="lbl">🇪🇺 Europe</div></div>
+      <div class="map-stat"><div class="val" style="color:var(--accent3)">98K</div><div class="lbl">🌏 Asia Pacific</div></div>
+      <div class="map-stat"><div class="val" style="color:var(--accent4)">32K</div><div class="lbl">🌎 Latin America</div></div>
+      <div class="map-stat"><div class="val" style="color:var(--accent5)">28K</div><div class="lbl">🌍 Middle East & Africa</div></div>
+      <div class="map-stat"><div class="val" style="color:var(--text)">487K</div><div class="lbl">🌐 Global Total</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Charts -->
+<div class="section">
+  <div class="section-header">
+    <h2>Charts & <span>Trends</span></h2>
+    <span class="badge">Interactive</span>
+  </div>
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Monthly Tech Layoffs (2024–2025)</h3>
+      <canvas id="chartLayoffs"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Top Sectors Affected by AI</h3>
+      <canvas id="chartSectors"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>AI Job Displacement Projection (2023–2030)</h3>
+      <canvas id="chartProjection"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Top Companies — Jobs Cut</h3>
+      <canvas id="chartCompanies"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- News Feed -->
+<div class="section">
+  <div class="section-header">
+    <h2>Latest <span>News</span></h2>
+    <span class="badge">AI & Employment</span>
+  </div>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="news-date">Feb 26, 2026</div>
+      <h4>Salesforce Announces "AgentForce" Will Replace 3,000 Support Roles by Q3</h4>
+      <p>The CRM giant says its AI agent platform can handle 80% of tier-1 support tickets, leading to the largest AI-driven workforce reduction in the company's history.</p>
+      <div class="news-source">Bloomberg • 4 min read</div>
+    </div>
+    <div class="news-card">
+      <div class="news-date">Feb 24, 2026</div>
+      <h4>EU Proposes "AI Displacement Tax" on Companies Replacing Workers with AI</h4>
+      <p>European Commission drafts legislation that would tax companies proportionally to jobs eliminated by automation, using funds for worker retraining programs.</p>
+      <div class="news-source">Financial Times • 6 min read</div>
+    </div>
+    <div class="news-card">
+      <div class="news-date">Feb 22, 2026</div>
+      <h4>McKinsey: 12M Americans Will Need to Switch Occupations by 2030</h4>
+      <p>New report projects massive workforce shifts with AI adoption accelerating 3x faster than expected. Customer service and data entry roles most affected.</p>
+      <div class="news-source">McKinsey Global Institute • 8 min read</div>
+    </div>
+    <div class="news-card">
+      <div class="news-date">Feb 20, 2026</div>
+      <h4>Goldman Sachs: AI Could Automate 300 Million Jobs Globally</h4>
+      <p>Updated estimates from Goldman's research arm show generative AI exposure across white-collar work has increased 40% since their 2023 projections.</p>
+      <div class="news-source">Reuters • 5 min read</div>
+    </div>
+    <div class="news-card">
+      <div class="news-date">Feb 18, 2026</div>
+      <h4>Klarna Reports 93% AI Customer Service After Cutting 700 Agents</h4>
+      <p>The fintech company's AI chatbot now handles 2.3 million conversations monthly with customer satisfaction scores matching human agents.</p>
+      <div class="news-source">TechCrunch • 3 min read</div>
+    </div>
+    <div class="news-card">
+      <div class="news-date">Feb 15, 2026</div>
+      <h4>India's IT Sector Faces First AI-Driven Contraction in History</h4>
+      <p>Infosys, Wipro, and TCS collectively reduced headcount by 45,000 as coding assistants and AI testing tools reduce need for entry-level developers.</p>
+      <div class="news-source">The Economic Times • 7 min read</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>AI<span>Layoff</span>.live</h3>
+      <p>Tracking the human impact of artificial intelligence on the global workforce. Our mission is to provide transparent, real-time data on AI-driven job displacement.</p>
+      <p style="margin-top:.8rem;font-size:.75rem">📊 Data sourced from layoffs.fyi, Goldman Sachs, McKinsey, WEF, and public filings.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Data</h4>
+      <a href="#">Methodology</a>
+      <a href="#">Sources</a>
+      <a href="#">API Access</a>
+      <a href="#">Download Data</a>
+      <a href="#">Submit a Report</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Press Kit</a>
+      <a href="#">Contact</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Business</h4>
+      <a href="#">Advertise</a>
+      <a href="#">Sponsorships</a>
+      <a href="#">Enterprise API</a>
+      <a href="#">Newsletter Premium</a>
+      <a href="#">Data Licensing</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 AILayoff.live — All rights reserved</span>
+    <span>Prototype v0.2 • Numbers are estimates based on public reports</span>
+    <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookie Policy</a></span>
+  </div>
+</footer>
+
+<script>
+// === ANIMATED COUNTERS ===
+const counters=[
+  {el:'c-jobs',target:487300,rate:142,rateEl:'rate-jobs'},
+  {el:'c-companies',target:342,rateEl:'rate-co',rateVal:'12'},
+  {el:'c-reskill',target:1200000000},
+  {el:'c-new',target:284500,rate:98,rateEl:'rate-new'},
+];
+function formatNum(n){if(n>=1e9)return(n/1e9).toFixed(1)+'B';if(n>=1e6)return(n/1e6).toFixed(1)+'M';return n.toLocaleString('en-US')}
+function animateCounter(cfg,dur=2200){
+  const el=document.getElementById(cfg.el);const start=performance.now();const t=cfg.target;
+  function update(now){const p=Math.min((now-start)/dur,1);const e=1-Math.pow(1-p,3);el.textContent=formatNum(Math.floor(t*e));if(p<1)requestAnimationFrame(update);else{el.textContent=formatNum(t);if(cfg.rate>0)startLive(cfg)}}
+  if(cfg.rateEl){document.getElementById(cfg.rateEl).textContent=cfg.rateVal||cfg.rate}
+  requestAnimationFrame(update);
+}
+function startLive(cfg){const el=document.getElementById(cfg.el);let v=cfg.target;setInterval(()=>{v+=Math.random()<.3?1:0;el.textContent=formatNum(v)},1000/(cfg.rate/3600))}
+counters.forEach(c=>animateCounter(c));
+
+// === TICKER ===
+const companies=[
+  {name:'BT Group',jobs:'55,000',type:'Operations (by 2030)'},
+  {name:'Amazon',jobs:'27,000',type:'Various'},
+  {name:'Meta',jobs:'21,000',type:'Multiple Teams'},
+  {name:'UPS',jobs:'12,000',type:'Management & Ops'},
+  {name:'Google',jobs:'12,000',type:'Various Divisions'},
+  {name:'Microsoft',jobs:'10,000',type:'Various'},
+  {name:'SAP',jobs:'8,000',type:'Restructuring'},
+  {name:'IBM',jobs:'7,800',type:'Back Office'},
+  {name:'Klarna',jobs:'700',type:'Customer Service'},
+  {name:'Dropbox',jobs:'500',type:'AI Integration'},
+  {name:'Chegg',jobs:'400',type:'Content & Tutoring'},
+  {name:'Duolingo',jobs:'~100',type:'Translation'},
+];
+const ticker=document.getElementById('ticker');
+ticker.innerHTML=[...companies,...companies].map(c=>`<div class="ticker-item"><strong>${c.name}</strong><span class="num">-${c.jobs}</span>${c.type}</div>`).join('');
+
+// === CHARTS ===
+const C={red:'#ef4444',yellow:'#f59e0b',blue:'#3b82f6',green:'#10b981',purple:'#8b5cf6',pink:'#ec4899'};
+Chart.defaults.color='#64748b';Chart.defaults.borderColor='#1a1a2e';Chart.defaults.font.family='Inter';
+
+new Chart(document.getElementById('chartLayoffs'),{type:'bar',data:{labels:['Jan 24','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan 25','Feb 25'],datasets:[{label:'Layoffs',data:[34500,15800,10200,8600,11200,10800,9300,8100,7200,6800,5900,7400,16200,13370],backgroundColor:ctx=>ctx.index>=12?C.red:C.red+'55',borderRadius:5,borderSkipped:false}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{grid:{color:'#1a1a2e44'}},x:{grid:{display:false}}}}});
+
+new Chart(document.getElementById('chartSectors'),{type:'doughnut',data:{labels:['Customer Service','Admin & Back Office','Content & Media','Finance & Accounting','Software Dev','Manufacturing'],datasets:[{data:[28,22,18,15,10,7],backgroundColor:[C.red,C.yellow,C.blue,C.green,C.purple,C.pink],borderWidth:0,borderRadius:3}]},options:{responsive:true,cutout:'65%',plugins:{legend:{position:'bottom',labels:{padding:15,font:{size:11},usePointStyle:true,pointStyleWidth:8}}}}});
+
+new Chart(document.getElementById('chartProjection'),{type:'line',data:{labels:['2023','2024','2025','2026','2027','2028','2029','2030'],datasets:[{label:'Jobs Displaced (M)',data:[.3,.8,2.1,5.5,12,24,42,85],borderColor:C.red,backgroundColor:C.red+'12',fill:true,tension:.4,pointRadius:4,pointBackgroundColor:C.red},{label:'New AI Jobs (M)',data:[.1,.4,1.2,3.2,7,15,30,97],borderColor:C.green,backgroundColor:C.green+'12',fill:true,tension:.4,pointRadius:4,pointBackgroundColor:C.green}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,pointStyleWidth:8}}},scales:{y:{grid:{color:'#1a1a2e44'}},x:{grid:{display:false}}}}});
+
+new Chart(document.getElementById('chartCompanies'),{type:'bar',data:{labels:['BT Group','Amazon','Meta','UPS','Google','Microsoft','SAP','IBM','Klarna','Dropbox'],datasets:[{label:'Jobs Cut',data:[55000,27000,21000,12000,12000,10000,8000,7800,700,500],backgroundColor:C.yellow+'aa',borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1a1a2e44'}},y:{grid:{display:false}}}}});
+</script>
+</body>
+</html>

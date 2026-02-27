@@ -1,0 +1,11 @@
+{
+  "name": "ailayoffs",
+  "version": "1.0.0",
+  "description": "AI Layoffs Tracker - Tracking the Digital Pandemic",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
