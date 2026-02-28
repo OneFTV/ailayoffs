@@ -283,5 +283,16 @@
     "sourceName": "Reuters",
     "aiRelated": true,
     "classification": "likely"
+  },
+  {
+    "company": "Block",
+    "sector": "Fintech",
+    "jobsCut": 6000,
+    "reason": "Jack Dorsey halved workforce; said AI makes large teams unnecessary and your company is next",
+    "date": "2026-02-26",
+    "source": "https://techcrunch.com/",
+    "sourceName": "TechCrunch",
+    "aiRelated": true,
+    "classification": "confirmed"
   }
 ]
