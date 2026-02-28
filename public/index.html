@@ -177,7 +177,7 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     <span><span class="update-dot"></span> Data updated every 6 hours</span>
     <span>Sources: layoffs.fyi · Goldman Sachs · McKinsey · WEF</span>
   </div>
-  <div>Feb 27, 2026</div>
+  <div id="last-updated">Loading...</div>
 </div>
 
 <!-- Header -->
@@ -334,6 +334,26 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
   </div>
 </div>
 
+<!-- By Country -->
+<div class="section">
+  <div class="section-header">
+    <h2>Jobs Lost <span>by Country</span></h2>
+    <span class="badge">Top 10</span>
+  </div>
+  <div id="country-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem"></div>
+</div>
+
+<!-- Acceleration Timeline -->
+<div class="section">
+  <div class="section-header">
+    <h2>Acceleration <span>Timeline</span></h2>
+    <span class="badge">Cumulative</span>
+  </div>
+  <div class="chart-card">
+    <canvas id="chartTimeline" height="250"></canvas>
+  </div>
+</div>
+
 <!-- Charts -->
 <div class="section">
   <div class="section-header">
@@ -478,7 +498,8 @@ Promise.all([
   if(tbody){
     const tagClass={Tech:'tag-tech',Fintech:'tag-finance',Logistics:'tag-retail',Telecom:'tag-telecom',Education:'tag-education',Media:'tag-media'};
     const INITIAL_SHOW = 10;
-    const rows = layoffs.map(l=>`<tr><td><strong>${l.company}</strong></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td class="col-reason">${l.reason}</td><td class="col-date">${l.date}</td><td class="col-source"><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`);
+    const badge = (n) => n >= 3 ? '✅' : n >= 2 ? '🔵' : '⚪';
+    const rows = layoffs.map(l=>`<tr><td><strong>${l.company}</strong> <span title="${l.sourceCount||1} source(s) verified" style="font-size:.7rem">${badge(l.sourceCount||1)}</span></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td class="col-reason">${l.reason}</td><td class="col-date">${l.date}</td><td class="col-source"><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`);
     tbody.innerHTML = rows.map((r,i) => i < INITIAL_SHOW ? r : r.replace('<tr>','<tr class="hidden-row" style="display:none">')).join('');
     if(layoffs.length > INITIAL_SHOW){
       const showBtn = document.createElement('div');
@@ -523,6 +544,49 @@ new Chart(document.getElementById('chartSectors'),{type:'doughnut',data:{labels:
 new Chart(document.getElementById('chartProjection'),{type:'line',data:{labels:['2023','2024','2025','2026','2027','2028','2029','2030'],datasets:[{label:'Jobs Displaced (M)',data:[.3,.8,2.1,5.5,12,24,42,85],borderColor:C.red,backgroundColor:C.red+'12',fill:true,tension:.4,pointRadius:4,pointBackgroundColor:C.red},{label:'New AI Jobs (M)',data:[.1,.4,1.2,3.2,7,15,30,97],borderColor:C.green,backgroundColor:C.green+'12',fill:true,tension:.4,pointRadius:4,pointBackgroundColor:C.green}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,pointStyleWidth:8}}},scales:{y:{grid:{color:'#1a1a2e44'}},x:{grid:{display:false}}}}});
 
 new Chart(document.getElementById('chartCompanies'),{type:'bar',data:{labels:['BT Group','Amazon','Meta','UPS','Google','Microsoft','SAP','IBM','Klarna','Dropbox'],datasets:[{label:'Jobs Cut',data:[55000,27000,21000,12000,12000,10000,8000,7800,700,500],backgroundColor:C.yellow+'aa',borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1a1a2e44'}},y:{grid:{display:false}}}}});
+
+// === LAST UPDATED + META ===
+fetch('/api/meta').then(r=>r.json()).then(m=>{
+  const d=new Date(m.lastDataUpdate);
+  const ago=Math.round((Date.now()-d.getTime())/60000);
+  const agoText=ago<60?ago+'m ago':Math.round(ago/60)+'h ago';
+  document.getElementById('last-updated').textContent='Last updated: '+d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'})+' ('+agoText+') • '+m.sourceCount+' sources';
+});
+
+// === BY COUNTRY ===
+fetch('/api/by-country').then(r=>r.json()).then(countries=>{
+  const flags={'US':'🇺🇸','UK':'🇬🇧','DE':'🇩🇪','SE':'🇸🇪','IN':'🇮🇳','IE':'🇮🇪','NL':'🇳🇱','JP':'🇯🇵','CN':'🇨🇳','IL':'🇮🇱','AU':'🇦🇺'};
+  const colors=['#ef4444','#f59e0b','#3b82f6','#10b981','#8b5cf6','#ec4899','#06b6d4','#84cc16','#f97316','#6366f1'];
+  const max=countries[0]?.totalJobs||1;
+  const el=document.getElementById('country-list');
+  el.innerHTML=countries.slice(0,10).map((c,i)=>{
+    const pct=Math.round(c.totalJobs/max*100);
+    const color=colors[i%colors.length];
+    return `<div style="background:var(--card2);border-radius:10px;padding:.8rem 1rem;position:relative;overflow:hidden">
+      <div style="position:absolute;bottom:0;left:0;height:3px;width:${pct}%;background:${color};border-radius:0 3px 0 10px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div><span style="font-size:1.1rem">${flags[c.code]||'🌐'}</span> <strong style="font-size:.85rem">${c.country}</strong></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;color:${color};font-size:1rem">${(c.totalJobs/1000).toFixed(1)}K</div>
+      </div>
+      <div style="color:var(--muted);font-size:.65rem;margin-top:.2rem">${c.companies} companies</div>
+    </div>`;
+  }).join('');
+});
+
+// === ACCELERATION TIMELINE ===
+fetch('/api/timeline').then(r=>r.json()).then(tl=>{
+  new Chart(document.getElementById('chartTimeline'),{
+    type:'line',
+    data:{
+      labels:tl.map(t=>t.month),
+      datasets:[
+        {label:'Cumulative Jobs Lost',data:tl.map(t=>t.cumulative),borderColor:C.red,backgroundColor:C.red+'15',fill:true,tension:.3,pointRadius:3,pointBackgroundColor:C.red,yAxisID:'y'},
+        {label:'Monthly New',data:tl.map(t=>t.jobsCut),borderColor:C.yellow,backgroundColor:C.yellow+'40',type:'bar',borderRadius:4,yAxisID:'y1'}
+      ]
+    },
+    options:{responsive:true,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom',labels:{usePointStyle:true,pointStyleWidth:8}}},scales:{y:{type:'linear',position:'left',grid:{color:'#1a1a2e44'},ticks:{callback:v=>(v/1000)+'K'}},y1:{type:'linear',position:'right',grid:{display:false},ticks:{callback:v=>(v/1000)+'K'}},x:{grid:{display:false}}}}
+  });
+});
 </script>
 <script>
 // --- Client-side Analytics Tracker ---

@@ -199,6 +199,72 @@ app.get('/api/analytics', (req, res) => {
   });
 });
 
+// GET /api/by-country — jobs by country
+app.get('/api/by-country', (req, res) => {
+  const data = loadData();
+  const companyCountry = {
+    'BT Group':'UK','Amazon':'US','Meta':'US','UPS':'US','Google':'US','Microsoft':'US',
+    'SAP':'DE','IBM':'US','Klarna':'SE','Dropbox':'US','Chegg':'US','Duolingo':'US',
+    'Intuit':'US','Stack Overflow':'US','Cisco':'US','eBay':'US','Salesforce':'US',
+    'Dell':'US','PayPal':'US','Workday':'US','Block':'US','DocuSign':'US','Bumble':'US',
+    'Twilio':'US','Intel':'US','Citigroup':'US','TCS':'IN','Accenture':'IE',
+    'HP Inc.':'US','HP':'US','McKinsey':'US','Omnicom Group':'US','Lufthansa':'DE',
+    'Xerox':'US','ASML':'NL','Nike':'US','Unity':'US','C.H. Robinson':'US',
+    'Recruit Holdings':'JP','Indeed':'JP','Glassdoor':'JP','Autodesk':'US',
+    'Baker McKenzie':'US','CrowdStrike':'US','TikTok':'CN','Paycom':'US',
+    'BlackRock':'US','Just Eat Takeaway':'NL','Fiverr':'IL','Grammarly':'US',
+    'Business Insider':'US','Spotify':'SE','Snap':'US','Zoom':'US','Expedia':'US',
+    'Atlassian':'AU','Canva':'AU','BuzzFeed':'US'
+  };
+  const countryNames = {
+    'US':'United States','UK':'United Kingdom','DE':'Germany','SE':'Sweden','IN':'India',
+    'IE':'Ireland','NL':'Netherlands','JP':'Japan','CN':'China','IL':'Israel','AU':'Australia'
+  };
+  const byCountry = {};
+  data.forEach(d => {
+    const cc = companyCountry[d.company] || 'US';
+    const name = countryNames[cc] || cc;
+    if (!byCountry[name]) byCountry[name] = { country: name, code: cc, totalJobs: 0, companies: 0, companySet: new Set() };
+    byCountry[name].totalJobs += d.jobsCut;
+    byCountry[name].companySet.add(d.company);
+  });
+  const result = Object.values(byCountry).map(c => ({ country: c.country, code: c.code, totalJobs: c.totalJobs, companies: c.companySet.size }));
+  result.sort((a, b) => b.totalJobs - a.totalJobs);
+  res.json(result);
+});
+
+// GET /api/timeline — monthly timeline
+app.get('/api/timeline', (req, res) => {
+  const data = loadData();
+  const monthly = {};
+  data.forEach(d => {
+    const m = d.date.slice(0, 7);
+    if (!monthly[m]) monthly[m] = { month: m, jobsCut: 0, events: 0 };
+    monthly[m].jobsCut += d.jobsCut;
+    monthly[m].events++;
+  });
+  let cumulative = 0;
+  const result = Object.values(monthly).sort((a, b) => a.month.localeCompare(b.month)).map(m => {
+    cumulative += m.jobsCut;
+    return { ...m, cumulative };
+  });
+  res.json(result);
+});
+
+// GET /api/meta — site metadata
+app.get('/api/meta', (req, res) => {
+  const data = loadData();
+  const lastEntry = data.reduce((latest, d) => d.date > latest ? d.date : latest, '2000-01-01');
+  const stats = fs.statSync(DATA_PATH);
+  res.json({
+    lastDataUpdate: stats.mtime.toISOString(),
+    lastEntry,
+    totalEntries: data.length,
+    totalJobs: data.reduce((s, d) => s + d.jobsCut, 0),
+    sourceCount: new Set(data.map(d => d.sourceName)).size
+  });
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
