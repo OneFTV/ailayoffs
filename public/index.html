@@ -469,7 +469,23 @@ Promise.all([
   const tbody=document.querySelector('table tbody');
   if(tbody){
     const tagClass={Tech:'tag-tech',Fintech:'tag-finance',Logistics:'tag-retail',Telecom:'tag-telecom',Education:'tag-education',Media:'tag-media'};
-    tbody.innerHTML=layoffs.map(l=>`<tr><td><strong>${l.company}</strong></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td>${l.reason}</td><td>${l.date}</td><td><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`).join('');
+    const INITIAL_SHOW = 10;
+    const rows = layoffs.map(l=>`<tr><td><strong>${l.company}</strong></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td>${l.reason}</td><td>${l.date}</td><td><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`);
+    tbody.innerHTML = rows.map((r,i) => i < INITIAL_SHOW ? r : r.replace('<tr>','<tr class="hidden-row" style="display:none">')).join('');
+    if(layoffs.length > INITIAL_SHOW){
+      const showBtn = document.createElement('div');
+      showBtn.style.cssText='text-align:center;padding:1rem;cursor:pointer;color:var(--accent3);font-weight:600;font-size:.9rem;border-top:1px solid var(--border)';
+      showBtn.innerHTML=`▼ Show All (${layoffs.length} companies)`;
+      showBtn.onclick=()=>{
+        document.querySelectorAll('.hidden-row').forEach(r=>r.style.display='');
+        showBtn.innerHTML='▲ Show Less';
+        showBtn.onclick=()=>{
+          document.querySelectorAll('.hidden-row').forEach(r=>r.style.display='none');
+          showBtn.innerHTML=`▼ Show All (${layoffs.length} companies)`;
+        };
+      };
+      tbody.closest('.table-wrap').appendChild(showBtn);
+    }
   }
 
   // Update company count badge
