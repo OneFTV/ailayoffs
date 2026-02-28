@@ -106,6 +106,12 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .tag-media{background:rgba(239,68,68,.1);color:var(--accent)}
 .jobs-cut{color:var(--accent);font-weight:700;font-family:'JetBrains Mono',monospace}
 .source-link{color:var(--accent3);font-size:.75rem}
+@media(max-width:768px){
+  table{font-size:.8rem}
+  thead th,tbody td{padding:.5rem .6rem}
+  .col-reason,.col-date,.col-source{display:none}
+  .table-wrap{overflow-x:hidden}
+}
 
 /* News Feed */
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
@@ -259,9 +265,9 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
           <th>Company</th>
           <th>Sector</th>
           <th>Jobs Cut</th>
-          <th>AI Role</th>
-          <th>Date</th>
-          <th>Source</th>
+          <th class="col-reason">AI Role</th>
+          <th class="col-date">Date</th>
+          <th class="col-source">Source</th>
         </tr>
       </thead>
       <tbody>
@@ -470,7 +476,7 @@ Promise.all([
   if(tbody){
     const tagClass={Tech:'tag-tech',Fintech:'tag-finance',Logistics:'tag-retail',Telecom:'tag-telecom',Education:'tag-education',Media:'tag-media'};
     const INITIAL_SHOW = 10;
-    const rows = layoffs.map(l=>`<tr><td><strong>${l.company}</strong></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td>${l.reason}</td><td>${l.date}</td><td><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`);
+    const rows = layoffs.map(l=>`<tr><td><strong>${l.company}</strong></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td class="col-reason">${l.reason}</td><td class="col-date">${l.date}</td><td class="col-source"><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`);
     tbody.innerHTML = rows.map((r,i) => i < INITIAL_SHOW ? r : r.replace('<tr>','<tr class="hidden-row" style="display:none">')).join('');
     if(layoffs.length > INITIAL_SHOW){
       const showBtn = document.createElement('div');
