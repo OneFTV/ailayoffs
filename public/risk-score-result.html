@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Risk Score | AILayoff.live</title>
+<meta name="description" content="AI automation risk score for this occupation">
+<meta property="og:title" content="AI Risk Score | AILayoff.live" id="og-title">
+<meta property="og:description" content="Check your occupation's AI automation risk score" id="og-desc">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"AI Job Risk Score","url":"https://ailayoffs.live/risk-score","description":"Check if your job is at risk from AI automation","applicationCategory":"BusinessApplication","operatingSystem":"Web"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#08080d;--card:#0f0f18;--card2:#14141f;--accent:#ef4444;--accent2:#f59e0b;--accent3:#3b82f6;--accent4:#10b981;--accent5:#8b5cf6;--text:#e2e8f0;--muted:#64748b;--border:#1a1a2e}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent3);text-decoration:none}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:.6rem 2rem;background:var(--card);border-bottom:1px solid var(--border);font-size:.75rem;color:var(--muted)}
+.topbar a{color:var(--text);font-weight:600;margin-left:1.5rem;opacity:.7;transition:opacity .2s}
+.topbar a:hover{opacity:1;color:var(--accent3)}
+.topbar a.active{opacity:1;color:var(--accent)}
+
+.container{max-width:800px;margin:0 auto;padding:2rem 1.5rem}
+
+/* Gauge */
+.gauge-section{text-align:center;padding:2rem 0 1rem}
+.gauge-wrap{position:relative;width:220px;height:220px;margin:0 auto}
+.gauge-bg{width:220px;height:220px;border-radius:50%;background:conic-gradient(var(--gauge-color) calc(var(--pct)*3.6deg),var(--card2) 0);display:flex;align-items:center;justify-content:center;position:relative}
+.gauge-bg::before{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:var(--bg)}
+.gauge-inner{position:absolute;text-align:center;z-index:1}
+.gauge-score{font-size:3.5rem;font-weight:900;font-family:'JetBrains Mono',monospace;line-height:1}
+.gauge-label{font-size:.7rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-top:.2rem}
+.gauge-of{font-size:.75rem;color:var(--muted);margin-top:.1rem}
+
+.job-title{font-size:1.8rem;font-weight:900;margin-top:1.5rem;letter-spacing:-1px}
+.job-meta{color:var(--muted);font-size:.85rem;margin-top:.3rem}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-top:1.2rem}
+.card h3{font-size:.8rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:.8rem;font-weight:600}
+.card p{font-size:.9rem;line-height:1.7;color:var(--text)}
+.card ul{list-style:none;padding:0}
+.card ul li{padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.88rem;display:flex;align-items:flex-start;gap:.5rem}
+.card ul li:last-child{border-bottom:none}
+.card ul li::before{flex-shrink:0;margin-top:2px}
+.risk-item::before{content:'⚠️'}
+.safe-item::before{content:'🛡️'}
+.task-item::before{content:'📋'}
+
+.impact-card{background:linear-gradient(135deg,rgba(239,68,68,.06),rgba(59,130,246,.06));border-color:rgba(239,68,68,.15)}
+.impact-stat{font-size:1.3rem;font-weight:800;color:var(--accent);font-family:'JetBrains Mono',monospace}
+
+/* Email gate */
+.email-gate{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(139,92,246,.08));border:1px solid rgba(59,130,246,.15);border-radius:14px;padding:2rem;text-align:center;margin-top:1.5rem}
+.email-gate h3{font-size:1.1rem;font-weight:700;margin-bottom:.3rem;color:var(--text)}
+.email-gate p{color:var(--muted);font-size:.85rem;margin-bottom:1rem}
+.email-form{display:flex;gap:.5rem;max-width:400px;margin:0 auto}
+.email-form input{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;color:var(--text);font-size:.85rem;outline:none}
+.email-form input:focus{border-color:var(--accent3)}
+.email-form button{background:var(--accent3);color:#fff;border:none;border-radius:8px;padding:.6rem 1.2rem;font-weight:600;font-size:.85rem;cursor:pointer;white-space:nowrap}
+.email-form button:hover{background:#2563eb}
+
+/* Share */
+.share{display:flex;gap:.8rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap}
+.share a{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.5rem 1rem;font-size:.8rem;color:var(--text);transition:all .2s}
+.share a:hover{border-color:var(--accent3)}
+
+.back-link{display:block;text-align:center;margin-top:2rem;font-size:.9rem;font-weight:600}
+
+.footer{border-top:1px solid var(--border);margin-top:3rem;padding:2rem;text-align:center;font-size:.75rem;color:var(--muted)}
+.footer a{color:var(--accent3);margin:0 .5rem}
+
+.loading{text-align:center;padding:4rem 1rem;color:var(--muted);font-size:1.1rem}
+.error{text-align:center;padding:4rem 1rem}
+.error h2{color:var(--accent);margin-bottom:.5rem}
+
+@media(max-width:600px){
+  .container{padding:1.5rem 1rem}
+  .job-title{font-size:1.4rem}
+  .gauge-wrap{width:180px;height:180px}
+  .gauge-bg{width:180px;height:180px}
+  .gauge-bg::before{width:148px;height:148px}
+  .gauge-score{font-size:2.8rem}
+  .email-form{flex-direction:column}
+  .topbar{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div style="display:flex;align-items:center;gap:1.5rem">
+    <a href="/">Home</a>
+    <a href="/risk-score" class="active">Risk Score</a>
+  </div>
+  <div><a href="/" style="color:var(--text);font-weight:800;opacity:1">AI<span style="color:var(--accent)">Layoff</span>.live</a></div>
+</div>
+
+<div class="container" id="content">
+  <div class="loading" id="loading">Analyzing occupation data...</div>
+</div>
+
+<div class="footer">
+  <a href="/">← AILayoff.live</a> · <a href="/risk-score">Risk Score</a> · <a href="/about.html">About</a>
+</div>
+
+<script>
+const slug = window.location.pathname.split('/risk-score/')[1];
+if(!slug){window.location.href='/risk-score';}
+
+fetch('/api/risk-score/'+encodeURIComponent(slug))
+  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
+  .then(d=>{
+    const s=d.risk_score;
+    const color=s<=25?'#10b981':s<=50?'#f59e0b':s<=75?'#f97316':'#ef4444';
+    const level=s<=25?'LOW RISK':s<=50?'MEDIUM RISK':s<=75?'HIGH RISK':'VERY HIGH RISK';
+
+    document.title=`${d.title} — AI Risk Score: ${s}/100 | AILayoff.live`;
+    document.getElementById('og-title').content=`${d.title} — AI Risk Score: ${s}/100`;
+    document.getElementById('og-desc').content=d.ai_impact_summary||`${d.title} has an AI automation risk score of ${s}/100`;
+
+    const risks=(d.risk_factors||[]).map(f=>`<li class="risk-item">${f}</li>`).join('');
+    const safes=(d.safe_factors||[]).map(f=>`<li class="safe-item">${f}</li>`).join('');
+    const tasks=(d.key_tasks||[]).map(t=>`<li class="task-item">${t}</li>`).join('');
+
+    const shareText=encodeURIComponent(`My job "${d.title}" has an AI risk score of ${s}/100. Check yours:`);
+    const shareUrl=encodeURIComponent(window.location.href);
+
+    let impactHtml='';
+    if(d.sector_stats&&(d.sector_stats.companies>0||d.sector_stats.jobs>0)){
+      const ss=d.sector_stats;
+      impactHtml=`<div class="card impact-card"><h3>📊 Industry Impact — ${d.related_sector||'Related'} Sector</h3>
+        <p><span class="impact-stat">${ss.companies}</span> companies have cut <span class="impact-stat">${(ss.jobs||0).toLocaleString()}</span> jobs due to AI in the ${d.related_sector||'related'} sector</p></div>`;
+    }
+
+    let metaInfo=[];
+    if(d.category)metaInfo.push(d.category);
+    if(d.median_salary)metaInfo.push('Median salary: $'+(d.median_salary).toLocaleString());
+    if(d.employment_count)metaInfo.push((d.employment_count).toLocaleString()+' employed');
+
+    document.getElementById('content').innerHTML=`
+      <div class="gauge-section">
+        <div class="gauge-wrap">
+          <div class="gauge-bg" style="--pct:${s};--gauge-color:${color}">
+            <div class="gauge-inner">
+              <div class="gauge-score" style="color:${color}">${s}</div>
+              <div class="gauge-of">out of 100</div>
+              <div class="gauge-label" style="color:${color}">${level}</div>
+            </div>
+          </div>
+        </div>
+        <h1 class="job-title">${d.title}</h1>
+        <div class="job-meta">${metaInfo.join(' · ')}</div>
+      </div>
+
+      ${d.ai_impact_summary?`<div class="card"><h3>🤖 AI Impact Summary</h3><p>${d.ai_impact_summary}</p></div>`:''}
+
+      ${risks?`<div class="card"><h3>⚠️ Key Risk Factors</h3><ul>${risks}</ul></div>`:''}
+      ${safes?`<div class="card"><h3>🛡️ What Keeps This Job Safe</h3><ul>${safes}</ul></div>`:''}
+      ${tasks?`<div class="card"><h3>📋 Key Tasks</h3><ul>${tasks}</ul></div>`:''}
+
+      ${impactHtml}
+
+      <div class="email-gate">
+        <h3>📧 Get Your Full AI Career Report</h3>
+        <p>Detailed analysis, reskilling recommendations, and future outlook — delivered to your inbox</p>
+        <form class="email-form" id="email-form">
+          <input type="email" placeholder="your@email.com" required id="gate-email">
+          <button type="submit" id="gate-btn">Get Report</button>
+        </form>
+      </div>
+
+      <div class="share">
+        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(`My job as ${d.title} has a ${s}% AI automation risk! Check yours at ailayoffs.live/risk-score`)}" target="_blank">🐦 Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}" target="_blank">💼 Share on LinkedIn</a>
+        <a href="#" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied!';setTimeout(()=>this.textContent='🔗 Copy Link',2000);return false">🔗 Copy Link</a>
+      </div>
+
+      <a class="back-link" href="/risk-score">← Check another job</a>
+    `;
+
+    // Email form handler
+    document.getElementById('email-form').addEventListener('submit',async e=>{
+      e.preventDefault();
+      const btn=document.getElementById('gate-btn');
+      const email=document.getElementById('gate-email').value;
+      btn.disabled=true;btn.textContent='...';
+      try{
+        const r=await fetch('/api/risk-report',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,occupation_slug:slug})});
+        if(r.ok){btn.textContent='✓ Sent!';btn.style.background='#10b981';}
+        else{btn.textContent='Error';setTimeout(()=>{btn.textContent='Get Report';btn.style.background='';btn.disabled=false},3000);}
+      }catch{btn.textContent='Error';setTimeout(()=>{btn.textContent='Get Report';btn.style.background='';btn.disabled=false},3000);}
+    });
+  })
+  .catch(()=>{
+    document.getElementById('content').innerHTML=`<div class="error"><h2>Occupation not found</h2><p>We couldn't find data for this job title.</p><a href="/risk-score" style="display:inline-block;margin-top:1rem;background:var(--accent);color:white;padding:.6rem 1.5rem;border-radius:8px;font-weight:600">Search Again</a></div>`;
+  });
+</script>
+</body>
+</html>

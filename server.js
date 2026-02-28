@@ -442,6 +442,178 @@ app.post('/api/contact', async (req, res) => {
   } catch(e) { console.error('Contact error:', e.message); res.status(500).json({ error: 'Server error' }); }
 });
 
+// === RISK SCORE API ===
+app.get('/api/risk-score', async (req, res) => {
+  // Search endpoint
+  if (req.query.q !== undefined) {
+    try {
+      if (!useDB) return res.status(503).json({ error: 'Database required' });
+      const q = (req.query.q || '').trim().slice(0, 100);
+      if (!q) return res.json([]);
+      const r = await pool.query(
+        `SELECT title, title_slug, risk_score, related_sector FROM occupations WHERE title ILIKE $1 ORDER BY risk_score DESC LIMIT 10`,
+        [`%${q}%`]
+      );
+      return res.json(r.rows);
+    } catch(e) { return res.status(500).json({ error: 'Server error' }); }
+  }
+  res.json({ error: 'Missing q parameter' });
+});
+
+app.get('/api/risk-score-stats', async (req, res) => {
+  try {
+    if (!useDB) return res.json({ total: 0, avg_risk: 0 });
+    const r = await pool.query(`SELECT COUNT(*) as total, ROUND(AVG(risk_score)) as avg_risk FROM occupations`);
+    res.json({ total: parseInt(r.rows[0].total), avg_risk: parseInt(r.rows[0].avg_risk || 0) });
+  } catch(e) { res.status(500).json({ error: 'Server error' }); }
+});
+
+app.get('/api/risk-score/:slug', async (req, res) => {
+  try {
+    if (!useDB) return res.status(503).json({ error: 'Database required' });
+    const slug = req.params.slug.trim().toLowerCase();
+    if (!/^[a-z0-9\-]+$/.test(slug)) return res.status(400).json({ error: 'Invalid slug' });
+    const r = await pool.query(`SELECT * FROM occupations WHERE title_slug=$1`, [slug]);
+    if (!r.rows.length) return res.status(404).json({ error: 'Not found' });
+    const job = r.rows[0];
+
+    // Parse JSON fields if stored as strings
+    const parse = (v) => { try { return typeof v === 'string' ? JSON.parse(v) : (v || []); } catch { return []; } };
+
+    // Get sector stats from layoffs table
+    let sector_stats = { companies: 0, jobs: 0 };
+    if (job.related_sector) {
+      try {
+        const ss = await pool.query(
+          `SELECT COUNT(DISTINCT company) as companies, COALESCE(SUM(laid_off_count),0) as jobs FROM layoffs WHERE LOWER(industry) LIKE $1`,
+          [`%${job.related_sector.toLowerCase()}%`]
+        );
+        if (ss.rows[0]) sector_stats = { companies: parseInt(ss.rows[0].companies), jobs: parseInt(ss.rows[0].jobs) };
+      } catch(e) {}
+    }
+
+    res.json({
+      title: job.title,
+      slug: job.title_slug,
+      risk_score: job.risk_score,
+      risk_factors: parse(job.risk_factors),
+      safe_factors: parse(job.safe_factors),
+      ai_impact_summary: job.ai_impact_summary,
+      key_tasks: parse(job.key_tasks),
+      automation_probability: job.automation_probability,
+      related_sector: job.related_sector,
+      category: job.category || job.related_sector,
+      median_salary: job.median_salary,
+      employment_count: job.employment_count,
+      sector_stats
+    });
+  } catch(e) { console.error('Risk score error:', e.message); res.status(500).json({ error: 'Server error' }); }
+});
+
+// === RISK REPORT EMAIL GATE ===
+app.post('/api/risk-report', async (req, res) => {
+  try {
+    const { email, occupation_slug } = req.body;
+    if (!email || typeof email !== 'string') return res.status(400).json({ error: 'Email required' });
+    if (!occupation_slug || typeof occupation_slug !== 'string') return res.status(400).json({ error: 'Occupation slug required' });
+
+    const clean = email.trim().toLowerCase().slice(0, 254);
+    if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(clean)) return res.status(400).json({ error: 'Invalid email' });
+    if (/['";\\<>{}()=]|drop |select |insert |delete |union |script/i.test(clean)) return res.status(400).json({ error: 'Invalid input' });
+
+    const slug = occupation_slug.trim().toLowerCase().slice(0, 255);
+    if (!/^[a-z0-9\-]+$/.test(slug)) return res.status(400).json({ error: 'Invalid slug' });
+
+    if (!useDB) return res.status(503).json({ error: 'Database required' });
+
+    const ip = getIP(req);
+    const ipHash = crypto.createHash('sha256').update(ip + 'report-salt').digest('hex').slice(0, 64);
+
+    // Rate limit: 5 per IP per hour
+    const rl = await pool.query(`SELECT COUNT(*) as c FROM risk_report_requests WHERE ip_hash=$1 AND created_at > NOW() - INTERVAL '1 hour'`, [ipHash]);
+    if (parseInt(rl.rows[0].c) >= 5) return res.status(429).json({ error: 'Too many requests. Try again later.' });
+
+    // Save to subscribers (upsert)
+    const dup = await pool.query(`SELECT id FROM subscribers WHERE email=$1`, [clean]);
+    if (!dup.rows.length) {
+      await pool.query(`INSERT INTO subscribers (email, ip_hash, source) VALUES ($1, $2, 'risk-report')`, [clean, ipHash.slice(0, 12)]);
+    }
+
+    // Save report request
+    await pool.query(`INSERT INTO risk_report_requests (email, occupation_slug, ip_hash) VALUES ($1, $2, $3)`, [clean, slug, ipHash]);
+
+    // Get occupation data
+    const occ = await pool.query(`SELECT * FROM occupations WHERE title_slug=$1`, [slug]);
+    if (!occ.rows.length) return res.status(404).json({ error: 'Occupation not found' });
+    const job = occ.rows[0];
+
+    // Career transition suggestions: similar sector, lower risk
+    let alternatives = [];
+    try {
+      const alt = await pool.query(
+        `SELECT title, title_slug, risk_score, related_sector FROM occupations 
+         WHERE related_sector = $1 AND risk_score < $2 AND title_slug != $3
+         ORDER BY risk_score ASC LIMIT 5`,
+        [job.related_sector, job.risk_score, slug]
+      );
+      alternatives = alt.rows;
+      // If not enough from same sector, fill from all
+      if (alternatives.length < 3) {
+        const more = await pool.query(
+          `SELECT title, title_slug, risk_score, related_sector FROM occupations 
+           WHERE risk_score < $1 AND title_slug != $2 AND title_slug NOT IN (${alternatives.map((_, i) => `$${i + 3}`).join(',') || "''"})
+           ORDER BY ABS(risk_score - $1 + 20) ASC LIMIT $${alternatives.length + 3}`,
+          [job.risk_score, slug, ...alternatives.map(a => a.title_slug), 5 - alternatives.length]
+        );
+        alternatives = [...alternatives, ...more.rows];
+      }
+    } catch(e) { console.error('Alt careers error:', e.message); }
+
+    res.json({
+      ok: true,
+      report: {
+        title: job.title,
+        slug: job.title_slug,
+        risk_score: job.risk_score,
+        risk_factors: job.risk_factors,
+        safe_factors: job.safe_factors,
+        ai_impact_summary: job.ai_impact_summary,
+        key_tasks: job.key_tasks,
+        automation_probability: job.automation_probability,
+        related_sector: job.related_sector,
+        career_alternatives: alternatives.map(a => ({
+          title: a.title,
+          slug: a.title_slug,
+          risk_score: a.risk_score,
+          sector: a.related_sector
+        }))
+      }
+    });
+  } catch(e) { console.error('Risk report error:', e.message); res.status(500).json({ error: 'Server error' }); }
+});
+
+// === OG DATA FOR SEO ===
+app.get('/api/og-data/:slug', async (req, res) => {
+  try {
+    if (!useDB) return res.status(503).json({ error: 'Database required' });
+    const slug = req.params.slug.trim().toLowerCase();
+    if (!/^[a-z0-9\-]+$/.test(slug)) return res.status(400).json({ error: 'Invalid slug' });
+    const r = await pool.query(`SELECT title, risk_score, ai_impact_summary FROM occupations WHERE title_slug=$1`, [slug]);
+    if (!r.rows.length) return res.status(404).json({ error: 'Not found' });
+    const job = r.rows[0];
+    res.json({
+      title: `${job.title} - ${job.risk_score}% AI Automation Risk | AILayoffs`,
+      description: job.ai_impact_summary || `${job.title} has a ${job.risk_score}% risk of being automated by AI. Find out if your job is at risk.`,
+      risk_score: job.risk_score,
+      url: `https://ailayoffs.live/risk-score/${slug}`
+    });
+  } catch(e) { res.status(500).json({ error: 'Server error' }); }
+});
+
+// === RISK SCORE PAGE ROUTES ===
+app.get('/risk-score', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'risk-score.html')); });
+app.get('/risk-score/:slug', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'risk-score-result.html')); });
+
 app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'index.html')); });
 
 // Run migration on startup if DB is available
@@ -467,6 +639,15 @@ async function init() {
           ip_hash VARCHAR(12),
           created_at TIMESTAMP DEFAULT NOW()
         )`);
+        // Phase 3: Email gate tables
+        await pool.query(`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS source VARCHAR(50) DEFAULT 'newsletter'`).catch(()=>{});
+        await pool.query(`CREATE TABLE IF NOT EXISTS risk_report_requests (
+          id SERIAL PRIMARY KEY,
+          email VARCHAR(255) NOT NULL,
+          occupation_slug VARCHAR(255) NOT NULL,
+          ip_hash VARCHAR(64),
+          created_at TIMESTAMP DEFAULT NOW()
+        )`).catch(()=>{});
         console.log('PostgreSQL connected, tables exist');
       }
     } catch(e) { console.error('DB init error:', e.message); }

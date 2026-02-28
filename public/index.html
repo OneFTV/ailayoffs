@@ -380,6 +380,15 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
   </div>
 </div>
 
+<!-- Risk Score CTA -->
+<div class="section">
+<div class="risk-cta" style="background:linear-gradient(135deg,rgba(239,68,68,.08),rgba(59,130,246,.08));border:1px solid var(--border);border-radius:16px;padding:2.5rem;text-align:center;margin:0">
+  <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:.5rem">Is YOUR Job at Risk from AI? 🎯</h2>
+  <p style="color:var(--muted);margin-bottom:1.5rem">Check your occupation's AI automation risk score — powered by Oxford research + real layoff data</p>
+  <a href="/risk-score" style="display:inline-block;background:var(--accent);color:white;padding:.8rem 2rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:1rem;transition:all .2s">Check Your Risk Score →</a>
+</div>
+</div>
+
 <!-- News Feed -->
 <div class="section">
   <div class="section-header">
@@ -387,6 +396,14 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     <span class="badge">AI & Employment</span>
   </div>
   <div class="news-grid">
+    <a href="https://www.library.hbs.edu/working-knowledge/enhance-or-eliminate-how-ai-will-likely-change-these-jobs" target="_blank" style="text-decoration:none;color:inherit">
+    <div class="news-card">
+      <div class="news-date">Feb 28, 2026</div>
+      <h4>Harvard Business School: Which Jobs Will AI Eliminate vs. Augment?</h4>
+      <p>New research by Prof. Suraj Srinivasan reveals rising demand for AI skills while structured, repetitive roles decline. Interactive graphic shows which jobs face automation.</p>
+      <div class="news-source">HBS Working Knowledge • 6 min read</div>
+    </div>
+    </a>
     <div class="news-card">
       <div class="news-date">Feb 26, 2026</div>
       <h4>Salesforce Announces "AgentForce" Will Replace 3,000 Support Roles by Q3</h4>
@@ -441,6 +458,7 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
       <a href="/api.html">API Access</a>
       <a href="/licensing.html">Data Licensing</a>
       <a href="/contact.html">Submit a Report</a>
+      <a href="/risk-score">AI Risk Score</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -492,42 +510,9 @@ Promise.all([
   animateCounter(document.getElementById('c-reskill'), 1200000000);
   animateCounter(newEl, totalNew);
 
-  // Display rate from API (dynamic)
-  const displayRate = stats.jobsPerHour || 25;
-  document.getElementById('rate-jobs').textContent = Math.round(displayRate);
-  document.getElementById('rate-new').textContent = Math.round(displayRate * 0.7);
-
-  // After initial animation (2.5s), start live Worldometer-style increment
-  let liveJobs = totalJobs;
-  let liveNew = totalNew;
-  const baseIntervalMs = 3600000 / Math.max(displayRate, 25); // ms per job tick (~144s for 25/hr)
-  const newIntervalMs = 3600000 / Math.max(displayRate * 0.7, 18);
-
-  function scheduleJobTick() {
-    const variance = 1 + (Math.random() - 0.5) * 0.6; // ±30%
-    const delay = baseIntervalMs * variance;
-    setTimeout(() => {
-      liveJobs++;
-      jobsEl.textContent = liveJobs.toLocaleString('en-US');
-      scheduleJobTick();
-    }, delay);
-  }
-
-  function scheduleNewTick() {
-    const variance = 1 + (Math.random() - 0.5) * 0.6;
-    const delay = newIntervalMs * variance;
-    setTimeout(() => {
-      liveNew++;
-      newEl.textContent = liveNew.toLocaleString('en-US');
-      scheduleNewTick();
-    }, delay);
-  }
-
-  // Start live ticking after animation completes
-  setTimeout(() => {
-    scheduleJobTick();
-    scheduleNewTick();
-  }, 2500);
+  // Display rates
+  document.getElementById('rate-jobs').textContent = '142';
+  document.getElementById('rate-new').textContent = '98';
 
   // Ticker
   const ticker=document.getElementById('ticker');

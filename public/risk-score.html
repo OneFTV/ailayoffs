@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Your Job at Risk from AI? — AI Risk Score | AILayoff.live</title>
+<meta name="description" content="Check your occupation's AI automation risk score. Powered by Oxford research and real layoff data.">
+<meta property="og:title" content="Is Your Job at Risk from AI? — AILayoff.live">
+<meta property="og:description" content="Check your occupation's AI automation risk score — powered by Oxford research + real layoff data">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#08080d;--card:#0f0f18;--card2:#14141f;--accent:#ef4444;--accent2:#f59e0b;--accent3:#3b82f6;--accent4:#10b981;--accent5:#8b5cf6;--text:#e2e8f0;--muted:#64748b;--border:#1a1a2e;--glow:rgba(239,68,68,.15)}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent3);text-decoration:none;transition:color .2s}
+a:hover{color:#60a5fa}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:.6rem 2rem;background:var(--card);border-bottom:1px solid var(--border);font-size:.75rem;color:var(--muted)}
+.topbar-left{display:flex;gap:1.5rem;align-items:center}
+.topbar a{color:var(--text);font-weight:600;margin-left:1.5rem;opacity:.7;transition:opacity .2s}
+.topbar a:hover{opacity:1;color:var(--accent3)}
+.topbar a.active{opacity:1;color:var(--accent)}
+
+.hero{text-align:center;padding:4rem 1rem 2rem;background:linear-gradient(180deg,var(--card) 0%,var(--bg) 100%);position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.hero h1{font-size:2.6rem;font-weight:900;letter-spacing:-2px;margin-bottom:.5rem}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);font-size:1rem;max-width:600px;margin:0 auto}
+
+.search-wrap{max-width:600px;margin:2rem auto 0;position:relative}
+.search-wrap input{width:100%;padding:1rem 1.5rem;background:var(--card);border:2px solid var(--border);border-radius:14px;color:var(--text);font-size:1.1rem;font-family:inherit;outline:none;transition:border .2s}
+.search-wrap input:focus{border-color:var(--accent)}
+.search-wrap input::placeholder{color:var(--muted)}
+.autocomplete{position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:12px;margin-top:4px;overflow:hidden;display:none;z-index:10;max-height:320px;overflow-y:auto}
+.autocomplete a{display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.2rem;color:var(--text);border-bottom:1px solid var(--border);transition:background .15s}
+.autocomplete a:last-child{border-bottom:none}
+.autocomplete a:hover{background:rgba(255,255,255,.03)}
+.autocomplete .score{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.85rem}
+.score-low{color:var(--accent4)}.score-med{color:var(--accent2)}.score-high{color:#f97316}.score-vhigh{color:var(--accent)}
+
+.popular{max-width:600px;margin:1.5rem auto 0;text-align:center}
+.popular h3{font-size:.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:.8rem;font-weight:600}
+.popular-tags{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.popular-tags a{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.4rem 1rem;font-size:.85rem;color:var(--text);transition:all .2s}
+.popular-tags a:hover{border-color:var(--accent);color:var(--accent)}
+
+.stats-bar{text-align:center;margin-top:2.5rem;padding:1.5rem;color:var(--muted);font-size:.9rem}
+.stats-bar span{color:var(--accent);font-weight:800;font-family:'JetBrains Mono',monospace}
+
+.footer{border-top:1px solid var(--border);margin-top:4rem;padding:2rem;text-align:center;font-size:.75rem;color:var(--muted)}
+.footer a{color:var(--accent3);margin:0 .5rem}
+
+@media(max-width:600px){
+  .hero h1{font-size:1.8rem}
+  .search-wrap{margin:1.5rem 1rem 0}
+  .popular{padding:0 1rem}
+  .topbar{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="/">Home</a>
+    <a href="/risk-score" class="active">Risk Score</a>
+  </div>
+  <div><a href="/" style="color:var(--text);font-weight:800;opacity:1">AI<span style="color:var(--accent)">Layoff</span>.live</a></div>
+</div>
+
+<div class="hero">
+  <h1>Is Your Job at <span>Risk</span> from AI?</h1>
+  <p>Search your occupation to see its AI automation risk score — powered by Oxford research and real layoff data</p>
+
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Search your job title... (e.g. Software Developer)" autocomplete="off">
+    <div class="autocomplete" id="results"></div>
+  </div>
+
+  <div class="popular">
+    <h3>Popular searches</h3>
+    <div class="popular-tags">
+      <a href="/risk-score/accountants">Accountant</a>
+      <a href="/risk-score/software-developers">Software Developer</a>
+      <a href="/risk-score/heavy-and-tractor-trailer-truck-drivers">Truck Driver</a>
+      <a href="/risk-score/registered-nurses">Nurse</a>
+      <a href="/risk-score/lawyers">Lawyer</a>
+      <a href="/risk-score/graphic-designers">Graphic Designer</a>
+      <a href="/risk-score/financial-analysts">Financial Analyst</a>
+    </div>
+  </div>
+
+  <div class="stats-bar" id="stats-bar">Loading occupation data...</div>
+</div>
+
+<div class="footer">
+  <a href="/">← Back to AILayoff.live</a> · <a href="/risk-score">Risk Score</a> · <a href="/about.html">About</a>
+</div>
+
+<script>
+const input=document.getElementById('search'),results=document.getElementById('results');
+let timer;
+input.addEventListener('input',()=>{
+  clearTimeout(timer);
+  const q=input.value.trim();
+  if(q.length<2){results.style.display='none';return}
+  timer=setTimeout(()=>{
+    fetch('/api/risk-score?q='+encodeURIComponent(q))
+      .then(r=>r.json()).then(data=>{
+        if(!data.length){results.style.display='none';return}
+        results.innerHTML=data.map(d=>{
+          const cls=d.risk_score<=25?'score-low':d.risk_score<=50?'score-med':d.risk_score<=75?'score-high':'score-vhigh';
+          return `<a href="/risk-score/${d.title_slug}"><span>${d.title}</span><span class="score ${cls}">${d.risk_score}/100</span></a>`;
+        }).join('');
+        results.style.display='block';
+      }).catch(()=>{results.style.display='none'});
+  },300);
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))results.style.display='none'});
+input.addEventListener('focus',()=>{if(results.innerHTML)results.style.display='block'});
+
+fetch('/api/risk-score-stats').then(r=>r.json()).then(s=>{
+  document.getElementById('stats-bar').innerHTML=`<span>${s.total||0}</span> occupations analyzed · Average risk score: <span>${s.avg_risk||0}</span>/100`;
+}).catch(()=>{});
+</script>
+</body>
+</html>
