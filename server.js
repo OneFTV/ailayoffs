@@ -442,6 +442,14 @@ app.post('/api/contact', async (req, res) => {
   } catch(e) { console.error('Contact error:', e.message); res.status(500).json({ error: 'Server error' }); }
 });
 
+// === RISK SCORE CHART API ===
+app.get('/api/risk-score-chart', async (req, res) => {
+  try {
+    const r = await pool.query('SELECT title, title_slug, risk_score, augmentation_score FROM occupations WHERE risk_score IS NOT NULL AND augmentation_score IS NOT NULL ORDER BY title');
+    res.json(r.rows);
+  } catch(e) { res.json([]); }
+});
+
 // === RISK SCORE API ===
 app.get('/api/risk-score', async (req, res) => {
   // Search endpoint

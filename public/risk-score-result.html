@@ -157,6 +157,33 @@ fetch('/api/risk-score/'+encodeURIComponent(slug))
         <div class="job-meta">${metaInfo.join(' · ')}</div>
       </div>
 
+      ${(()=>{
+        const aug=d.augmentation_score||0;
+        const rs=d.risk_score||0;
+        let augText=aug>=70?'AI tools will significantly enhance productivity in this role':aug>=40?'AI will moderately assist workers in this occupation':'AI has limited potential to augment this role';
+        let badge,badgeColor,badgeEmoji;
+        if(rs<50&&aug>=40){badge='AI-Enhanced';badgeColor='#22c55e';badgeEmoji='✅';}
+        else if(rs>=50&&aug>=40){badge='Transforming';badgeColor='#eab308';badgeEmoji='⚡';}
+        else if(rs<50&&aug<40){badge='AI-Resistant';badgeColor='#3b82f6';badgeEmoji='🛡️';}
+        else{badge='At Risk';badgeColor='#ef4444';badgeEmoji='⚠️';}
+        const skills=parse(d.skills_to_learn||'[]');
+        const skillsHtml=skills.length?`<div class="card"><h3>🎯 Skills to Stay Relevant</h3><ul>${skills.map(s=>'<li class="task-item">'+s+'</li>').join('')}</ul></div>`:'';
+        return `
+        <div style="display:flex;justify-content:center;margin-top:1rem"><div style="background:${badgeColor}22;border:1px solid ${badgeColor}44;border-radius:10px;padding:.5rem 1.2rem;font-weight:700;font-size:.95rem;color:${badgeColor}">${badgeEmoji} ${badge}</div></div>
+
+        <div class="card">
+          <h3>🔮 AI Augmentation Potential</h3>
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.5rem">
+            <div style="flex:1;background:var(--card2);border-radius:8px;height:24px;overflow:hidden">
+              <div style="width:${aug}%;height:100%;background:linear-gradient(90deg,#10b981,#22c55e);border-radius:8px;transition:width 1s"></div>
+            </div>
+            <span style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.1rem;color:#22c55e;min-width:50px">${aug}%</span>
+          </div>
+          <p style="color:var(--muted);font-size:.85rem">${augText}</p>
+        </div>
+        ${skillsHtml}`;
+      })()}
+
       ${d.ai_impact_summary?`<div class="card"><h3>🤖 AI Impact Summary</h3><p>${d.ai_impact_summary}</p></div>`:''}
 
       ${risks?`<div class="card"><h3>⚠️ Key Risk Factors</h3><ul>${risks}</ul></div>`:''}

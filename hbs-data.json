@@ -1,0 +1,5468 @@
+[
+  {
+    "occupation_title": "Correspondence clerks",
+    "automation_score": 0.86,
+    "augmentation_score": 0.09,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Interpreters and translators",
+    "automation_score": 0.8,
+    "augmentation_score": 0.28,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Court, municipal, and license clerks",
+    "automation_score": 0.76,
+    "augmentation_score": 0.06,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Medical transcriptionists",
+    "automation_score": 0.74,
+    "augmentation_score": 0.12,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Telemarketers",
+    "automation_score": 0.73,
+    "augmentation_score": 0.3,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Order clerks",
+    "automation_score": 0.72,
+    "augmentation_score": 0.26,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Word processors and typists",
+    "automation_score": 0.72,
+    "augmentation_score": 0.32,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Climate change policy analysts",
+    "automation_score": 0.72,
+    "augmentation_score": 0.0,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Sustainability specialists",
+    "automation_score": 0.71,
+    "augmentation_score": 0.0,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Loan interviewers and clerks",
+    "automation_score": 0.7,
+    "augmentation_score": 0.1,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Writers and authors",
+    "automation_score": 0.7,
+    "augmentation_score": 0.24,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Payroll and timekeeping clerks",
+    "automation_score": 0.7,
+    "augmentation_score": 0.09,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Bill and account collectors",
+    "automation_score": 0.7,
+    "augmentation_score": 0.13,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Software quality assurance analysts and testers",
+    "automation_score": 0.7,
+    "augmentation_score": 0.12,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Project management specialists",
+    "automation_score": 0.7,
+    "augmentation_score": 0.26,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Credit counselors",
+    "automation_score": 0.69,
+    "augmentation_score": 0.17,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Poets, lyricists and creative writers",
+    "automation_score": 0.69,
+    "augmentation_score": 0.33,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Human resources assistants, except payroll and timekeeping",
+    "automation_score": 0.68,
+    "augmentation_score": 0.19,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Bookkeeping, accounting, and auditing clerks",
+    "automation_score": 0.68,
+    "augmentation_score": 0.19,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Insurance claims and policy processing clerks",
+    "automation_score": 0.68,
+    "augmentation_score": 0.14,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Executive secretaries and executive administrative assistants",
+    "automation_score": 0.68,
+    "augmentation_score": 0.29,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Tutors",
+    "automation_score": 0.67,
+    "augmentation_score": 0.33,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Sales representatives of services, except advertising, insurance, financial services, and travel",
+    "automation_score": 0.67,
+    "augmentation_score": 0.32,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Clinical data managers",
+    "automation_score": 0.67,
+    "augmentation_score": 0.08,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Proofreaders and copy markers",
+    "automation_score": 0.66,
+    "augmentation_score": 0.38,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Health education specialists",
+    "automation_score": 0.66,
+    "augmentation_score": 0.23,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Data warehousing specialists",
+    "automation_score": 0.66,
+    "augmentation_score": 0.0,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Medical secretaries and administrative assistants",
+    "automation_score": 0.66,
+    "augmentation_score": 0.31,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Training and development specialists",
+    "automation_score": 0.66,
+    "augmentation_score": 0.17,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Procurement clerks",
+    "automation_score": 0.66,
+    "augmentation_score": 0.18,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Web developers",
+    "automation_score": 0.65,
+    "augmentation_score": 0.19,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Physicists",
+    "automation_score": 0.65,
+    "augmentation_score": 0.13,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Freight forwarders",
+    "automation_score": 0.65,
+    "augmentation_score": 0.07,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Interviewers, except eligibility and loan",
+    "automation_score": 0.65,
+    "augmentation_score": 0.28,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Computer programmers",
+    "automation_score": 0.64,
+    "augmentation_score": 0.44,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Mathematicians",
+    "automation_score": 0.64,
+    "augmentation_score": 0.0,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Receptionists and information clerks",
+    "automation_score": 0.64,
+    "augmentation_score": 0.43,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Business intelligence analysts",
+    "automation_score": 0.64,
+    "augmentation_score": 0.0,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Information technology project managers",
+    "automation_score": 0.64,
+    "augmentation_score": 0.18,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Preventive medicine physicians",
+    "automation_score": 0.63,
+    "augmentation_score": 0.13,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Environmental economists",
+    "automation_score": 0.63,
+    "augmentation_score": 0.0,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Advertising sales agents",
+    "automation_score": 0.63,
+    "augmentation_score": 0.24,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Credit authorizers, checkers, and clerks",
+    "automation_score": 0.63,
+    "augmentation_score": 0.3,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Training and development managers",
+    "automation_score": 0.63,
+    "augmentation_score": 0.15,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Biostatisticians",
+    "automation_score": 0.62,
+    "augmentation_score": 0.07,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Web and digital interface designers",
+    "automation_score": 0.62,
+    "augmentation_score": 0.06,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Tax preparers",
+    "automation_score": 0.62,
+    "augmentation_score": 0.16,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Sales representatives, wholesale and manufacturing, technical and scientific products",
+    "automation_score": 0.62,
+    "augmentation_score": 0.31,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Secretaries and administrative assistants, except legal, medical, and executive",
+    "automation_score": 0.62,
+    "augmentation_score": 0.32,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Dispatchers, except police, fire, and ambulance",
+    "automation_score": 0.62,
+    "augmentation_score": 0.15,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Regulatory affairs specialists",
+    "automation_score": 0.62,
+    "augmentation_score": 0.05,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Web administrators",
+    "automation_score": 0.61,
+    "augmentation_score": 0.1,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Instructional coordinators",
+    "automation_score": 0.61,
+    "augmentation_score": 0.3,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Penetration testers",
+    "automation_score": 0.61,
+    "augmentation_score": 0.17,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Clinical research coordinators",
+    "automation_score": 0.61,
+    "augmentation_score": 0.29,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Public relations specialists",
+    "automation_score": 0.61,
+    "augmentation_score": 0.36,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Production, planning, and expediting clerks",
+    "automation_score": 0.6,
+    "augmentation_score": 0.3,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Regulatory affairs managers",
+    "automation_score": 0.6,
+    "augmentation_score": 0.08,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Statistical assistants",
+    "automation_score": 0.6,
+    "augmentation_score": 0.41,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Office clerks, general",
+    "automation_score": 0.6,
+    "augmentation_score": 0.45,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Database architects",
+    "automation_score": 0.6,
+    "augmentation_score": 0.1,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Wind energy development managers",
+    "automation_score": 0.6,
+    "augmentation_score": 0.13,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Business continuity planners",
+    "automation_score": 0.6,
+    "augmentation_score": 0.0,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Title examiners, abstractors, and searchers",
+    "automation_score": 0.59,
+    "augmentation_score": 0.2,
+    "job_family": "Legal"
+  },
+  {
+    "occupation_title": "Historians",
+    "automation_score": 0.59,
+    "augmentation_score": 0.18,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Health information technologists and medical registrars",
+    "automation_score": 0.59,
+    "augmentation_score": 0.22,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Eligibility interviewers, government programs",
+    "automation_score": 0.59,
+    "augmentation_score": 0.29,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Solar sales representatives and assessors",
+    "automation_score": 0.59,
+    "augmentation_score": 0.34,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Document management specialists",
+    "automation_score": 0.59,
+    "augmentation_score": 0.16,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Blockchain engineers",
+    "automation_score": 0.59,
+    "augmentation_score": 0.11,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Shipping, receiving, and inventory clerks",
+    "automation_score": 0.59,
+    "augmentation_score": 0.4,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Brokerage clerks",
+    "automation_score": 0.59,
+    "augmentation_score": 0.32,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Credit analysts",
+    "automation_score": 0.58,
+    "augmentation_score": 0.24,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Environmental engineers",
+    "automation_score": 0.58,
+    "augmentation_score": 0.3,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Human resources specialists",
+    "automation_score": 0.58,
+    "augmentation_score": 0.26,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Sales engineers",
+    "automation_score": 0.58,
+    "augmentation_score": 0.26,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Chief sustainability officers",
+    "automation_score": 0.58,
+    "augmentation_score": 0.12,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Spa managers",
+    "automation_score": 0.58,
+    "augmentation_score": 0.23,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Loan officers",
+    "automation_score": 0.58,
+    "augmentation_score": 0.21,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Fundraisers",
+    "automation_score": 0.58,
+    "augmentation_score": 0.25,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Statisticians",
+    "automation_score": 0.57,
+    "augmentation_score": 0.0,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Database administrators",
+    "automation_score": 0.57,
+    "augmentation_score": 0.0,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Financial risk specialists",
+    "automation_score": 0.57,
+    "augmentation_score": 0.0,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Survey researchers",
+    "automation_score": 0.57,
+    "augmentation_score": 0.2,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Bioinformatics technicians",
+    "automation_score": 0.57,
+    "augmentation_score": 0.19,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Customer service representatives",
+    "automation_score": 0.57,
+    "augmentation_score": 0.14,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Court reporters and simultaneous captioners",
+    "automation_score": 0.57,
+    "augmentation_score": 0.46,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Computer systems analysts",
+    "automation_score": 0.57,
+    "augmentation_score": 0.24,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Counter and rental clerks",
+    "automation_score": 0.57,
+    "augmentation_score": 0.46,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Logistics analysts",
+    "automation_score": 0.57,
+    "augmentation_score": 0.05,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Information security engineers",
+    "automation_score": 0.57,
+    "augmentation_score": 0.0,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Reservation and transportation ticket agents and travel clerks",
+    "automation_score": 0.57,
+    "augmentation_score": 0.42,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Insurance underwriters",
+    "automation_score": 0.57,
+    "augmentation_score": 0.0,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Travel agents",
+    "automation_score": 0.56,
+    "augmentation_score": 0.38,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Medical records specialists",
+    "automation_score": 0.56,
+    "augmentation_score": 0.11,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Fundraising managers",
+    "automation_score": 0.56,
+    "augmentation_score": 0.38,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Securities, commodities, and financial services sales agents",
+    "automation_score": 0.56,
+    "augmentation_score": 0.19,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Data scientists",
+    "automation_score": 0.56,
+    "augmentation_score": 0.12,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Political scientists",
+    "automation_score": 0.56,
+    "augmentation_score": 0.12,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Bioengineers and biomedical engineers",
+    "automation_score": 0.56,
+    "augmentation_score": 0.16,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Compliance managers",
+    "automation_score": 0.56,
+    "augmentation_score": 0.12,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Economists",
+    "automation_score": 0.56,
+    "augmentation_score": 0.16,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Search marketing strategists",
+    "automation_score": 0.56,
+    "augmentation_score": 0.04,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Public relations managers",
+    "automation_score": 0.55,
+    "augmentation_score": 0.38,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Social science research assistants",
+    "automation_score": 0.55,
+    "augmentation_score": 0.37,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Purchasing managers",
+    "automation_score": 0.55,
+    "augmentation_score": 0.22,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Digital forensics analysts",
+    "automation_score": 0.55,
+    "augmentation_score": 0.26,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Budget analysts",
+    "automation_score": 0.55,
+    "augmentation_score": 0.12,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "First-line supervisors of office and administrative support workers",
+    "automation_score": 0.55,
+    "augmentation_score": 0.39,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Genetic counselors",
+    "automation_score": 0.55,
+    "augmentation_score": 0.21,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Labor relations specialists",
+    "automation_score": 0.55,
+    "augmentation_score": 0.31,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Meeting, convention, and event planners",
+    "automation_score": 0.54,
+    "augmentation_score": 0.37,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Online merchants",
+    "automation_score": 0.54,
+    "augmentation_score": 0.34,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "News analysts, reporters, and journalists",
+    "automation_score": 0.54,
+    "augmentation_score": 0.41,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Epidemiologists",
+    "automation_score": 0.54,
+    "augmentation_score": 0.19,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Recycling coordinators",
+    "automation_score": 0.54,
+    "augmentation_score": 0.39,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Personal financial advisors",
+    "automation_score": 0.54,
+    "augmentation_score": 0.25,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Customs brokers",
+    "automation_score": 0.54,
+    "augmentation_score": 0.29,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Atmospheric and space scientists",
+    "automation_score": 0.54,
+    "augmentation_score": 0.26,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Transportation planners",
+    "automation_score": 0.53,
+    "augmentation_score": 0.16,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Legal secretaries and administrative assistants",
+    "automation_score": 0.53,
+    "augmentation_score": 0.42,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Judicial law clerks",
+    "automation_score": 0.53,
+    "augmentation_score": 0.45,
+    "job_family": "Legal"
+  },
+  {
+    "occupation_title": "Bioinformatics scientists",
+    "automation_score": 0.53,
+    "augmentation_score": 0.17,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Brownfield redevelopment specialists and site managers",
+    "automation_score": 0.53,
+    "augmentation_score": 0.21,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Librarians and media collections specialists",
+    "automation_score": 0.53,
+    "augmentation_score": 0.41,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Editors",
+    "automation_score": 0.53,
+    "augmentation_score": 0.4,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Manufacturing engineers",
+    "automation_score": 0.53,
+    "augmentation_score": 0.21,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Broadcast announcers and radio disc jockeys",
+    "automation_score": 0.53,
+    "augmentation_score": 0.46,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Wind energy operations managers",
+    "automation_score": 0.53,
+    "augmentation_score": 0.32,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Validation engineers",
+    "automation_score": 0.53,
+    "augmentation_score": 0.29,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Criminal justice and law enforcement teachers, postsecondary",
+    "automation_score": 0.53,
+    "augmentation_score": 0.45,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Health informatics specialists",
+    "automation_score": 0.53,
+    "augmentation_score": 0.09,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Industrial ecologists",
+    "automation_score": 0.53,
+    "augmentation_score": 0.04,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Market research analysts and marketing specialists",
+    "automation_score": 0.52,
+    "augmentation_score": 0.24,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Energy engineers, except wind and solar",
+    "automation_score": 0.52,
+    "augmentation_score": 0.25,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Community health workers",
+    "automation_score": 0.52,
+    "augmentation_score": 0.41,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Animal scientists",
+    "automation_score": 0.52,
+    "augmentation_score": 0.15,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Logisticians",
+    "automation_score": 0.52,
+    "augmentation_score": 0.25,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Speech-language pathology assistants",
+    "automation_score": 0.52,
+    "augmentation_score": 0.39,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Telephone operators",
+    "automation_score": 0.52,
+    "augmentation_score": 0.43,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Computer systems engineers/architects",
+    "automation_score": 0.52,
+    "augmentation_score": 0.29,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Purchasing agents, except wholesale, retail, and farm products",
+    "automation_score": 0.52,
+    "augmentation_score": 0.31,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Operations research analysts",
+    "automation_score": 0.52,
+    "augmentation_score": 0.24,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Forestry and conservation science teachers, postsecondary",
+    "automation_score": 0.51,
+    "augmentation_score": 0.46,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Industrial-organizational psychologists",
+    "automation_score": 0.51,
+    "augmentation_score": 0.4,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Accountants and auditors",
+    "automation_score": 0.51,
+    "augmentation_score": 0.3,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Concierges",
+    "automation_score": 0.51,
+    "augmentation_score": 0.41,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Technical writers",
+    "automation_score": 0.51,
+    "augmentation_score": 0.31,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Directors, religious activities and education",
+    "automation_score": 0.51,
+    "augmentation_score": 0.42,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Equal opportunity representatives and officers",
+    "automation_score": 0.51,
+    "augmentation_score": 0.38,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Environmental scientists and specialists, including health",
+    "automation_score": 0.5,
+    "augmentation_score": 0.16,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Telecommunications engineering specialists",
+    "automation_score": 0.5,
+    "augmentation_score": 0.34,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Compliance officers",
+    "automation_score": 0.5,
+    "augmentation_score": 0.48,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Tax examiners and collectors, and revenue agents",
+    "automation_score": 0.5,
+    "augmentation_score": 0.32,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Financial quantitative analysts",
+    "automation_score": 0.5,
+    "augmentation_score": 0.18,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Library science teachers, postsecondary",
+    "automation_score": 0.5,
+    "augmentation_score": 0.47,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Actuaries",
+    "automation_score": 0.5,
+    "augmentation_score": 0.2,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Cost estimators",
+    "automation_score": 0.5,
+    "augmentation_score": 0.25,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Information security analysts",
+    "automation_score": 0.5,
+    "augmentation_score": 0.27,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Entertainment and recreation managers, except gambling",
+    "automation_score": 0.5,
+    "augmentation_score": 0.46,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Gambling managers",
+    "automation_score": 0.5,
+    "augmentation_score": 0.39,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Nurse midwives",
+    "automation_score": 0.5,
+    "augmentation_score": 0.45,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Management analysts",
+    "automation_score": 0.5,
+    "augmentation_score": 0.4,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Environmental compliance inspectors",
+    "automation_score": 0.5,
+    "augmentation_score": 0.31,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "English language and literature teachers, postsecondary",
+    "automation_score": 0.49,
+    "augmentation_score": 0.47,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Intelligence analysts",
+    "automation_score": 0.49,
+    "augmentation_score": 0.23,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Compensation, benefits, and job analysis specialists",
+    "automation_score": 0.49,
+    "augmentation_score": 0.34,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Philosophy and religion teachers, postsecondary",
+    "automation_score": 0.49,
+    "augmentation_score": 0.45,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Computer user support specialists",
+    "automation_score": 0.49,
+    "augmentation_score": 0.49,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Computer network architects",
+    "automation_score": 0.49,
+    "augmentation_score": 0.33,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Supply chain managers",
+    "automation_score": 0.49,
+    "augmentation_score": 0.17,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Dietetic technicians",
+    "automation_score": 0.49,
+    "augmentation_score": 0.44,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Natural sciences managers",
+    "automation_score": 0.49,
+    "augmentation_score": 0.39,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Mechatronics engineers",
+    "automation_score": 0.49,
+    "augmentation_score": 0.24,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Dietitians and nutritionists",
+    "automation_score": 0.49,
+    "augmentation_score": 0.39,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Industrial production managers",
+    "automation_score": 0.49,
+    "augmentation_score": 0.29,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Patient representatives",
+    "automation_score": 0.49,
+    "augmentation_score": 0.37,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "File clerks",
+    "automation_score": 0.49,
+    "augmentation_score": 0.47,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Logistics engineers",
+    "automation_score": 0.49,
+    "augmentation_score": 0.12,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Aerospace engineers",
+    "automation_score": 0.49,
+    "augmentation_score": 0.24,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Sales representatives, wholesale and manufacturing, except technical and scientific products",
+    "automation_score": 0.49,
+    "augmentation_score": 0.42,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Marriage and family therapists",
+    "automation_score": 0.48,
+    "augmentation_score": 0.42,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Insurance sales agents",
+    "automation_score": 0.48,
+    "augmentation_score": 0.38,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Economics teachers, postsecondary",
+    "automation_score": 0.48,
+    "augmentation_score": 0.44,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Fraud examiners, investigators and analysts",
+    "automation_score": 0.48,
+    "augmentation_score": 0.42,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Claims adjusters, examiners, and investigators",
+    "automation_score": 0.48,
+    "augmentation_score": 0.35,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Billing and posting clerks",
+    "automation_score": 0.48,
+    "augmentation_score": 0.41,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Security management specialists",
+    "automation_score": 0.48,
+    "augmentation_score": 0.42,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Video game designers",
+    "automation_score": 0.48,
+    "augmentation_score": 0.37,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Electronics engineers, except computer",
+    "automation_score": 0.48,
+    "augmentation_score": 0.37,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Atmospheric, earth, marine, and space sciences teachers, postsecondary",
+    "automation_score": 0.48,
+    "augmentation_score": 0.47,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Recreation and fitness studies teachers, postsecondary",
+    "automation_score": 0.48,
+    "augmentation_score": 0.46,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "New accounts clerks",
+    "automation_score": 0.48,
+    "augmentation_score": 0.48,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Nanosystems engineers",
+    "automation_score": 0.48,
+    "augmentation_score": 0.29,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Switchboard operators, including answering service",
+    "automation_score": 0.48,
+    "augmentation_score": 0.5,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Environmental restoration planners",
+    "automation_score": 0.48,
+    "augmentation_score": 0.29,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Automotive engineers",
+    "automation_score": 0.48,
+    "augmentation_score": 0.22,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Biofuels/biodiesel technology and product development managers",
+    "automation_score": 0.48,
+    "augmentation_score": 0.26,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Network and computer systems administrators",
+    "automation_score": 0.47,
+    "augmentation_score": 0.32,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Paralegals and legal assistants",
+    "automation_score": 0.47,
+    "augmentation_score": 0.45,
+    "job_family": "Legal"
+  },
+  {
+    "occupation_title": "Emergency management directors",
+    "automation_score": 0.47,
+    "augmentation_score": 0.39,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Architecture teachers, postsecondary",
+    "automation_score": 0.47,
+    "augmentation_score": 0.46,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Geneticists",
+    "automation_score": 0.47,
+    "augmentation_score": 0.33,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Archivists",
+    "automation_score": 0.47,
+    "augmentation_score": 0.24,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Compensation and benefits managers",
+    "automation_score": 0.47,
+    "augmentation_score": 0.3,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Career/technical education teachers, postsecondary",
+    "automation_score": 0.47,
+    "augmentation_score": 0.46,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Public safety telecommunicators",
+    "automation_score": 0.47,
+    "augmentation_score": 0.44,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Nurse practitioners",
+    "automation_score": 0.47,
+    "augmentation_score": 0.29,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Clinical nurse specialists",
+    "automation_score": 0.47,
+    "augmentation_score": 0.4,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Transportation, storage, and distribution managers",
+    "automation_score": 0.47,
+    "augmentation_score": 0.31,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Quality control analysts",
+    "automation_score": 0.47,
+    "augmentation_score": 0.41,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Real estate sales agents",
+    "automation_score": 0.47,
+    "augmentation_score": 0.43,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Family and consumer sciences teachers, postsecondary",
+    "automation_score": 0.46,
+    "augmentation_score": 0.48,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Environmental science teachers, postsecondary",
+    "automation_score": 0.46,
+    "augmentation_score": 0.48,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Security managers",
+    "automation_score": 0.46,
+    "augmentation_score": 0.38,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Speech-language pathologists",
+    "automation_score": 0.46,
+    "augmentation_score": 0.38,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Materials engineers",
+    "automation_score": 0.46,
+    "augmentation_score": 0.38,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Postmasters and mail superintendents",
+    "automation_score": 0.46,
+    "augmentation_score": 0.47,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Transportation engineers",
+    "automation_score": 0.46,
+    "augmentation_score": 0.39,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Fitness and wellness coordinators",
+    "automation_score": 0.46,
+    "augmentation_score": 0.48,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Robotics engineers",
+    "automation_score": 0.46,
+    "augmentation_score": 0.38,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Data entry keyers",
+    "automation_score": 0.46,
+    "augmentation_score": 0.43,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Medical scientists, except epidemiologists",
+    "automation_score": 0.46,
+    "augmentation_score": 0.41,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Health and safety engineers, except mining safety engineers and inspectors",
+    "automation_score": 0.46,
+    "augmentation_score": 0.4,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Fire-prevention and protection engineers",
+    "automation_score": 0.46,
+    "augmentation_score": 0.36,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Quality control systems managers",
+    "automation_score": 0.46,
+    "augmentation_score": 0.42,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Biologists",
+    "automation_score": 0.46,
+    "augmentation_score": 0.44,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Mechanical engineers",
+    "automation_score": 0.45,
+    "augmentation_score": 0.32,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Library technicians",
+    "automation_score": 0.45,
+    "augmentation_score": 0.42,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "First-line supervisors of police and detectives",
+    "automation_score": 0.45,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Foreign language and literature teachers, postsecondary",
+    "automation_score": 0.45,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Law teachers, postsecondary",
+    "automation_score": 0.45,
+    "augmentation_score": 0.47,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Demonstrators and product promoters",
+    "automation_score": 0.45,
+    "augmentation_score": 0.5,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Communications teachers, postsecondary",
+    "automation_score": 0.45,
+    "augmentation_score": 0.48,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Investment fund managers",
+    "automation_score": 0.45,
+    "augmentation_score": 0.24,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Water resource specialists",
+    "automation_score": 0.45,
+    "augmentation_score": 0.3,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Geothermal production managers",
+    "automation_score": 0.45,
+    "augmentation_score": 0.45,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "First-line supervisors of entertainment and recreation workers, except gambling services",
+    "automation_score": 0.45,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Farm and home management educators",
+    "automation_score": 0.45,
+    "augmentation_score": 0.42,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Financial managers",
+    "automation_score": 0.45,
+    "augmentation_score": 0.36,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Radio frequency identification device specialists",
+    "automation_score": 0.45,
+    "augmentation_score": 0.41,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Lawyers",
+    "automation_score": 0.45,
+    "augmentation_score": 0.43,
+    "job_family": "Legal"
+  },
+  {
+    "occupation_title": "Adult basic education, adult secondary education, and english as a second language instructors",
+    "automation_score": 0.45,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Nuclear engineers",
+    "automation_score": 0.45,
+    "augmentation_score": 0.33,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Treasurers and controllers",
+    "automation_score": 0.45,
+    "augmentation_score": 0.36,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Chemistry teachers, postsecondary",
+    "automation_score": 0.45,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Soil and plant scientists",
+    "automation_score": 0.44,
+    "augmentation_score": 0.28,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Urban and regional planners",
+    "automation_score": 0.44,
+    "augmentation_score": 0.38,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Education teachers, postsecondary",
+    "automation_score": 0.44,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Anthropology and archeology teachers, postsecondary",
+    "automation_score": 0.44,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Clinical and counseling psychologists",
+    "automation_score": 0.44,
+    "augmentation_score": 0.44,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "History teachers, postsecondary",
+    "automation_score": 0.44,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Travel guides",
+    "automation_score": 0.44,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Industrial engineers",
+    "automation_score": 0.44,
+    "augmentation_score": 0.38,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Geodetic surveyors",
+    "automation_score": 0.44,
+    "augmentation_score": 0.37,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Hydrologic technicians",
+    "automation_score": 0.44,
+    "augmentation_score": 0.38,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Computer science teachers, postsecondary",
+    "automation_score": 0.44,
+    "augmentation_score": 0.48,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Hospitalists",
+    "automation_score": 0.44,
+    "augmentation_score": 0.45,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Photonics engineers",
+    "automation_score": 0.44,
+    "augmentation_score": 0.4,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Financial and investment analysts",
+    "automation_score": 0.44,
+    "augmentation_score": 0.36,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Computer and information systems managers",
+    "automation_score": 0.44,
+    "augmentation_score": 0.37,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Molecular and cellular biologists",
+    "automation_score": 0.44,
+    "augmentation_score": 0.4,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Teaching assistants, postsecondary",
+    "automation_score": 0.43,
+    "augmentation_score": 0.48,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Neuropsychologists",
+    "automation_score": 0.43,
+    "augmentation_score": 0.41,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Education administrators, postsecondary",
+    "automation_score": 0.43,
+    "augmentation_score": 0.43,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Appraisers of personal and business property",
+    "automation_score": 0.43,
+    "augmentation_score": 0.41,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Clergy",
+    "automation_score": 0.43,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Engineering teachers, postsecondary",
+    "automation_score": 0.43,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Advertising and promotions managers",
+    "automation_score": 0.43,
+    "augmentation_score": 0.44,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Energy auditors",
+    "automation_score": 0.43,
+    "augmentation_score": 0.41,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "First-line supervisors of housekeeping and janitorial workers",
+    "automation_score": 0.43,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "First-line supervisors of production and operating workers",
+    "automation_score": 0.43,
+    "augmentation_score": 0.48,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Educational, guidance, and career counselors and advisors",
+    "automation_score": 0.43,
+    "augmentation_score": 0.48,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Administrative law judges, adjudicators, and hearing officers",
+    "automation_score": 0.43,
+    "augmentation_score": 0.46,
+    "job_family": "Legal"
+  },
+  {
+    "occupation_title": "Curators",
+    "automation_score": 0.43,
+    "augmentation_score": 0.45,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Computer network support specialists",
+    "automation_score": 0.43,
+    "augmentation_score": 0.46,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Agricultural sciences teachers, postsecondary",
+    "automation_score": 0.43,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Fuel cell engineers",
+    "automation_score": 0.43,
+    "augmentation_score": 0.3,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Lodging managers",
+    "automation_score": 0.43,
+    "augmentation_score": 0.5,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Social and human service assistants",
+    "automation_score": 0.43,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Human resources managers",
+    "automation_score": 0.43,
+    "augmentation_score": 0.37,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Area, ethnic, and cultural studies teachers, postsecondary",
+    "automation_score": 0.42,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Geography teachers, postsecondary",
+    "automation_score": 0.42,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Microsystems engineers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.42,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Solar energy systems engineers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.42,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Health specialties teachers, postsecondary",
+    "automation_score": 0.42,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "First-line supervisors of passenger attendants",
+    "automation_score": 0.42,
+    "augmentation_score": 0.5,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Social work teachers, postsecondary",
+    "automation_score": 0.42,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Pharmacy aides",
+    "automation_score": 0.42,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Sociology teachers, postsecondary",
+    "automation_score": 0.42,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Software developers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.43,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Buyers and purchasing agents, farm products",
+    "automation_score": 0.42,
+    "augmentation_score": 0.38,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Park naturalists",
+    "automation_score": 0.42,
+    "augmentation_score": 0.47,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Farmers, ranchers, and other agricultural managers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.49,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Computer numerically controlled tool programmers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.49,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Computer hardware engineers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.45,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Education and childcare administrators, preschool and daycare",
+    "automation_score": 0.42,
+    "augmentation_score": 0.47,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Food service managers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.45,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Political science teachers, postsecondary",
+    "automation_score": 0.42,
+    "augmentation_score": 0.47,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Marketing managers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.38,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Wholesale and retail buyers, except farm products",
+    "automation_score": 0.42,
+    "augmentation_score": 0.38,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Neurologists",
+    "automation_score": 0.42,
+    "augmentation_score": 0.47,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Real estate brokers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.28,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Occupational health and safety technicians",
+    "automation_score": 0.42,
+    "augmentation_score": 0.48,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Geographic information systems technologists and technicians",
+    "automation_score": 0.42,
+    "augmentation_score": 0.27,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Hydrologists",
+    "automation_score": 0.42,
+    "augmentation_score": 0.33,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Sales managers",
+    "automation_score": 0.42,
+    "augmentation_score": 0.35,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Water/wastewater engineers",
+    "automation_score": 0.41,
+    "augmentation_score": 0.34,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Gambling cage workers",
+    "automation_score": 0.41,
+    "augmentation_score": 0.5,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Construction managers",
+    "automation_score": 0.41,
+    "augmentation_score": 0.46,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Financial examiners",
+    "automation_score": 0.41,
+    "augmentation_score": 0.35,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "First-line supervisors of non-retail sales workers",
+    "automation_score": 0.41,
+    "augmentation_score": 0.48,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Sociologists",
+    "automation_score": 0.41,
+    "augmentation_score": 0.45,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Radiologists",
+    "automation_score": 0.41,
+    "augmentation_score": 0.42,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Psychiatrists",
+    "automation_score": 0.41,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Materials scientists",
+    "automation_score": 0.41,
+    "augmentation_score": 0.42,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Hotel, motel, and resort desk clerks",
+    "automation_score": 0.41,
+    "augmentation_score": 0.49,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Business teachers, postsecondary",
+    "automation_score": 0.41,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Medical and health services managers",
+    "automation_score": 0.41,
+    "augmentation_score": 0.4,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Appraisers and assessors of real estate",
+    "automation_score": 0.41,
+    "augmentation_score": 0.39,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Physics teachers, postsecondary",
+    "automation_score": 0.41,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Astronomers",
+    "automation_score": 0.41,
+    "augmentation_score": 0.43,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Hydroelectric production managers",
+    "automation_score": 0.41,
+    "augmentation_score": 0.47,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Allergists and immunologists",
+    "automation_score": 0.4,
+    "augmentation_score": 0.47,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Petroleum engineers",
+    "automation_score": 0.4,
+    "augmentation_score": 0.41,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Personal care aides",
+    "automation_score": 0.4,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Human factors engineers and ergonomists",
+    "automation_score": 0.4,
+    "augmentation_score": 0.4,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "First-line supervisors of retail sales workers",
+    "automation_score": 0.4,
+    "augmentation_score": 0.48,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "First-line supervisors of food preparation and serving workers",
+    "automation_score": 0.4,
+    "augmentation_score": 0.48,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Architectural and engineering managers",
+    "automation_score": 0.4,
+    "augmentation_score": 0.48,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Foresters",
+    "automation_score": 0.4,
+    "augmentation_score": 0.4,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Psychology teachers, postsecondary",
+    "automation_score": 0.4,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Audiologists",
+    "automation_score": 0.4,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Biochemists and biophysicists",
+    "automation_score": 0.4,
+    "augmentation_score": 0.45,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Agents and business managers of artists, performers, and athletes",
+    "automation_score": 0.4,
+    "augmentation_score": 0.49,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Computer and information research scientists",
+    "automation_score": 0.4,
+    "augmentation_score": 0.39,
+    "job_family": "Computer and math"
+  },
+  {
+    "occupation_title": "Remote sensing scientists and technologists",
+    "automation_score": 0.4,
+    "augmentation_score": 0.26,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Environmental engineering technologists and technicians",
+    "automation_score": 0.4,
+    "augmentation_score": 0.43,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Industrial engineering technologists and technicians",
+    "automation_score": 0.4,
+    "augmentation_score": 0.43,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Naturopathic physicians",
+    "automation_score": 0.4,
+    "augmentation_score": 0.47,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "General and operations managers",
+    "automation_score": 0.39,
+    "augmentation_score": 0.41,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Chemical engineers",
+    "automation_score": 0.39,
+    "augmentation_score": 0.41,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Family medicine physicians",
+    "automation_score": 0.39,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Funeral home managers",
+    "automation_score": 0.39,
+    "augmentation_score": 0.49,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Athletic trainers",
+    "automation_score": 0.39,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Pharmacy technicians",
+    "automation_score": 0.39,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Morticians, undertakers, and funeral arrangers",
+    "automation_score": 0.39,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Pediatricians, general",
+    "automation_score": 0.39,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Property, real estate, and community association managers",
+    "automation_score": 0.39,
+    "augmentation_score": 0.49,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Administrative services managers",
+    "automation_score": 0.39,
+    "augmentation_score": 0.49,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Middle school teachers, except special and career/technical education",
+    "automation_score": 0.39,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Art, drama, and music teachers, postsecondary",
+    "automation_score": 0.39,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Pharmacists",
+    "automation_score": 0.39,
+    "augmentation_score": 0.46,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Zoologists and wildlife biologists",
+    "automation_score": 0.39,
+    "augmentation_score": 0.49,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Acupuncturists",
+    "automation_score": 0.39,
+    "augmentation_score": 0.47,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Probation officers and correctional treatment specialists",
+    "automation_score": 0.39,
+    "augmentation_score": 0.48,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Geographers",
+    "automation_score": 0.38,
+    "augmentation_score": 0.35,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "First-line supervisors of security workers",
+    "automation_score": 0.38,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Precision agriculture technicians",
+    "automation_score": 0.38,
+    "augmentation_score": 0.32,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Cargo and freight agents",
+    "automation_score": 0.38,
+    "augmentation_score": 0.49,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Meter readers, utilities",
+    "automation_score": 0.38,
+    "augmentation_score": 0.5,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Secondary school teachers, except special and career/technical education",
+    "automation_score": 0.38,
+    "augmentation_score": 0.48,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "First-line supervisors of personal service workers",
+    "automation_score": 0.38,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Geoscientists, except hydrologists and geographers",
+    "automation_score": 0.38,
+    "augmentation_score": 0.39,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Remote sensing technicians",
+    "automation_score": 0.38,
+    "augmentation_score": 0.39,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Physicians, pathologists",
+    "automation_score": 0.38,
+    "augmentation_score": 0.48,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Shampooers",
+    "automation_score": 0.38,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Traffic technicians",
+    "automation_score": 0.38,
+    "augmentation_score": 0.5,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Biological science teachers, postsecondary",
+    "automation_score": 0.37,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Insurance appraisers, auto damage",
+    "automation_score": 0.37,
+    "augmentation_score": 0.49,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Civil engineers",
+    "automation_score": 0.37,
+    "augmentation_score": 0.44,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Sports medicine physicians",
+    "automation_score": 0.37,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Mining and geological engineers, including mining safety engineers",
+    "automation_score": 0.37,
+    "augmentation_score": 0.47,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "School psychologists",
+    "automation_score": 0.37,
+    "augmentation_score": 0.46,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Chief executives",
+    "automation_score": 0.37,
+    "augmentation_score": 0.48,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Social and community service managers",
+    "automation_score": 0.37,
+    "augmentation_score": 0.49,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Music directors and composers",
+    "automation_score": 0.37,
+    "augmentation_score": 0.46,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Conservation scientists",
+    "automation_score": 0.37,
+    "augmentation_score": 0.44,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Architects, except landscape and naval",
+    "automation_score": 0.37,
+    "augmentation_score": 0.5,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Chiropractors",
+    "automation_score": 0.37,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Transportation inspectors",
+    "automation_score": 0.37,
+    "augmentation_score": 0.49,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Self-enrichment teachers",
+    "automation_score": 0.36,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "First-line supervisors of material-moving machine and vehicle operators",
+    "automation_score": 0.36,
+    "augmentation_score": 0.5,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Obstetricians and gynecologists",
+    "automation_score": 0.36,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Tellers",
+    "automation_score": 0.36,
+    "augmentation_score": 0.49,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Electrical engineers",
+    "automation_score": 0.36,
+    "augmentation_score": 0.44,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Library assistants, clerical",
+    "automation_score": 0.36,
+    "augmentation_score": 0.5,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Nursing instructors and teachers, postsecondary",
+    "automation_score": 0.36,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Fish and game wardens",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Loss prevention managers",
+    "automation_score": 0.35,
+    "augmentation_score": 0.48,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Shuttle drivers and chauffeurs",
+    "automation_score": 0.35,
+    "augmentation_score": 0.47,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "First-line supervisors of mechanics, installers, and repairers",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "First-line supervisors of landscaping, lawn service, and groundskeeping workers",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Mechanical engineering technologists and technicians",
+    "automation_score": 0.35,
+    "augmentation_score": 0.49,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Legislators",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Hosts and hostesses, restaurant, lounge, and coffee shop",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Range managers",
+    "automation_score": 0.35,
+    "augmentation_score": 0.42,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Animal control workers",
+    "automation_score": 0.35,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Art therapists",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Coaches and scouts",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Midwives",
+    "automation_score": 0.35,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Career/technical education teachers, secondary school",
+    "automation_score": 0.34,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Food scientists and technologists",
+    "automation_score": 0.34,
+    "augmentation_score": 0.48,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "First-line supervisors of gambling services workers",
+    "automation_score": 0.34,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Robotics technicians",
+    "automation_score": 0.34,
+    "augmentation_score": 0.5,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Retail salespersons",
+    "automation_score": 0.34,
+    "augmentation_score": 0.5,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Advanced practice psychiatric nurses",
+    "automation_score": 0.34,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Coin, vending, and amusement machine servicers and repairers",
+    "automation_score": 0.34,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Career/technical education teachers, middle school",
+    "automation_score": 0.34,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Mathematical science teachers, postsecondary",
+    "automation_score": 0.34,
+    "augmentation_score": 0.5,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Wind energy engineers",
+    "automation_score": 0.34,
+    "augmentation_score": 0.47,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Health care social workers",
+    "automation_score": 0.34,
+    "augmentation_score": 0.47,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Arbitrators, mediators, and conciliators",
+    "automation_score": 0.34,
+    "augmentation_score": 0.5,
+    "job_family": "Legal"
+  },
+  {
+    "occupation_title": "Producers and directors",
+    "automation_score": 0.34,
+    "augmentation_score": 0.49,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Adapted physical education specialists",
+    "automation_score": 0.33,
+    "augmentation_score": 0.49,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Retail loss prevention specialists",
+    "automation_score": 0.33,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Parts salespersons",
+    "automation_score": 0.33,
+    "augmentation_score": 0.49,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "First-line supervisors of helpers, laborers, and material movers, hand",
+    "automation_score": 0.33,
+    "augmentation_score": 0.5,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Driver/sales workers",
+    "automation_score": 0.33,
+    "augmentation_score": 0.48,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Solar energy installation managers",
+    "automation_score": 0.33,
+    "augmentation_score": 0.48,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Agricultural engineers",
+    "automation_score": 0.33,
+    "augmentation_score": 0.5,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Mental health and substance abuse social workers",
+    "automation_score": 0.33,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Education administrators, kindergarten through secondary",
+    "automation_score": 0.33,
+    "augmentation_score": 0.5,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Marine engineers and naval architects",
+    "automation_score": 0.33,
+    "augmentation_score": 0.48,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Environmental science and protection technicians, including health",
+    "automation_score": 0.33,
+    "augmentation_score": 0.5,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Stockers and order fillers",
+    "automation_score": 0.33,
+    "augmentation_score": 0.49,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Rehabilitation counselors",
+    "automation_score": 0.33,
+    "augmentation_score": 0.48,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Medical dosimetrists",
+    "automation_score": 0.32,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Detectives and criminal investigators",
+    "automation_score": 0.32,
+    "augmentation_score": 0.48,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Transportation vehicle, equipment and systems inspectors, except aviation",
+    "automation_score": 0.32,
+    "augmentation_score": 0.49,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Occupational therapists",
+    "automation_score": 0.32,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Exercise physiologists",
+    "automation_score": 0.32,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Surveying and mapping technicians",
+    "automation_score": 0.32,
+    "augmentation_score": 0.46,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Civil engineering technologists and technicians",
+    "automation_score": 0.32,
+    "augmentation_score": 0.5,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Tour guides and escorts",
+    "automation_score": 0.32,
+    "augmentation_score": 0.45,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Registered nurses",
+    "automation_score": 0.32,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Facilities managers",
+    "automation_score": 0.32,
+    "augmentation_score": 0.5,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Biological technicians",
+    "automation_score": 0.32,
+    "augmentation_score": 0.5,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Biomass power plant managers",
+    "automation_score": 0.32,
+    "augmentation_score": 0.5,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Cooks, private household",
+    "automation_score": 0.32,
+    "augmentation_score": 0.43,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Cytogenetic technologists",
+    "automation_score": 0.31,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Customs and border protection officers",
+    "automation_score": 0.31,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "General internal medicine physicians",
+    "automation_score": 0.31,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Landscape architects",
+    "automation_score": 0.31,
+    "augmentation_score": 0.47,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Geological technicians, except hydrologic technicians",
+    "automation_score": 0.31,
+    "augmentation_score": 0.5,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Pediatric surgeons",
+    "automation_score": 0.31,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Door-to-door sales workers, news and street vendors, and related workers",
+    "automation_score": 0.31,
+    "augmentation_score": 0.45,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Occupational health and safety specialists",
+    "automation_score": 0.31,
+    "augmentation_score": 0.5,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "First-line supervisors of construction trades and extraction workers",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Umpires, referees, and other sports officials",
+    "automation_score": 0.3,
+    "augmentation_score": 0.46,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Orthoptists",
+    "automation_score": 0.3,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Media programming directors",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "First-line supervisors of firefighting and prevention workers",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Nanotechnology engineering technologists and technicians",
+    "automation_score": 0.3,
+    "augmentation_score": 0.49,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Mental health counselors",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Chemists",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Podiatrists",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Child, family, and school social workers",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Airfield operations specialists",
+    "automation_score": 0.3,
+    "augmentation_score": 0.49,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Electrical and electronic engineering technologists and technicians",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Exercise trainers and group fitness instructors",
+    "automation_score": 0.3,
+    "augmentation_score": 0.46,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Physician assistants",
+    "automation_score": 0.3,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Government property inspectors and investigators",
+    "automation_score": 0.3,
+    "augmentation_score": 0.49,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Elementary school teachers, except special education",
+    "automation_score": 0.3,
+    "augmentation_score": 0.48,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Forest and conservation technicians",
+    "automation_score": 0.29,
+    "augmentation_score": 0.47,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Dental assistants",
+    "automation_score": 0.29,
+    "augmentation_score": 0.44,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Bus drivers, school",
+    "automation_score": 0.29,
+    "augmentation_score": 0.42,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Audio and video technicians",
+    "automation_score": 0.29,
+    "augmentation_score": 0.49,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Anthropologists and archeologists",
+    "automation_score": 0.29,
+    "augmentation_score": 0.49,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Microbiologists",
+    "automation_score": 0.29,
+    "augmentation_score": 0.5,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Talent directors",
+    "automation_score": 0.29,
+    "augmentation_score": 0.41,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Disc jockeys, except radio",
+    "automation_score": 0.29,
+    "augmentation_score": 0.47,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Medical assistants",
+    "automation_score": 0.29,
+    "augmentation_score": 0.48,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Weatherization installers and technicians",
+    "automation_score": 0.29,
+    "augmentation_score": 0.45,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Biofuels production managers",
+    "automation_score": 0.28,
+    "augmentation_score": 0.5,
+    "job_family": "Management"
+  },
+  {
+    "occupation_title": "Residential advisors",
+    "automation_score": 0.28,
+    "augmentation_score": 0.48,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Chefs and head cooks",
+    "automation_score": 0.28,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Music therapists",
+    "automation_score": 0.28,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Inspectors, testers, sorters, samplers, and weighers",
+    "automation_score": 0.28,
+    "augmentation_score": 0.43,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Dermatologists",
+    "automation_score": 0.28,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Clinical neuropsychologists",
+    "automation_score": 0.28,
+    "augmentation_score": 0.5,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Forest fire inspectors and prevention specialists",
+    "automation_score": 0.28,
+    "augmentation_score": 0.47,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Computer, automated teller, and office machine repairers",
+    "automation_score": 0.28,
+    "augmentation_score": 0.46,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Postal service mail carriers",
+    "automation_score": 0.27,
+    "augmentation_score": 0.43,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Surveyors",
+    "automation_score": 0.27,
+    "augmentation_score": 0.5,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Nuclear power reactor operators",
+    "automation_score": 0.27,
+    "augmentation_score": 0.47,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Electrical and electronics repairers, commercial and industrial equipment",
+    "automation_score": 0.27,
+    "augmentation_score": 0.47,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Occupational therapy aides",
+    "automation_score": 0.27,
+    "augmentation_score": 0.44,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Amusement and recreation attendants",
+    "automation_score": 0.27,
+    "augmentation_score": 0.4,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Acute care nurses",
+    "automation_score": 0.27,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Ophthalmologists, except pediatric",
+    "automation_score": 0.27,
+    "augmentation_score": 0.5,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Air traffic controllers",
+    "automation_score": 0.27,
+    "augmentation_score": 0.5,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Psychiatric technicians",
+    "automation_score": 0.27,
+    "augmentation_score": 0.42,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Weighers, measurers, checkers, and samplers, recordkeeping",
+    "automation_score": 0.27,
+    "augmentation_score": 0.44,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Power distributors and dispatchers",
+    "automation_score": 0.27,
+    "augmentation_score": 0.5,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Special education teachers, middle school",
+    "automation_score": 0.27,
+    "augmentation_score": 0.47,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Recreational therapists",
+    "automation_score": 0.27,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Food science technicians",
+    "automation_score": 0.27,
+    "augmentation_score": 0.48,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Postal service clerks",
+    "automation_score": 0.26,
+    "augmentation_score": 0.41,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Opticians, dispensing",
+    "automation_score": 0.26,
+    "augmentation_score": 0.45,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Aircraft cargo handling supervisors",
+    "automation_score": 0.26,
+    "augmentation_score": 0.45,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Models",
+    "automation_score": 0.26,
+    "augmentation_score": 0.39,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Physical therapists",
+    "automation_score": 0.26,
+    "augmentation_score": 0.47,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Gambling surveillance officers and gambling investigators",
+    "automation_score": 0.26,
+    "augmentation_score": 0.38,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Veterinary assistants and laboratory animal caretakers",
+    "automation_score": 0.25,
+    "augmentation_score": 0.43,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Private detectives and investigators",
+    "automation_score": 0.25,
+    "augmentation_score": 0.49,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Electro-mechanical and mechatronics technologists and technicians",
+    "automation_score": 0.25,
+    "augmentation_score": 0.49,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Fire inspectors and investigators",
+    "automation_score": 0.25,
+    "augmentation_score": 0.46,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Actors",
+    "automation_score": 0.25,
+    "augmentation_score": 0.38,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Urologists",
+    "automation_score": 0.25,
+    "augmentation_score": 0.49,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Railroad conductors and yardmasters",
+    "automation_score": 0.25,
+    "augmentation_score": 0.47,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Chemical technicians",
+    "automation_score": 0.25,
+    "augmentation_score": 0.49,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Occupational therapy assistants",
+    "automation_score": 0.25,
+    "augmentation_score": 0.43,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Emergency medicine physicians",
+    "automation_score": 0.24,
+    "augmentation_score": 0.48,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Costume attendants",
+    "automation_score": 0.24,
+    "augmentation_score": 0.41,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Special education teachers, secondary school",
+    "automation_score": 0.24,
+    "augmentation_score": 0.46,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Gas compressor and gas pumping station operators",
+    "automation_score": 0.24,
+    "augmentation_score": 0.36,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Nuclear monitoring technicians",
+    "automation_score": 0.24,
+    "augmentation_score": 0.47,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Refuse and recyclable material collectors",
+    "automation_score": 0.24,
+    "augmentation_score": 0.42,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Couriers and messengers",
+    "automation_score": 0.24,
+    "augmentation_score": 0.42,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Nuclear medicine technologists",
+    "automation_score": 0.24,
+    "augmentation_score": 0.45,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Subway and streetcar operators",
+    "automation_score": 0.24,
+    "augmentation_score": 0.37,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Substance abuse and behavioral disorder counselors",
+    "automation_score": 0.24,
+    "augmentation_score": 0.48,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Low vision therapists, orientation and mobility specialists, and vision rehabilitation therapists",
+    "automation_score": 0.24,
+    "augmentation_score": 0.47,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Industrial machinery mechanics",
+    "automation_score": 0.24,
+    "augmentation_score": 0.46,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Animal caretakers",
+    "automation_score": 0.24,
+    "augmentation_score": 0.41,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Non-destructive testing specialists",
+    "automation_score": 0.23,
+    "augmentation_score": 0.44,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Veterinarians",
+    "automation_score": 0.23,
+    "augmentation_score": 0.44,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Aviation inspectors",
+    "automation_score": 0.23,
+    "augmentation_score": 0.44,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Airline pilots, copilots, and flight engineers",
+    "automation_score": 0.23,
+    "augmentation_score": 0.44,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "First-line supervisors of correctional officers",
+    "automation_score": 0.23,
+    "augmentation_score": 0.42,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Kindergarten teachers, except special education",
+    "automation_score": 0.23,
+    "augmentation_score": 0.43,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Audiovisual equipment installers and repairers",
+    "automation_score": 0.23,
+    "augmentation_score": 0.4,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Special education teachers, elementary school",
+    "automation_score": 0.23,
+    "augmentation_score": 0.42,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Baggage porters and bellhops",
+    "automation_score": 0.23,
+    "augmentation_score": 0.36,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Electrical and electronics repairers, powerhouse, substation, and relay",
+    "automation_score": 0.23,
+    "augmentation_score": 0.44,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Calibration technologists and technicians",
+    "automation_score": 0.23,
+    "augmentation_score": 0.44,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Anesthesiologists",
+    "automation_score": 0.23,
+    "augmentation_score": 0.46,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Telecommunications equipment installers and repairers, except line installers",
+    "automation_score": 0.23,
+    "augmentation_score": 0.43,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Orthopedic surgeons, except pediatric",
+    "automation_score": 0.23,
+    "augmentation_score": 0.48,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Medical equipment repairers",
+    "automation_score": 0.23,
+    "augmentation_score": 0.46,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Teaching assistants, preschool, elementary, middle, and secondary school, except special education",
+    "automation_score": 0.23,
+    "augmentation_score": 0.39,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Chemical equipment operators and tenders",
+    "automation_score": 0.22,
+    "augmentation_score": 0.38,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Massage therapists",
+    "automation_score": 0.22,
+    "augmentation_score": 0.42,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Automotive engineering technicians",
+    "automation_score": 0.22,
+    "augmentation_score": 0.49,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Taxi drivers",
+    "automation_score": 0.22,
+    "augmentation_score": 0.38,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Parking enforcement workers",
+    "automation_score": 0.22,
+    "augmentation_score": 0.39,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Diagnostic medical sonographers",
+    "automation_score": 0.22,
+    "augmentation_score": 0.42,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Neurodiagnostic technologists",
+    "automation_score": 0.22,
+    "augmentation_score": 0.43,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Medical and clinical laboratory technologists",
+    "automation_score": 0.22,
+    "augmentation_score": 0.43,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Agricultural technicians",
+    "automation_score": 0.22,
+    "augmentation_score": 0.43,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Cardiologists",
+    "automation_score": 0.21,
+    "augmentation_score": 0.45,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Emergency medical technicians",
+    "automation_score": 0.21,
+    "augmentation_score": 0.38,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Commercial pilots",
+    "automation_score": 0.21,
+    "augmentation_score": 0.45,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Judges, magistrate judges, and magistrates",
+    "automation_score": 0.21,
+    "augmentation_score": 0.44,
+    "job_family": "Legal"
+  },
+  {
+    "occupation_title": "Respiratory therapists",
+    "automation_score": 0.21,
+    "augmentation_score": 0.36,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Office machine operators, except computer",
+    "automation_score": 0.21,
+    "augmentation_score": 0.36,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Optometrists",
+    "automation_score": 0.21,
+    "augmentation_score": 0.43,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Special education teachers, preschool",
+    "automation_score": 0.21,
+    "augmentation_score": 0.42,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Automotive and watercraft service attendants",
+    "automation_score": 0.21,
+    "augmentation_score": 0.37,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Correctional officers and jailers",
+    "automation_score": 0.21,
+    "augmentation_score": 0.35,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Dentists, general",
+    "automation_score": 0.21,
+    "augmentation_score": 0.45,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Recreation workers",
+    "automation_score": 0.21,
+    "augmentation_score": 0.42,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Bridge and lock tenders",
+    "automation_score": 0.21,
+    "augmentation_score": 0.34,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Home appliance repairers",
+    "automation_score": 0.21,
+    "augmentation_score": 0.37,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Teaching assistants, special education",
+    "automation_score": 0.2,
+    "augmentation_score": 0.36,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Special education teachers, kindergarten",
+    "automation_score": 0.2,
+    "augmentation_score": 0.39,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Cardiovascular technologists and technicians",
+    "automation_score": 0.2,
+    "augmentation_score": 0.36,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Physical medicine and rehabilitation physicians",
+    "automation_score": 0.2,
+    "augmentation_score": 0.44,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Interior designers",
+    "automation_score": 0.2,
+    "augmentation_score": 0.5,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Manicurists and pedicurists",
+    "automation_score": 0.2,
+    "augmentation_score": 0.34,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Orthodontists",
+    "automation_score": 0.2,
+    "augmentation_score": 0.42,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Medical equipment preparers",
+    "automation_score": 0.2,
+    "augmentation_score": 0.32,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Butchers and meat cutters",
+    "automation_score": 0.2,
+    "augmentation_score": 0.37,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Desktop publishers",
+    "automation_score": 0.2,
+    "augmentation_score": 0.5,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Nurse anesthetists",
+    "automation_score": 0.2,
+    "augmentation_score": 0.41,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Childcare workers",
+    "automation_score": 0.2,
+    "augmentation_score": 0.32,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Heavy and tractor-trailer truck drivers",
+    "automation_score": 0.2,
+    "augmentation_score": 0.36,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cooks, institution and cafeteria",
+    "automation_score": 0.2,
+    "augmentation_score": 0.4,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Musicians and singers",
+    "automation_score": 0.2,
+    "augmentation_score": 0.41,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Commercial and industrial designers",
+    "automation_score": 0.19,
+    "augmentation_score": 0.5,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Solar photovoltaic installers",
+    "automation_score": 0.19,
+    "augmentation_score": 0.47,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Bailiffs",
+    "automation_score": 0.19,
+    "augmentation_score": 0.31,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Textile cutting machine setters, operators, and tenders",
+    "automation_score": 0.19,
+    "augmentation_score": 0.35,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Set and exhibit designers",
+    "automation_score": 0.19,
+    "augmentation_score": 0.48,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Magnetic resonance imaging technologists",
+    "automation_score": 0.19,
+    "augmentation_score": 0.38,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Police and sheriff's patrol officers",
+    "automation_score": 0.19,
+    "augmentation_score": 0.38,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Team assemblers",
+    "automation_score": 0.19,
+    "augmentation_score": 0.4,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Radiologic technologists and technicians",
+    "automation_score": 0.19,
+    "augmentation_score": 0.36,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Coil winders, tapers, and finishers",
+    "automation_score": 0.19,
+    "augmentation_score": 0.3,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Wind turbine service technicians",
+    "automation_score": 0.19,
+    "augmentation_score": 0.43,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Barbers",
+    "automation_score": 0.19,
+    "augmentation_score": 0.41,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Waiters and waitresses",
+    "automation_score": 0.19,
+    "augmentation_score": 0.35,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Orthotists and prosthetists",
+    "automation_score": 0.18,
+    "augmentation_score": 0.37,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Electrical and electronics drafters",
+    "automation_score": 0.18,
+    "augmentation_score": 0.42,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Nuclear technicians",
+    "automation_score": 0.18,
+    "augmentation_score": 0.44,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Museum technicians and conservators",
+    "automation_score": 0.18,
+    "augmentation_score": 0.4,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Petroleum pump system operators, refinery operators, and gaugers",
+    "automation_score": 0.18,
+    "augmentation_score": 0.37,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Coroners",
+    "automation_score": 0.18,
+    "augmentation_score": 0.38,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Stationary engineers and boiler operators",
+    "automation_score": 0.18,
+    "augmentation_score": 0.36,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Funeral attendants",
+    "automation_score": 0.18,
+    "augmentation_score": 0.35,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Textile knitting and weaving machine setters, operators, and tenders",
+    "automation_score": 0.18,
+    "augmentation_score": 0.32,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Food cooking machine operators and tenders",
+    "automation_score": 0.18,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Farm equipment mechanics and service technicians",
+    "automation_score": 0.18,
+    "augmentation_score": 0.34,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Transit and railroad police",
+    "automation_score": 0.18,
+    "augmentation_score": 0.33,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Chemical plant and system operators",
+    "automation_score": 0.18,
+    "augmentation_score": 0.33,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Psychiatric aides",
+    "automation_score": 0.18,
+    "augmentation_score": 0.29,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Home health aides",
+    "automation_score": 0.18,
+    "augmentation_score": 0.33,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Cartographers and photogrammetrists",
+    "automation_score": 0.18,
+    "augmentation_score": 0.5,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Ship engineers",
+    "automation_score": 0.18,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Electrical and electronic equipment assemblers",
+    "automation_score": 0.17,
+    "augmentation_score": 0.36,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Machinists",
+    "automation_score": 0.17,
+    "augmentation_score": 0.39,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Printing press operators",
+    "automation_score": 0.17,
+    "augmentation_score": 0.38,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Substitute teachers, short-term",
+    "automation_score": 0.17,
+    "augmentation_score": 0.35,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Bus drivers, transit and intercity",
+    "automation_score": 0.17,
+    "augmentation_score": 0.32,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Gambling change persons and booth cashiers",
+    "automation_score": 0.17,
+    "augmentation_score": 0.4,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Locker room, coatroom, and dressing room attendants",
+    "automation_score": 0.17,
+    "augmentation_score": 0.28,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Critical care nurses",
+    "automation_score": 0.17,
+    "augmentation_score": 0.36,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Crematory operators",
+    "automation_score": 0.17,
+    "augmentation_score": 0.28,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Aerospace engineering and operations technologists and technicians",
+    "automation_score": 0.17,
+    "augmentation_score": 0.45,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Geothermal technicians",
+    "automation_score": 0.17,
+    "augmentation_score": 0.42,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Watch and clock repairers",
+    "automation_score": 0.16,
+    "augmentation_score": 0.31,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Radiation therapists",
+    "automation_score": 0.16,
+    "augmentation_score": 0.4,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Police identification and records officers",
+    "automation_score": 0.16,
+    "augmentation_score": 0.31,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Broadcast technicians",
+    "automation_score": 0.16,
+    "augmentation_score": 0.4,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Bakers",
+    "automation_score": 0.16,
+    "augmentation_score": 0.32,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Graphic designers",
+    "automation_score": 0.16,
+    "augmentation_score": 0.42,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Computer numerically controlled tool operators",
+    "automation_score": 0.16,
+    "augmentation_score": 0.34,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Captains, mates, and pilots of water vessels",
+    "automation_score": 0.16,
+    "augmentation_score": 0.31,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Phlebotomists",
+    "automation_score": 0.16,
+    "augmentation_score": 0.32,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Rail yard engineers, dinkey operators, and hostlers",
+    "automation_score": 0.16,
+    "augmentation_score": 0.27,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Physical therapist aides",
+    "automation_score": 0.16,
+    "augmentation_score": 0.27,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Floral designers",
+    "automation_score": 0.16,
+    "augmentation_score": 0.39,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Cytotechnologists",
+    "automation_score": 0.16,
+    "augmentation_score": 0.36,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Camera operators, television, video, and film",
+    "automation_score": 0.16,
+    "augmentation_score": 0.38,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Gas plant operators",
+    "automation_score": 0.16,
+    "augmentation_score": 0.38,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Power plant operators",
+    "automation_score": 0.15,
+    "augmentation_score": 0.37,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Security and fire alarm systems installers",
+    "automation_score": 0.15,
+    "augmentation_score": 0.36,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Special effects artists and animators",
+    "automation_score": 0.15,
+    "augmentation_score": 0.43,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Preschool teachers, except special education",
+    "automation_score": 0.15,
+    "augmentation_score": 0.32,
+    "job_family": "Educational instruction"
+  },
+  {
+    "occupation_title": "Textile bleaching and dyeing machine operators and tenders",
+    "automation_score": 0.15,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Maintenance workers, machinery",
+    "automation_score": 0.15,
+    "augmentation_score": 0.29,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Furnace, kiln, oven, drier, and kettle operators and tenders",
+    "automation_score": 0.15,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cashiers",
+    "automation_score": 0.15,
+    "augmentation_score": 0.33,
+    "job_family": "Sales"
+  },
+  {
+    "occupation_title": "Avionics technicians",
+    "automation_score": 0.15,
+    "augmentation_score": 0.35,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Conveyor operators and tenders",
+    "automation_score": 0.15,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Pest control workers",
+    "automation_score": 0.15,
+    "augmentation_score": 0.35,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Photonics technicians",
+    "automation_score": 0.15,
+    "augmentation_score": 0.39,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Veterinary technologists and technicians",
+    "automation_score": 0.15,
+    "augmentation_score": 0.3,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Paramedics",
+    "automation_score": 0.15,
+    "augmentation_score": 0.36,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Transportation security screeners",
+    "automation_score": 0.14,
+    "augmentation_score": 0.29,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Jewelers and precious stone and metal workers",
+    "automation_score": 0.14,
+    "augmentation_score": 0.3,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Food batchmakers",
+    "automation_score": 0.14,
+    "augmentation_score": 0.27,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Architectural and civil drafters",
+    "automation_score": 0.14,
+    "augmentation_score": 0.48,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Crushing, grinding, and polishing machine setters, operators, and tenders",
+    "automation_score": 0.14,
+    "augmentation_score": 0.24,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Firefighters",
+    "automation_score": 0.14,
+    "augmentation_score": 0.24,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Cabinetmakers and bench carpenters",
+    "automation_score": 0.14,
+    "augmentation_score": 0.3,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Security guards",
+    "automation_score": 0.14,
+    "augmentation_score": 0.24,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Hairdressers, hairstylists, and cosmetologists",
+    "automation_score": 0.14,
+    "augmentation_score": 0.24,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Locomotive engineers",
+    "automation_score": 0.14,
+    "augmentation_score": 0.24,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Earth drillers, except oil and gas",
+    "automation_score": 0.14,
+    "augmentation_score": 0.33,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Carpenters",
+    "automation_score": 0.14,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Patternmakers, wood",
+    "automation_score": 0.14,
+    "augmentation_score": 0.31,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Physical therapist assistants",
+    "automation_score": 0.14,
+    "augmentation_score": 0.24,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Rolling machine setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.13,
+    "augmentation_score": 0.27,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Water and wastewater treatment plant and system operators",
+    "automation_score": 0.13,
+    "augmentation_score": 0.23,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Textile winding, twisting, and drawing out machine setters, operators, and tenders",
+    "automation_score": 0.13,
+    "augmentation_score": 0.23,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Light truck drivers",
+    "automation_score": 0.13,
+    "augmentation_score": 0.23,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Semiconductor processing technicians",
+    "automation_score": 0.13,
+    "augmentation_score": 0.23,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Nannies",
+    "automation_score": 0.13,
+    "augmentation_score": 0.23,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Farm labor contractors",
+    "automation_score": 0.13,
+    "augmentation_score": 0.39,
+    "job_family": "Business and finance"
+  },
+  {
+    "occupation_title": "Construction and building inspectors",
+    "automation_score": 0.13,
+    "augmentation_score": 0.39,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Fabric and apparel patternmakers",
+    "automation_score": 0.13,
+    "augmentation_score": 0.38,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Gambling and sports book writers and runners",
+    "automation_score": 0.13,
+    "augmentation_score": 0.29,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Licensed practical and licensed vocational nurses",
+    "automation_score": 0.13,
+    "augmentation_score": 0.29,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Bartenders",
+    "automation_score": 0.13,
+    "augmentation_score": 0.3,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Craft artists",
+    "automation_score": 0.13,
+    "augmentation_score": 0.31,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Dental hygienists",
+    "automation_score": 0.13,
+    "augmentation_score": 0.31,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Electrical and electronics installers and repairers, transportation equipment",
+    "automation_score": 0.13,
+    "augmentation_score": 0.31,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Milling and planing machine setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.13,
+    "augmentation_score": 0.32,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Athletes and sports competitors",
+    "automation_score": 0.12,
+    "augmentation_score": 0.36,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Forensic science technicians",
+    "automation_score": 0.12,
+    "augmentation_score": 0.31,
+    "job_family": "Life, physical, and social science"
+  },
+  {
+    "occupation_title": "Flight attendants",
+    "automation_score": 0.12,
+    "augmentation_score": 0.2,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Insulation workers, mechanical",
+    "automation_score": 0.12,
+    "augmentation_score": 0.37,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Passenger attendants",
+    "automation_score": 0.12,
+    "augmentation_score": 0.26,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Fine artists, including painters, sculptors, and illustrators",
+    "automation_score": 0.12,
+    "augmentation_score": 0.4,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Endoscopy technicians",
+    "automation_score": 0.12,
+    "augmentation_score": 0.26,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Histotechnologists",
+    "automation_score": 0.12,
+    "augmentation_score": 0.3,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Fashion designers",
+    "automation_score": 0.12,
+    "augmentation_score": 0.42,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Cooks, restaurant",
+    "automation_score": 0.12,
+    "augmentation_score": 0.3,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Merchandise displayers and window trimmers",
+    "automation_score": 0.12,
+    "augmentation_score": 0.37,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Model makers, metal and plastic",
+    "automation_score": 0.12,
+    "augmentation_score": 0.3,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Mail clerks and mail machine operators, except postal service",
+    "automation_score": 0.12,
+    "augmentation_score": 0.24,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Art directors",
+    "automation_score": 0.12,
+    "augmentation_score": 0.43,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Welding, soldering, and brazing machine setters, operators, and tenders",
+    "automation_score": 0.12,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Electronic equipment installers and repairers, motor vehicles",
+    "automation_score": 0.12,
+    "augmentation_score": 0.27,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Maintenance and repair workers, general",
+    "automation_score": 0.12,
+    "augmentation_score": 0.33,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Hydroelectric plant technicians",
+    "automation_score": 0.12,
+    "augmentation_score": 0.25,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Postal service mail sorters, processors, and processing machine operators",
+    "automation_score": 0.12,
+    "augmentation_score": 0.29,
+    "job_family": "Office support"
+  },
+  {
+    "occupation_title": "Embalmers",
+    "automation_score": 0.12,
+    "augmentation_score": 0.32,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Baristas",
+    "automation_score": 0.11,
+    "augmentation_score": 0.25,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Prepress technicians and workers",
+    "automation_score": 0.11,
+    "augmentation_score": 0.35,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Septic tank servicers and sewer pipe cleaners",
+    "automation_score": 0.11,
+    "augmentation_score": 0.23,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Skincare specialists",
+    "automation_score": 0.11,
+    "augmentation_score": 0.28,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Choreographers",
+    "automation_score": 0.11,
+    "augmentation_score": 0.34,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Operating engineers and other construction equipment operators",
+    "automation_score": 0.11,
+    "augmentation_score": 0.24,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Camera and photographic equipment repairers",
+    "automation_score": 0.11,
+    "augmentation_score": 0.36,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Outdoor power equipment and other small engine mechanics",
+    "automation_score": 0.11,
+    "augmentation_score": 0.25,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Multiple machine tool setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.11,
+    "augmentation_score": 0.23,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Pump operators, except wellhead pumpers",
+    "automation_score": 0.11,
+    "augmentation_score": 0.26,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Gambling dealers",
+    "automation_score": 0.11,
+    "augmentation_score": 0.24,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Fast food and counter workers",
+    "automation_score": 0.11,
+    "augmentation_score": 0.22,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Painters, construction and maintenance",
+    "automation_score": 0.11,
+    "augmentation_score": 0.28,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Biomass plant technicians",
+    "automation_score": 0.11,
+    "augmentation_score": 0.26,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Photographers",
+    "automation_score": 0.11,
+    "augmentation_score": 0.42,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Mixing and blending machine setters, operators, and tenders",
+    "automation_score": 0.11,
+    "augmentation_score": 0.19,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Laborers and freight, stock, and material movers, hand",
+    "automation_score": 0.11,
+    "augmentation_score": 0.2,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "School bus monitors",
+    "automation_score": 0.11,
+    "augmentation_score": 0.2,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Extruding, forming, pressing, and compacting machine setters, operators, and tenders",
+    "automation_score": 0.11,
+    "augmentation_score": 0.19,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Ophthalmic medical technicians",
+    "automation_score": 0.11,
+    "augmentation_score": 0.19,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Elevator and escalator installers and repairers",
+    "automation_score": 0.1,
+    "augmentation_score": 0.33,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Model makers, wood",
+    "automation_score": 0.1,
+    "augmentation_score": 0.25,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Biofuels processing technicians",
+    "automation_score": 0.1,
+    "augmentation_score": 0.33,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Ophthalmic medical technologists",
+    "automation_score": 0.1,
+    "augmentation_score": 0.23,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Glass blowers, molders, benders, and finishers",
+    "automation_score": 0.1,
+    "augmentation_score": 0.26,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Nursing assistants",
+    "automation_score": 0.1,
+    "augmentation_score": 0.2,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Print binding and finishing workers",
+    "automation_score": 0.1,
+    "augmentation_score": 0.21,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Medical and clinical laboratory technicians",
+    "automation_score": 0.1,
+    "augmentation_score": 0.32,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Loading and moving machine operators, underground mining",
+    "automation_score": 0.1,
+    "augmentation_score": 0.18,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Excavating and loading machine and dragline operators, surface mining",
+    "automation_score": 0.1,
+    "augmentation_score": 0.23,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Food and tobacco roasting, baking, and drying machine operators and tenders",
+    "automation_score": 0.1,
+    "augmentation_score": 0.18,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Heating, air conditioning, and refrigeration mechanics and installers",
+    "automation_score": 0.1,
+    "augmentation_score": 0.18,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Film and video editors",
+    "automation_score": 0.1,
+    "augmentation_score": 0.25,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Control and valve installers and repairers, except mechanical door",
+    "automation_score": 0.1,
+    "augmentation_score": 0.23,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Sound engineering technicians",
+    "automation_score": 0.1,
+    "augmentation_score": 0.23,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Lifeguards, ski patrol, and other recreational protective service workers",
+    "automation_score": 0.1,
+    "augmentation_score": 0.22,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Rotary drill operators, oil and gas",
+    "automation_score": 0.1,
+    "augmentation_score": 0.18,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Ambulance drivers and attendants, except emergency medical technicians",
+    "automation_score": 0.1,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Mobile heavy equipment mechanics, except engines",
+    "automation_score": 0.1,
+    "augmentation_score": 0.32,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Hazardous materials removal workers",
+    "automation_score": 0.09,
+    "augmentation_score": 0.24,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Grinding, lapping, polishing, and buffing machine tool setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.09,
+    "augmentation_score": 0.29,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Heat treating equipment setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.09,
+    "augmentation_score": 0.22,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Upholsterers",
+    "automation_score": 0.09,
+    "augmentation_score": 0.24,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Anesthesiologist assistants",
+    "automation_score": 0.09,
+    "augmentation_score": 0.29,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Packers and packagers, hand",
+    "automation_score": 0.09,
+    "augmentation_score": 0.16,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cleaning, washing, and metal pickling equipment operators and tenders",
+    "automation_score": 0.09,
+    "augmentation_score": 0.16,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Extruding and drawing machine setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.09,
+    "augmentation_score": 0.22,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Separating, filtering, clarifying, precipitating, and still machine setters, operators, and tenders",
+    "automation_score": 0.09,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Recreational vehicle service technicians",
+    "automation_score": 0.09,
+    "augmentation_score": 0.22,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Media technical directors/managers",
+    "automation_score": 0.08,
+    "augmentation_score": 0.27,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Crane and tower operators",
+    "automation_score": 0.08,
+    "augmentation_score": 0.26,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Service unit operators, oil and gas",
+    "automation_score": 0.08,
+    "augmentation_score": 0.19,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Forging machine setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.08,
+    "augmentation_score": 0.15,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Maids and housekeeping cleaners",
+    "automation_score": 0.08,
+    "augmentation_score": 0.14,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Surgical technologists",
+    "automation_score": 0.08,
+    "augmentation_score": 0.2,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Ushers, lobby attendants, and ticket takers",
+    "automation_score": 0.08,
+    "augmentation_score": 0.22,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Animal trainers",
+    "automation_score": 0.08,
+    "augmentation_score": 0.18,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Photographic process workers and processing machine operators",
+    "automation_score": 0.08,
+    "augmentation_score": 0.21,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Makeup artists, theatrical and performance",
+    "automation_score": 0.08,
+    "augmentation_score": 0.31,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Machine feeders and offbearers",
+    "automation_score": 0.08,
+    "augmentation_score": 0.15,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Motorboat mechanics and service technicians",
+    "automation_score": 0.08,
+    "augmentation_score": 0.15,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Aircraft mechanics and service technicians",
+    "automation_score": 0.08,
+    "augmentation_score": 0.19,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Telecommunications line installers and repairers",
+    "automation_score": 0.08,
+    "augmentation_score": 0.19,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Locksmiths and safe repairers",
+    "automation_score": 0.08,
+    "augmentation_score": 0.14,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Mechanical drafters",
+    "automation_score": 0.07,
+    "augmentation_score": 0.47,
+    "job_family": "Engineering"
+  },
+  {
+    "occupation_title": "Furniture finishers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Explosives workers, ordnance handling experts, and blasters",
+    "automation_score": 0.07,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Derrick operators, oil and gas",
+    "automation_score": 0.07,
+    "augmentation_score": 0.12,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Radio, cellular, and tower equipment installers and repairers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.17,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Plumbers, pipefitters, and steamfitters",
+    "automation_score": 0.07,
+    "augmentation_score": 0.18,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Janitors and cleaners, except maids and housekeeping cleaners",
+    "automation_score": 0.07,
+    "augmentation_score": 0.16,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Tailors, dressmakers, and custom sewers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.16,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Mechanical door repairers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.16,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Food servers, nonrestaurant",
+    "automation_score": 0.07,
+    "augmentation_score": 0.13,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Crossing guards and flaggers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.13,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Metal-refining furnace operators and tenders",
+    "automation_score": 0.07,
+    "augmentation_score": 0.13,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Electric motor, power tool, and related repairers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.15,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Medical appliance technicians",
+    "automation_score": 0.07,
+    "augmentation_score": 0.13,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Signal and track switch repairers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.13,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Landscaping and groundskeeping workers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.13,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Construction laborers",
+    "automation_score": 0.07,
+    "augmentation_score": 0.14,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cooling and freezing equipment operators and tenders",
+    "automation_score": 0.06,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Plating machine setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.06,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Rail car repairers",
+    "automation_score": 0.06,
+    "augmentation_score": 0.11,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Shoe machine operators and tenders",
+    "automation_score": 0.06,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Aircraft service attendants",
+    "automation_score": 0.06,
+    "augmentation_score": 0.1,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Railroad brake, signal, and switch operators and locomotive firers",
+    "automation_score": 0.06,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Adhesive bonding machine operators and tenders",
+    "automation_score": 0.06,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cutting and slicing machine setters, operators, and tenders",
+    "automation_score": 0.06,
+    "augmentation_score": 0.14,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Sewing machine operators",
+    "automation_score": 0.06,
+    "augmentation_score": 0.14,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Tree trimmers and pruners",
+    "automation_score": 0.06,
+    "augmentation_score": 0.15,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Electricians",
+    "automation_score": 0.06,
+    "augmentation_score": 0.16,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Sailors and marine oilers",
+    "automation_score": 0.05,
+    "augmentation_score": 0.14,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cleaners of vehicles and equipment",
+    "automation_score": 0.05,
+    "augmentation_score": 0.09,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Extruding and forming machine setters, operators, and tenders, synthetic and glass fibers",
+    "automation_score": 0.05,
+    "augmentation_score": 0.09,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Grinding and polishing workers, hand",
+    "automation_score": 0.05,
+    "augmentation_score": 0.09,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Parking attendants",
+    "automation_score": 0.05,
+    "augmentation_score": 0.19,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Tank car, truck, and ship loaders",
+    "automation_score": 0.05,
+    "augmentation_score": 0.1,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Gem and diamond workers",
+    "automation_score": 0.05,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Recycling and reclamation workers",
+    "automation_score": 0.05,
+    "augmentation_score": 0.1,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Engine and other machine assemblers",
+    "automation_score": 0.05,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Sheet metal workers",
+    "automation_score": 0.05,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Molding, coremaking, and casting machine setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.05,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cooks, fast food",
+    "automation_score": 0.05,
+    "augmentation_score": 0.18,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Pesticide handlers, sprayers, and applicators, vegetation",
+    "automation_score": 0.05,
+    "augmentation_score": 0.19,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Insulation workers, floor, ceiling, and wall",
+    "automation_score": 0.05,
+    "augmentation_score": 0.17,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Woodworking machine setters, operators, and tenders, except sawing",
+    "automation_score": 0.04,
+    "augmentation_score": 0.14,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Automotive body and related repairers",
+    "automation_score": 0.04,
+    "augmentation_score": 0.08,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Coating, painting, and spraying machine setters, operators, and tenders",
+    "automation_score": 0.04,
+    "augmentation_score": 0.07,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Potters, manufacturing",
+    "automation_score": 0.04,
+    "augmentation_score": 0.16,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Brickmasons and blockmasons",
+    "automation_score": 0.04,
+    "augmentation_score": 0.14,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Oral and maxillofacial surgeons",
+    "automation_score": 0.04,
+    "augmentation_score": 0.15,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Hearing aid specialists",
+    "automation_score": 0.04,
+    "augmentation_score": 0.15,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Patternmakers, metal and plastic",
+    "automation_score": 0.04,
+    "augmentation_score": 0.15,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--electricians",
+    "automation_score": 0.04,
+    "augmentation_score": 0.08,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Welders, cutters, solderers, and brazers",
+    "automation_score": 0.04,
+    "augmentation_score": 0.14,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Motion picture projectionists",
+    "automation_score": 0.04,
+    "augmentation_score": 0.08,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Automotive service technicians and mechanics",
+    "automation_score": 0.04,
+    "augmentation_score": 0.14,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Layout workers, metal and plastic",
+    "automation_score": 0.04,
+    "augmentation_score": 0.25,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Manufactured building and mobile home installers",
+    "automation_score": 0.04,
+    "augmentation_score": 0.13,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Dancers",
+    "automation_score": 0.03,
+    "augmentation_score": 0.11,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Continuous mining machine operators",
+    "automation_score": 0.03,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Lathe and turning machine tool setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.03,
+    "augmentation_score": 0.22,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Motorboat operators",
+    "automation_score": 0.03,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--production workers",
+    "automation_score": 0.03,
+    "augmentation_score": 0.06,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Timing device assemblers and adjusters",
+    "automation_score": 0.03,
+    "augmentation_score": 0.1,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Tool and die makers",
+    "automation_score": 0.03,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cutters and trimmers, hand",
+    "automation_score": 0.03,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Drilling and boring machine tool setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.03,
+    "augmentation_score": 0.12,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Bicycle repairers",
+    "automation_score": 0.03,
+    "augmentation_score": 0.13,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Plasterers and stucco masons",
+    "automation_score": 0.03,
+    "augmentation_score": 0.13,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Tool grinders, filers, and sharpeners",
+    "automation_score": 0.03,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--installation, maintenance, and repair workers",
+    "automation_score": 0.03,
+    "augmentation_score": 0.11,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Tapers",
+    "automation_score": 0.03,
+    "augmentation_score": 0.12,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Food preparation workers",
+    "automation_score": 0.03,
+    "augmentation_score": 0.07,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Solar thermal installers and technicians",
+    "automation_score": 0.02,
+    "augmentation_score": 0.09,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Electrical power-line installers and repairers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.09,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Shoe and leather workers and repairers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.07,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Bus and truck mechanics and diesel engine specialists",
+    "automation_score": 0.02,
+    "augmentation_score": 0.07,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Tire repairers and changers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.07,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Roofers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.07,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Tile and stone setters",
+    "automation_score": 0.02,
+    "augmentation_score": 0.08,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Commercial divers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.08,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Glaziers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.08,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Drywall and ceiling tile installers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.08,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Sawing machine setters, operators, and tenders, wood",
+    "automation_score": 0.02,
+    "augmentation_score": 0.08,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Fence erectors",
+    "automation_score": 0.02,
+    "augmentation_score": 0.09,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cutting, punching, and press machine setters, operators, and tenders, metal and plastic",
+    "automation_score": 0.02,
+    "augmentation_score": 0.07,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Laundry and dry-cleaning workers",
+    "automation_score": 0.02,
+    "augmentation_score": 0.06,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Surgical assistants",
+    "automation_score": 0.02,
+    "augmentation_score": 0.07,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Floor sanders and finishers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Carpet installers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Floor layers, except carpet, wood, and hard tiles",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Structural metal fabricators and fitters",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Pipelayers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Slaughterers and meat packers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Dining room and cafeteria attendants and bartender helpers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Dredge operators",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Histology technicians",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Millwrights",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Pourers and casters, metal",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Packaging and filling machine operators and tenders",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Meat, poultry, and fish cutters and trimmers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Etchers and engravers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Orderlies",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Terrazzo workers and finishers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cement masons and concrete finishers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Dental laboratory technicians",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Wellhead pumpers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Paving, surfacing, and tamping equipment operators",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--brickmasons, blockmasons, stonemasons, and tile and marble setters",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Rail-track laying and maintenance equipment operators",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Prosthodontists",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Health care"
+  },
+  {
+    "occupation_title": "Motorcycle mechanics",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Painting, coating, and decorating workers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Lighting technicians",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Arts, sports and media"
+  },
+  {
+    "occupation_title": "Stone cutters and carvers, manufacturing",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Musical instrument repairers and tuners",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Refractory materials repairers, except brickmasons",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Reinforcing iron and rebar workers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Pressers, textile, garment, and related materials",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Electromechanical equipment assemblers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--extraction workers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Structural iron and steel workers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.11,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Aircraft structure, surfaces, rigging, and systems assemblers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.07,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Segmental pavers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Molders, shapers, and casters, except metal and plastic",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Automotive glass installers and repairers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Dishwashers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Ophthalmic laboratory technicians",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Fiberglass laminators and fabricators",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Hoist and winch operators",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Paperhangers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Cooks, short order",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Pile driver operators",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Foundry mold and coremakers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Industrial truck and tractor operators",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Riggers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Services and other"
+  },
+  {
+    "occupation_title": "Boilermakers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Stonemasons",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Tire builders",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--carpenters",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--painters, paperhangers, plasterers, and stucco masons",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Sewers, hand",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--pipelayers, plumbers, pipefitters, and steamfitters",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Helpers--roofers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Paper goods machine setters, operators, and tenders",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Roof bolters, mining",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Rock splitters, quarry",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Roustabouts, oil and gas",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  },
+  {
+    "occupation_title": "Highway maintenance workers",
+    "automation_score": 0.0,
+    "augmentation_score": 0.0,
+    "job_family": "Production, construction and transportation"
+  }
+]

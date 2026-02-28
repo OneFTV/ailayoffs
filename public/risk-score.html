@@ -94,10 +94,37 @@ a:hover{color:#60a5fa}
   <div class="stats-bar" id="stats-bar">Loading occupation data...</div>
 </div>
 
+<div class="chart-section">
+  <h2 class="chart-title">AI Impact Map — Where Does Your Job Fall?</h2>
+  <p class="chart-subtitle">Each dot is an occupation. Click any dot to see its full analysis.</p>
+  <div class="chart-legend">
+    <span class="legend-item"><span class="legend-dot" style="background:#22c55e"></span>AI-Enhanced</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#eab308"></span>Transforming</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span>AI-Resistant</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>At Risk</span>
+  </div>
+  <div class="chart-container">
+    <canvas id="scatterChart"></canvas>
+  </div>
+</div>
+
+<style>
+.chart-section{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.chart-title{font-size:1.5rem;font-weight:800;text-align:center;letter-spacing:-1px}
+.chart-subtitle{color:var(--muted);text-align:center;font-size:.9rem;margin-top:.3rem}
+.chart-legend{display:flex;gap:1.2rem;justify-content:center;margin-top:1rem;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--muted)}
+.legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chart-container{margin-top:1rem;position:relative;height:600px;max-height:70vh}
+@media(max-width:600px){.chart-container{height:400px}.chart-title{font-size:1.2rem}}
+</style>
+
 <div class="footer">
   <a href="/">← Back to AILayoff.live</a> · <a href="/risk-score">Risk Score</a> · <a href="/about.html">About</a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3"></script>
 <script>
 const input=document.getElementById('search'),results=document.getElementById('results');
 let timer;
@@ -122,6 +149,71 @@ input.addEventListener('focus',()=>{if(results.innerHTML)results.style.display='
 
 fetch('/api/risk-score-stats').then(r=>r.json()).then(s=>{
   document.getElementById('stats-bar').innerHTML=`<span>${s.total||0}</span> occupations analyzed · Average risk score: <span>${s.avg_risk||0}</span>/100`;
+}).catch(()=>{});
+
+// Scatter chart
+const notableJobs=['Software Developers','Heavy and Tractor-Trailer Truck Drivers','Registered Nurses','Accountants','Data Entry Keyers','Lawyers','Elementary School Teachers, Except Special Education','Physicians, All Other'];
+fetch('/api/risk-score-chart').then(r=>r.json()).then(data=>{
+  if(!data.length)return;
+  function qColor(r,a){if(r<50&&a>=50)return '#22c55e';if(r>=50&&a>=50)return '#eab308';if(r<50&&a<50)return '#3b82f6';return '#ef4444';}
+  const points=data.map(d=>({x:d.risk_score,y:d.augmentation_score,title:d.title,slug:d.title_slug,color:qColor(d.risk_score,d.augmentation_score)}));
+  const ctx=document.getElementById('scatterChart').getContext('2d');
+  const chart=new Chart(ctx,{
+    type:'scatter',
+    data:{datasets:[{
+      data:points,
+      pointBackgroundColor:points.map(p=>p.color),
+      pointBorderColor:points.map(p=>p.color),
+      pointRadius:points.map(p=>notableJobs.includes(p.title)?6:3.5),
+      pointHoverRadius:8,
+      pointBorderWidth:0
+    }]},
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      animation:{duration:800},
+      scales:{
+        x:{min:0,max:100,title:{display:true,text:'Automation Risk →',color:'#64748b',font:{size:13,weight:600}},grid:{color:'#1e1e2e'},ticks:{color:'#64748b',stepSize:25}},
+        y:{min:0,max:100,title:{display:true,text:'AI Augmentation Potential →',color:'#64748b',font:{size:13,weight:600}},grid:{color:'#1e1e2e'},ticks:{color:'#64748b',stepSize:25}}
+      },
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          callbacks:{
+            label:function(c){const p=c.raw;return `${p.title}: Risk ${p.x}%, Augmentation ${p.y}%`;}
+          },
+          backgroundColor:'#12121a',borderColor:'#1e1e2e',borderWidth:1,titleFont:{size:0},bodyColor:'#e0e0e0',padding:10
+        },
+        annotation:{
+          annotations:{
+            lineX:{type:'line',xMin:50,xMax:50,borderColor:'rgba(100,116,139,.3)',borderWidth:1,borderDash:[6,4]},
+            lineY:{type:'line',yMin:50,yMax:50,borderColor:'rgba(100,116,139,.3)',borderWidth:1,borderDash:[6,4]},
+            labelTL:{type:'label',xValue:10,yValue:95,content:['AI-Enhanced ✅'],color:'#22c55e',font:{size:11,weight:600}},
+            labelTR:{type:'label',xValue:90,yValue:95,content:['Transforming ⚡'],color:'#eab308',font:{size:11,weight:600}},
+            labelBL:{type:'label',xValue:10,yValue:5,content:['AI-Resistant 🛡️'],color:'#3b82f6',font:{size:11,weight:600}},
+            labelBR:{type:'label',xValue:90,yValue:5,content:['At Risk ⚠️'],color:'#ef4444',font:{size:11,weight:600}}
+          }
+        }
+      },
+      onClick:(e,els)=>{if(els.length){const p=points[els[0].index];window.location.href='/risk-score/'+p.slug;}}
+    },
+    plugins:[{
+      id:'labelNotable',
+      afterDatasetsDraw(chart){
+        const ctx2=chart.ctx;
+        ctx2.font='600 10px Inter,sans-serif';
+        ctx2.textAlign='center';
+        points.forEach((p,i)=>{
+          if(!notableJobs.includes(p.title))return;
+          const meta=chart.getDatasetMeta(0).data[i];
+          if(!meta)return;
+          const short=p.title.replace(/, Except.*/,'').replace(/Heavy and Tractor-Trailer /,'').replace(/Physicians.*/,'Doctor').replace('Registered ','').replace('Elementary School ','');
+          ctx2.fillStyle='#e0e0e0';
+          ctx2.fillText(short,meta.x,meta.y-10);
+        });
+      }
+    }]
+  });
 }).catch(()=>{});
 </script>
 </body>
