@@ -2,10 +2,18 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
+const { Pool } = require('pg');
 
 const DATA_FILE = path.join(__dirname, 'data', 'layoffs.json');
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 const AI_KEYWORDS = /\b(ai|artificial intelligence|automation|machine learning|chatbot|gpt|llm|generative ai|copilot|deep learning|neural|openai|claude|gemini)\b/i;
+
+// PostgreSQL connection
+const useDB = !!process.env.DATABASE_URL;
+let pool;
+if (useDB) {
+  pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false }, max: 5 });
+}
 
 const http = axios.create({
   timeout: 15000,
@@ -265,14 +273,15 @@ async function scrapeWARN() {
 
 // ─── Main ───
 async function main() {
-  console.log('🤖 AILayoffs.live Scraper');
+  const ts = new Date().toISOString();
+  console.log(`\n[${ts}] 🤖 AILayoffs.live Scraper`);
   console.log('========================\n');
   
-  // Load existing data
+  // Load existing data (JSON)
   let existing = [];
   try {
     existing = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
-    console.log(`📁 Loaded ${existing.length} existing entries`);
+    console.log(`📁 Loaded ${existing.length} existing JSON entries`);
   } catch (e) {
     console.log('📁 No existing data file, starting fresh');
   }
@@ -284,14 +293,16 @@ async function main() {
   await scrapeReddit();
   await scrapeWARN();
   
-  // Deduplicate
+  // Deduplicate against JSON
   const seen = new Set(existing.map(dedupeKey));
   let added = 0;
+  const uniqueNew = [];
   for (const entry of newEntries) {
     const key = dedupeKey(entry);
     if (!seen.has(key)) {
       seen.add(key);
       existing.push(entry);
+      uniqueNew.push(entry);
       added++;
     }
   }
@@ -299,15 +310,57 @@ async function main() {
   // Sort by date descending
   existing.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
   
-  // Save
+  // Save to JSON
   fs.writeFileSync(DATA_FILE, JSON.stringify(existing, null, 2));
   
+  // Write to PostgreSQL if available
+  let dbInserted = 0;
+  if (useDB && uniqueNew.length > 0) {
+    console.log(`\n💾 Writing ${uniqueNew.length} new entries to PostgreSQL...`);
+    for (const entry of uniqueNew) {
+      try {
+        // Check for duplicate in DB by company + date
+        const dup = await pool.query(
+          `SELECT id FROM layoffs WHERE LOWER(company) = LOWER($1) AND date = $2`,
+          [entry.company, entry.date]
+        );
+        if (dup.rows.length > 0) {
+          console.log(`  ⏭ Skip (exists in DB): ${entry.company} ${entry.date}`);
+          continue;
+        }
+        await pool.query(
+          `INSERT INTO layoffs (company, sector, jobs_cut, reason, date, source, source_name, source_url, classification)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+          [
+            entry.company, entry.sector || 'Unknown', entry.jobsCut || 0,
+            entry.reason || '', entry.date, entry.source || '',
+            entry.sourceName || '', entry.source || '', entry.aiRelated ? 'ai-related' : 'general'
+          ]
+        );
+        dbInserted++;
+        console.log(`  ✅ Inserted: ${entry.company} (${entry.jobsCut} jobs, ${entry.date})`);
+      } catch (e) {
+        console.log(`  ❌ DB insert error for ${entry.company}: ${e.message}`);
+      }
+    }
+    console.log(`\n📊 DB: ${dbInserted} new rows inserted`);
+  } else if (useDB) {
+    console.log('\n💾 No new entries to write to PostgreSQL');
+  } else {
+    console.log('\n⚠ No DATABASE_URL — skipping PostgreSQL');
+  }
+  
   console.log('\n========================');
-  console.log(`📊 Results: ${newEntries.length} scraped, ${added} new unique, ${existing.length} total`);
-  console.log(`💾 Saved to ${DATA_FILE}`);
+  console.log(`📊 Results: ${newEntries.length} scraped, ${added} new unique, ${existing.length} total JSON`);
+  console.log(`💾 JSON saved to ${DATA_FILE}`);
+  if (useDB) console.log(`💾 PostgreSQL: ${dbInserted} inserted`);
+  
+  // Close pool
+  if (pool) await pool.end();
 }
 
 main().catch(e => {
   console.error('Fatal error:', e.message);
+  if (pool) pool.end();
   process.exit(1);
 });

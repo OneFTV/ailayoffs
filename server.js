@@ -180,13 +180,22 @@ app.get('/api/stats', async (req, res) => {
     const total = await pool.query(`SELECT SUM(jobs_cut) as total, COUNT(DISTINCT company) as companies FROM layoffs`);
     const bySector = await pool.query(`SELECT sector, SUM(jobs_cut) as total FROM layoffs GROUP BY sector ORDER BY total DESC`);
     const byMonth = await pool.query(`SELECT TO_CHAR(date, 'YYYY-MM') as month, SUM(jobs_cut) as total FROM layoffs GROUP BY month ORDER BY month`);
+    // Rate calculations
+    const last90 = await pool.query(`SELECT COALESCE(SUM(jobs_cut),0) as total FROM layoffs WHERE date >= CURRENT_DATE - INTERVAL '90 days'`);
+    const thisMonth = await pool.query(`SELECT COALESCE(SUM(jobs_cut),0) as total FROM layoffs WHERE TO_CHAR(date,'YYYY-MM') = TO_CHAR(CURRENT_DATE,'YYYY-MM')`);
+    const lastEntry = await pool.query(`SELECT MAX(date) as last_date FROM layoffs`);
     const t = total.rows[0];
     const sectorMap = {}; bySector.rows.forEach(r => sectorMap[r.sector] = parseInt(r.total));
+    const jobs90 = parseInt(last90.rows[0].total) || 0;
+    const jobsPerHour = Math.round((jobs90 / 90 / 24) * 100) / 100;
     res.json({
       totalJobsCut: parseInt(t.total), totalCompanies: parseInt(t.companies),
       bySector: sectorMap,
       byMonth: byMonth.rows.map(r => ({ month: r.month, jobsCut: parseInt(r.total) })),
-      avgPerCompany: Math.round(parseInt(t.total) / parseInt(t.companies))
+      avgPerCompany: Math.round(parseInt(t.total) / parseInt(t.companies)),
+      jobsPerHour,
+      monthlyRate: parseInt(thisMonth.rows[0].total) || 0,
+      lastUpdated: lastEntry.rows[0].last_date || null
     });
   } else {
     const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
@@ -195,7 +204,15 @@ app.get('/api/stats', async (req, res) => {
     const bySector = {}; data.forEach(d => { bySector[d.sector] = (bySector[d.sector] || 0) + d.jobsCut; });
     const byMonthMap = {}; data.forEach(d => { const m = d.date.slice(0, 7); byMonthMap[m] = (byMonthMap[m] || 0) + d.jobsCut; });
     const byMonth = Object.entries(byMonthMap).sort(([a], [b]) => a.localeCompare(b)).map(([month, jobsCut]) => ({ month, jobsCut }));
-    res.json({ totalJobsCut, totalCompanies: companies.length, bySector, byMonth, avgPerCompany: Math.round(totalJobsCut / companies.length) });
+    // Rate calculations for JSON fallback
+    const now = new Date();
+    const d90ago = new Date(now - 90*86400000).toISOString().slice(0,10);
+    const thisMonthStr = now.toISOString().slice(0,7);
+    const jobs90 = data.filter(d => d.date >= d90ago).reduce((s,d) => s + d.jobsCut, 0);
+    const jobsPerHour = Math.round((jobs90 / 90 / 24) * 100) / 100;
+    const monthlyRate = data.filter(d => d.date.slice(0,7) === thisMonthStr).reduce((s,d) => s + d.jobsCut, 0);
+    const lastUpdated = data.reduce((l, d) => d.date > l ? d.date : l, '');
+    res.json({ totalJobsCut, totalCompanies: companies.length, bySector, byMonth, avgPerCompany: Math.round(totalJobsCut / companies.length), jobsPerHour, monthlyRate, lastUpdated });
   }
 });
 
@@ -391,6 +408,40 @@ app.get('/api/applications/stats', async (req, res) => {
   } else { res.json({}); }
 });
 
+// POST /api/contact — contact form submissions
+app.post('/api/contact', async (req, res) => {
+  try {
+    const { name, email, subject, message, category } = req.body;
+    if (!name || !email || !subject || !message || !category) return res.status(400).json({ error: 'All fields are required' });
+    const validCats = ['general','advertising','sponsorship','press','licensing','privacy','data-correction'];
+    const clean = (s, max) => (s || '').toString().trim().slice(0, max);
+    const cName = clean(name, 255);
+    const cEmail = clean(email, 254).toLowerCase();
+    const cSubject = clean(subject, 500);
+    const cMessage = clean(message, 5000);
+    const cCategory = clean(category, 50).toLowerCase();
+    if (!validCats.includes(cCategory)) return res.status(400).json({ error: 'Invalid category' });
+    if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(cEmail)) return res.status(400).json({ error: 'Invalid email' });
+    const allFields = [cName, cEmail, cSubject, cMessage].join(' ');
+    if (/['";\\]|drop\s|select\s|insert\s|delete\s|union\s|<script/i.test(allFields)) return res.status(400).json({ error: 'Invalid input detected' });
+
+    const ip = getIP(req);
+    const ipHash = crypto.createHash('sha256').update(ip + 'contact-salt').digest('hex').slice(0, 12);
+
+    if (useDB) {
+      const rl = await pool.query(`SELECT COUNT(*) as c FROM contact_messages WHERE ip_hash=$1 AND created_at > NOW() - INTERVAL '1 hour'`, [ipHash]);
+      if (parseInt(rl.rows[0].c) >= 3) return res.status(429).json({ error: 'Too many messages. Please try again later.' });
+      await pool.query(
+        `INSERT INTO contact_messages (name, email, subject, message, category, ip_hash) VALUES ($1,$2,$3,$4,$5,$6)`,
+        [cName, cEmail, cSubject, cMessage, cCategory, ipHash]
+      );
+      res.json({ ok: true, msg: 'Message sent! We\'ll get back to you soon.' });
+    } else {
+      res.status(503).json({ error: 'Contact form requires database' });
+    }
+  } catch(e) { console.error('Contact error:', e.message); res.status(500).json({ error: 'Server error' }); }
+});
+
 app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'index.html')); });
 
 // Run migration on startup if DB is available
@@ -403,6 +454,19 @@ async function init() {
         console.log('Running initial migration...');
         require('./migrate');
       } else {
+        // Ensure source_url column exists
+        await pool.query(`ALTER TABLE layoffs ADD COLUMN IF NOT EXISTS source_url TEXT DEFAULT ''`).catch(()=>{});
+        // Ensure contact_messages table exists
+        await pool.query(`CREATE TABLE IF NOT EXISTS contact_messages (
+          id SERIAL PRIMARY KEY,
+          name TEXT NOT NULL,
+          email TEXT NOT NULL,
+          subject TEXT NOT NULL,
+          message TEXT NOT NULL,
+          category VARCHAR(50) NOT NULL,
+          ip_hash VARCHAR(12),
+          created_at TIMESTAMP DEFAULT NOW()
+        )`);
         console.log('PostgreSQL connected, tables exist');
       }
     } catch(e) { console.error('DB init error:', e.message); }

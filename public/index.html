@@ -481,13 +481,53 @@ Promise.all([
   fetch('/api/stats').then(r=>r.json()),
   fetch('/api/layoffs').then(r=>r.json())
 ]).then(([stats, layoffs]) => {
-  // Counters
-  animateCounter(document.getElementById('c-jobs'), stats.totalJobsCut);
+  // Counters - animate first, then start live increment
+  const jobsEl = document.getElementById('c-jobs');
+  const newEl = document.getElementById('c-new');
+  const totalJobs = stats.totalJobsCut;
+  const totalNew = 284500;
+
+  animateCounter(jobsEl, totalJobs);
   animateCounter(document.getElementById('c-companies'), stats.totalCompanies);
   animateCounter(document.getElementById('c-reskill'), 1200000000);
-  animateCounter(document.getElementById('c-new'), 284500);
-  document.getElementById('rate-jobs').textContent = '142';
-  document.getElementById('rate-new').textContent = '98';
+  animateCounter(newEl, totalNew);
+
+  // Display rate from API (dynamic)
+  const displayRate = stats.jobsPerHour || 25;
+  document.getElementById('rate-jobs').textContent = Math.round(displayRate);
+  document.getElementById('rate-new').textContent = Math.round(displayRate * 0.7);
+
+  // After initial animation (2.5s), start live Worldometer-style increment
+  let liveJobs = totalJobs;
+  let liveNew = totalNew;
+  const baseIntervalMs = 3600000 / Math.max(displayRate, 25); // ms per job tick (~144s for 25/hr)
+  const newIntervalMs = 3600000 / Math.max(displayRate * 0.7, 18);
+
+  function scheduleJobTick() {
+    const variance = 1 + (Math.random() - 0.5) * 0.6; // ±30%
+    const delay = baseIntervalMs * variance;
+    setTimeout(() => {
+      liveJobs++;
+      jobsEl.textContent = liveJobs.toLocaleString('en-US');
+      scheduleJobTick();
+    }, delay);
+  }
+
+  function scheduleNewTick() {
+    const variance = 1 + (Math.random() - 0.5) * 0.6;
+    const delay = newIntervalMs * variance;
+    setTimeout(() => {
+      liveNew++;
+      newEl.textContent = liveNew.toLocaleString('en-US');
+      scheduleNewTick();
+    }, delay);
+  }
+
+  // Start live ticking after animation completes
+  setTimeout(() => {
+    scheduleJobTick();
+    scheduleNewTick();
+  }, 2500);
 
   // Ticker
   const ticker=document.getElementById('ticker');

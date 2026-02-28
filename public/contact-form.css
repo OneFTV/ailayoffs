@@ -1,0 +1,14 @@
+.cf-form{margin-top:1rem}
+.cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+@media(max-width:600px){.cf-grid{grid-template-columns:1fr}}
+.cf-group{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.8rem}
+.cf-group label{font-size:.75rem;color:var(--muted,#64748b);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.cf-group input,.cf-group textarea,.cf-group select{background:var(--bg,#0a0a0f);border:1px solid var(--border,#1e1e2e);border-radius:8px;padding:.6rem .8rem;color:var(--text,#e0e0e0);font-size:.85rem;font-family:inherit;outline:none;transition:border .2s;resize:vertical}
+.cf-group input:focus,.cf-group textarea:focus,.cf-group select:focus{border-color:var(--accent3,#3b82f6)}
+.cf-group select{cursor:pointer}
+.cf-btn{background:var(--accent3,#3b82f6);color:#fff;border:none;border-radius:8px;padding:.7rem 1.5rem;font-weight:600;font-size:.85rem;cursor:pointer;transition:all .2s;margin-top:.5rem}
+.cf-btn:hover{background:#2563eb;transform:translateY(-1px)}
+.cf-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.cf-status{margin-top:.5rem;font-weight:600;font-size:.9rem}
+.cf-ok{color:var(--accent4,#10b981)}
+.cf-err{color:var(--accent,#ef4444)}
