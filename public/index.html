@@ -498,8 +498,7 @@ Promise.all([
   if(tbody){
     const tagClass={Tech:'tag-tech',Fintech:'tag-finance',Logistics:'tag-retail',Telecom:'tag-telecom',Education:'tag-education',Media:'tag-media'};
     const INITIAL_SHOW = 10;
-    const badge = (n) => n >= 3 ? '✅' : n >= 2 ? '🔵' : '⚪';
-    const rows = layoffs.map(l=>`<tr><td><strong>${l.company}</strong> <span title="${l.sourceCount||1} source(s) verified" style="font-size:.7rem">${badge(l.sourceCount||1)}</span></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td class="col-reason">${l.reason}</td><td class="col-date">${l.date}</td><td class="col-source"><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`);
+    const rows = layoffs.map(l=>`<tr><td><strong>${l.company}</strong></td><td><span class="tag ${tagClass[l.sector]||'tag-tech'}">${l.sector}</span></td><td class="jobs-cut">${l.jobsCut.toLocaleString()}</td><td class="col-reason">${l.reason}</td><td class="col-date">${l.date}</td><td class="col-source"><a class="source-link" href="${l.source}" target="_blank">${l.sourceName} ↗</a></td></tr>`);
     tbody.innerHTML = rows.map((r,i) => i < INITIAL_SHOW ? r : r.replace('<tr>','<tr class="hidden-row" style="display:none">')).join('');
     if(layoffs.length > INITIAL_SHOW){
       const showBtn = document.createElement('div');
