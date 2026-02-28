@@ -26,8 +26,12 @@ function parseUA(ua) {
   if (/mobile|android|iphone|ipad/i.test(ua)) return 'mobile';
   return 'desktop';
 }
+const geoip = require('geoip-lite');
 function getCountry(req) {
-  return req.headers['cf-ipcountry'] || req.headers['x-vercel-ip-country'] || 'unknown';
+  if (req.headers['cf-ipcountry']) return req.headers['cf-ipcountry'];
+  const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip;
+  const geo = geoip.lookup(ip);
+  return geo?.country || 'unknown';
 }
 
 function loadData() {
