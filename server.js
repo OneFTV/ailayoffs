@@ -10,8 +10,10 @@ const ANALYTICS_PATH = path.join(__dirname, 'data', 'analytics.json');
 
 // --- Analytics Engine ---
 function loadAnalytics() {
-  try { return JSON.parse(fs.readFileSync(ANALYTICS_PATH, 'utf8')); }
-  catch { return { pageviews: [], visitors: {} }; }
+  try {
+    const raw = JSON.parse(fs.readFileSync(ANALYTICS_PATH, 'utf8'));
+    return { pageviews: raw.pageviews || [], visitors: raw.visitors || {} };
+  } catch(e) { return { pageviews: [], visitors: {} }; }
 }
 function saveAnalytics(data) {
   fs.writeFileSync(ANALYTICS_PATH, JSON.stringify(data));
