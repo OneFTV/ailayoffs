@@ -46,12 +46,15 @@ app.use((req, res, next) => {
     const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip;
     const vid = hashIP(ip);
     const today = new Date().toISOString().slice(0, 10);
+    const ua = req.headers['user-agent'] || '';
+    const isBot = /bot|crawler|spider|scraper|curl|wget|python|go-http|node-fetch|chatgpt|gpt|anthropic|claude|perplexity|bytespider|semrush|ahrefs/i.test(ua);
     analytics.pageviews.push({
       path: req.path,
       vid,
       country: getCountry(req),
-      device: parseUA(req.headers['user-agent']),
+      device: parseUA(ua),
       referrer: req.headers['referer'] || 'direct',
+      isBot,
       ts: Date.now(),
       date: today
     });
@@ -66,7 +69,32 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.json());
 app.use(express.static('public'));
+
+// POST /api/track — client-side event tracking
+app.post('/api/track', (req, res) => {
+  try {
+    const { event, data, vid, duration } = req.body;
+    if (!event) return res.status(400).json({error:'missing event'});
+    const analytics = loadAnalytics();
+    if (!analytics.events) analytics.events = [];
+    if (!analytics.sessions) analytics.sessions = [];
+    
+    if (event === 'session_end' && vid && duration) {
+      analytics.sessions.push({ vid, duration, date: new Date().toISOString().slice(0,10), ts: Date.now() });
+      // Keep last 30 days
+      const cutoff = Date.now() - 30*86400000;
+      analytics.sessions = analytics.sessions.filter(s => s.ts > cutoff);
+    } else {
+      analytics.events.push({ event, data: data||{}, vid: vid||'anon', date: new Date().toISOString().slice(0,10), ts: Date.now() });
+      const cutoff = Date.now() - 30*86400000;
+      analytics.events = analytics.events.filter(e => e.ts > cutoff);
+    }
+    saveAnalytics(analytics);
+    res.json({ok:true});
+  } catch(e) { res.json({ok:true}); }
+});
 
 // GET /api/layoffs
 app.get('/api/layoffs', (req, res) => {
@@ -136,6 +164,21 @@ app.get('/api/analytics', (req, res) => {
   const dailyUV = {};
   Object.entries(a.visitors).forEach(([date, vids]) => { dailyUV[date] = vids.length; });
 
+  // Bot detection
+  const bots = pv30d.filter(p => p.isBot).length;
+  const humans = pv30d.length - bots;
+
+  // Events (clicks)
+  const events = a.events || [];
+  const events7d = events.filter(e => e.ts > now - 7*day);
+  const clicksByButton = {};
+  events7d.forEach(e => { clicksByButton[e.event] = (clicksByButton[e.event]||0) + 1; });
+
+  // Session duration
+  const sessions = a.sessions || [];
+  const sessions7d = sessions.filter(s => s.ts > now - 7*day);
+  const avgDuration = sessions7d.length ? Math.round(sessions7d.reduce((s,x) => s+x.duration, 0) / sessions7d.length) : 0;
+
   res.json({
     summary: {
       pageviews_24h: pv24h.length,
@@ -149,6 +192,10 @@ app.get('/api/analytics', (req, res) => {
     top_referrers: countBy(pv7d, 'referrer').slice(0,20),
     devices: countBy(pv7d, 'device'),
     top_pages: countBy(pv7d, 'path').slice(0,10),
+    bot_vs_human: { bots_30d: bots, humans_30d: humans, bot_pct: pv30d.length ? Math.round(bots/pv30d.length*100) : 0 },
+    clicks: Object.entries(clicksByButton).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({name:k,count:v})),
+    avg_session_seconds: avgDuration,
+    total_sessions_7d: sessions7d.length,
   });
 });
 

@@ -77,6 +77,30 @@ fetch('/api/analytics').then(r=>r.json()).then(d=>{
     html+=`</table>`;
   }
 
+  // Bot vs Human
+  html+=`<h2>Bot vs Human (30d)</h2>
+  <div class="cards">
+    <div class="card"><div class="num">${d.bot_vs_human.humans_30d}</div><div class="label">Humans</div></div>
+    <div class="card"><div class="num">${d.bot_vs_human.bots_30d}</div><div class="label">Bots/AI</div></div>
+    <div class="card"><div class="num">${d.bot_vs_human.bot_pct}%</div><div class="label">Bot Traffic</div></div>
+  </div>`;
+
+  // Session duration
+  const mins = Math.floor(d.avg_session_seconds/60);
+  const secs = d.avg_session_seconds%60;
+  html+=`<h2>Engagement (7d)</h2>
+  <div class="cards">
+    <div class="card"><div class="num">${mins}m ${secs}s</div><div class="label">Avg Session</div></div>
+    <div class="card"><div class="num">${d.total_sessions_7d}</div><div class="label">Sessions</div></div>
+  </div>`;
+
+  // Button clicks
+  if(d.clicks && d.clicks.length){
+    html+=`<h2>Button Clicks (7d)</h2><table>`;
+    d.clicks.forEach(c=>{html+=`<tr><td>${c.name}</td><td>${c.count}</td></tr>`});
+    html+=`</table>`;
+  }
+
   document.getElementById('content').innerHTML=html;
 }).catch(()=>{document.getElementById('content').innerHTML='<p>Error loading analytics</p>'});
 </script>

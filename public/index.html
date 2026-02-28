@@ -520,5 +520,37 @@ new Chart(document.getElementById('chartProjection'),{type:'line',data:{labels:[
 
 new Chart(document.getElementById('chartCompanies'),{type:'bar',data:{labels:['BT Group','Amazon','Meta','UPS','Google','Microsoft','SAP','IBM','Klarna','Dropbox'],datasets:[{label:'Jobs Cut',data:[55000,27000,21000,12000,12000,10000,8000,7800,700,500],backgroundColor:C.yellow+'aa',borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1a1a2e44'}},y:{grid:{display:false}}}}});
 </script>
+<script>
+// --- Client-side Analytics Tracker ---
+(function(){
+  const vid = localStorage.getItem('al_vid') || (crypto.randomUUID().slice(0,12));
+  localStorage.setItem('al_vid', vid);
+  const startTime = Date.now();
+  
+  function track(event, data) {
+    navigator.sendBeacon('/api/track', JSON.stringify({event, data, vid}));
+  }
+
+  // Track button clicks
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('a, button, [data-track]');
+    if (!btn) return;
+    const label = btn.dataset.track || btn.textContent.trim().slice(0,50) || btn.className;
+    track('click', { label, href: btn.href || '' });
+  });
+
+  // Track newsletter form submit
+  const form = document.querySelector('form');
+  if (form) form.addEventListener('submit', () => track('newsletter_signup', {}));
+
+  // Track session duration on leave
+  function sendDuration() {
+    const duration = Math.round((Date.now() - startTime) / 1000);
+    navigator.sendBeacon('/api/track', JSON.stringify({event:'session_end', vid, duration}));
+  }
+  document.addEventListener('visibilitychange', () => { if(document.visibilityState==='hidden') sendDuration(); });
+  window.addEventListener('pagehide', sendDuration);
+})();
+</script>
 </body>
 </html>
