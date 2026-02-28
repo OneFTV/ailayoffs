@@ -542,7 +542,10 @@ new Chart(document.getElementById('chartSectors'),{type:'doughnut',data:{labels:
 
 new Chart(document.getElementById('chartProjection'),{type:'line',data:{labels:['2023','2024','2025','2026','2027','2028','2029','2030'],datasets:[{label:'Jobs Displaced (M)',data:[.3,.8,2.1,5.5,12,24,42,85],borderColor:C.red,backgroundColor:C.red+'12',fill:true,tension:.4,pointRadius:4,pointBackgroundColor:C.red},{label:'New AI Jobs (M)',data:[.1,.4,1.2,3.2,7,15,30,97],borderColor:C.green,backgroundColor:C.green+'12',fill:true,tension:.4,pointRadius:4,pointBackgroundColor:C.green}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,pointStyleWidth:8}}},scales:{y:{grid:{color:'#1a1a2e44'}},x:{grid:{display:false}}}}});
 
-new Chart(document.getElementById('chartCompanies'),{type:'bar',data:{labels:['BT Group','Amazon','Meta','UPS','Google','Microsoft','SAP','IBM','Klarna','Dropbox'],datasets:[{label:'Jobs Cut',data:[55000,27000,21000,12000,12000,10000,8000,7800,700,500],backgroundColor:C.yellow+'aa',borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1a1a2e44'}},y:{grid:{display:false}}}}});
+fetch('/api/companies').then(r=>r.json()).then(companies=>{
+  const top=companies.slice(0,10);
+  new Chart(document.getElementById('chartCompanies'),{type:'bar',data:{labels:top.map(c=>c.company),datasets:[{label:'Jobs Cut',data:top.map(c=>c.totalJobsCut),backgroundColor:C.yellow+'aa',borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1a1a2e44'},ticks:{callback:v=>(v/1000)+'K'}},y:{grid:{display:false}}}}});
+});
 
 // === LAST UPDATED + META ===
 fetch('/api/meta').then(r=>r.json()).then(m=>{
