@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AILayoffs Analytics</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:1.5rem;max-width:900px;margin:0 auto}
+h1{font-size:1.5rem;margin-bottom:.5rem;color:#ff4444}
+h2{font-size:1rem;margin:1.5rem 0 .5rem;color:#888;text-transform:uppercase;letter-spacing:1px;font-size:.75rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.8rem;margin-bottom:1rem}
+.card{background:#12121a;border:1px solid #1e1e2e;border-radius:10px;padding:1rem;text-align:center}
+.card .num{font-size:1.8rem;font-weight:800;color:#ff4444;font-family:'JetBrains Mono',monospace}
+.card .label{font-size:.7rem;color:#888;margin-top:.3rem;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;font-size:.85rem;margin:.5rem 0}
+th{text-align:left;padding:.5rem;color:#888;font-size:.7rem;text-transform:uppercase;border-bottom:1px solid #1e1e2e}
+td{padding:.5rem;border-bottom:1px solid #111}
+.bar{background:#ff4444;height:6px;border-radius:3px;display:inline-block}
+a{color:#3b82f6;text-decoration:none}
+.loading{text-align:center;padding:3rem;color:#666}
+</style>
+</head>
+<body>
+<h1>📊 AILayoffs Analytics</h1>
+<p style="color:#666;font-size:.8rem;margin-bottom:1rem"><a href="/">← Back to site</a></p>
+<div id="content"><div class="loading">Loading...</div></div>
+<script>
+fetch('/api/analytics').then(r=>r.json()).then(d=>{
+  const s=d.summary;
+  let html=`
+  <div class="cards">
+    <div class="card"><div class="num">${s.unique_today}</div><div class="label">Visitors Today</div></div>
+    <div class="card"><div class="num">${s.pageviews_24h}</div><div class="label">Views 24h</div></div>
+    <div class="card"><div class="num">${s.unique_7d}</div><div class="label">Visitors 7d</div></div>
+    <div class="card"><div class="num">${s.pageviews_7d}</div><div class="label">Views 7d</div></div>
+    <div class="card"><div class="num">${s.pageviews_30d}</div><div class="label">Views 30d</div></div>
+  </div>`;
+
+  // Daily chart (simple text)
+  const days=Object.entries(d.daily.pageviews).sort(([a],[b])=>a.localeCompare(b)).slice(-14);
+  if(days.length){
+    const max=Math.max(...days.map(([,v])=>v));
+    html+=`<h2>Daily Pageviews (14d)</h2><table>`;
+    days.forEach(([date,count])=>{
+      const w=Math.max(2,count/max*200);
+      const uv=d.daily.visitors[date]||0;
+      html+=`<tr><td style="width:90px;white-space:nowrap">${date.slice(5)}</td><td><span class="bar" style="width:${w}px"></span> ${count} pv / ${uv} uv</td></tr>`;
+    });
+    html+=`</table>`;
+  }
+
+  // Top countries
+  if(d.top_countries.length){
+    const max=d.top_countries[0]?.count||1;
+    html+=`<h2>Top Countries (7d)</h2><table>`;
+    d.top_countries.forEach(c=>{
+      const w=Math.max(2,c.count/max*150);
+      html+=`<tr><td style="width:80px">${c.name}</td><td><span class="bar" style="width:${w}px"></span> ${c.count}</td></tr>`;
+    });
+    html+=`</table>`;
+  }
+
+  // Devices
+  if(d.devices.length){
+    html+=`<h2>Devices (7d)</h2><table>`;
+    d.devices.forEach(c=>{html+=`<tr><td>${c.name}</td><td>${c.count}</td></tr>`});
+    html+=`</table>`;
+  }
+
+  // Top referrers
+  if(d.top_referrers.length){
+    html+=`<h2>Top Referrers (7d)</h2><table>`;
+    d.top_referrers.slice(0,10).forEach(c=>{
+      const name=c.name==='direct'?'Direct':c.name.replace(/https?:\/\//,'').slice(0,50);
+      html+=`<tr><td>${name}</td><td>${c.count}</td></tr>`;
+    });
+    html+=`</table>`;
+  }
+
+  document.getElementById('content').innerHTML=html;
+}).catch(()=>{document.getElementById('content').innerHTML='<p>Error loading analytics</p>'});
+</script>
+</body>
+</html>

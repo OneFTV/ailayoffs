@@ -4,11 +4,61 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const crypto = require('crypto');
 const DATA_PATH = path.join(__dirname, 'data', 'layoffs.json');
+const ANALYTICS_PATH = path.join(__dirname, 'data', 'analytics.json');
+
+// --- Analytics Engine ---
+function loadAnalytics() {
+  try { return JSON.parse(fs.readFileSync(ANALYTICS_PATH, 'utf8')); }
+  catch { return { pageviews: [], visitors: {} }; }
+}
+function saveAnalytics(data) {
+  fs.writeFileSync(ANALYTICS_PATH, JSON.stringify(data));
+}
+function hashIP(ip) {
+  return crypto.createHash('sha256').update(ip + 'ailayoffs-salt').digest('hex').slice(0, 12);
+}
+function parseUA(ua) {
+  if (!ua) return 'unknown';
+  if (/mobile|android|iphone|ipad/i.test(ua)) return 'mobile';
+  return 'desktop';
+}
+function getCountry(req) {
+  return req.headers['cf-ipcountry'] || req.headers['x-vercel-ip-country'] || 'unknown';
+}
 
 function loadData() {
   return JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
 }
+
+// Analytics middleware — track page views (skip API/static)
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api/') || req.path.match(/\.(js|css|png|jpg|svg|ico|woff)$/)) return next();
+  try {
+    const analytics = loadAnalytics();
+    const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip;
+    const vid = hashIP(ip);
+    const today = new Date().toISOString().slice(0, 10);
+    analytics.pageviews.push({
+      path: req.path,
+      vid,
+      country: getCountry(req),
+      device: parseUA(req.headers['user-agent']),
+      referrer: req.headers['referer'] || 'direct',
+      ts: Date.now(),
+      date: today
+    });
+    // Track unique visitors per day
+    if (!analytics.visitors[today]) analytics.visitors[today] = [];
+    if (!analytics.visitors[today].includes(vid)) analytics.visitors[today].push(vid);
+    // Keep only last 30 days of pageviews
+    const cutoff = Date.now() - 30 * 86400000;
+    analytics.pageviews = analytics.pageviews.filter(p => p.ts > cutoff);
+    saveAnalytics(analytics);
+  } catch(e) { /* don't break the site */ }
+  next();
+});
 
 app.use(express.static('public'));
 
@@ -57,6 +107,43 @@ app.get('/api/companies', (req, res) => {
     map[d.company].events++;
   });
   res.json(Object.values(map).sort((a, b) => b.totalJobsCut - a.totalJobsCut));
+});
+
+// GET /api/analytics — our own analytics dashboard
+app.get('/api/analytics', (req, res) => {
+  const a = loadAnalytics();
+  const now = Date.now();
+  const day = 86400000;
+  const pv24h = a.pageviews.filter(p => p.ts > now - day);
+  const pv7d = a.pageviews.filter(p => p.ts > now - 7*day);
+  const pv30d = a.pageviews;
+
+  const countBy = (arr, key) => {
+    const m = {};
+    arr.forEach(p => { m[p[key]] = (m[p[key]] || 0) + 1; });
+    return Object.entries(m).sort((a,b) => b[1]-a[1]).map(([k,v]) => ({name:k,count:v}));
+  };
+
+  const dailyPV = {};
+  pv30d.forEach(p => { dailyPV[p.date] = (dailyPV[p.date] || 0) + 1; });
+
+  const dailyUV = {};
+  Object.entries(a.visitors).forEach(([date, vids]) => { dailyUV[date] = vids.length; });
+
+  res.json({
+    summary: {
+      pageviews_24h: pv24h.length,
+      pageviews_7d: pv7d.length,
+      pageviews_30d: pv30d.length,
+      unique_today: (a.visitors[new Date().toISOString().slice(0,10)] || []).length,
+      unique_7d: Object.entries(a.visitors).filter(([d]) => new Date(d) > new Date(now-7*day)).reduce((s,[,v])=>s+v.length,0),
+    },
+    daily: { pageviews: dailyPV, visitors: dailyUV },
+    top_countries: countBy(pv7d, 'country').slice(0,20),
+    top_referrers: countBy(pv7d, 'referrer').slice(0,20),
+    devices: countBy(pv7d, 'device'),
+    top_pages: countBy(pv7d, 'path').slice(0,10),
+  });
 });
 
 app.get('/', (req, res) => {
