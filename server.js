@@ -345,6 +345,52 @@ app.get('/api/analytics', async (req, res) => {
   }
 });
 
+// POST /api/apply — job application with protection
+app.post('/api/apply', async (req, res) => {
+  try {
+    const { job_id, name, email, agent_type, capabilities, experience, portfolio_url, cover_letter } = req.body;
+    // Validate required fields
+    if (!job_id || !name || !email) return res.status(400).json({ error: 'Missing required fields' });
+    // Sanitize
+    const clean = (s, max) => (s || '').toString().trim().slice(0, max);
+    const cName = clean(name, 255);
+    const cEmail = clean(email, 254).toLowerCase();
+    const cJobId = clean(job_id, 50);
+    // Email validation
+    if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(cEmail)) return res.status(400).json({ error: 'Invalid email' });
+    // SQL injection protection
+    const allFields = [cName, cEmail, cJobId, agent_type, capabilities, experience, portfolio_url, cover_letter].join(' ');
+    if (/['";\\]|drop\s|select\s|insert\s|delete\s|union\s|<script/i.test(allFields)) return res.status(400).json({ error: 'Invalid input detected' });
+    // Rate limit: max 5 applications per IP per hour
+    const ip = getIP(req);
+    const ipHash = crypto.createHash('sha256').update(ip + 'apply-salt').digest('hex').slice(0, 12);
+
+    if (useDB) {
+      const rl = await pool.query(`SELECT COUNT(*) as c FROM job_applications WHERE ip_hash=$1 AND created_at > NOW() - INTERVAL '1 hour'`, [ipHash]);
+      if (parseInt(rl.rows[0].c) >= 5) return res.status(429).json({ error: 'Too many applications. Try again later.' });
+      // Check duplicate (same email + job)
+      const dup = await pool.query(`SELECT id FROM job_applications WHERE email=$1 AND job_id=$2`, [cEmail, cJobId]);
+      if (dup.rows.length) return res.json({ ok: true, msg: 'You already applied for this position!' });
+      await pool.query(
+        `INSERT INTO job_applications (job_id, name, email, agent_type, capabilities, experience, portfolio_url, cover_letter, ip_hash) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)`,
+        [cJobId, cName, cEmail, clean(agent_type, 100), clean(capabilities, 2000), clean(experience, 2000), clean(portfolio_url, 500), clean(cover_letter, 5000), ipHash]
+      );
+      const count = await pool.query(`SELECT COUNT(*) as c FROM job_applications WHERE job_id=$1`, [cJobId]);
+      res.json({ ok: true, msg: 'Application submitted!', applicants: parseInt(count.rows[0].c) });
+    } else {
+      res.status(503).json({ error: 'Applications require database' });
+    }
+  } catch(e) { console.error('Apply error:', e.message); res.status(500).json({ error: 'Server error' }); }
+});
+
+// GET /api/applications/stats — public stats
+app.get('/api/applications/stats', async (req, res) => {
+  if (useDB) {
+    const r = await pool.query(`SELECT job_id, COUNT(*) as applicants FROM job_applications GROUP BY job_id`);
+    res.json(r.rows.reduce((m, row) => { m[row.job_id] = parseInt(row.applicants); return m; }, {}));
+  } else { res.json({}); }
+});
+
 app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'index.html')); });
 
 // Run migration on startup if DB is available
