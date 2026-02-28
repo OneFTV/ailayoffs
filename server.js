@@ -265,6 +265,56 @@ app.get('/api/meta', (req, res) => {
   });
 });
 
+// POST /api/subscribe — newsletter signup with protection
+const SUBS_PATH = path.join(__dirname, 'data', 'subscribers.json');
+function loadSubs() {
+  try { return JSON.parse(fs.readFileSync(SUBS_PATH, 'utf8')); }
+  catch { return { emails: [], rateLimit: {} }; }
+}
+function saveSubs(data) { fs.writeFileSync(SUBS_PATH, JSON.stringify(data, null, 2)); }
+
+app.post('/api/subscribe', (req, res) => {
+  try {
+    const { email } = req.body;
+    // Validate email format strictly
+    if (!email || typeof email !== 'string') return res.status(400).json({error:'Email required'});
+    const clean = email.trim().toLowerCase().slice(0, 254);
+    if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(clean)) return res.status(400).json({error:'Invalid email'});
+    // Block SQL injection patterns
+    if (/['";\\<>{}()=]|drop |select |insert |delete |union |script/i.test(clean)) return res.status(400).json({error:'Invalid input'});
+    
+    // Rate limit: max 3 per IP per hour
+    const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip;
+    const ipHash = crypto.createHash('sha256').update(ip + 'sub-salt').digest('hex').slice(0, 12);
+    const subs = loadSubs();
+    const now = Date.now();
+    if (!subs.rateLimit) subs.rateLimit = {};
+    const rl = subs.rateLimit[ipHash] || [];
+    const recent = rl.filter(t => t > now - 3600000);
+    if (recent.length >= 3) return res.status(429).json({error:'Too many requests. Try again later.'});
+    
+    // Check duplicate
+    if (subs.emails.find(e => e.email === clean)) return res.json({ok:true, msg:'Already subscribed!'});
+    
+    // Save
+    subs.emails.push({ email: clean, date: new Date().toISOString(), ipHash });
+    subs.rateLimit[ipHash] = [...recent, now];
+    // Clean old rate limit entries
+    Object.keys(subs.rateLimit).forEach(k => {
+      subs.rateLimit[k] = subs.rateLimit[k].filter(t => t > now - 3600000);
+      if (!subs.rateLimit[k].length) delete subs.rateLimit[k];
+    });
+    saveSubs(subs);
+    res.json({ok:true, msg:'Subscribed!', total: subs.emails.length});
+  } catch(e) { res.status(500).json({error:'Server error'}); }
+});
+
+// GET /api/subscribers/count
+app.get('/api/subscribers/count', (req, res) => {
+  const subs = loadSubs();
+  res.json({ count: subs.emails.length });
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

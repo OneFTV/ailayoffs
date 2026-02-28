@@ -230,9 +230,9 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
         <h3>📊 Weekly AI Displacement Report</h3>
         <p>Get the latest data on AI layoffs, company tracker updates, and reskilling insights. Free.</p>
       </div>
-      <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Subscribed!';this.querySelector('button').style.background='#10b981'">
-        <input type="email" placeholder="your@email.com" required>
-        <button type="submit">Subscribe Free</button>
+      <form class="newsletter-form" id="nl-form">
+        <input type="email" placeholder="your@email.com" required id="nl-email" maxlength="254" autocomplete="email">
+        <button type="submit" id="nl-btn">Subscribe Free</button>
       </form>
     </div>
   </div>
@@ -607,9 +607,36 @@ fetch('/api/timeline').then(r=>r.json()).then(tl=>{
     track('click', { label, href: btn.href || '' });
   });
 
-  // Track newsletter form submit
-  const form = document.querySelector('form');
-  if (form) form.addEventListener('submit', () => track('newsletter_signup', {}));
+  // Newsletter form
+  const nlForm = document.getElementById('nl-form');
+  const nlBtn = document.getElementById('nl-btn');
+  const nlEmail = document.getElementById('nl-email');
+  if (nlForm) nlForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    nlBtn.disabled = true;
+    nlBtn.textContent = '...';
+    try {
+      const r = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({email: nlEmail.value})
+      });
+      const d = await r.json();
+      if (r.ok) {
+        nlBtn.textContent = '✓ Subscribed!';
+        nlBtn.style.background = '#10b981';
+        nlEmail.value = '';
+        track('newsletter_signup', {});
+      } else {
+        nlBtn.textContent = d.error || 'Error';
+        nlBtn.style.background = '#ef4444';
+        setTimeout(() => { nlBtn.textContent = 'Subscribe Free'; nlBtn.style.background = ''; nlBtn.disabled = false; }, 3000);
+      }
+    } catch {
+      nlBtn.textContent = 'Error';
+      setTimeout(() => { nlBtn.textContent = 'Subscribe Free'; nlBtn.style.background = ''; nlBtn.disabled = false; }, 3000);
+    }
+  });
 
   // Track session duration on leave
   function sendDuration() {
