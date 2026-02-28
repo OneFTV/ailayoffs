@@ -107,9 +107,10 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .jobs-cut{color:var(--accent);font-weight:700;font-family:'JetBrains Mono',monospace}
 .source-link{color:var(--accent3);font-size:.75rem}
 @media(max-width:768px){
-  table{font-size:.8rem}
-  thead th,tbody td{padding:.5rem .6rem}
-  .col-reason,.col-date,.col-source{display:none}
+  table{font-size:.75rem}
+  thead th,tbody td{padding:.4rem .4rem}
+  .col-date,.col-source{display:none}
+  .col-reason{max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.7rem}
   .table-wrap{overflow-x:hidden}
 }
 
