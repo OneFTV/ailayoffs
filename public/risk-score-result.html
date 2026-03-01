@@ -186,7 +186,7 @@ fetch('/api/risk-score/'+encodeURIComponent(slug))
 
       <div class="card">
         <h3>📍 Where This Job Sits</h3>
-        <p style="color:var(--muted);font-size:.82rem;margin-bottom:.8rem">This occupation compared to ${'\x60'}all others in our database${'\x60'}</p>
+        <p style="color:var(--muted);font-size:.82rem;margin-bottom:.8rem">See where this occupation lands across 4 AI impact quadrants</p>
         <canvas id="posChart" style="width:100%;max-height:350px"></canvas>
       </div>
 
@@ -216,26 +216,43 @@ fetch('/api/risk-score/'+encodeURIComponent(slug))
       <a class="back-link" href="/risk-score">← Check another job</a>
     `;
 
-    // Scatter chart
+    // Scatter chart — quadrant only, single dot
     const sc=document.createElement('script');
     sc.src='https://cdn.jsdelivr.net/npm/chart.js@4';
     sc.onload=()=>{
-      fetch('/api/risk-score-chart').then(r=>r.json()).then(all=>{
-        const others=all.filter(o=>o.title_slug!==slug).map(o=>({x:o.risk_score,y:o.augmentation_score||0}));
-        const me=all.find(o=>o.title_slug===slug);
-        const ctx=document.getElementById('posChart');
-        if(!ctx||!me)return;
-        new Chart(ctx,{type:'scatter',data:{datasets:[
-          {label:'Other occupations',data:others,backgroundColor:'rgba(100,116,139,.25)',pointRadius:3,pointHoverRadius:5},
-          {label:d.title,data:[{x:me.risk_score,y:me.augmentation_score||0}],backgroundColor:color,borderColor:'#fff',borderWidth:2,pointRadius:9,pointHoverRadius:11}
-        ]},options:{responsive:true,maintainAspectRatio:true,aspectRatio:1.6,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.datasetIndex===1?`${d.title}: Risk ${me.risk_score}%, Aug ${me.augmentation_score||0}%`:''}}},scales:{x:{title:{display:true,text:'Automation Risk →',color:'#94a3b8',font:{size:11}},min:0,max:100,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b'}},y:{title:{display:true,text:'Augmentation Potential →',color:'#94a3b8',font:{size:11}},min:0,max:100,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b'}}},animation:{duration:800}}});
-        // quadrant lines
-        const chart=Chart.getChart(ctx);
-        if(chart){
-          const qPlugin={id:'quadLines',afterDraw(ch){const{ctx:c,scales:{x,y}}=ch;const mx=x.getPixelForValue(50),my=y.getPixelForValue(50);c.save();c.strokeStyle='rgba(255,255,255,.12)';c.setLineDash([6,4]);c.lineWidth=1;c.beginPath();c.moveTo(mx,y.top);c.lineTo(mx,y.bottom);c.moveTo(x.left,my);c.lineTo(x.right,my);c.stroke();c.restore();}};
-          Chart.register(qPlugin);chart.update();
-        }
-      }).catch(()=>{});
+      const aug=d.augmentation_score||0;
+      const rs=d.risk_score||0;
+      const ctx=document.getElementById('posChart');
+      if(!ctx)return;
+
+      const quadPlugin={id:'quadBg',beforeDraw(ch){
+        const{ctx:c,scales:{x,y}}=ch;
+        const mx=x.getPixelForValue(50),my=y.getPixelForValue(50);
+        const l=x.left,r=x.right,t=y.top,b=y.bottom;
+        // Top-left: AI-Enhanced (green)
+        c.fillStyle='rgba(34,197,94,.08)';c.fillRect(l,t,mx-l,my-t);
+        // Top-right: Transforming (yellow)
+        c.fillStyle='rgba(234,179,8,.08)';c.fillRect(mx,t,r-mx,my-t);
+        // Bottom-left: AI-Resistant (blue)
+        c.fillStyle='rgba(59,130,246,.08)';c.fillRect(l,my,mx-l,b-my);
+        // Bottom-right: At Risk (red)
+        c.fillStyle='rgba(239,68,68,.08)';c.fillRect(mx,my,r-mx,b-my);
+        // Lines
+        c.save();c.strokeStyle='rgba(255,255,255,.15)';c.setLineDash([6,4]);c.lineWidth=1;
+        c.beginPath();c.moveTo(mx,t);c.lineTo(mx,b);c.moveTo(l,my);c.lineTo(r,my);c.stroke();c.restore();
+        // Labels
+        c.save();c.font='600 11px Inter,sans-serif';c.globalAlpha=.5;
+        c.fillStyle='#22c55e';c.fillText('AI-Enhanced',l+8,t+18);
+        c.fillStyle='#eab308';c.fillText('Transforming',r-90,t+18);
+        c.fillStyle='#3b82f6';c.fillText('AI-Resistant',l+8,b-8);
+        c.fillStyle='#ef4444';c.fillText('At Risk',r-55,b-8);
+        c.restore();
+      }};
+      Chart.register(quadPlugin);
+
+      new Chart(ctx,{type:'scatter',data:{datasets:[
+        {label:d.title,data:[{x:rs,y:aug}],backgroundColor:color,borderColor:'#fff',borderWidth:2,pointRadius:10,pointHoverRadius:13}
+      ]},options:{responsive:true,maintainAspectRatio:true,aspectRatio:1.6,plugins:{legend:{display:false},tooltip:{callbacks:{label:()=>`${d.title}: Risk ${rs}%, Augmentation ${aug}%`}}},scales:{x:{title:{display:true,text:'Automation Risk →',color:'#94a3b8',font:{size:11}},min:0,max:100,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b'}},y:{title:{display:true,text:'Augmentation Potential →',color:'#94a3b8',font:{size:11}},min:0,max:100,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b'}}},animation:{duration:800}}});
     };
     document.head.appendChild(sc);
 
