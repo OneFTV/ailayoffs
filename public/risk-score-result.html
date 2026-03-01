@@ -112,6 +112,39 @@ a{color:var(--accent3);text-decoration:none}
 const slug = window.location.pathname.split('/risk-score/')[1];
 if(!slug){window.location.href='/risk-score';}
 
+// Easter eggs 🥚
+const easterEggs={
+  'stripper':{title:'Stripper',emoji:'💃',score:'—',color:'#a855f7',msg:"AI can't do <em>that</em>... yet.",sub:'Some jobs require a human touch. Literally.'},
+  'drug-dealer':{title:'Drug Dealer',emoji:'🕵️',score:'—',color:'#ef4444',msg:'Nice try, FBI.',sub:'This search has been logged. Just kidding. Or are we?'},
+  'hitman':{title:'Hitman',emoji:'☠️',score:'—',color:'#64748b',msg:"We're not touching this one.",sub:'Some occupations are beyond our risk assessment capabilities.'},
+  'prostitute':{title:'Prostitute',emoji:'🤖',score:'—',color:'#f59e0b',msg:"The world's oldest profession vs the world's newest technology.",sub:'Spoiler: humans still win this one.'},
+  'escort':{title:'Escort',emoji:'💋',score:'—',color:'#ec4899',msg:'AI companions exist, but... no.',sub:'There are things algorithms simply cannot replace.'},
+  'hooker':{title:'Hooker',emoji:'🎣',score:'—',color:'#06b6d4',msg:'Did you mean a fishing hook operator?',sub:'We choose to believe you meant the maritime profession.'},
+  'pimp':{title:'Pimp',emoji:'🎩',score:'—',color:'#a855f7',msg:'Management roles are evolving, but not like this.',sub:'Maybe try searching "Operations Manager" instead?'},
+  'assassin':{title:'Assassin',emoji:'🥷',score:'—',color:'#64748b',msg:'Autonomous weapons are a separate debate entirely.',sub:'We recommend a career change. Seriously.'}
+};
+
+const egg=easterEggs[slug];
+if(egg){
+  document.title=`${egg.title} — AI Risk Score | AILayoff.live`;
+  document.getElementById('content').innerHTML=`
+    <div class="gauge-section">
+      <div style="font-size:5rem;margin-bottom:.5rem">${egg.emoji}</div>
+      <h1 class="job-title">${egg.title}</h1>
+      <div style="font-size:3rem;font-weight:900;color:${egg.color};margin-top:1.5rem;font-family:'JetBrains Mono',monospace">${egg.score}</div>
+    </div>
+    <div class="card" style="text-align:center;background:linear-gradient(135deg,${egg.color}11,${egg.color}05);border-color:${egg.color}33">
+      <p style="font-size:1.4rem;font-weight:700;margin-bottom:.5rem">${egg.msg}</p>
+      <p style="color:var(--muted);font-size:.9rem">${egg.sub}</p>
+    </div>
+    <div class="share" style="margin-top:2rem">
+      <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(`I just searched "${egg.title}" on the AI Job Risk calculator 😂 Check yours:`)}&url=${encodeURIComponent('https://ailayoffs.live/risk-score/'+slug)}" target="_blank">🐦 Share on X</a>
+      <a href="#" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied!';setTimeout(()=>this.textContent='🔗 Copy Link',2000);return false">🔗 Copy Link</a>
+    </div>
+    <a class="back-link" href="/risk-score">← Search a real job this time</a>
+  `;
+}else{
+
 fetch('/api/risk-score/'+encodeURIComponent(slug))
   .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
   .then(d=>{
@@ -272,6 +305,7 @@ fetch('/api/risk-score/'+encodeURIComponent(slug))
   .catch(()=>{
     document.getElementById('content').innerHTML=`<div class="error"><h2>Occupation not found</h2><p>We couldn't find data for this job title.</p><a href="/risk-score" style="display:inline-block;margin-top:1rem;background:var(--accent);color:white;padding:.6rem 1.5rem;border-radius:8px;font-weight:600">Search Again</a></div>`;
   });
+} // end else (not easter egg)
 </script>
 </body>
 </html>
