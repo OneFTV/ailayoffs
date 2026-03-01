@@ -152,6 +152,7 @@ fetch('/api/risk-score/'+encodeURIComponent(slug))
     const color=s<=25?'#10b981':s<=50?'#f59e0b':s<=75?'#f97316':'#ef4444';
     const level=s<=25?'LOW RISK':s<=50?'MEDIUM RISK':s<=75?'HIGH RISK':'VERY HIGH RISK';
 
+    fetch('/api/occupation-search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:d.title.toLowerCase(),found:true,slug:slug})});
     document.title=`${d.title} — AI Risk Score: ${s}/100 | AILayoff.live`;
     document.getElementById('og-title').content=`${d.title} — AI Risk Score: ${s}/100`;
     document.getElementById('og-desc').content=d.ai_impact_summary||`${d.title} has an AI automation risk score of ${s}/100`;

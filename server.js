@@ -442,6 +442,29 @@ app.post('/api/contact', async (req, res) => {
   } catch(e) { console.error('Contact error:', e.message); res.status(500).json({ error: 'Server error' }); }
 });
 
+// === OCCUPATION SEARCH TRACKING ===
+app.post('/api/occupation-search', async (req, res) => {
+  try {
+    const { query, found, slug } = req.body;
+    if (!query || typeof query !== 'string' || query.length > 200) return res.status(400).json({ error: 'Invalid query' });
+    const crypto = require('crypto');
+    const ip = req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for']?.split(',')[0] || req.ip;
+    const ipHash = crypto.createHash('sha256').update(ip + 'occ-salt').digest('hex').slice(0, 16);
+    const country = req.headers['cf-ipcountry'] || null;
+    await pool.query('INSERT INTO occupation_searches(query,found,slug,ip_hash,country) VALUES($1,$2,$3,$4,$5)', [query.trim().toLowerCase(), !!found, slug || null, ipHash, country]);
+    res.json({ ok: true });
+  } catch (e) { res.status(500).json({ error: 'Server error' }); }
+});
+
+app.get('/api/occupation-search-stats', async (req, res) => {
+  try {
+    const top = await pool.query("SELECT query, COUNT(*) as count, bool_or(found) as found FROM occupation_searches GROUP BY query ORDER BY count DESC LIMIT 50");
+    const notFound = await pool.query("SELECT query, COUNT(*) as count FROM occupation_searches WHERE found=false GROUP BY query ORDER BY count DESC LIMIT 50");
+    const total = await pool.query("SELECT COUNT(*) as total, COUNT(*) FILTER(WHERE found) as found_count, COUNT(*) FILTER(WHERE NOT found) as not_found_count FROM occupation_searches");
+    res.json({ topSearches: top.rows, missingOccupations: notFound.rows, stats: total.rows[0] });
+  } catch (e) { res.status(500).json({ error: 'Server error' }); }
+});
+
 // === RISK SCORE CHART API ===
 app.get('/api/risk-score-chart', async (req, res) => {
   try {

@@ -102,6 +102,28 @@ fetch('/api/analytics').then(r=>r.json()).then(d=>{
   }
 
   document.getElementById('content').innerHTML=html;
+
+  // Occupation search stats
+  fetch('/api/occupation-search-stats').then(r=>r.json()).then(s=>{
+    let h='<h2>🔍 Risk Score Searches</h2>';
+    h+=`<div class="cards">
+      <div class="card"><div class="num">${s.stats.total}</div><div class="label">Total Searches</div></div>
+      <div class="card"><div class="num">${s.stats.found_count}</div><div class="label">Found</div></div>
+      <div class="card"><div class="num">${s.stats.not_found_count}</div><div class="label">Not Found</div></div>
+    </div>`;
+    if(s.topSearches.length){
+      h+='<h3>Top Searched</h3><table><tr><th>Query</th><th>Count</th><th>Found</th></tr>';
+      s.topSearches.forEach(r=>{h+=`<tr><td>${r.query}</td><td>${r.count}</td><td>${r.found?'✅':'❌'}</td></tr>`});
+      h+='</table>';
+    }
+    if(s.missingOccupations.length){
+      h+='<h3>⚠️ Missing Occupations (searched but not in DB)</h3><table><tr><th>Query</th><th>Searches</th></tr>';
+      s.missingOccupations.forEach(r=>{h+=`<tr><td>${r.query}</td><td>${r.count}</td></tr>`});
+      h+='</table>';
+    }
+    document.getElementById('content').innerHTML+=h;
+  }).catch(()=>{});
+
 }).catch(()=>{document.getElementById('content').innerHTML='<p>Error loading analytics</p>'});
 </script>
 </body>

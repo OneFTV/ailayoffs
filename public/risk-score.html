@@ -115,7 +115,7 @@ input.addEventListener('input',()=>{
   timer=setTimeout(()=>{
     fetch('/api/risk-score?q='+encodeURIComponent(q))
       .then(r=>r.json()).then(data=>{
-        if(!data.length){results.style.display='none';return}
+        if(!data.length){results.style.display='none';fetch('/api/occupation-search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,found:false})});return}
         results.innerHTML=data.map(d=>{
           const cls=d.risk_score<=25?'score-low':d.risk_score<=50?'score-med':d.risk_score<=75?'score-high':'score-vhigh';
           return `<a href="/risk-score/${d.title_slug}"><span>${d.title}</span><span class="score ${cls}">${d.risk_score}/100</span></a>`;
