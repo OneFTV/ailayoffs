@@ -252,7 +252,7 @@ fetch('/api/risk-score/'+encodeURIComponent(slug))
 
       new Chart(ctx,{type:'scatter',data:{datasets:[
         {label:d.title,data:[{x:rs,y:aug}],backgroundColor:color,borderColor:'#fff',borderWidth:2,pointRadius:10,pointHoverRadius:13}
-      ]},options:{responsive:true,maintainAspectRatio:true,aspectRatio:1.6,plugins:{legend:{display:false},tooltip:{callbacks:{label:()=>`${d.title}: Risk ${rs}%, Augmentation ${aug}%`}}},scales:{x:{title:{display:true,text:'Automation Risk →',color:'#94a3b8',font:{size:11}},min:0,max:100,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b'}},y:{title:{display:true,text:'Augmentation Potential →',color:'#94a3b8',font:{size:11}},min:0,max:100,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b'}}},animation:{duration:800}}});
+      ]},options:{responsive:true,maintainAspectRatio:true,aspectRatio:1.6,plugins:{legend:{display:false},tooltip:{callbacks:{label:()=>`${d.title}: Risk ${rs}%, Augmentation ${aug}%`}}},layout:{padding:{left:15,right:15,top:15,bottom:15}},scales:{x:{title:{display:true,text:'Automation Risk →',color:'#94a3b8',font:{size:11}},min:-5,max:105,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b',callback:v=>v>=0&&v<=100?v:''}},y:{title:{display:true,text:'Augmentation Potential →',color:'#94a3b8',font:{size:11}},min:-5,max:105,grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#64748b',callback:v=>v>=0&&v<=100?v:''}}},animation:{duration:800}}});
     };
     document.head.appendChild(sc);
 
