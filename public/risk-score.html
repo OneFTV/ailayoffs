@@ -81,13 +81,14 @@ a:hover{color:#60a5fa}
   <div class="popular">
     <h3>Popular searches</h3>
     <div class="popular-tags">
-      <a href="/risk-score/accountants">Accountant</a>
-      <a href="/risk-score/software-developers">Software Developer</a>
-      <a href="/risk-score/heavy-and-tractor-trailer-truck-drivers">Truck Driver</a>
-      <a href="/risk-score/registered-nurses">Nurse</a>
-      <a href="/risk-score/lawyers">Lawyer</a>
-      <a href="/risk-score/graphic-designers">Graphic Designer</a>
-      <a href="/risk-score/financial-analysts">Financial Analyst</a>
+      <a href="/risk-score/accountant">Accountant</a>
+      <a href="/risk-score/software-developer">Software Developer</a>
+      <a href="/risk-score/truck-driver">Truck Driver</a>
+      <a href="/risk-score/registered-nurse">Nurse</a>
+      <a href="/risk-score/lawyer">Lawyer</a>
+      <a href="/risk-score/graphic-designer">Graphic Designer</a>
+      <a href="/risk-score/financial-analyst">Financial Analyst</a>
+      <a href="/risk-score/sales-engineer">Sales Engineer</a>
     </div>
   </div>
 
@@ -152,21 +153,21 @@ fetch('/api/risk-score-stats').then(r=>r.json()).then(s=>{
 }).catch(()=>{});
 
 // Scatter chart
-const notableJobs=['Software Developers','Heavy and Tractor-Trailer Truck Drivers','Registered Nurses','Accountants','Data Entry Keyers','Lawyers','Elementary School Teachers, Except Special Education','Physicians, All Other'];
+const notableSlugs=['software-developer','truck-driver','registered-nurse','accountant','data-entry-clerk','lawyer','teacher','doctor'];
 fetch('/api/risk-score-chart').then(r=>r.json()).then(data=>{
   if(!data.length)return;
-  function qColor(r,a){if(r<50&&a>=50)return '#22c55e';if(r>=50&&a>=50)return '#eab308';if(r<50&&a<50)return '#3b82f6';return '#ef4444';}
-  const points=data.map(d=>({x:d.risk_score,y:d.augmentation_score,title:d.title,slug:d.title_slug,color:qColor(d.risk_score,d.augmentation_score)}));
+  function qColor(r,a){if(r<50&&a>=35)return 'rgba(34,197,94,.65)';if(r>=50&&a>=35)return 'rgba(234,179,8,.65)';if(r<50&&a<35)return 'rgba(59,130,246,.65)';return 'rgba(239,68,68,.65)';}
+  const points=data.map(d=>({x:d.risk_score,y:d.augmentation_score,title:d.title,slug:d.title_slug,color:qColor(d.risk_score,d.augmentation_score),notable:notableSlugs.includes(d.title_slug)}));
   const ctx=document.getElementById('scatterChart').getContext('2d');
   const chart=new Chart(ctx,{
     type:'scatter',
     data:{datasets:[{
       data:points,
       pointBackgroundColor:points.map(p=>p.color),
-      pointBorderColor:points.map(p=>p.color),
-      pointRadius:points.map(p=>notableJobs.includes(p.title)?6:3.5),
-      pointHoverRadius:8,
-      pointBorderWidth:0
+      pointBorderColor:points.map(p=>p.notable?'#fff':'transparent'),
+      pointRadius:points.map(p=>p.notable?5:2.5),
+      pointHoverRadius:6,
+      pointBorderWidth:points.map(p=>p.notable?1.5:0)
     }]},
     options:{
       responsive:true,
@@ -186,12 +187,12 @@ fetch('/api/risk-score-chart').then(r=>r.json()).then(data=>{
         },
         annotation:{
           annotations:{
-            lineX:{type:'line',xMin:50,xMax:50,borderColor:'rgba(100,116,139,.3)',borderWidth:1,borderDash:[6,4]},
-            lineY:{type:'line',yMin:50,yMax:50,borderColor:'rgba(100,116,139,.3)',borderWidth:1,borderDash:[6,4]},
-            labelTL:{type:'label',xValue:10,yValue:95,content:['AI-Enhanced ✅'],color:'#22c55e',font:{size:11,weight:600}},
-            labelTR:{type:'label',xValue:90,yValue:95,content:['Transforming ⚡'],color:'#eab308',font:{size:11,weight:600}},
-            labelBL:{type:'label',xValue:10,yValue:5,content:['AI-Resistant 🛡️'],color:'#3b82f6',font:{size:11,weight:600}},
-            labelBR:{type:'label',xValue:90,yValue:5,content:['At Risk ⚠️'],color:'#ef4444',font:{size:11,weight:600}}
+            lineX:{type:'line',xMin:50,xMax:50,borderColor:'rgba(100,116,139,.2)',borderWidth:1,borderDash:[6,4]},
+            lineY:{type:'line',yMin:35,yMax:35,borderColor:'rgba(100,116,139,.2)',borderWidth:1,borderDash:[6,4]},
+            labelTL:{type:'label',xValue:15,yValue:92,content:['AI-Enhanced ✅'],color:'rgba(34,197,94,.5)',font:{size:10,weight:600}},
+            labelTR:{type:'label',xValue:85,yValue:92,content:['Transforming ⚡'],color:'rgba(234,179,8,.5)',font:{size:10,weight:600}},
+            labelBL:{type:'label',xValue:15,yValue:3,content:['AI-Resistant 🛡️'],color:'rgba(59,130,246,.5)',font:{size:10,weight:600}},
+            labelBR:{type:'label',xValue:85,yValue:3,content:['At Risk ⚠️'],color:'rgba(239,68,68,.5)',font:{size:10,weight:600}}
           }
         }
       },

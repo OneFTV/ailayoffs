@@ -445,7 +445,7 @@ app.post('/api/contact', async (req, res) => {
 // === RISK SCORE CHART API ===
 app.get('/api/risk-score-chart', async (req, res) => {
   try {
-    const r = await pool.query('SELECT title, title_slug, risk_score, augmentation_score FROM occupations WHERE risk_score IS NOT NULL AND augmentation_score IS NOT NULL ORDER BY title');
+    const r = await pool.query('SELECT title, title_slug, risk_score, augmentation_score FROM occupations WHERE risk_score IS NOT NULL AND augmentation_score IS NOT NULL AND augmentation_score != 50 ORDER BY title');
     res.json(r.rows);
   } catch(e) { res.json([]); }
 });
@@ -481,7 +481,14 @@ app.get('/api/risk-score/:slug', async (req, res) => {
     if (!useDB) return res.status(503).json({ error: 'Database required' });
     const slug = req.params.slug.trim().toLowerCase();
     if (!/^[a-z0-9\-]+$/.test(slug)) return res.status(400).json({ error: 'Invalid slug' });
-    const r = await pool.query(`SELECT * FROM occupations WHERE title_slug=$1`, [slug]);
+    let r = await pool.query(`SELECT * FROM occupations WHERE title_slug=$1`, [slug]);
+    // Fuzzy fallback: try removing trailing 's', or LIKE match
+    if (!r.rows.length && slug.endsWith('s')) {
+      r = await pool.query(`SELECT * FROM occupations WHERE title_slug=$1`, [slug.slice(0,-1)]);
+    }
+    if (!r.rows.length) {
+      r = await pool.query(`SELECT * FROM occupations WHERE title_slug LIKE $1 LIMIT 1`, [`%${slug}%`]);
+    }
     if (!r.rows.length) return res.status(404).json({ error: 'Not found' });
     const job = r.rows[0];
 
