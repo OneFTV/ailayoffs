@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const pool = new Pool({ connectionString: 'postgresql://postgres:ZbwrIpoGafpCTVuEjqsBGhkdLnLfeQaM@shinkansen.proxy.rlwy.net:16008/railway', ssl: { rejectUnauthorized: false } });
+const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
 
 const data = {
   "accountant": [72, ["AI-assisted auditing tools","Data visualization","Advisory & consulting skills","Forensic accounting","ESG reporting"]],

@@ -4,7 +4,7 @@
  */
 const { Pool } = require('pg');
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:ZbwrIpoGafpCTVuEjqsBGhkdLnLfeQaM@shinkansen.proxy.rlwy.net:16008/railway',
+  connectionString: process.env.DATABASE_URL || process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false }
 });
 

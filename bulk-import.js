@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const pool = new Pool({ connectionString: 'postgresql://postgres:ZbwrIpoGafpCTVuEjqsBGhkdLnLfeQaM@shinkansen.proxy.rlwy.net:16008/railway' });
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
 function slug(t) { return t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
 function rl(p) { return p < 0.3 ? 'Low' : p < 0.7 ? 'Medium' : 'High'; }

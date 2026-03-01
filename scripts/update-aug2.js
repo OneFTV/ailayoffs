@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const pool = new Pool({ connectionString: 'postgresql://postgres:ZbwrIpoGafpCTVuEjqsBGhkdLnLfeQaM@shinkansen.proxy.rlwy.net:16008/railway', ssl: { rejectUnauthorized: false }, max: 5 });
+const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false }, max: 5 });
 
 // Inline a subset — we'll build SQL values
 const fs = require('fs');
