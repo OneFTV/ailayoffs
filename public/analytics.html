@@ -25,7 +25,15 @@ a{color:#3b82f6;text-decoration:none}
 <p style="color:#666;font-size:.8rem;margin-bottom:1rem"><a href="/">← Back to site</a></p>
 <div id="content"><div class="loading">Loading...</div></div>
 <script>
-fetch('/api/analytics').then(r=>r.json()).then(d=>{
+(function(){
+let analyticsKey = localStorage.getItem('analytics_key');
+if (!analyticsKey) {
+  analyticsKey = prompt('Enter analytics key:');
+  if (analyticsKey) localStorage.setItem('analytics_key', analyticsKey);
+  else { document.getElementById('content').innerHTML='<p>Key required</p>'; return; }
+}
+const K = encodeURIComponent(analyticsKey);
+fetch('/api/analytics?key='+K).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(d=>{
   const s=d.summary;
   let html=`
   <div class="cards">
@@ -104,7 +112,7 @@ fetch('/api/analytics').then(r=>r.json()).then(d=>{
   document.getElementById('content').innerHTML=html;
 
   // Occupation search stats
-  fetch('/api/occupation-search-stats').then(r=>r.json()).then(s=>{
+  fetch('/api/occupation-search-stats?key='+K).then(r=>r.json()).then(s=>{
     let h='<h2>🔍 Risk Score Searches</h2>';
     h+=`<div class="cards">
       <div class="card"><div class="num">${s.stats.total}</div><div class="label">Total Searches</div></div>
@@ -124,7 +132,8 @@ fetch('/api/analytics').then(r=>r.json()).then(d=>{
     document.getElementById('content').innerHTML+=h;
   }).catch(()=>{});
 
-}).catch(()=>{document.getElementById('content').innerHTML='<p>Error loading analytics</p>'});
+}).catch(()=>{localStorage.removeItem('analytics_key');document.getElementById('content').innerHTML='<p>Error loading analytics. Invalid key? <a href="">Retry</a></p>'});
+})();
 </script>
 </body>
 </html>

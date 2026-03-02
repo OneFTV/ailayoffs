@@ -3,6 +3,8 @@ const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
 const { Pool } = require('pg');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -37,6 +39,32 @@ function getIP(req) { return req.headers['x-forwarded-for']?.split(',')[0]?.trim
 // --- JSON fallback functions ---
 function loadJSON(p, def) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return def; } }
 function saveJSON(p, data) { fs.writeFileSync(p, JSON.stringify(data)); }
+
+// --- Security & Rate Limiting ---
+app.disable('x-powered-by');
+
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://cdn.jsdelivr.net", "https://cdnjs.cloudflare.com", "https://unpkg.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net", "https://cdnjs.cloudflare.com", "https://unpkg.com", "https://fonts.googleapis.com"],
+      imgSrc: ["'self'", "data:", "https:"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net", "https://cdnjs.cloudflare.com"],
+      connectSrc: ["'self'"],
+      frameSrc: ["'none'"],
+    }
+  }
+}));
+
+const globalLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+  keyGenerator: (req) => req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for']?.split(',')[0] || req.ip,
+});
+app.use(globalLimiter);
 
 // --- Middleware ---
 app.use(express.json());
@@ -297,8 +325,15 @@ app.get('/api/meta', async (req, res) => {
   }
 });
 
+// Analytics auth middleware
+function requireAnalyticsKey(req, res, next) {
+  const key = process.env.ANALYTICS_KEY;
+  if (key && req.query.key !== key) return res.status(403).json({ error: 'Forbidden' });
+  next();
+}
+
 // GET /api/analytics
-app.get('/api/analytics', async (req, res) => {
+app.get('/api/analytics', requireAnalyticsKey, async (req, res) => {
   const now = Date.now();
   const day = 86400000;
 
@@ -447,16 +482,17 @@ app.post('/api/occupation-search', async (req, res) => {
   try {
     const { query, found, slug } = req.body;
     if (!query || typeof query !== 'string' || query.length > 200) return res.status(400).json({ error: 'Invalid query' });
+    const sanitizedQuery = query.replace(/<[^>]*>/g, '');
     const crypto = require('crypto');
     const ip = req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for']?.split(',')[0] || req.ip;
     const ipHash = crypto.createHash('sha256').update(ip + 'occ-salt').digest('hex').slice(0, 16);
     const country = req.headers['cf-ipcountry'] || null;
-    await pool.query('INSERT INTO occupation_searches(query,found,slug,ip_hash,country) VALUES($1,$2,$3,$4,$5)', [query.trim().toLowerCase(), !!found, slug || null, ipHash, country]);
+    await pool.query('INSERT INTO occupation_searches(query,found,slug,ip_hash,country) VALUES($1,$2,$3,$4,$5)', [sanitizedQuery.trim().toLowerCase(), !!found, slug || null, ipHash, country]);
     res.json({ ok: true });
   } catch (e) { res.status(500).json({ error: 'Server error' }); }
 });
 
-app.get('/api/occupation-search-stats', async (req, res) => {
+app.get('/api/occupation-search-stats', requireAnalyticsKey, async (req, res) => {
   try {
     const top = await pool.query("SELECT query, COUNT(*) as count, bool_or(found) as found FROM occupation_searches GROUP BY query ORDER BY count DESC LIMIT 50");
     const notFound = await pool.query("SELECT query, COUNT(*) as count FROM occupation_searches WHERE found=false GROUP BY query ORDER BY count DESC LIMIT 50");
@@ -479,7 +515,7 @@ app.get('/api/risk-score', async (req, res) => {
   if (req.query.q !== undefined) {
     try {
       if (!useDB) return res.status(503).json({ error: 'Database required' });
-      const q = (req.query.q || '').trim().slice(0, 100);
+      const q = (req.query.q || '').replace(/<[^>]*>/g, '').trim().slice(0, 100);
       if (!q) return res.json([]);
       const r = await pool.query(
         `SELECT title, title_slug, risk_score, related_sector FROM occupations WHERE title ILIKE $1 ORDER BY risk_score DESC LIMIT 10`,
