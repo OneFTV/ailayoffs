@@ -1,133 +1,223 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Anthropic's New AI Labor Market Study: Who's Really at Risk? — AILayoff.live</title>
-<meta name="description" content="Anthropic introduces 'observed exposure' — a new measure combining AI capability with real-world usage data. Computer programmers top the list at 75% coverage.">
-<meta property="og:title" content="Anthropic's New AI Labor Market Study: Who's Really at Risk?">
-<meta property="og:description" content="New research from Anthropic reveals which jobs AI is actually replacing vs. which it could theoretically replace. The gap is massive.">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthropic's New "Observed Exposure" Metric Reveals Which Jobs AI Is Actually Replacing — AILayoff.live</title>
+<meta name="description" content="Anthropic's groundbreaking research introduces 'observed exposure' — measuring real AI displacement risk. Computer Programmers top the list at 75% task coverage.">
+<meta property="og:title" content="Anthropic's New Metric Reveals Which Jobs AI Is Actually Replacing">
+<meta property="og:description" content="Computer Programmers at 75% AI task coverage. 30% of workers have zero exposure. The first data-driven look at real AI displacement.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://ailayoffs.live/blog/anthropic-labor-market-2026.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/page-style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-.blog-meta{color:#64748b;font-size:.85rem;margin-bottom:2rem;display:flex;gap:1.5rem;flex-wrap:wrap}
-.blog-meta span{display:flex;align-items:center;gap:.4rem}
-.highlight-box{background:rgba(239,68,68,.08);border-left:3px solid #ef4444;padding:1.2rem 1.5rem;border-radius:0 8px 8px 0;margin:1.5rem 0}
-.highlight-box p{margin:0;color:#e2e8f0}
-.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
-.stat-box{background:#14141f;border:1px solid #1a1a2e;border-radius:12px;padding:1.2rem;text-align:center}
-.stat-box .num{font-size:2rem;font-weight:800;font-family:'JetBrains Mono',monospace;color:#ef4444}
-.stat-box .label{font-size:.75rem;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-top:.3rem}
-.occ-table{width:100%;border-collapse:collapse;margin:1rem 0}
-.occ-table th{text-align:left;padding:.6rem;color:#64748b;font-size:.75rem;text-transform:uppercase;border-bottom:1px solid #1a1a2e}
-.occ-table td{padding:.6rem;border-bottom:1px solid #111}
-.occ-table .bar{height:8px;border-radius:4px;display:inline-block}
-.high{color:#ef4444}.low{color:#10b981}
-blockquote{border-left:2px solid #3b82f6;padding-left:1rem;margin:1.5rem 0;color:#94a3b8;font-style:italic}
-.source-link{display:inline-flex;align-items:center;gap:.5rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);padding:.5rem 1rem;border-radius:8px;margin-top:1rem;font-size:.85rem}
-.cta-box{background:linear-gradient(135deg,rgba(239,68,68,.1),rgba(239,68,68,.05));border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:1.5rem;text-align:center;margin:2rem 0}
-.cta-box a{display:inline-block;background:#ef4444;color:#fff;padding:.6rem 1.5rem;border-radius:8px;font-weight:600;text-decoration:none;margin-top:.8rem}
-.cta-box a:hover{background:#dc2626;color:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#08080d;--card:#0f0f18;--card2:#14141f;--accent:#ef4444;--accent2:#f59e0b;--accent3:#3b82f6;--accent4:#10b981;--accent5:#8b5cf6;--text:#e2e8f0;--muted:#64748b;--border:#1a1a2e;--glow:rgba(239,68,68,.15)}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;overflow-x:hidden}
+a{color:var(--accent3);text-decoration:none;transition:color .2s}
+a:hover{color:#60a5fa}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:.6rem 2rem;background:var(--card);border-bottom:1px solid var(--border);font-size:.75rem;color:var(--muted)}
+
+.article-container{max-width:800px;margin:0 auto;padding:3rem 2rem}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted);margin-bottom:2rem;transition:color .2s}
+.back-link:hover{color:var(--text)}
+.article-meta{margin-bottom:2rem}
+.article-meta .date{font-size:.75rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.article-meta .source{font-size:.75rem;color:var(--muted);margin-top:.3rem}
+h1{font-size:2.2rem;font-weight:900;letter-spacing:-1.5px;line-height:1.2;margin-bottom:1.5rem}
+h1 .red{color:var(--accent)}
+h2{font-size:1.4rem;font-weight:700;margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.1rem;font-weight:700;margin:2rem 0 .8rem}
+p{margin-bottom:1.2rem;color:var(--text);font-size:.95rem}
+.lead{font-size:1.1rem;color:var(--muted);margin-bottom:2rem;line-height:1.7}
+
+.stat-highlight{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;margin:2rem 0;text-align:center}
+.stat-highlight .big-number{font-size:3.5rem;font-weight:900;font-family:'JetBrains Mono',monospace;color:var(--accent);line-height:1}
+.stat-highlight .stat-label{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+
+.exposure-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.85rem}
+.exposure-table th{text-align:left;padding:.8rem 1rem;background:var(--card2);color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;border-bottom:1px solid var(--border)}
+.exposure-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.exposure-table tr:hover{background:rgba(255,255,255,.02)}
+.exposure-bar{height:8px;border-radius:4px;background:var(--card2);overflow:hidden;min-width:120px}
+.exposure-bar .fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),#f97316)}
+.tag-high{color:var(--accent);font-weight:700;font-family:'JetBrains Mono',monospace}
+.tag-low{color:var(--accent4);font-weight:700;font-family:'JetBrains Mono',monospace}
+
+.key-finding{background:linear-gradient(135deg,rgba(239,68,68,.06),rgba(245,158,11,.06));border:1px solid rgba(239,68,68,.15);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.key-finding h4{font-size:.8rem;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem}
+
+.zero-exposure{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.zero-tag{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.4rem .8rem;font-size:.8rem;color:var(--accent4)}
+
+.demographics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+.demo-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem;text-align:center}
+.demo-card .val{font-size:1.8rem;font-weight:800;font-family:'JetBrains Mono',monospace;color:var(--accent2)}
+.demo-card .lbl{font-size:.75rem;color:var(--muted);margin-top:.3rem}
+
+.source-box{background:var(--card);border:1px solid var(--accent3);border-radius:12px;padding:1.5rem;margin:2rem 0}
+.source-box h4{font-size:.8rem;color:var(--accent3);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem}
+
+footer{text-align:center;padding:2rem;border-top:1px solid var(--border);margin-top:3rem;font-size:.8rem;color:var(--muted)}
+
+@media(max-width:768px){
+  .article-container{padding:2rem 1rem}
+  h1{font-size:1.6rem}
+  .demographics-grid{grid-template-columns:1fr}
+}
 </style>
-</head><body><div class="page-wrap">
-<a href="/" class="back">← Back to Tracker</a>
+</head>
+<body>
 
-<h1>Anthropic's New AI Labor Market Study: <span class="red">Who's Really at Risk?</span></h1>
-
-<div class="blog-meta">
-<span>📅 March 5, 2026</span>
-<span>📖 5 min read</span>
-<span>🏷️ Research</span>
+<div class="topbar">
+  <span><a href="/" style="color:inherit">AI<strong style="color:var(--accent)">Layoff</strong>.live</a></span>
+  <span>Research Analysis • March 5, 2026</span>
 </div>
 
-<div class="highlight-box">
-<p><strong>TL;DR:</strong> Anthropic published new research introducing "observed exposure" — a metric that measures not just what AI <em>could</em> do, but what it's <em>actually</em> doing. Computer programmers are #1 at 75% task coverage. No mass unemployment yet, but hiring of young workers (22-25) is quietly slowing in exposed jobs.</p>
-</div>
+<article class="article-container">
+  <a href="/" class="back-link">← Back to Dashboard</a>
 
-<div class="card">
-<h3>A New Way to Measure AI Risk</h3>
-<p>Previous studies measured AI's <em>theoretical</em> capability — what tasks could an LLM theoretically speed up? Anthropic's new paper flips the script by combining theory with <strong>real-world usage data</strong> from millions of Claude conversations.</p>
-<p>The result is a metric called <strong>"observed exposure"</strong> that weights:</p>
-<ul class="bullets">
-<li>Tasks that are theoretically feasible for AI</li>
-<li>Tasks that see <strong>actual usage</strong> in professional settings</li>
-<li>Work-related contexts (not personal use)</li>
-<li><strong>Automated</strong> implementations weighted more heavily than augmentative ones</li>
-</ul>
-<p>The key insight: <strong>AI is far from reaching its theoretical capability.</strong> Even in the most exposed category (Computer & Math), Claude currently covers just 33% of all possible tasks.</p>
-</div>
+  <div class="article-meta">
+    <div class="date">March 5, 2026</div>
+    <div class="source">Source: Anthropic Research — Maxim Massenkoff & Peter McCrory</div>
+  </div>
 
-<div class="card">
-<h3>Most Exposed Occupations</h3>
-<p>Here are the jobs where AI is actually being used to perform work tasks, ranked by observed exposure:</p>
-<table class="occ-table">
-<tr><th>Occupation</th><th>Coverage</th><th>Exposure</th></tr>
-<tr><td><strong>Computer Programmers</strong></td><td><span class="high">75%</span></td><td><span class="bar high" style="width:75%;background:#ef4444"></span></td></tr>
-<tr><td><strong>Customer Service Reps</strong></td><td><span class="high">65%</span></td><td><span class="bar high" style="width:65%;background:#ef4444"></span></td></tr>
-<tr><td><strong>Data Entry Keyers</strong></td><td><span class="high">67%</span></td><td><span class="bar high" style="width:67%;background:#ef4444"></span></td></tr>
-<tr><td><strong>Financial Analysts</strong></td><td><span class="high">60%</span></td><td><span class="bar high" style="width:60%;background:#f59e0b"></span></td></tr>
-</table>
-<p style="color:#64748b;font-size:.85rem;margin-top:.5rem">Source: Anthropic "Labor market impacts of AI" (March 2026)</p>
-</div>
+  <h1>Anthropic's New "<span class="red">Observed Exposure</span>" Metric Reveals Which Jobs AI Is Actually Replacing</h1>
 
-<div class="card">
-<h3>Least Exposed — The "AI-Proof" Jobs</h3>
-<p><strong>30% of all workers have zero AI exposure.</strong> These jobs involve physical, hands-on tasks that AI simply can't reach:</p>
-<ul class="bullets">
-<li>Cooks, Bartenders, Dishwashers</li>
-<li>Motorcycle Mechanics</li>
-<li>Lifeguards</li>
-<li>Dressing Room Attendants</li>
-</ul>
-<p>Many tasks remain beyond AI's reach — from pruning trees and operating farm machinery to representing clients in court.</p>
-</div>
+  <p class="lead">A groundbreaking research paper from Anthropic introduces a new way to measure AI's real-world impact on jobs — not what AI <em>could</em> do theoretically, but what it's <em>actually</em> doing. The results are both reassuring and alarming.</p>
 
-<div class="stat-grid">
-<div class="stat-box"><div class="num">75%</div><div class="label">Top Exposure (Programmers)</div></div>
-<div class="stat-box"><div class="num">30%</div><div class="label">Workers with Zero Exposure</div></div>
-<div class="stat-box"><div class="num">14%</div><div class="label">Drop in Young Worker Hiring</div></div>
-<div class="stat-box"><div class="num">0.6%</div><div class="label">Growth Drop per 10% Exposure</div></div>
-</div>
+  <div class="stat-highlight">
+    <div class="big-number">75%</div>
+    <div class="stat-label">of Computer Programmer tasks are now covered by AI — the highest of any occupation</div>
+  </div>
 
-<div class="card">
-<h3>The Uncomfortable Finding: Young Workers</h3>
-<p>While the study found <strong>no systematic increase in unemployment</strong> for highly exposed workers overall, one finding stands out:</p>
-<blockquote>
-"We find suggestive evidence that hiring of younger workers has slowed in exposed occupations... a 14% drop in the job finding rate compared to 2022 in exposed occupations."
-</blockquote>
-<p>Workers aged <strong>22-25</strong> are less likely to be hired into AI-exposed occupations since ChatGPT launched. The effect isn't huge, but it echoes findings from other researchers (Brynjolfsson et al.). Young people aren't being fired — they're just <strong>not being hired</strong> in the first place.</p>
-</div>
+  <h2>What Is "Observed Exposure"?</h2>
 
-<div class="card">
-<h3>Who's Most Vulnerable?</h3>
-<p>The demographics of the most exposed workers may surprise you:</p>
-<ul class="bullets">
-<li><strong>16% more likely to be female</strong> than unexposed workers</li>
-<li><strong>11% more likely to be white</strong></li>
-<li><strong>Almost 2x more likely to be Asian</strong></li>
-<li><strong>Earn 47% more</strong> on average</li>
-<li><strong>3.8x more likely</strong> to hold a graduate degree</li>
-</ul>
-<p>This isn't a blue-collar displacement story. AI is coming for <strong>educated, well-paid, white-collar workers</strong> first.</p>
-</div>
+  <p>Previous attempts to measure AI's impact on jobs relied on theoretical assessments — asking whether an AI <em>could</em> perform a given task. Anthropic's new metric, <strong>"observed exposure,"</strong> goes further by combining three data sources:</p>
 
-<div class="card">
-<h3>BLS Projections Align</h3>
-<p>The Bureau of Labor Statistics independently projects weaker job growth for occupations with higher AI exposure. For every <strong>10 percentage point increase</strong> in observed exposure, the BLS growth projection drops by <strong>0.6 percentage points</strong> through 2034.</p>
-<p>The paper notes this is a modest correlation — but it validates the measure against independent government data.</p>
-</div>
+  <ul style="margin:1rem 0 1.5rem 1.5rem;color:var(--text);font-size:.95rem;line-height:2">
+    <li><strong>O*NET database</strong> — 800+ occupations and their constituent tasks</li>
+    <li><strong>Anthropic Economic Index</strong> — real-world Claude usage data from millions of conversations</li>
+    <li><strong>Eloundou et al. (2023)</strong> — theoretical LLM capability ratings per task</li>
+  </ul>
 
-<div class="card">
-<h3>Why This Matters</h3>
-<p>Previous studies told us what AI <em>could</em> replace. This study tells us what AI <em>is actually</em> replacing — right now, based on real usage data. The gap between theoretical capability and actual adoption is massive, but it's <strong>closing fast</strong>.</p>
-<p>As the authors note: <em>"This framework is most useful when the effects are ambiguous — and could help identify the most vulnerable jobs before displacement is visible."</em></p>
-<a href="https://www.anthropic.com/research/labor-market-impacts" target="_blank" class="source-link">📄 Read the full paper on Anthropic.com →</a>
-</div>
+  <p>The key innovation: observed exposure weights <strong>automated</strong> (rather than augmentative) and <strong>work-related</strong> uses more heavily. A task gets full weight if it's being fully automated via API, but only half weight if humans are using AI as an assistant.</p>
 
-<div class="cta-box">
-<h3>Is Your Job at Risk?</h3>
-<p>Check your occupation's AI exposure score — updated with Anthropic's latest data.</p>
-<a href="/risk-score">Check Now →</a>
-</div>
+  <div class="key-finding">
+    <h4>Key Insight</h4>
+    <p style="margin:0">AI is far from reaching its theoretical capability. In the Computer & Math category, LLMs could theoretically handle <strong>94%</strong> of tasks, but actual coverage is just <strong>33%</strong>. The gap between what AI <em>can</em> do and what it's <em>actually doing</em> remains enormous.</p>
+  </div>
 
-<div class="footer-mini"><span>© 2026 AILayoff.live</span><span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/cookies.html">Cookie Policy</a></span></div>
-</div></body></html>
+  <h2>Top 10 Most Exposed Occupations</h2>
+
+  <table class="exposure-table">
+    <thead>
+      <tr><th>#</th><th>Occupation</th><th>Observed Exposure</th><th>Coverage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Computer Programmers</strong></td><td class="tag-high">75%</td><td><div class="exposure-bar"><div class="fill" style="width:75%"></div></div></td></tr>
+      <tr><td>2</td><td><strong>Customer Service Representatives</strong></td><td class="tag-high">70%</td><td><div class="exposure-bar"><div class="fill" style="width:70%"></div></div></td></tr>
+      <tr><td>3</td><td><strong>Data Entry Keyers</strong></td><td class="tag-high">67%</td><td><div class="exposure-bar"><div class="fill" style="width:67%"></div></div></td></tr>
+      <tr><td>4</td><td><strong>Financial Analysts</strong></td><td class="tag-high">55%</td><td><div class="exposure-bar"><div class="fill" style="width:55%"></div></div></td></tr>
+      <tr><td>5</td><td><strong>Technical Writers</strong></td><td class="tag-high">52%</td><td><div class="exposure-bar"><div class="fill" style="width:52%"></div></div></td></tr>
+      <tr><td>6</td><td><strong>Market Research Analysts</strong></td><td class="tag-high">48%</td><td><div class="exposure-bar"><div class="fill" style="width:48%"></div></div></td></tr>
+      <tr><td>7</td><td><strong>Editors</strong></td><td class="tag-high">45%</td><td><div class="exposure-bar"><div class="fill" style="width:45%"></div></div></td></tr>
+      <tr><td>8</td><td><strong>Interpreters & Translators</strong></td><td class="tag-high">43%</td><td><div class="exposure-bar"><div class="fill" style="width:43%"></div></div></td></tr>
+      <tr><td>9</td><td><strong>Accountants & Auditors</strong></td><td class="tag-high">41%</td><td><div class="exposure-bar"><div class="fill" style="width:41%"></div></div></td></tr>
+      <tr><td>10</td><td><strong>Paralegals & Legal Assistants</strong></td><td class="tag-high">39%</td><td><div class="exposure-bar"><div class="fill" style="width:39%"></div></div></td></tr>
+    </tbody>
+  </table>
+
+  <h2>30% of Workers Have Zero AI Exposure</h2>
+
+  <p>On the other end of the spectrum, nearly a third of all US workers are in occupations where AI task coverage is effectively <strong>zero</strong>. These are jobs where tasks appeared too infrequently in Claude's usage data to meet even the minimum threshold.</p>
+
+  <div class="zero-exposure">
+    <span class="zero-tag">🍳 Cooks</span>
+    <span class="zero-tag">🏍️ Motorcycle Mechanics</span>
+    <span class="zero-tag">🏊 Lifeguards</span>
+    <span class="zero-tag">🍸 Bartenders</span>
+    <span class="zero-tag">🍽️ Dishwashers</span>
+    <span class="zero-tag">👔 Dressing Room Attendants</span>
+  </div>
+
+  <p>These roles share a common thread: they require physical presence, manual dexterity, or real-time human interaction that current AI systems simply cannot replicate.</p>
+
+  <h2>No Unemployment Crisis — Yet</h2>
+
+  <div class="key-finding">
+    <h4>Critical Finding</h4>
+    <p style="margin:0">There is <strong>no systematic increase in unemployment</strong> for workers in highly AI-exposed occupations since late 2022. The unemployment rate gap between the most and least exposed workers is "small and insignificant."</p>
+  </div>
+
+  <p>However, there's an early warning signal that shouldn't be ignored:</p>
+
+  <div class="stat-highlight">
+    <div class="big-number" style="color:var(--accent2)">14%</div>
+    <div class="stat-label">drop in job finding rate for workers aged 22-25 entering high-exposure occupations</div>
+  </div>
+
+  <p>While older workers in these roles aren't being fired, <strong>young workers (ages 22-25) are finding it harder to get hired</strong> into AI-exposed occupations. The researchers describe this as "suggestive evidence that hiring of younger workers has slowed" — a potential leading indicator of broader displacement to come.</p>
+
+  <h2>Who's Most at Risk? The Demographics</h2>
+
+  <p>Workers in the top quartile of AI exposure look very different from those with zero exposure:</p>
+
+  <div class="demographics-grid">
+    <div class="demo-card">
+      <div class="val">+16pp</div>
+      <div class="lbl">More likely to be female</div>
+    </div>
+    <div class="demo-card">
+      <div class="val">+47%</div>
+      <div class="lbl">Higher average earnings</div>
+    </div>
+    <div class="demo-card">
+      <div class="val">4.5×</div>
+      <div class="lbl">More likely to have graduate degree</div>
+    </div>
+    <div class="demo-card">
+      <div class="val">+11pp</div>
+      <div class="lbl">More likely to be white</div>
+    </div>
+  </div>
+
+  <p>This inverts the typical automation narrative. Unlike previous waves of automation that primarily affected blue-collar manufacturing workers, AI displacement risk is concentrated among <strong>higher-educated, higher-paid, white-collar workers</strong>.</p>
+
+  <h2>BLS Projections Confirm the Trend</h2>
+
+  <p>The Bureau of Labor Statistics' own employment projections correlate with Anthropic's observed exposure measure:</p>
+
+  <div class="stat-highlight">
+    <div class="big-number" style="color:var(--accent3);font-size:2.5rem">-0.6%</div>
+    <div class="stat-label">For every 10 percentage point increase in AI coverage, BLS growth projection drops by 0.6 percentage points</div>
+  </div>
+
+  <p>While the relationship is "slight," it provides independent validation that Anthropic's measure tracks real labor market dynamics. Notably, there is <strong>no such correlation</strong> when using purely theoretical AI capability measures alone — only when combining theory with actual usage data.</p>
+
+  <h2>What This Means</h2>
+
+  <p>The paper's authors are careful to note limitations: their data comes from one AI platform (Claude), and the absence of unemployment effects doesn't mean they won't emerge. They frame this as establishing a baseline:</p>
+
+  <blockquote style="border-left:3px solid var(--accent);padding:1rem 1.5rem;margin:1.5rem 0;background:var(--card);border-radius:0 8px 8px 0;font-style:italic;color:var(--muted)">
+    "By laying this groundwork now, before meaningful effects have emerged, we hope future findings will more reliably identify economic disruption than post-hoc analyses."
+  </blockquote>
+
+  <p>The message is clear: <strong>the red area is growing</strong>. As AI capabilities advance and adoption spreads, the gap between what AI can theoretically do and what it's actually doing will narrow. The question isn't <em>if</em> but <em>when</em> the labor market effects become unmistakable.</p>
+
+  <div class="source-box">
+    <h4>Original Research</h4>
+    <p style="margin:.3rem 0"><strong>"Labor market impacts of AI: A new measure and early evidence"</strong></p>
+    <p style="margin:.3rem 0;font-size:.85rem;color:var(--muted)">Maxim Massenkoff and Peter McCrory • Anthropic • March 5, 2026</p>
+    <p style="margin:.5rem 0 0"><a href="https://www.anthropic.com/research/labor-market-impacts" target="_blank">Read the full paper →</a></p>
+    <p style="margin:.3rem 0;font-size:.8rem"><a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank">Download the dataset on HuggingFace →</a></p>
+  </div>
+</article>
+
+<footer>
+  <p><a href="/">AI<strong style="color:var(--accent)">Layoff</strong>.live</a> — Tracking the human impact of artificial intelligence on the global workforce.</p>
+</footer>
+
+</body>
+</html>
